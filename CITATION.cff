@@ -17,6 +17,10 @@ abstract: >-
   the raw experiment outputs behind every reading in the paper, and the
   complete generation chain of the data figures.
 license: MIT
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23386805
+    description: Zenodo archive of release v1.0.0
 keywords:
   - theorem proving
   - large language models
