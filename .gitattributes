@@ -1,0 +1,9 @@
+# All text files check out with LF everywhere. This matters for byte-level
+# verification: the frozen judging module src/judge/drct_common.py must keep
+# its registered md5 (7c31b58da9d7228cee31b9be581fe5dd) after checkout on
+# any platform, and MANIFEST_SHA256.txt hashes LF bytes.
+* text=auto eol=lf
+*.png binary
+*.npz binary
+*.pdf binary
+*.zip binary
