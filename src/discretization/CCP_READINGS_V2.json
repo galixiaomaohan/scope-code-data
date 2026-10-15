@@ -1,0 +1,194 @@
+{
+ "schema": "ccp-readings-v2/1",
+ "columns": [
+  "model",
+  "rule_baseline",
+  "floor"
+ ],
+ "anchor_v2_md5": "42a9d4037142af2b2a6928f7646e8dc3",
+ "rollout_md5": "81fde8b7bf3c7d5327acd064b7a0a5b2",
+ "anchor_criterion": "桥可解析 (bridge 成功导出实参, 题面符合桥文法) ∧ 解法不可词法导出 (规则基线 certified=0 / 产不出正确算子序)",
+ "device_disclosure": "装置口径未变: 实参由桥从题面导出 (ccp_rollout.arm_args), 模型贡献 = 算子序; 本件逐题登记 device_passthrough (= 规则臂能渲染完整算子链)",
+ "device_note": "装置结构注 (gen16, 逐行实证): ccp_rollout.eval_item 在 plan_ok 之后仍以 RA.ARM[cls] (= 规则基线同一函数) 渲染证明并交 judge ⇒ 逐题 certified(模型) ⊆ certified(规则基线)。故 M1 的 'certified>0 ∧ certified>rule' 在**现有三柱装置下对任何锚定集均不可满足** (与锚定集构造无关; CRIT-1 是其在 v1 锚定集上的特例)。v2 判据的 '桥可解析' 只解开了 实参可得性, 未解开该互斥 ⇒ 本件同时登记 device_passthrough 供主代定夺装置修法。",
+ "sets": {},
+ "generated": "2026-09-23T13:14:32",
+ "model": {
+  "ckpt": "scratch/ccp/gen13/out/ccpB135_state.pt",
+  "ckpt_md5": "fb151c3fafc64760076d77eec45abba0",
+  "summary": {
+   "ineq|greedy": {
+    "n": 3,
+    "plan_ok": 0,
+    "certified": 0,
+    "rule_certified": 0,
+    "device_passthrough": 0,
+    "m1_branch_reachable": 0,
+    "plan_rate": 0.0,
+    "cert_rate": 0.0,
+    "first_pred_hit": 0,
+    "first_pred_rate": 0.0,
+    "why": {
+     "no_plan": 3
+    }
+   }
+  },
+  "sets": "anchor_v2,anchor_v2_parsepool"
+ },
+ "rule_baseline": {
+  "ind": {
+   "n": 0,
+   "have_plan": 0,
+   "certified": 0,
+   "cert_rate": 0.0,
+   "why": {},
+   "names": []
+  },
+  "ineq": {
+   "n": 3,
+   "have_plan": 0,
+   "certified": 0,
+   "cert_rate": 0.0,
+   "why": {
+    "sos_UNSUPPORTED_LEFTOVER": 2,
+    "sos_UNSUPPORTED_NEG_SQ": 1
+   },
+   "names": [
+    "imo_1984_p2",
+    "algebra_amgm_sqrtxymulxmyeqxpy_xpygeq4",
+    "algebra_sqineq_2unitcircatblt1"
+   ]
+  },
+  "nt": {
+   "n": 0,
+   "have_plan": 0,
+   "certified": 0,
+   "cert_rate": 0.0,
+   "why": {},
+   "names": []
+  }
+ },
+ "model_per_class": {
+  "ind": {
+   "n": 0,
+   "certified": 0,
+   "plan_ok": 0,
+   "device_passthrough": 0,
+   "m1_branch_reachable": 0,
+   "why": {}
+  },
+  "ineq": {
+   "n": 3,
+   "certified": 0,
+   "plan_ok": 0,
+   "device_passthrough": 0,
+   "m1_branch_reachable": 0,
+   "why": {
+    "no_plan": 3
+   }
+  },
+  "nt": {
+   "n": 0,
+   "certified": 0,
+   "plan_ok": 0,
+   "device_passthrough": 0,
+   "m1_branch_reachable": 0,
+   "why": {}
+  }
+ },
+ "floor_anchor_v2": {
+  "imo_1984_p2": {
+   "closers": []
+  },
+  "algebra_amgm_sqrtxymulxmyeqxpy_xpygeq4": {
+   "closers": []
+  },
+  "algebra_sqineq_2unitcircatblt1": {
+   "closers": []
+  }
+ },
+ "floor_anchor_v2_summary": {
+  "n": 3,
+  "hard": 3,
+  "closers_hist": {}
+ },
+ "M1": {
+  "ind": {
+   "model_certified": 0,
+   "rule_certified": 0,
+   "n_anchor": 0,
+   "M1": false,
+   "M1_decidable": false,
+   "M1_undecidable_reason": "n_anchor=0 (v2 判据下该类 Valid 池不足 ⇒ 无题可判; 见 feasibility)",
+   "n_device_passthrough": 0,
+   "n_m1_branch_reachable": 0
+  },
+  "ineq": {
+   "model_certified": 0,
+   "rule_certified": 0,
+   "n_anchor": 3,
+   "M1": false,
+   "M1_decidable": false,
+   "M1_undecidable_reason": "certified>0 分支对模型不可达 (装置受限: 0/3 题 device_passthrough, 且渲染器 = 规则臂 RA.ARM ⇒ 模型 certified ⊆ 规则臂 certified)",
+   "n_device_passthrough": 0,
+   "n_m1_branch_reachable": 0
+  },
+  "nt": {
+   "model_certified": 0,
+   "rule_certified": 0,
+   "n_anchor": 0,
+   "M1": false,
+   "M1_decidable": false,
+   "M1_undecidable_reason": "n_anchor=0 (v2 判据下该类 Valid 池不足 ⇒ 无题可判; 见 feasibility)",
+   "n_device_passthrough": 0,
+   "n_m1_branch_reachable": 0
+  }
+ },
+ "M1_any": false,
+ "M1_decidable_any": false,
+ "n_anchor_total": 3,
+ "feasibility": {
+  "ind": {
+   "n_bridge_ok_in_pool": 0,
+   "target": 10,
+   "gap_vs_target": 10,
+   "target_met_by_parse_pool": false,
+   "target_met_by_anchor": false,
+   "n_anchor_device_passthrough": 0,
+   "note": "桥解析池已不足目标 → 主代裁决 (选项甲: 扩桥文法; 选项乙: gen14 桥-hard 合成题补位并标注非真题)"
+  },
+  "ineq": {
+   "n_bridge_ok_in_pool": 4,
+   "target": 10,
+   "gap_vs_target": 6,
+   "target_met_by_parse_pool": false,
+   "target_met_by_anchor": false,
+   "n_anchor_device_passthrough": 0,
+   "note": "桥解析池已不足目标 → 主代裁决 (选项甲: 扩桥文法; 选项乙: gen14 桥-hard 合成题补位并标注非真题)"
+  },
+  "nt": {
+   "n_bridge_ok_in_pool": 0,
+   "target": 10,
+   "gap_vs_target": 10,
+   "target_met_by_parse_pool": false,
+   "target_met_by_anchor": false,
+   "n_anchor_device_passthrough": 0,
+   "note": "桥解析池已不足目标 → 主代裁决 (选项甲: 扩桥文法; 选项乙: gen14 桥-hard 合成题补位并标注非真题)"
+  }
+ },
+ "funnel_gap": {
+  "ind": {
+   "n_pool_technique": 5,
+   "n_bridge_ok_in_pool": 0
+  },
+  "ineq": {
+   "n_pool_technique": 11,
+   "n_bridge_ok_in_pool": 4
+  },
+  "nt": {
+   "n_pool_technique": 6,
+   "n_bridge_ok_in_pool": 0
+  }
+ },
+ "verdict": "M1(v2) = false 且 **不可判** (装置受限): v2 判据只解开实参可得性, 未解开 '渲染器 = 规则臂' 互斥 ⇒ 任何锚定集下 certified(模型) ⊆ certified(规则臂), M1 的严格大于分支恒不可满足。详见 m1_device_note。",
+ "wall_s": 13.1
+}

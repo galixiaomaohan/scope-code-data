@@ -1,0 +1,15 @@
+{
+ "schema": "gen35-compile-gate/1",
+ "generated": "2026-09-24T15:16:43+0800",
+ "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+ "definition": "compiler: 金标链 × 装置供参 -> 算子模板证明文本 -> 冻结判卷; 门 = certified/2399 = 100%",
+ "judge": {
+  "n": 2399,
+  "certified": 2399,
+  "rate": 1.0,
+  "reason_hist": {},
+  "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd"
+ },
+ "parent_ledger_unchanged": true,
+ "wall_s": 3745.9
+}

@@ -1,0 +1,84 @@
+{
+ "figure": "fig_err_confidence",
+ "what": "Confidence of the first erroneous decision step for the baseline (117/218) and the final G-S configuration (191/218), on the same 218-item deep-chain exam, both from the gen36 factorial series. (a) ECDF of the top-1 operator probability at the first divergent step; (b,c) absolute-count histograms with a rug of the raw values.",
+ "one_line_reading": "The final configuration does not make its remaining mistakes less confidently -- the ECDF shape is unchanged -- it makes far fewer of them: confidently-wrong decisions drop from 55 to 12.",
+ "source": [
+  {
+   "path": "<original workstation path, not shipped>",
+   "md5": "5f1bd3025df101d8be9191eeaf7a7af4",
+   "n_items": 218,
+   "ckpt": "<server tree>/gen35/ckpt/deep_plan_formal_6000.pt",
+   "ckpt_md5": "eb0e1c603ed12e6994e5935e4ef7ed6d",
+   "role": "baseline"
+  },
+  {
+   "path": "<original workstation path, not shipped>",
+   "md5": "9360bfcf4d133c09bcea07943ba8446d",
+   "n_items": 218,
+   "ckpt": "<server tree>/gen36/ckpt/deep_plan_formal_a2wt1_6000.pt",
+   "ckpt_md5": "6891ea1a5eec315b94d8290e4cc903e5",
+   "role": "final"
+  }
+ ],
+ "outputs": {
+  "png": "<original workstation path, not shipped>",
+  "csv": "<original workstation path, not shipped>"
+ },
+ "method": "p_max is read verbatim from chain.trace[k].p_max of the two persisted walk files at the first divergent decision step k (identical rule to gen36_erranalysis.py); nothing is re-estimated.",
+ "readings": {
+  "baseline": {
+   "certified": "117/218",
+   "n_err": 101,
+   "n_p_ge_0.9": 55,
+   "n_margin_ge_0.9": 46,
+   "frac_p_ge_0.9": 0.5446
+  },
+  "final": {
+   "certified": "191/218",
+   "n_err": 27,
+   "n_p_ge_0.9": 12,
+   "n_margin_ge_0.9": 7,
+   "frac_p_ge_0.9": 0.4444
+  },
+  "confidently_wrong_reduction": "55 -> 12 (78% fewer)",
+  "gen36_factorial_series_arms": {
+   "G-W  (w-tail only)": {
+    "src": "<original workstation path, not shipped>",
+    "n_errors": 108,
+    "certified": 110,
+    "n_p_ge_0.9": 69,
+    "md5": "43bce40ff76fb247012233e924efea3b"
+   },
+   "G-SW (shift+w-tail)": {
+    "src": "<original workstation path, not shipped>",
+    "n_errors": 46,
+    "certified": 172,
+    "n_p_ge_0.9": 26,
+    "md5": "e3b730a472cf7e4e2493513662554526"
+   },
+   "G-S  (shift only) = final": {
+    "src": "<original workstation path, not shipped>",
+    "n_errors": 27,
+    "certified": 191,
+    "n_p_ge_0.9": 12,
+    "md5": "9360bfcf4d133c09bcea07943ba8446d"
+   },
+   "g44_v7 s1 re-test": {
+    "src": "<original workstation path, not shipped>",
+    "n_errors": 27,
+    "certified": 191,
+    "n_p_ge_0.9": 13,
+    "md5": "3e224da90f61508898f8a136104bcd63"
+   }
+  }
+ },
+ "caveats": [
+  "CORRECTION (an earlier analysis note suggested changing the section's 12 to 13 -- that suggestion is WITHDRAWN). The section's 12 comes from gen36/out/GEN36_WALK_gs.json, which is the SAME series as its baseline; under the single rule p_max>=0.9 that file gives exactly 12/27. Section 8 is self-consistent and needs no change. The earlier 13/27 came from pairing the gen35 baseline with a DIFFERENT checkpoint family (gen44 v7 s1, 220-op head).",
+  "Both readings coexist and are registered above: p_max>=0.9 gives 12/27 on the gen36 G-S walk and 13/27 on the gen44 s1 walk (27 errors in both). The single row that moves is ri=171 (p_max=0.9449, margin=0.8900). The four factorial arms reproduce Section 8's table exactly: errors 101/108/46/27 -> certified 117/110/172/191.",
+  "margin>=0.9 is NOT the section's rule; it is reported only for completeness (baseline 46/101, G-S 7/27). Do not mix the two.",
+  "This figure uses the gen36 in-series pair, so it is now directly citable by Section 8. The gen44 s1 re-test is the subject of fig_train_dynamics and fig_head_geometry instead.",
+  "The baseline walk is a different checkpoint (deep_plan_formal_6000) than the final one (deep_plan_formal_a2wt1_6000), but they belong to the same factorial series: same exam rows, same seed 20260923, same batch order md5.",
+  "'error' is defined as NOT (exact_hit and first_hit) on the operator chain, which reproduces the 101 / 27 counts exactly; it is a strict superset view of Lean certification, but on these files the two error sets coincide.",
+  "The ECDF shapes are almost indistinguishable; the effect in this comparison is in the COUNT of confidently-wrong decisions (55 -> 12), not in their probability distribution. A caption claiming better-calibrated errors would overreach."
+ ]
+}

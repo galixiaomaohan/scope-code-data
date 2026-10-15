@@ -1,0 +1,55 @@
+{
+ "schema": "gen37-selftest/1",
+ "generated": "2026-09-25T00:49:16+0800",
+ "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+ "cases": [
+  {
+   "case": "A_certified_expect_true",
+   "name": "gen32_ind_nest_300008",
+   "gen35_certified": true,
+   "judge_certified": true,
+   "reasons": [],
+   "lean": {
+    "rc": 0,
+    "accepted": true,
+    "sorry": false,
+    "secs": 9.88
+   },
+   "n1n2": {
+    "n1_accepted": false,
+    "n2_accepted": true,
+    "n1_secs": 9.77,
+    "n2_secs": 9.72,
+    "n1_vacuous": false,
+    "n1_note": "N1 已判"
+   },
+   "wall_s": 29.37,
+   "PASS": true
+  },
+  {
+   "case": "B_rejected_expect_false",
+   "name": "gen32_ineq_cascade_300004",
+   "gen35_certified": false,
+   "judge_certified": false,
+   "reasons": [
+    "lean_reject_sorry"
+   ],
+   "lean": {
+    "rc": 1,
+    "accepted": false,
+    "sorry": true,
+    "secs": 9.79
+   },
+   "n1n2": null,
+   "wall_s": 9.8,
+   "PASS": true
+  },
+  {
+   "case": "C_statement_identity",
+   "name": "gen32_ind_nest_300008",
+   "prompt_statement_equals_render": true,
+   "prompt_tail": " : f 0 = 4) (fstep : ∀ k, f (k + 1) = f k + 1 * p k) : ∀ n : ℕ, f n = 4 - 12 * n + n ^ 2 + 12 * n ^ 3 + 4 * n ^ 4 := by\n"
+  }
+ ],
+ "PASS_all": true
+}

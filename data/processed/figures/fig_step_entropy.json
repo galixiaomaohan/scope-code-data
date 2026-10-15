@@ -1,0 +1,33 @@
+{
+ "figure": "fig_step_entropy",
+ "what": "Mean entropy of the masked operator distribution P(o|F_t) as a function of decision step t, split into items the final checkpoint solved exactly (certified) and items it failed. Bands are +/-1 s.e.m., n is the number of frames at that step; the dashed line is each group's overall mean.",
+ "one_line_reading": "Every decision before step 4 is essentially deterministic (entropy < 1e-3 nats), and steps 4-6 are the only ones that carry any uncertainty. There the two groups separate sharply: at t=4 the failed items decide at 0.191 nats against 0.027 for the certified ones (7x). Both statements hold at once -- the model is measurably less certain at the step where it goes wrong, yet its top-1 probability there is still 0.918, so the mistake is also 'confidently wrong'.",
+ "source": [
+  {
+   "path": "<original workstation path, not shipped>",
+   "md5": "9acc097083d66ce52e5c886e7d53d645",
+   "role": "entropy capture"
+  }
+ ],
+ "outputs": {
+  "png": "<original workstation path, not shipped>",
+  "csv": "<original workstation path, not shipped>"
+ },
+ "method": "entropy of softmax(step_logits + mask) with mask = legal operator indices + END, i.e. exactly the distribution gen34_eval.walk_chain decides with; frames grouped by item outcome, averaged per step index.",
+ "readings": {
+  "kmax": 9,
+  "n_frames_certified": 1375,
+  "n_frames_failed": 177,
+  "n_items_certified": 191,
+  "n_items_failed": 27,
+  "mean_entropy_certified": 0.010159156422896476,
+  "mean_entropy_failed": 0.048174073933153726,
+  "entropy_t0_certified": 0.00010289005264087396,
+  "entropy_t0_failed": 8.374074271041873e-05
+ },
+ "caveats": [
+  "the failed group has only 27 items, so late-step points rest on a few frames and their s.e.m. bands are correspondingly wide.",
+  "the step axis is unbounded for failures: an item that stopped early has no frames at high t, so the per-step n differs between groups (annotated).",
+  "'certified' here is exact operator-chain match, which coincides with Lean certification on this checkpoint (191/218)."
+ ]
+}

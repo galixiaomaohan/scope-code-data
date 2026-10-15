@@ -1,0 +1,58 @@
+{
+ "schema": "gen34-equiv/1",
+ "ckpt": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen33/ckpt/deep_base_formal_6000.pt",
+ "ckpt_md5": "0e30990b063d6a3a387f6c52b96f66ea",
+ "step": 6000,
+ "n_rows": 8,
+ "dev": "cuda:2",
+ "note": "C 臂等价性判定: gen33 代码路径 vs gen34 代码路径, 同一 gen33 ckpt; 全过 ⇒ C 臂可直接复用 gen33 产物 (免 100 分钟重训)",
+ "E1_params_bitwise": true,
+ "E1_n_diff_params": 0,
+ "E2_axes_bitwise": {
+  "lg": true,
+  "zb": true,
+  "lt": true
+ },
+ "E2_abs_max_diff": {
+  "lg": 0.0,
+  "zb": 0.0,
+  "lt": 0.0
+ },
+ "E3_loss_bitwise": true,
+ "E3_values": {
+  "g33": [
+   0.0990719199180603,
+   2.85671903839102e-05,
+   0.22164671123027802,
+   0.08980807662010193
+  ],
+  "g34": [
+   0.0990719199180603,
+   2.85671903839102e-05,
+   0.22164671123027802,
+   0.08980807662010193
+  ]
+ },
+ "E3b_slot_channel_off": true,
+ "E4_greedy_render": [
+  {
+   "ri": 0,
+   "name": "gen32_ind_nest_300008",
+   "n33": 80,
+   "n34": 80,
+   "text_equal": true,
+   "token_equal": true
+  },
+  {
+   "ri": 1,
+   "name": "gen32_ind_nest_300015",
+   "n33": 80,
+   "n34": 80,
+   "text_equal": true,
+   "token_equal": true
+  }
+ ],
+ "E4_all_equal": true,
+ "pass": true,
+ "verdict": "C 臂可复用 gen33 产物 (免重训)"
+}

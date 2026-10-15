@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: >-
+  If you use this code or data, please cite both this repository
+  and the paper (arXiv:2610.08319).
+type: software
+title: "SCOPE: code and data package"
+authors:
+  - family-names: Zhou
+    given-names: Hanchao
+  - family-names: Li
+    given-names: Jialei
+repository-code: "https://github.com/galixiaomaohan/scope-code-data"
+abstract: >-
+  Supplementary code and raw data for "SCOPE: Certified Theorem Proving
+  with a Language Model as the Policy Planner" (arXiv:2610.08319):
+  the experiment pipeline (gen33-44), the frozen Lean judging module,
+  the raw experiment outputs behind every reading in the paper, and the
+  complete generation chain of the data figures.
+license: MIT
+keywords:
+  - theorem proving
+  - large language models
+  - neuro-symbolic systems
+  - Lean
+  - reproducibility
+preferred-citation:
+  type: article
+  title: "SCOPE: Certified Theorem Proving with a Language Model as the Policy Planner"
+  authors:
+    - family-names: Zhou
+      given-names: Hanchao
+    - family-names: Li
+      given-names: Jialei
+  year: 2026
+  repository: "arXiv"
+  repository-artifact: "2610.08319"
+  url: "https://arxiv.org/abs/2610.08319"

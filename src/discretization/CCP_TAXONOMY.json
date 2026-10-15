@@ -1,0 +1,398 @@
+{
+ "schema": "ccp-taxonomy/1",
+ "split_used_for_design": "Valid(256) only",
+ "firewall": "设计段未读 Test 题面; Test 仅用 Phase 0 冻结类别标签计数做覆盖映射",
+ "n_classes": 15,
+ "classes": [
+  {
+   "id": "subst_compute",
+   "zh": "代入计算链",
+   "definition": "沿假设等式逐条代入并闭式求值 (等式链/闭式代入)",
+   "lean_tactics": [
+    "intro",
+    "rw [h_i]",
+    "norm_num",
+    "ring",
+    "simp only [h_i]"
+   ],
+   "difficulty": 1,
+   "floor_est": "低-中",
+   "valid_count": 5,
+   "valid_examples": [
+    "amc12b_2004_p3",
+    "mathd_algebra_59",
+    "amc12a_2016_p2"
+   ]
+  },
+  {
+   "id": "linear_solve",
+   "zh": "线性/联立求解",
+   "definition": "多元一次方程组消元、线性不等式组求解",
+   "lean_tactics": [
+    "linarith",
+    "omega",
+    "ring_nf",
+    "nlinarith"
+   ],
+   "difficulty": 1,
+   "floor_est": "低-中",
+   "valid_count": 68,
+   "valid_examples": [
+    "amc12a_2015_p10",
+    "amc12a_2009_p9",
+    "amc12a_2019_p9"
+   ]
+  },
+  {
+   "id": "eq_identity",
+   "zh": "代数恒等变形",
+   "definition": "多项式/有理式恒等 (展开、因式分解、配方恒等)",
+   "lean_tactics": [
+    "ring",
+    "ring_nf",
+    "field_simp",
+    "norm_num",
+    "rfl"
+   ],
+   "difficulty": 1,
+   "floor_est": "低",
+   "valid_count": 15,
+   "valid_examples": [
+    "mathd_algebra_182",
+    "mathd_algebra_462",
+    "mathd_algebra_126.variants.lineMap"
+   ]
+  },
+  {
+   "id": "sos_bound",
+   "zh": "配方法/平方和非负",
+   "definition": "结论为序关系, 证法 = 写成平方和 (含余项非负)",
+   "lean_tactics": [
+    "nlinarith [sq_nonneg (...)]",
+    "positivity",
+    "linarith",
+    "ring_nf"
+   ],
+   "difficulty": 2,
+   "floor_est": "低",
+   "valid_count": 8,
+   "valid_examples": [
+    "algebra_sqineq_2at2pclta2c2p41pc",
+    "algebra_binomnegdiscrineq_10alt28asqp1",
+    "algebra_sqineq_36azm9asqle36zsq"
+   ]
+  },
+  {
+   "id": "amgm_cauchy",
+   "zh": "均值/柯西/三角放缩",
+   "definition": "AM-GM、柯西-施瓦茨、三角不等式的模板化应用",
+   "lean_tactics": [
+    "nlinarith",
+    "gcongr",
+    "linarith"
+   ],
+   "difficulty": 3,
+   "floor_est": "低",
+   "valid_count": 3,
+   "valid_examples": [
+    "algebra_amgm_prod1toneq1_sum1tongeqn",
+    "mathd_numbertheory_35",
+    "algebra_amgm_sumasqdivbsqgeqsumbdiva"
+   ]
+  },
+  {
+   "id": "bound_chain",
+   "zh": "单调夹逼/放缩链",
+   "definition": "多步序关系传递 (le_trans/lt_of_le_of_lt/单调性)",
+   "lean_tactics": [
+    "gcongr",
+    "linarith",
+    "linarith [h_i]",
+    "exact le_trans .."
+   ],
+   "difficulty": 2,
+   "floor_est": "低",
+   "valid_count": 4,
+   "valid_examples": [
+    "algebra_apb4leq8ta4pb4",
+    "mathd_algebra_144",
+    "imo_1966_p5"
+   ]
+  },
+  {
+   "id": "induction_rec",
+   "zh": "归纳递推(闭式)",
+   "definition": "递推关系 → 闭式; 归纳法 + 环归一",
+   "lean_tactics": [
+    "induction n with",
+    "rw [hstep, ih]",
+    "pow_succ",
+    "ring",
+    "omega"
+   ],
+   "difficulty": 2,
+   "floor_est": "低",
+   "valid_count": 0,
+   "valid_examples": []
+  },
+  {
+   "id": "induction_sum",
+   "zh": "归纳求和",
+   "definition": "∑ 恒等式的归纳证明 (基例 + sum_range_succ)",
+   "lean_tactics": [
+    "induction n with",
+    "Finset.sum_range_succ",
+    "push_cast",
+    "ring_nf",
+    "nlinarith"
+   ],
+   "difficulty": 3,
+   "floor_est": "低",
+   "valid_count": 5,
+   "valid_examples": [
+    "mathd_numbertheory_24",
+    "mathd_numbertheory_24.variants.digits",
+    "numbertheory_sumkmulnckeqnmul2pownm1"
+   ]
+  },
+  {
+   "id": "sum_manip",
+   "zh": "求和变换",
+   "definition": "裂项/换元/平移/重排等求和恒等式变形",
+   "lean_tactics": [
+    "Finset.sum_congr",
+    "Finset.sum_range_succ",
+    "Nat.sub_add",
+    "ring_nf",
+    "norm_num"
+   ],
+   "difficulty": 3,
+   "floor_est": "低",
+   "valid_count": 29,
+   "valid_examples": [
+    "induction_sum2kp1npqsqm1",
+    "aime_1991_p6",
+    "mathd_numbertheory_149"
+   ]
+  },
+  {
+   "id": "comb_binomial",
+   "zh": "组合计数/二项式",
+   "definition": "choose/binomial/Pascal/Vandermonde/计数恒等",
+   "lean_tactics": [
+    "Nat.choose_succ_succ",
+    "Finset.card",
+    "ring_nf",
+    "Omega"
+   ],
+   "difficulty": 3,
+   "floor_est": "低-中",
+   "valid_count": 1,
+   "valid_examples": [
+    "numbertheory_nckeqnm1ckpnm1ckm1"
+   ]
+  },
+  {
+   "id": "div_closure",
+   "zh": "整除闭包",
+   "definition": "由若干假设 m∣x_i 推出组合式/乘积被 m^k 整除 (见证构造)",
+   "lean_tactics": [
+    "obtain ⟨w, rfl⟩ := h",
+    "exact ⟨witness, by ring⟩",
+    "Dvd.dvd",
+    "ring"
+   ],
+   "difficulty": 2,
+   "floor_est": "低",
+   "valid_count": 11,
+   "valid_examples": [
+    "imo_1984_p2",
+    "imo_1964_p1_2",
+    "induction_divisibility_3divnto3m2n"
+   ]
+  },
+  {
+   "id": "mod_arith",
+   "zh": "模算术/同余",
+   "definition": "同余链、模幂、剩余类计算",
+   "lean_tactics": [
+    "omega",
+    "Nat.ModEq",
+    "Nat.pow_mod",
+    "ZMod",
+    "decide",
+    "norm_num"
+   ],
+   "difficulty": 2,
+   "floor_est": "中",
+   "valid_count": 35,
+   "valid_examples": [
+    "mathd_numbertheory_780",
+    "mathd_numbertheory_13",
+    "mathd_numbertheory_64"
+   ]
+  },
+  {
+   "id": "prime_factor",
+   "zh": "素因数/因数结构",
+   "definition": "Prime/gcd/lcm/因数个数/算术基本定理应用",
+   "lean_tactics": [
+    "Nat.Prime",
+    "Nat.factorization",
+    "Nat.gcd_eq_left",
+    "omega",
+    "norm_num"
+   ],
+   "difficulty": 3,
+   "floor_est": "低-中",
+   "valid_count": 9,
+   "valid_examples": [
+    "mathd_numbertheory_169",
+    "mathd_numbertheory_188",
+    "amc12b_2002_p11"
+   ]
+  },
+  {
+   "id": "count_pigeonhole",
+   "zh": "计数/鸽巢/容斥/存在",
+   "definition": "存在性与计数界 (鸽巢、容斥、双射)",
+   "lean_tactics": [
+    "Finset.card",
+    "by_contra",
+    "push_neg",
+    "omega",
+    "Nat.card_le_card_of_injOn"
+   ],
+   "difficulty": 3,
+   "floor_est": "低-中",
+   "valid_count": 19,
+   "valid_examples": [
+    "mathd_numbertheory_221",
+    "imo_1987_p4",
+    "mathd_numbertheory_33"
+   ]
+  },
+  {
+   "id": "analysis_eval",
+   "zh": "分析/函数求值",
+   "definition": "导数/积分/极限/级数/三角与指数的符号求值",
+   "lean_tactics": [
+    "norm_num",
+    "ring_nf",
+    "Real.exp",
+    "deriv",
+    "Real.sin_cos",
+    "nlinarith"
+   ],
+   "difficulty": 3,
+   "floor_est": "低-中",
+   "valid_count": 44,
+   "valid_examples": [
+    "amc12a_2019_p21",
+    "amc12a_2008_p8",
+    "aime_1984_p5"
+   ]
+  }
+ ],
+ "valid_total": 256,
+ "unmatched": [],
+ "test_coverage_by_label": {
+  "source": "scratch/ccp/TEST_COVERAGE.json (Phase 0 冻结类别标签; 未新增 Test 读取)",
+  "n_test": 243,
+  "layer_counts": {
+   "solved": 17,
+   "L1_translation": 160,
+   "L2_vocabulary": 64,
+   "L3_navigation": 2
+  },
+  "class_counts_fractional": {
+   "subst_compute": 150.0,
+   "comb_binomial": 23.0,
+   "eq_identity": 17.0,
+   "bound_chain": 13.0,
+   "sos_bound": 11.0,
+   "div_closure": 8.0,
+   "mod_arith": 7.0,
+   "analysis_eval": 6.0,
+   "amgm_cauchy": 5.0,
+   "induction_sum": 1.0,
+   "sum_manip": 1.0,
+   "count_pigeonhole": 1.0
+  },
+  "unmapped_label_pairs": 11,
+  "projection_rule": {
+   "inequality|prove_inequality": [
+    "sos_bound",
+    "bound_chain"
+   ],
+   "inequality|solve_value": [
+    "bound_chain"
+   ],
+   "numbertheory|prove_divisibility": [
+    "div_closure"
+   ],
+   "numbertheory|solve_value": [
+    "mod_arith"
+   ],
+   "numbertheory|prove_inequality": [
+    "bound_chain"
+   ],
+   "combinatorics|solve_value": [
+    "comb_binomial"
+   ],
+   "combinatorics|prove_identity": [
+    "induction_sum",
+    "sum_manip"
+   ],
+   "combinatorics|prove_inequality": [
+    "amgm_cauchy"
+   ],
+   "analysis|solve_value": [
+    "analysis_eval"
+   ],
+   "algebra|solve_value": [
+    "subst_compute"
+   ],
+   "algebra|prove_identity": [
+    "eq_identity"
+   ],
+   "algebra|count_or_exist": [
+    "count_pigeonhole"
+   ],
+   "algebra|other": [
+    "eq_identity"
+   ]
+  }
+ },
+ "operator_interface_status": {
+  "note": "registry 名义算子 → 接口实现状态 (Phase 0 CLASS_SPECS 结论: 只有代入计算一种范式接了接口)",
+  "pilot_implemented": {
+   "induction_rec": [
+    "ccp_ind_recurrence (带证书)",
+    "ccp_ring_identity (带证书)"
+   ],
+   "sos_bound": [
+    "ccp_ineq_sos (带证书)",
+    "ccp_ineq_close (带证书)"
+   ],
+   "div_closure": [
+    "ccp_nt_dvd_witness (带证书)",
+    "ccp_nt_dvd_combine (带证书)"
+   ]
+  },
+  "not_yet_wired": [
+   "amgm_cauchy",
+   "bound_chain",
+   "induction_sum",
+   "sum_manip",
+   "comb_binomial",
+   "mod_arith",
+   "prime_factor",
+   "analysis_eval",
+   "count_pigeonhole",
+   "eq_identity",
+   "linear_solve",
+   "subst_compute"
+  ]
+ }
+}

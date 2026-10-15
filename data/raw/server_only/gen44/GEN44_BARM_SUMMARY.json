@@ -1,0 +1,362 @@
+{
+ "schema": "gen44-barm-summary/1",
+ "created": "2026-09-27T02:42:56+0800",
+ "ckpt": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen44/ckpt/g44_v7_formal_s1_a2wt1_6000.pt",
+ "ckpt_md5": "8d7c81f0d69322cce1e4eda2b4660fdf",
+ "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+ "n_shard_files": 4,
+ "provenance": [
+  {
+   "file": "GEN44_BARM_JUDGE_s0.json",
+   "md5": "5112697bf36bb3d2b235557fbd48212e",
+   "n_rows": 156,
+   "n_certified": 72,
+   "wall_s": 2971.1,
+   "judge_ok": true,
+   "shard": {
+    "shard": 0,
+    "nshard": 4,
+    "n_manifest_rows": 623,
+    "n_shard_rows": 156
+   }
+  },
+  {
+   "file": "GEN44_BARM_JUDGE_s1.json",
+   "md5": "4379adc962fc75ec32e783d7b5cd3508",
+   "n_rows": 156,
+   "n_certified": 75,
+   "wall_s": 2833.9,
+   "judge_ok": true,
+   "shard": {
+    "shard": 1,
+    "nshard": 4,
+    "n_manifest_rows": 623,
+    "n_shard_rows": 156
+   }
+  },
+  {
+   "file": "GEN44_BARM_JUDGE_s2.json",
+   "md5": "2f4b3bf791803aa25f74a8870464e47f",
+   "n_rows": 156,
+   "n_certified": 70,
+   "wall_s": 3012.4,
+   "judge_ok": true,
+   "shard": {
+    "shard": 2,
+    "nshard": 4,
+    "n_manifest_rows": 623,
+    "n_shard_rows": 156
+   }
+  },
+  {
+   "file": "GEN44_BARM_JUDGE_s3.json",
+   "md5": "eecd9f1ca84d510ee514501d35b4dae2",
+   "n_rows": 155,
+   "n_certified": 64,
+   "wall_s": 2938.4,
+   "judge_ok": true,
+   "shard": {
+    "shard": 3,
+    "nshard": 4,
+    "n_manifest_rows": 623,
+    "n_shard_rows": 155
+   }
+  }
+ ],
+ "by_fam": {
+  "b1": {
+   "n_cert_rows": 817,
+   "exact_hit": 89,
+   "exact_hit_rate": 0.1089,
+   "struct_hit": 415,
+   "struct_dev": 402,
+   "render_skip": 169,
+   "over_run": 163,
+   "n_rendered": 246,
+   "n_judged": 246,
+   "certified": 87,
+   "rate": 0.3537,
+   "wilson95": [
+    0.2966,
+    0.4152
+   ],
+   "reject_reasons": {
+    "lean_reject_sorry": 156,
+    "autoimplicit_dependent": 1,
+    "lean_reject": 2
+   },
+   "device_arm": {
+    "n_judged": 810,
+    "certified": 354,
+    "rate": 0.437,
+    "wilson95": [
+     0.4033,
+     0.4714
+    ],
+    "src": "GEN44_S8_LITALL_SUMMARY.json"
+   }
+  },
+  "b2": {
+   "n_cert_rows": 309,
+   "exact_hit": 164,
+   "exact_hit_rate": 0.5307,
+   "struct_hit": 237,
+   "struct_dev": 72,
+   "render_skip": 8,
+   "over_run": 8,
+   "n_rendered": 229,
+   "n_judged": 229,
+   "certified": 158,
+   "rate": 0.69,
+   "wilson95": [
+    0.6273,
+    0.7463
+   ],
+   "reject_reasons": {
+    "lean_reject_sorry": 68,
+    "autoimplicit_dependent": 2,
+    "lean_reject": 1
+   },
+   "device_arm": {
+    "n_judged": 306,
+    "certified": 201,
+    "rate": 0.6569,
+    "wilson95": [
+     0.602,
+     0.7078
+    ],
+    "src": "GEN44_S8_LITALL_SUMMARY.json"
+   }
+  },
+  "b3": {
+   "n_cert_rows": 26,
+   "exact_hit": 8,
+   "exact_hit_rate": 0.3077,
+   "struct_hit": 21,
+   "struct_dev": 5,
+   "render_skip": 0,
+   "over_run": 2,
+   "n_rendered": 21,
+   "n_judged": 21,
+   "certified": 5,
+   "rate": 0.2381,
+   "wilson95": [
+    0.1063,
+    0.4509
+   ],
+   "reject_reasons": {
+    "lean_reject_sorry": 16
+   },
+   "device_arm": {
+    "n_judged": 26,
+    "certified": 6,
+    "rate": 0.2308,
+    "wilson95": [
+     0.1103,
+     0.4205
+    ],
+    "src": "GEN44_S8_LITALL_SUMMARY.json"
+   }
+  },
+  "b4": {
+   "n_cert_rows": 2,
+   "exact_hit": 2,
+   "exact_hit_rate": 1.0,
+   "struct_hit": 2,
+   "struct_dev": 0,
+   "render_skip": 0,
+   "over_run": 0,
+   "n_rendered": 2,
+   "n_judged": 2,
+   "certified": 2,
+   "rate": 1.0,
+   "wilson95": [
+    0.3424,
+    1.0
+   ],
+   "reject_reasons": {},
+   "device_arm": {
+    "n_judged": 2,
+    "certified": 2,
+    "rate": 1.0,
+    "wilson95": [
+     0.3424,
+     1.0
+    ],
+    "src": "GEN44_S8_LITALL_SUMMARY.json"
+   }
+  },
+  "b5": {
+   "n_cert_rows": 10,
+   "exact_hit": 1,
+   "exact_hit_rate": 0.1,
+   "struct_hit": 6,
+   "struct_dev": 4,
+   "render_skip": 0,
+   "over_run": 0,
+   "n_rendered": 6,
+   "n_judged": 6,
+   "certified": 1,
+   "rate": 0.1667,
+   "wilson95": [
+    0.0301,
+    0.5635
+   ],
+   "reject_reasons": {
+    "lean_reject_sorry": 5
+   },
+   "device_arm": {
+    "n_judged": 10,
+    "certified": 1,
+    "rate": 0.1,
+    "wilson95": [
+     0.0179,
+     0.4042
+    ],
+    "src": "GEN44_S8_LITALL_SUMMARY.json"
+   }
+  },
+  "b6": {
+   "n_cert_rows": 85,
+   "exact_hit": 0,
+   "exact_hit_rate": 0.0,
+   "struct_hit": 76,
+   "struct_dev": 9,
+   "render_skip": 76,
+   "over_run": 76,
+   "n_rendered": 0,
+   "n_judged": 0,
+   "certified": 0,
+   "rate": null,
+   "wilson95": [
+    0.0,
+    0.0
+   ],
+   "reject_reasons": {},
+   "device_arm": {
+    "n_judged": 85,
+    "certified": 35,
+    "rate": 0.4118,
+    "wilson95": [
+     0.3132,
+     0.518
+    ],
+    "src": "GEN44_S8_LITALL_SUMMARY.json"
+   }
+  },
+  "b7": {
+   "n_cert_rows": 201,
+   "exact_hit": 21,
+   "exact_hit_rate": 0.1045,
+   "struct_hit": 57,
+   "struct_dev": 144,
+   "render_skip": 0,
+   "over_run": 22,
+   "n_rendered": 57,
+   "n_judged": 57,
+   "certified": 13,
+   "rate": 0.2281,
+   "wilson95": [
+    0.1384,
+    0.3521
+   ],
+   "reject_reasons": {
+    "lean_reject_sorry": 44
+   },
+   "device_arm": {
+    "n_judged": 201,
+    "certified": 48,
+    "rate": 0.2388,
+    "wilson95": [
+     0.1851,
+     0.3023
+    ],
+    "src": "GEN44_S8_LITALL_SUMMARY.json"
+   }
+  },
+  "b8": {
+   "n_cert_rows": 74,
+   "exact_hit": 46,
+   "exact_hit_rate": 0.6216,
+   "struct_hit": 60,
+   "struct_dev": 14,
+   "render_skip": 0,
+   "over_run": 4,
+   "n_rendered": 60,
+   "n_judged": 60,
+   "certified": 13,
+   "rate": 0.2167,
+   "wilson95": [
+    0.1312,
+    0.3362
+   ],
+   "reject_reasons": {
+    "lean_reject_sorry": 47
+   },
+   "device_arm": {
+    "n_judged": 74,
+    "certified": 20,
+    "rate": 0.2703,
+    "wilson95": [
+     0.1823,
+     0.3809
+    ],
+    "src": "GEN44_S8_LITALL_SUMMARY.json"
+   }
+  },
+  "b9": {
+   "n_cert_rows": 11,
+   "exact_hit": 0,
+   "exact_hit_rate": 0.0,
+   "struct_hit": 2,
+   "struct_dev": 9,
+   "render_skip": 0,
+   "over_run": 7,
+   "n_rendered": 2,
+   "n_judged": 2,
+   "certified": 2,
+   "rate": 1.0,
+   "wilson95": [
+    0.3424,
+    1.0
+   ],
+   "reject_reasons": {},
+   "device_arm": {
+    "n_judged": 11,
+    "certified": 5,
+    "rate": 0.4545,
+    "wilson95": [
+     0.2127,
+     0.7199
+    ],
+    "src": "GEN44_S8_LITALL_SUMMARY.json"
+   }
+  }
+ },
+ "total": {
+  "n_cert_total": 1535,
+  "n_rendered": 623,
+  "n_judged": 623,
+  "certified": 281,
+  "rate": 0.451,
+  "wilson95": [
+   0.4124,
+   0.4903
+  ],
+  "exact_hit": 331,
+  "struct_dev": 659,
+  "render_skip": 253,
+  "over_run": 282
+ },
+ "device_arm_b_total": {
+  "n_judged": 1525,
+  "certified": 672,
+  "rate": 0.4407,
+  "wilson95": [
+   0.416,
+   0.4659
+  ],
+  "src": "GEN44_FINAL_REPORT.md §2.2 (VB 族树臂)"
+ },
+ "note": "主读数 = 模型走链 (结构相符) x 族单渲染 (叶级链代入) x 冻结判卷; struct_dev / render_skip 单列不作 0; 未执行 != 判零"
+}

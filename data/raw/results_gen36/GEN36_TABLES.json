@@ -1,0 +1,268 @@
+{
+ "schema": "gen36-tables/1",
+ "anchor": {
+  "pure_plan_gen35": {
+   "walk": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen35/out/GEN35_EVAL_PLAN_WALK.json",
+   "plan": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen35/out/GEN35_EVAL_PLAN.json",
+   "rows": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen35/out/GEN35_EVAL_PLAN_ROWS.jsonl",
+   "certified": 117,
+   "n": 218
+  },
+  "gold_chain_gen35": {
+   "rows": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen35/out/GEN35_CHAINREAD_ROWS.jsonl",
+   "certified": 218,
+   "n": 218,
+   "note": "金标链 × 编译 = 编译器上限"
+  },
+  "stock_chain_gen34A": {
+   "rows": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen35/out/GEN35_CHAINREAD_ROWS.jsonl",
+   "certified": 121,
+   "n": 218,
+   "note": "gen34 A 臂存量链 × 编译"
+  },
+  "end2end_gen34A": {
+   "certified": 1,
+   "n": 218,
+   "note": "旧路线端到端 (LLM 渲染)"
+  }
+ },
+ "arms": {
+  "gs": {
+   "walk_file": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen36/out/GEN36_WALK_gs.json",
+   "plan_file": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen36/out/GEN36_PLAN_gs.json",
+   "rows_file": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen36/out/GEN36_PLAN_gs_ROWS.jsonl",
+   "walk_md5": "9360bfcf4d133c09bcea07943ba8446d",
+   "plan_md5": "7ea6d6c2c48cf9606ce1f87bdf64abce",
+   "rows_md5": "73991a4d15196f1626dbc4c1579a2055",
+   "walk_table": {
+    "n": 218,
+    "first_hit": 218,
+    "exact_hit": 191,
+    "terminated_end": 218,
+    "over_run": 0
+   },
+   "n": 218,
+   "compile": {
+    "n": 218,
+    "n_exact": 191,
+    "n_first": 218,
+    "n_overrun": 0,
+    "err_hist": {
+     "OP_MISMATCH": 27
+    },
+    "fam": {
+     "gen32_ind_nest": {
+      "n": 13,
+      "exact": 13,
+      "first": 13,
+      "n_emit": 39,
+      "n_mismatch": 0
+     },
+     "gen32_ind_tower": {
+      "n": 24,
+      "exact": 24,
+      "first": 24,
+      "n_emit": 96,
+      "n_mismatch": 0
+     },
+     "gen32_ineq_cascade": {
+      "n": 181,
+      "exact": 154,
+      "first": 181,
+      "n_emit": 1026,
+      "n_mismatch": 27
+     }
+    },
+    "empty_proof": 0,
+    "exact_rate": 0.876147,
+    "first_rate": 1.0
+   },
+   "judge": {
+    "certified": 191,
+    "n": 218,
+    "reasons": {
+     "lean_reject_sorry": 27,
+     "autoimplicit_dependent": 27,
+     "sorry_ax": 27
+    }
+   },
+   "flag": {
+    "lam_txt": 0.0,
+    "lam_bind": 1.0,
+    "slot_cond": 1,
+    "slot_dev": 1,
+    "note": "纯规划臂: 渲染 text 损失移除 (V35_DESIGN §3 P1); 渲染头输出不计分"
+   },
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "ckpt_md5": "6891ea1a5eec315b94d8290e4cc903e5",
+   "rows_n": 218
+  },
+  "gsw": {
+   "walk_file": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen36/out/GEN36_WALK_gsw.json",
+   "plan_file": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen36/out/GEN36_PLAN_gsw.json",
+   "rows_file": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen36/out/GEN36_PLAN_gsw_ROWS.jsonl",
+   "walk_md5": "e3b730a472cf7e4e2493513662554526",
+   "plan_md5": "8e9ec0ab87183286cd5fafdcb3146a12",
+   "rows_md5": "d801678630c29141a65b82737fb9e63d",
+   "walk_table": {
+    "n": 218,
+    "first_hit": 218,
+    "exact_hit": 172,
+    "terminated_end": 218,
+    "over_run": 0
+   },
+   "n": 218,
+   "compile": {
+    "n": 218,
+    "n_exact": 172,
+    "n_first": 218,
+    "n_overrun": 0,
+    "err_hist": {
+     "OP_MISMATCH": 46,
+     "CERT_REJECT": 1
+    },
+    "fam": {
+     "gen32_ind_nest": {
+      "n": 13,
+      "exact": 13,
+      "first": 13,
+      "n_emit": 39,
+      "n_mismatch": 0
+     },
+     "gen32_ind_tower": {
+      "n": 24,
+      "exact": 24,
+      "first": 24,
+      "n_emit": 96,
+      "n_mismatch": 0
+     },
+     "gen32_ineq_cascade": {
+      "n": 181,
+      "exact": 135,
+      "first": 181,
+      "n_emit": 1006,
+      "n_mismatch": 46
+     }
+    },
+    "empty_proof": 0,
+    "exact_rate": 0.788991,
+    "first_rate": 1.0
+   },
+   "judge": {
+    "certified": 172,
+    "n": 218,
+    "reasons": {
+     "lean_reject_sorry": 46,
+     "autoimplicit_dependent": 46,
+     "sorry_ax": 46
+    }
+   },
+   "flag": {
+    "lam_txt": 0.0,
+    "lam_bind": 1.0,
+    "slot_cond": 1,
+    "slot_dev": 1,
+    "note": "纯规划臂: 渲染 text 损失移除 (V35_DESIGN §3 P1); 渲染头输出不计分"
+   },
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "ckpt_md5": "452c1683badf9d7e8b924af2a7bf1d6f",
+   "rows_n": 218
+  },
+  "gw": {
+   "walk_file": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen36/out/GEN36_WALK_GW.json",
+   "plan_file": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen36/out/GEN36_PLAN_GW.json",
+   "rows_file": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen36/out/GEN36_PLAN_GW_ROWS.jsonl",
+   "walk_md5": "43bce40ff76fb247012233e924efea3b",
+   "plan_md5": "0bffa0be6970526fd6b598b5791c760b",
+   "rows_md5": "fa629cd5ebebb96100b98bb31d0983e8",
+   "walk_table": {
+    "n": 218,
+    "first_hit": 218,
+    "exact_hit": 110,
+    "terminated_end": 218,
+    "over_run": 0
+   },
+   "n": 218,
+   "compile": {
+    "n": 218,
+    "n_exact": 110,
+    "n_first": 218,
+    "n_overrun": 0,
+    "err_hist": {
+     "OP_MISMATCH": 108
+    },
+    "fam": {
+     "gen32_ind_nest": {
+      "n": 13,
+      "exact": 13,
+      "first": 13,
+      "n_emit": 39,
+      "n_mismatch": 0
+     },
+     "gen32_ind_tower": {
+      "n": 24,
+      "exact": 24,
+      "first": 24,
+      "n_emit": 96,
+      "n_mismatch": 0
+     },
+     "gen32_ineq_cascade": {
+      "n": 181,
+      "exact": 73,
+      "first": 181,
+      "n_emit": 945,
+      "n_mismatch": 108
+     }
+    },
+    "empty_proof": 0,
+    "exact_rate": 0.504587,
+    "first_rate": 1.0
+   },
+   "judge": {
+    "certified": 110,
+    "n": 218,
+    "reasons": {
+     "lean_reject_sorry": 108,
+     "autoimplicit_dependent": 108,
+     "sorry_ax": 108
+    }
+   },
+   "flag": {
+    "lam_txt": 0.0,
+    "lam_bind": 1.0,
+    "slot_cond": 1,
+    "slot_dev": 1,
+    "note": "纯规划臂: 渲染 text 损失移除 (V35_DESIGN §3 P1); 渲染头输出不计分"
+   },
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "ckpt_md5": "5792b7b0d9d64aace0a0fd477c6a5f7b",
+   "rows_n": 218
+  }
+ },
+ "migration_md5": null,
+ "criteria": {
+  "M1_G_primary_arm": {
+   "label": "gw",
+   "certified": 110,
+   "n": 218,
+   "rate": 0.504587,
+   "wilson_lb": 0.438715,
+   "delta_vs_gen35": -0.03211
+  },
+  "M2_G_delta_vs_gen35_0.5367": -0.03211,
+  "M3_G_second_arm": {
+   "label": "gsw",
+   "certified": 172,
+   "n": 218,
+   "rate": 0.788991,
+   "wilson_lb": 0.730061,
+   "delta_vs_gen35": 0.252294
+  },
+  "n_exam": 218
+ },
+ "honesty": {
+  "note": "锚点 = gen35 纯规划 117/218 (0.5367); 每 +1 题 = +0.4587pt; 判卷冻结件 md5 断言由 C.judge_gate() 现场复核",
+  "declared": "K17 未执行≠判零; 缺件一律 None (不默认 0); 读件路径逐条登记"
+ },
+ "judge_md5_now": "7c31b58da9d7228cee31b9be581fe5dd"
+}

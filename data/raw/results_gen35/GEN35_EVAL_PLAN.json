@@ -1,0 +1,87 @@
+{
+ "schema": "gen35-eval/1",
+ "generated": "2026-09-24T17:21:26+0800",
+ "arm": "pure_plan",
+ "ckpt": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen35/ckpt/deep_plan_formal_6000.pt",
+ "ckpt_md5": "eb0e1c603ed12e6994e5935e4ef7ed6d",
+ "walk_table": {
+  "n": 218,
+  "first_hit": 218,
+  "exact_hit": 117,
+  "terminated_end": 218,
+  "over_run": 0
+ },
+ "compile": {
+  "n": 218,
+  "n_exact": 117,
+  "n_first": 218,
+  "n_overrun": 0,
+  "err_hist": {
+   "OP_MISMATCH": 101
+  },
+  "fam": {
+   "gen32_ind_nest": {
+    "n": 13,
+    "exact": 13,
+    "first": 13,
+    "n_emit": 39,
+    "n_mismatch": 0
+   },
+   "gen32_ind_tower": {
+    "n": 24,
+    "exact": 24,
+    "first": 24,
+    "n_emit": 96,
+    "n_mismatch": 0
+   },
+   "gen32_ineq_cascade": {
+    "n": 181,
+    "exact": 80,
+    "first": 181,
+    "n_emit": 952,
+    "n_mismatch": 101
+   }
+  },
+  "empty_proof": 0,
+  "exact_rate": 0.536697,
+  "first_rate": 1.0
+ },
+ "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+ "flag": {
+  "lam_txt": 0.0,
+  "lam_bind": 1.0,
+  "slot_cond": 1,
+  "slot_dev": 1,
+  "note": "纯规划臂: 渲染 text 损失移除 (V35_DESIGN §3 P1); 渲染头输出不计分"
+ },
+ "judge": {
+  "n": 218,
+  "certified": 117,
+  "rate": 0.536697,
+  "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+  "wall_s": 241.9,
+  "reason_hist": {
+   "lean_reject_sorry": 101,
+   "autoimplicit_dependent": 101,
+   "sorry_ax": 101
+  },
+  "fam": {
+   "gen32_ind_nest": {
+    "n": 13,
+    "certified": 13,
+    "exact": 13
+   },
+   "gen32_ind_tower": {
+    "n": 24,
+    "certified": 24,
+    "exact": 24
+   },
+   "gen32_ineq_cascade": {
+    "n": 181,
+    "certified": 80,
+    "exact": 80
+   }
+  }
+ },
+ "rows_md5": "6775dadb82c28990dbb401bd332e4540"
+}

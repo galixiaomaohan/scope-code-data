@@ -1,0 +1,517 @@
+{
+ "schema": "gen35-tables/1",
+ "generated": "2026-09-24T17:25:30+0800",
+ "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+ "n_exam": 218,
+ "prereg": {
+  "M1_F": "pure-plan certified/n",
+  "M2_F": "M1_F - stored-chain certified/n",
+  "M3_F": "chain first/exact hit",
+  "gate": "compiler gold-chain certified = 100%",
+  "gen34_exact_hit_ref": 0.555045871559633
+ },
+ "gate": {
+  "n": 2399,
+  "certified": 0,
+  "rate": 0.0,
+  "byte_eq_ref": 2399,
+  "byte_eq_rate": 1.0,
+  "by_family": {
+   "gen32_ind_nest": {
+    "n": 800,
+    "byte_eq": 800,
+    "certified": 0
+   },
+   "gen32_ind_tower": {
+    "n": 800,
+    "byte_eq": 800,
+    "certified": 0
+   },
+   "gen32_ineq_cascade": {
+    "n": 799,
+    "byte_eq": 799,
+    "certified": 0
+   }
+  },
+  "judge": {
+   "n": 2399,
+   "certified": 2399,
+   "rate": 1.0,
+   "reason_hist": {},
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd"
+  },
+  "neg_diagnosis": null,
+  "pass": false
+ },
+ "stored_chain": {
+  "compile": {
+   "n": 218,
+   "n_exact": 121,
+   "n_first": 218,
+   "n_overrun": 0,
+   "err_hist": {
+    "OP_MISMATCH": 97
+   },
+   "fam": {
+    "gen32_ind_nest": {
+     "n": 13,
+     "exact": 13,
+     "first": 13,
+     "n_emit": 39,
+     "n_mismatch": 0
+    },
+    "gen32_ind_tower": {
+     "n": 24,
+     "exact": 24,
+     "first": 24,
+     "n_emit": 96,
+     "n_mismatch": 0
+    },
+    "gen32_ineq_cascade": {
+     "n": 181,
+     "exact": 84,
+     "first": 181,
+     "n_emit": 956,
+     "n_mismatch": 97
+    }
+   },
+   "empty_proof": 0,
+   "exact_rate": 0.555046,
+   "first_rate": 1.0
+  },
+  "judge": {
+   "n": 218,
+   "certified": 121,
+   "rate": 0.555046,
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "wall_s": 241.9,
+   "reason_hist": {
+    "lean_reject_sorry": 97,
+    "autoimplicit_dependent": 97,
+    "sorry_ax": 97
+   },
+   "fam": {
+    "gen32_ind_nest": {
+     "n": 13,
+     "certified": 13,
+     "exact": 13
+    },
+    "gen32_ind_tower": {
+     "n": 24,
+     "certified": 24,
+     "exact": 24
+    },
+    "gen32_ineq_cascade": {
+     "n": 181,
+     "certified": 84,
+     "exact": 84
+    }
+   }
+  },
+  "decode_buckets": {
+   "walk_exact=True|walk_first=True|cert=True": 121,
+   "walk_exact=False|walk_first=True|cert=False": 97
+  },
+  "chain_exact_infile": 121,
+  "chain_first_infile": 218
+ },
+ "gold_chain_upper": {
+  "compile": {
+   "n": 218,
+   "n_exact": 218,
+   "n_first": 218,
+   "n_overrun": 0,
+   "err_hist": {},
+   "fam": {
+    "gen32_ind_nest": {
+     "n": 13,
+     "exact": 13,
+     "first": 13,
+     "n_emit": 39,
+     "n_mismatch": 0
+    },
+    "gen32_ind_tower": {
+     "n": 24,
+     "exact": 24,
+     "first": 24,
+     "n_emit": 96,
+     "n_mismatch": 0
+    },
+    "gen32_ineq_cascade": {
+     "n": 181,
+     "exact": 181,
+     "first": 181,
+     "n_emit": 1053,
+     "n_mismatch": 0
+    }
+   },
+   "empty_proof": 0,
+   "exact_rate": 1.0,
+   "first_rate": 1.0
+  },
+  "judge": {
+   "n": 218,
+   "certified": 218,
+   "rate": 1.0,
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "wall_s": 332.2,
+   "reason_hist": {},
+   "fam": {
+    "gen32_ind_nest": {
+     "n": 13,
+     "certified": 13,
+     "exact": 13
+    },
+    "gen32_ind_tower": {
+     "n": 24,
+     "certified": 24,
+     "exact": 24
+    },
+    "gen32_ineq_cascade": {
+     "n": 181,
+     "certified": 181,
+     "exact": 181
+    }
+   }
+  },
+  "pass": true
+ },
+ "endpoint_gen34_slotA": {
+  "n": 218,
+  "certified": 1,
+  "certified_names": [
+   "gen32_ind_tower_300063"
+  ],
+  "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen34/out/GEN33_PRESCREEN_TRACE_slotA.jsonl",
+  "md5": "5342a92a6225581e1ac5822cec26194f",
+  "note": "gen34 官方端到端读数 (渲染=LLM), 本批只读不回改"
+ },
+ "aud1_zero_param": {
+  "schema": "gen35-aud1/1",
+  "note": "零参数 (族众数链, 取自训练语料分布) 应用于考卷; 不用考卷标签",
+  "mode_by_family": {
+   "gen32_ind_nest": [
+    "gen32_nest_solve",
+    "gen32_nest_fold",
+    "gen32_nest_solve",
+    "gen32_nest_delta",
+    "gen32_nest_close"
+   ],
+   "gen32_ind_tower": [
+    "gen32_nest_solve",
+    "gen32_nest_delta",
+    "gen32_nest_fold",
+    "gen32_nest_solve",
+    "gen32_nest_delta",
+    "gen32_nest_fold",
+    "gen32_nest_solve",
+    "gen32_nest_delta",
+    "gen32_nest_close"
+   ],
+   "gen32_ineq_cascade": [
+    "gen32_sos_cross",
+    "gen32_sos_block",
+    "gen32_sos_block",
+    "gen32_sos_block",
+    "gen32_sos_tail_other"
+   ]
+  },
+  "n": 218,
+  "n_exact": 61,
+  "exact_rate": 0.279817,
+  "n_first": 143,
+  "first_rate": 0.655963,
+  "n_prefix": 61,
+  "prefix_rate": 0.279817,
+  "per_pos_acc": {
+   "0": 0.655963,
+   "1": 0.894495,
+   "2": 1.0,
+   "3": 1.0,
+   "4": 0.316514,
+   "5": 1.0,
+   "6": 1.0,
+   "7": 1.0,
+   "8": 1.0
+  }
+ },
+ "pure_plan": {
+  "walk": {
+   "n": 218,
+   "first_hit": 218,
+   "exact_hit": 117,
+   "terminated_end": 218,
+   "over_run": 0
+  },
+  "compile": {
+   "n": 218,
+   "n_exact": 117,
+   "n_first": 218,
+   "n_overrun": 0,
+   "err_hist": {
+    "OP_MISMATCH": 101
+   },
+   "fam": {
+    "gen32_ind_nest": {
+     "n": 13,
+     "exact": 13,
+     "first": 13,
+     "n_emit": 39,
+     "n_mismatch": 0
+    },
+    "gen32_ind_tower": {
+     "n": 24,
+     "exact": 24,
+     "first": 24,
+     "n_emit": 96,
+     "n_mismatch": 0
+    },
+    "gen32_ineq_cascade": {
+     "n": 181,
+     "exact": 80,
+     "first": 181,
+     "n_emit": 952,
+     "n_mismatch": 101
+    }
+   },
+   "empty_proof": 0,
+   "exact_rate": 0.536697,
+   "first_rate": 1.0
+  },
+  "judge": {
+   "n": 218,
+   "certified": 117,
+   "rate": 0.536697,
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "wall_s": 241.9,
+   "reason_hist": {
+    "lean_reject_sorry": 101,
+    "autoimplicit_dependent": 101,
+    "sorry_ax": 101
+   },
+   "fam": {
+    "gen32_ind_nest": {
+     "n": 13,
+     "certified": 13,
+     "exact": 13
+    },
+    "gen32_ind_tower": {
+     "n": 24,
+     "certified": 24,
+     "exact": 24
+    },
+    "gen32_ineq_cascade": {
+     "n": 181,
+     "certified": 80,
+     "exact": 80
+    }
+   }
+  },
+  "ckpt": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen35/ckpt/deep_plan_formal_6000.pt",
+  "ckpt_md5": "eb0e1c603ed12e6994e5935e4ef7ed6d",
+  "flag": {
+   "lam_txt": 0.0,
+   "lam_bind": 1.0,
+   "slot_cond": 1,
+   "slot_dev": 1,
+   "note": "纯规划臂: 渲染 text 损失移除 (V35_DESIGN §3 P1); 渲染头输出不计分"
+  }
+ },
+ "paeq": {
+  "pass": true,
+  "state_dict": {
+   "n_keys": 292,
+   "n_equal": 292,
+   "n_diff": 0,
+   "bad": []
+  },
+  "logits_first_step": {
+   "torch_equal": true,
+   "maxdiff": 0.0,
+   "n_dim": 3880,
+   "shape": [
+    20,
+    194
+   ],
+   "n_rows": 2
+  },
+  "grad_cut": {
+   "lam1": {
+    "total": 39.57372283935547,
+    "total_perturbed": 44.56446838378906,
+    "absdiff": 4.990745544433594,
+    "lt_main": 7.731470584869385,
+    "ntxt": 662,
+    "nbf": 32
+   },
+   "lam0": {
+    "total": 31.84225082397461,
+    "total_perturbed": 31.84225082397461,
+    "absdiff": 0.0,
+    "lt_main": 7.731470584869385,
+    "ntxt": 662,
+    "nbf": 32
+   },
+   "slot_side": {
+    "n_slot_target": 79,
+    "n_nonslot_target": 583,
+    "g_dev": 0.0,
+    "g_pos": 0.0,
+    "slot_cond": true,
+    "slot_dev": true
+   }
+  },
+  "text_term_dead_at_lam0": true,
+  "text_term_alive_at_lam1": true,
+  "slot_term_alive": true,
+  "plan_md5": "3449fb7ad1ecd5d5dcdd55de34408916",
+  "plan_file_md5": "89de9e657b1986c6acf3cdf944e721ca",
+  "plan_md5_same_as_gen34": true,
+  "out_md5": null
+ },
+ "four_way": {
+  "1_pure_plan_llm_x_compiler": {
+   "certified": 117,
+   "n": 218,
+   "rate": 0.536697
+  },
+  "2_gold_chain_x_compiler": {
+   "certified": 218,
+   "n": 218,
+   "rate": 1.0
+  },
+  "3_gen34A_chain_x_compiler": {
+   "certified": 121,
+   "n": 218,
+   "rate": 0.555046
+  },
+  "4_gen34A_end_to_end": {
+   "certified": 1,
+   "n": 218,
+   "note": "旧路线锚点 (LLM 渲染)"
+  }
+ },
+ "metrics": {
+  "M1_F": 0.536697,
+  "M1_F_int": "117/218",
+  "M2_F": -0.018349,
+  "M2_F_int": "117/218 - 121/218",
+  "M3_F_first_hit": 1.0,
+  "M3_F_exact_hit": 0.536697,
+  "M3_F_exact_ref_gen34": 0.555046,
+  "M3_F_gate_lb": 0.48869,
+  "M3_F_pass": true,
+  "compiler_gate": false,
+  "M1_F_vs_gen33_base_0": 0.536697,
+  "M1_F_vs_gen34_slotA_1": 0.53211
+ },
+ "decode_buckets_pure_plan": {
+  "exact=True|first=True|cert=True": 117,
+  "exact=False|first=True|cert=False": 101
+ },
+ "pure_plan_by_family": {
+  "gen32_ind_nest": {
+   "n": 13,
+   "cert": 13,
+   "exact": 13,
+   "first": 13
+  },
+  "gen32_ind_tower": {
+   "n": 24,
+   "cert": 24,
+   "exact": 24,
+   "first": 24
+  },
+  "gen32_ineq_cascade": {
+   "n": 181,
+   "cert": 80,
+   "exact": 80,
+   "first": 181
+  }
+ },
+ "pure_plan_step_err_hist": {
+  "OP_MISMATCH": 101
+ },
+ "stored_chain_by_family": {
+  "gen32_ind_nest": {
+   "n": 13,
+   "cert": 13,
+   "exact": 13
+  },
+  "gen32_ind_tower": {
+   "n": 24,
+   "cert": 24,
+   "exact": 24
+  },
+  "gen32_ineq_cascade": {
+   "n": 181,
+   "cert": 84,
+   "exact": 84
+  }
+ },
+ "dual_criteria": {},
+ "gen34_tables_ref": null,
+ "train": {
+  "tag": "deep_plan",
+  "plan": {
+   "steps": 6000,
+   "bs": 6,
+   "md5": "3449fb7ad1ecd5d5dcdd55de34408916",
+   "held_hits": 0,
+   "interleave": "3 类 × 2 题/步"
+  },
+  "steps": null,
+  "flags": {
+   "lam_bind": null,
+   "lam_txt": null,
+   "slot_cond": {
+    "slot_cond": true,
+    "slot_dev": true,
+    "slot_beta": 8.0,
+    "lam_slot": 3.0,
+    "n_slot_kinds": 8,
+    "slot_params": 4610,
+    "g_pos": 0.22745442390441895,
+    "g_dev": 0.20279265940189362
+   },
+   "slot_dev": null
+  },
+  "curve_first": {
+   "step": 1,
+   "loss": 30.27759,
+   "chain": 10.87288,
+   "slot": 6.02133,
+   "text": 7.29196
+  },
+  "curve_last": {
+   "step": 6000,
+   "loss": 0.05889,
+   "chain": 0.00014,
+   "slot": 0.37077,
+   "text": 7.98913
+  },
+  "n_curve_rows": 6000,
+  "eval_first": {
+   "n_rows": 48,
+   "sel_top1": 0.5801282051282052,
+   "n_frames": 312,
+   "slot_top1": 0.23205741626794257,
+   "slot_top1_nonunk": 0.562862669245648,
+   "n_slots": 1254,
+   "render_tok_acc": 0.2711726384364821,
+   "n_render_tok": 9824
+  },
+  "eval_last": {
+   "n_rows": 48,
+   "sel_top1": 1.0,
+   "n_frames": 408,
+   "slot_top1": 0.35800240673886885,
+   "slot_top1_nonunk": 0.9028831562974203,
+   "n_slots": 1662,
+   "render_tok_acc": 0.3483458646616541,
+   "n_render_tok": 13300
+  },
+  "eval_n": 120
+ },
+ "wall_s": 0.7
+}

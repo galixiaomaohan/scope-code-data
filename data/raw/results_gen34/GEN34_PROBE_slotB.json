@@ -1,0 +1,54 @@
+{
+ "schema": "gen34-probe-slot/1",
+ "ckpt": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen34/ckpt/deep_slotB_formal_6000.pt",
+ "ckpt_md5": "cd607ba29af1aab18a0d1ea12b6597e4",
+ "step": 6000,
+ "slot_dev_flag": false,
+ "n_rows": 24,
+ "slot_params": {
+  "slot_cond": true,
+  "slot_dev": false,
+  "slot_beta": 8.0,
+  "lam_slot": 3.0,
+  "n_slot_kinds": 8,
+  "slot_params": 4610,
+  "g_pos": 0.2388208955526352,
+  "g_dev": 0.0
+ },
+ "gate_on": {
+  "n_slot_label": 314,
+  "argmax_hit": 311,
+  "argmax_hit_rate": 0.990446,
+  "device_tok_rank1": 311,
+  "device_tok_rank5": 314,
+  "device_tok_rank20": 314,
+  "n_dev": 314,
+  "device_rank1_rate": 0.990446,
+  "device_rank5_rate": 1.0,
+  "margin_top1_minus_dev_median": 0.0,
+  "margin_top1_minus_dev_p90": 0.0,
+  "tag": "g as-trained"
+ },
+ "gate_off": {
+  "n_slot_label": 314,
+  "argmax_hit": 311,
+  "argmax_hit_rate": 0.990446,
+  "device_tok_rank1": 311,
+  "device_tok_rank5": 314,
+  "device_tok_rank20": 314,
+  "n_dev": 314,
+  "device_rank1_rate": 0.990446,
+  "device_rank5_rate": 1.0,
+  "margin_top1_minus_dev_median": 0.0,
+  "margin_top1_minus_dev_p90": 0.0,
+  "tag": "g_dev:=0 (对照)"
+ },
+ "md5_partial": "cc7e42b209aef3902e85114973257049",
+ "effective_boost": {
+  "g_dev": 0.0,
+  "beta": 8.0,
+  "g_dev_times_beta": 0.0,
+  "sufficient_p90_margin": false
+ },
+ "delta_argmax_hit": 0
+}

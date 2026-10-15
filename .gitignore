@@ -1,0 +1,11 @@
+# local build artifacts (README.md section 1: not package content)
+__pycache__/
+*.pyc
+figures_src/output/
+figures_src/Rplots.pdf
+*.regenerated.csv
+*.regenerated.json
+*.alignment.json
+*.alignment-layout.json
+*.collision-audit.json
+*.audit.pdf

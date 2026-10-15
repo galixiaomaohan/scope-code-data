@@ -1,0 +1,44 @@
+{
+ "figure": "fig_train_dynamics",
+ "what": "Two-panel training-dynamics view of the final CCP configuration (v7 head=220, arm s1, a2wt1, 6000 steps). (a) optimised objective with its chain and slot components, log scale; (b) clipped gradient norm (left log axis) against the slot-head bias g_pos and the held-out operator top-1 accuracy (right axis).",
+ "one_line_reading": "The objective falls 4.03 -> 0.025 nats over 6000 steps and the clipped gradient norm decays 98 -> 1.9 with it; the two held-out accuracies on the right axis are inert (operator top-1 is saturated at 1.00 from step 50, g_pos stays near 0.37), so this run must be read off the loss, not off eval.",
+ "source": [
+  {
+   "path": "<original workstation path, not shipped>",
+   "md5": "3e7aabdfa97084da51895009046974ec",
+   "rows": 6000,
+   "role": "per-training-step curve (1 line per step)"
+  }
+ ],
+ "outputs": {
+  "png": "<original workstation path, not shipped>",
+  "csv": "<original workstation path, not shipped>"
+ },
+ "method": "loss/chain/slot/text taken verbatim from the jsonl; curves drawn as 51-step centred moving average over the raw trace; eval points are the rotating 48-row held-out pool evaluated every 50 steps.",
+ "readings": {
+  "loss_step1": 4.02865,
+  "loss_step6000": 0.02543,
+  "chain_step6000": 0.02264,
+  "slot_step6000": 0.01879,
+  "text_step6000": 8.11689,
+  "text_min": 5.4239,
+  "gn_max": 98.4948,
+  "gn_step6000": 1.918,
+  "slot_g_pos_first": 0.3643952,
+  "slot_g_pos_last": 0.37130964,
+  "eval_sel_top1_first": 1.0,
+  "eval_sel_top1_last": 1.0,
+  "eval_sel_top1_n_exactly_1": 86,
+  "eval_slot_top1_first": 0.4003189792663477,
+  "eval_slot_top1_last": 0.0,
+  "eval_render_tok_acc_last": 0.2641242937853107,
+  "n_eval_points": 120,
+  "wall_hours": 4594.7
+ },
+ "caveats": [
+  "'text' (render-token CE, ~7-8 nats) uses a different denominator than loss/chain/slot and is kept only in the CSV.",
+  "eval_sel_top1 is 1.00 already at step 50 and exactly 1.00 at 86 of the 120 eval points -- a saturated / too-easy probe that must NOT be presented as a learning curve. Its residual variance is n_frames rounding.",
+  "eval_slot_top1 decays to 0.0 by step 6000 (from 0.400 at step 50) even though the slot training loss falls to 0.019 -- the two slot read-outs disagree; eval_render_tok_acc stays flat at 0.26-0.31. Neither is quoted in the panel.",
+  "the eval pool rotates (eval_rotate), so successive eval points are not on an identical row set."
+ ]
+}

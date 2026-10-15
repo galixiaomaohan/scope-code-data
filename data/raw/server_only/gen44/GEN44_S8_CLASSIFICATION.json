@@ -1,0 +1,53 @@
+{
+ "schema": "gen44-s8-classify/1",
+ "created": "2026-09-26T11:11:15+0800",
+ "N_library": 139826,
+ "classes": {
+  "exam_in_domain": {
+   "n": 48106,
+   "rule": "state1(A1 路由行) ∪ B1-B9 claim 池 (装置可解析且有族可编链)"
+  },
+  "exam_parseable_no_family": {
+   "n": 84267,
+   "rule": "state2 ∪ (state3 − ①) ∪ census error 行; 不作 0 分"
+  },
+  "exam_unparseable": {
+   "n": 5,
+   "rule": "census error 行 (解析层失败); 不作 0 分"
+  }
+ },
+ "counts": {
+  "A1_state1": 2050,
+  "B_claim_pool": 46056,
+  "B_certifiable": 1535,
+  "state2": 53173,
+  "state3": 84598,
+  "error": 5
+ },
+ "c6": {
+  "n": 7448,
+  "in_A1": 0,
+  "in_B_pool": 0,
+  "in_B_cert": 0,
+  "in_state2": 0,
+  "in_state3": 7448,
+  "in_err": 0
+ },
+ "denominator": {
+  "value": 132378,
+  "doc_value": 132375,
+  "delta_vs_doc": 3,
+  "note": "139826 − 7448 = 132378 (文书 132375, 差 3 行随报告披露)"
+ },
+ "judged_volume": {
+  "A1_rendered": 1979,
+  "B_cert_rendered": 1525,
+  "note": "由 manifest_va / manifest_vb 阶段回填"
+ },
+ "render_skip_policy": "① 内不可渲染行 (claim_uncert 无装置证书 / 模型链不可渲染) 单列, 不作 0 分",
+ "not_counted_as_zero": [
+  "exam_parseable_no_family",
+  "exam_unparseable",
+  "render_skip"
+ ]
+}

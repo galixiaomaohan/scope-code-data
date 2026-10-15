@@ -1,0 +1,848 @@
+{
+ "schema": "ccp-a-hybrid-smoke/2",
+ "tag": "formal_attn_nostate",
+ "run_kind": "formal",
+ "headline": "冒烟: 机械通路连通证据",
+ "generated": "2026-09-24T01:07:15+0800",
+ "law": "变更 74 (混合主臂) + 变更 75 (红线 R0) + gen27 修正令 (CRIT-1..LOW-16)",
+ "arch": "V32 链头 (step 168 / slot 24x238) + LM 渲染头, 同体单序列联合训练",
+ "track": {
+  "body": "/home/data/ZHC/tcaboost/research/models/SmolLM2-135M",
+  "body_dtype": "fp32",
+  "dual_track_disclosure": "MED-11: 本批只跑 135M 轨; 1.7B 轨代码路径存在 (CCPModel.dyn=True / cast_body bf16) 但**未接未跑**, 不作任何读数",
+  "params_M": 135.5
+ },
+ "cache": {
+  "path": "scratch/ccp/gen26/cache/formal_v2f_all.bin",
+  "md5": "d2aecc3cb85dd88f48c11aa9d92341ef",
+  "n_rows": 9366,
+  "segments": {
+   "a_train": [
+    0,
+    8898
+   ],
+   "a_held": [
+    8898,
+    9366
+   ]
+  },
+  "n_train": 8898,
+  "n_held": 468
+ },
+ "sidecar": {
+  "path": "scratch/ccp/gen26/out/V2F_RENDER_SIDECAR.jsonl",
+  "md5": "83b5b7b29b21c6f80d2d55fc4feb2ea8",
+  "n": 9366
+ },
+ "init": {
+  "path": "ckpt/sla_v31f.pt",
+  "info": {
+   "value_head_rows_copied": 151,
+   "ccp_rows_parent_copy": {
+    "161": 156,
+    "162": 158,
+    "163": 157,
+    "164": 158,
+    "165": 155,
+    "166": 160,
+    "167": 160,
+    "168": 161,
+    "169": 162,
+    "170": 161,
+    "171": 162,
+    "172": 161,
+    "173": 162,
+    "174": 163,
+    "175": 163,
+    "176": 164,
+    "177": 164,
+    "178": 164,
+    "179": 161,
+    "180": 162,
+    "181": 161,
+    "182": 162,
+    "183": 164,
+    "184": 164
+   },
+   "n_params": 135473753,
+   "head": 185,
+   "nvals": 352
+  }
+ },
+ "plan_attn": {
+  "schema": "ccp-a-planseq-attn/3",
+  "n_pa_params": 405836,
+  "n_ps_params": 74304,
+  "n_new_params": 480140,
+  "n_new_params_M": 0.4801,
+  "budget_M": 2.0,
+  "within_budget": true,
+  "enabled": true,
+  "capture": false,
+  "plan_summary": true,
+  "arch": {
+   "n_heads": 2,
+   "d_head": 64,
+   "d_a": 128,
+   "d_g": 64,
+   "d_arg": 32,
+   "d_dev": 64,
+   "d2": 1152,
+   "head": 185,
+   "nvals": 352,
+   "use_state": false,
+   "e_dim": 96,
+   "n_buckets": 6,
+   "seed": 20260923
+  },
+  "HID": 576,
+  "head": 185,
+  "nvals": 352,
+  "bias": {
+   "bucket_edges": [
+    "d=1",
+    "d=2",
+    "d=3",
+    "d=4",
+    "d=5..7",
+    "d>=8"
+   ],
+   "per_head": [
+    [
+     0.001054,
+     -0.000638,
+     0.00018,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     -0.000656,
+     0.002495,
+     -0.002203,
+     0.0,
+     0.0,
+     0.0
+    ]
+   ],
+   "recency_gap_head": [
+    0.001054,
+    -0.000656
+   ],
+   "note": "近步-远步偏置差 >0 ⇒ 该头习得近步加权; 起点全零 (无先验)"
+  },
+  "stats": {
+   "calls": 6372,
+   "delta_max": 1.1113433837890625,
+   "attn_entropy_sum": 34861.76013514958,
+   "attn_rows": 149384,
+   "o_norm_mean": 5.338983058929443
+  }
+ },
+ "objective": {
+  "form": "L = L_step + (lam_bind/NSLOT)*L_slot + lam_txt*L_text",
+  "lam_bind": 1.0,
+  "lam_txt": 1.0,
+  "NSLOT": 24,
+  "crit1_fix": "渲染段自回归错位 (位置 p 标签 = ids[p+1]); 见单测 MISALIGN"
+ },
+ "plan": {
+  "steps": 6000,
+  "bs": 6,
+  "md5": "8826980483188e020d1f487d0df7ac8f",
+  "held_hits": 0,
+  "interleave": "3 类 × 2 题/步"
+ },
+ "coverage_med6": {
+  "cls_pool": {
+   "ind": 4958,
+   "ineq": 3097,
+   "nt": 843
+  },
+  "seen_unique_final": {
+   "ind": 4615,
+   "ineq": 3066,
+   "nt": 843
+  },
+  "deviation": "交错混喂按最小类截断 ⇒ 单 epoch 只覆盖各类 per×批数 行; 跨 epoch 重洗扩大覆盖 (seen 列入曲线逐 10 步)"
+ },
+ "micro": {
+  "token_cap": 9000,
+  "total_micro_batches": 6000
+ },
+ "eval_med9": {
+  "eval_rows": 48,
+  "rotate": 1,
+  "held_pool": 468
+ },
+ "gpu": {
+  "dev": "cuda:2",
+  "used": 3629,
+  "total": 12282,
+  "free": 8653
+ },
+ "steps_done": 6000,
+ "stopped_nan": false,
+ "curve": {
+  "path": "scratch/ccp/gen30/out/FORMAL_ATTN_NOSTATE_CURVE.jsonl",
+  "md5": "ad75d068c7c019033eda0f36eb8659eb",
+  "first": {
+   "step": 1,
+   "loss": 13.21235,
+   "chain": 8.43635,
+   "slot": 4.08744,
+   "text": 4.60568,
+   "gn": 38.8027,
+   "lr": 1.6e-06,
+   "pa_delta_max": 0.0,
+   "ps_delta_max": 0.0,
+   "L": 287,
+   "micro": 1,
+   "nv": 18,
+   "nbf": 16,
+   "ntxt": 317,
+   "secs": 9.09,
+   "batch_cls": [
+    "ind",
+    "ind",
+    "ineq",
+    "ineq",
+    "nt",
+    "nt"
+   ],
+   "batch_cls_counts": {
+    "ind": 2,
+    "ineq": 2,
+    "nt": 2
+   },
+   "seen": {
+    "ind": 2,
+    "ineq": 2,
+    "nt": 2
+   }
+  },
+  "last": {
+   "step": 6000,
+   "loss": 0.31322,
+   "chain": 0.21485,
+   "slot": 1.23972,
+   "text": 0.04671,
+   "gn": 9.6673,
+   "lr": 4e-05,
+   "pa_delta_max": 1.046706,
+   "ps_delta_max": 0.373976,
+   "L": 458,
+   "micro": 1,
+   "nv": 18,
+   "nbf": 23,
+   "ntxt": 307,
+   "secs": 3227.6,
+   "batch_cls": [
+    "ind",
+    "ind",
+    "ineq",
+    "ineq",
+    "nt",
+    "nt"
+   ],
+   "batch_cls_counts": {
+    "ind": 2,
+    "ineq": 2,
+    "nt": 2
+   },
+   "seen": {
+    "ind": 4615,
+    "ineq": 3066,
+    "nt": 843
+   },
+   "eval": {
+    "n_rows": 48,
+    "sel_top1": 0.9936305732484076,
+    "n_frames": 157,
+    "slot_top1": 0.3366013071895425,
+    "slot_top1_nonunk": 0.7103448275862069,
+    "n_slots": 306,
+    "render_tok_acc": 0.9759450171821306,
+    "n_render_tok": 2328
+   },
+   "eval_idx": [
+    8922,
+    8923,
+    8924,
+    8925,
+    8926,
+    8927,
+    8928,
+    8929,
+    8930,
+    8931,
+    8932,
+    8933,
+    8934,
+    8935,
+    8936,
+    8937,
+    8938,
+    8939,
+    8940,
+    8941,
+    8942,
+    8943,
+    8944,
+    8945,
+    8946,
+    8947,
+    8948,
+    8949,
+    8950,
+    8951,
+    8952,
+    8953,
+    8954,
+    8955,
+    8956,
+    8957,
+    8958,
+    8959,
+    8960,
+    8961,
+    8962,
+    8963,
+    8964,
+    8965,
+    8966,
+    8967,
+    8968,
+    8969
+   ]
+  },
+  "min": {
+   "loss": 0.00033,
+   "chain": 1e-05,
+   "slot": 0.00018,
+   "text": 5e-05
+  }
+ },
+ "has_three_curves": true,
+ "ckpt": {
+  "path": "scratch/ccp/gen30/ckpt/hybrid_formal_attn_nostate_f935e143_6000.pt",
+  "md5": "2374d7ea4ec349597a02fafdc46a4f73"
+ },
+ "samples": [
+  {
+   "ri": 8898,
+   "name": "ccp_ind_lin_000010",
+   "cls": "ind",
+   "seg": "a_held",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ind_recurrence",
+     "ccp_ring_identity"
+    ],
+    "gold": [
+     "ccp_ind_recurrence",
+     "ccp_ring_identity"
+    ],
+    "first_hit": true,
+    "exact_hit": true,
+    "prefix_hit": true,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "bridge": 1,
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 0,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 161,
+      "pred": "ccp_ind_recurrence",
+      "gold": "ccp_ind_recurrence",
+      "gold_in_space": true,
+      "hit": true,
+      "p_max": 0.99996,
+      "margin": 0.99994,
+      "args_src": "bridge"
+     },
+     {
+      "k": 1,
+      "pred_idx": 162,
+      "pred": "ccp_ring_identity",
+      "gold": "ccp_ring_identity",
+      "gold_in_space": true,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 0.99999,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99999,
+      "margin": 0.99999,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nintro n\ninduction n with\n| zero => simp [h0]\n| succ n ih =>\n  rw [hstep, ih]\n  push_cast\n  ring\n```",
+    "n_tok": 47,
+    "body": "intro n\ninduction n with\n| zero => simp [h0]\n| succ n ih =>\n  rw [hstep, ih]\n  push_cast\n  ring"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ind_recurrence",
+      "hit": true,
+      "keywords": [
+       "induction",
+       "induct",
+       "hstep",
+       "ih"
+      ]
+     },
+     {
+      "op": "ccp_ring_identity",
+      "hit": true,
+      "keywords": [
+       "ring",
+       "push_cast",
+       "norm_num",
+       "linarith",
+       "omega"
+      ]
+     }
+    ]
+   },
+   "err": null
+  },
+  {
+   "ri": 8899,
+   "name": "ccp_ind_lin_000049",
+   "cls": "ind",
+   "seg": "a_held",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ind_recurrence",
+     "ccp_ring_identity"
+    ],
+    "gold": [
+     "ccp_ind_recurrence",
+     "ccp_ring_identity"
+    ],
+    "first_hit": true,
+    "exact_hit": true,
+    "prefix_hit": true,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "bridge": 1,
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 0,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 161,
+      "pred": "ccp_ind_recurrence",
+      "gold": "ccp_ind_recurrence",
+      "gold_in_space": true,
+      "hit": true,
+      "p_max": 0.99999,
+      "margin": 0.99999,
+      "args_src": "bridge"
+     },
+     {
+      "k": 1,
+      "pred_idx": 162,
+      "pred": "ccp_ring_identity",
+      "gold": "ccp_ring_identity",
+      "gold_in_space": true,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 0.99999,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99999,
+      "margin": 0.99998,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nintro n\ninduction n with\n| zero => simp [h0]\n| succ n ih =>\n  rw [hstep, ih]\n  push_cast\n  ring\n```",
+    "n_tok": 47,
+    "body": "intro n\ninduction n with\n| zero => simp [h0]\n| succ n ih =>\n  rw [hstep, ih]\n  push_cast\n  ring"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ind_recurrence",
+      "hit": true,
+      "keywords": [
+       "induction",
+       "induct",
+       "hstep",
+       "ih"
+      ]
+     },
+     {
+      "op": "ccp_ring_identity",
+      "hit": true,
+      "keywords": [
+       "ring",
+       "push_cast",
+       "norm_num",
+       "linarith",
+       "omega"
+      ]
+     }
+    ]
+   },
+   "err": null
+  },
+  {
+   "ri": 8900,
+   "name": "ccp_ind_aff2_000053",
+   "cls": "ind",
+   "seg": "a_held",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ind_recurrence",
+     "ccp_ring_identity"
+    ],
+    "gold": [
+     "ccp_ind_recurrence",
+     "ccp_ring_identity"
+    ],
+    "first_hit": true,
+    "exact_hit": true,
+    "prefix_hit": true,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "bridge": 1,
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 0,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 161,
+      "pred": "ccp_ind_recurrence",
+      "gold": "ccp_ind_recurrence",
+      "gold_in_space": true,
+      "hit": true,
+      "p_max": 0.99999,
+      "margin": 0.99998,
+      "args_src": "bridge"
+     },
+     {
+      "k": 1,
+      "pred_idx": 162,
+      "pred": "ccp_ring_identity",
+      "gold": "ccp_ring_identity",
+      "gold_in_space": true,
+      "hit": true,
+      "p_max": 0.99999,
+      "margin": 0.99998,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 0.99999,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nintro n\ninduction n with\n| zero => simp [h0]\n| succ n ih =>\n  rw [hstep, ih, pow_succ]\n  ring\n```",
+    "n_tok": 48,
+    "body": "intro n\ninduction n with\n| zero => simp [h0]\n| succ n ih =>\n  rw [hstep, ih, pow_succ]\n  ring"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ind_recurrence",
+      "hit": true,
+      "keywords": [
+       "induction",
+       "induct",
+       "hstep",
+       "ih"
+      ]
+     },
+     {
+      "op": "ccp_ring_identity",
+      "hit": true,
+      "keywords": [
+       "ring",
+       "push_cast",
+       "norm_num",
+       "linarith",
+       "omega"
+      ]
+     }
+    ]
+   },
+   "err": null
+  },
+  {
+   "ri": 8901,
+   "name": "ccp_ind_aff2_000095",
+   "cls": "ind",
+   "seg": "a_held",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ind_recurrence",
+     "ccp_ring_identity"
+    ],
+    "gold": [
+     "ccp_ind_recurrence",
+     "ccp_ring_identity"
+    ],
+    "first_hit": true,
+    "exact_hit": true,
+    "prefix_hit": true,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "bridge": 1,
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 0,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 161,
+      "pred": "ccp_ind_recurrence",
+      "gold": "ccp_ind_recurrence",
+      "gold_in_space": true,
+      "hit": true,
+      "p_max": 0.99996,
+      "margin": 0.99994,
+      "args_src": "bridge"
+     },
+     {
+      "k": 1,
+      "pred_idx": 162,
+      "pred": "ccp_ring_identity",
+      "gold": "ccp_ring_identity",
+      "gold_in_space": true,
+      "hit": true,
+      "p_max": 0.99998,
+      "margin": 0.99998,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 0.99999,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nintro n\ninduction n with\n| zero => simp [h0]\n| succ n ih =>\n  rw [hstep, ih, pow_succ]\n  ring\n```",
+    "n_tok": 48,
+    "body": "intro n\ninduction n with\n| zero => simp [h0]\n| succ n ih =>\n  rw [hstep, ih, pow_succ]\n  ring"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ind_recurrence",
+      "hit": true,
+      "keywords": [
+       "induction",
+       "induct",
+       "hstep",
+       "ih"
+      ]
+     },
+     {
+      "op": "ccp_ring_identity",
+      "hit": true,
+      "keywords": [
+       "ring",
+       "push_cast",
+       "norm_num",
+       "linarith",
+       "omega"
+      ]
+     }
+    ]
+   },
+   "err": null
+  },
+  {
+   "ri": 8902,
+   "name": "ccp_ind_lin_000097",
+   "cls": "ind",
+   "seg": "a_held",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ind_recurrence",
+     "ccp_ring_identity"
+    ],
+    "gold": [
+     "ccp_ind_recurrence",
+     "ccp_ring_identity"
+    ],
+    "first_hit": true,
+    "exact_hit": true,
+    "prefix_hit": true,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "bridge": 1,
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 0,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 161,
+      "pred": "ccp_ind_recurrence",
+      "gold": "ccp_ind_recurrence",
+      "gold_in_space": true,
+      "hit": true,
+      "p_max": 0.99999,
+      "margin": 0.99998,
+      "args_src": "bridge"
+     },
+     {
+      "k": 1,
+      "pred_idx": 162,
+      "pred": "ccp_ring_identity",
+      "gold": "ccp_ring_identity",
+      "gold_in_space": true,
+      "hit": true,
+      "p_max": 0.99999,
+      "margin": 0.99998,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99999,
+      "margin": 0.99998,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nintro n\ninduction n with\n| zero => simp [h0]\n| succ n ih =>\n  rw [hstep, ih]\n  push_cast\n  ring\n```",
+    "n_tok": 47,
+    "body": "intro n\ninduction n with\n| zero => simp [h0]\n| succ n ih =>\n  rw [hstep, ih]\n  push_cast\n  ring"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ind_recurrence",
+      "hit": true,
+      "keywords": [
+       "induction",
+       "induct",
+       "hstep",
+       "ih"
+      ]
+     },
+     {
+      "op": "ccp_ring_identity",
+      "hit": true,
+      "keywords": [
+       "ring",
+       "push_cast",
+       "norm_num",
+       "linarith",
+       "omega"
+      ]
+     }
+    ]
+   },
+   "err": null
+  }
+ ],
+ "sample_table": {
+  "n": 5,
+  "n_chain_rows": 5,
+  "n_chain_scored": 5,
+  "certified": null,
+  "first_hit": 1.0,
+  "exact_hit": 1.0,
+  "slot_col": 0.5,
+  "consistency": 1.0,
+  "op_out_of_space": 0,
+  "terminated_end": 5,
+  "render_tok_mean": 47.4,
+  "n_err": 0
+ },
+ "wall_s": 3248.47
+}

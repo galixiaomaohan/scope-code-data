@@ -1,0 +1,54 @@
+{
+ "schema": "gen34-pa-eq/1",
+ "n_rows": 12,
+ "n_slot_tokens": 250,
+ "cache": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen33/cache/deep_all.bin",
+ "slot_side": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen34/out/DEEP_SLOT_SIDECAR.jsonl",
+ "init": "ckpt/sla_v31f.pt",
+ "dev": "cuda:1",
+ "slot_param_report": {
+  "slot_cond": true,
+  "slot_dev": true,
+  "slot_beta": 8.0,
+  "lam_slot": 3.0,
+  "n_slot_kinds": 8,
+  "slot_params": 4610,
+  "g_pos": 0.0,
+  "g_dev": 0.0
+ },
+ "shared_params_bitwise_equal_at_init": true,
+ "n_diff_params_at_init": 0,
+ "note": "PA-EQ: 槽位通道零初始化挂载不得改变基线输出 (三轴逐位); B1 反证通道真的指向槽位且活着",
+ "axes": {
+  "A1_step_head_bitwise": true,
+  "A2_value_head_bitwise": true,
+  "A3_lm_head_bitwise": true,
+  "A3b_render_hidden_bitwise": true,
+  "abs_max_diff": {
+   "lg": 0.0,
+   "zb": 0.0,
+   "lt": 0.0,
+   "Hr": 0.0
+  }
+ },
+ "gate_zero": {
+  "g_pos": 0.0,
+  "g_dev": 0.0,
+  "both_zero": true
+ },
+ "channel_live_probe": {
+  "logit_delta_max_at_slot": 0.2982826232910156,
+  "logit_delta_max_at_nonslot": 0.0,
+  "slot_positions_in_batch": 250,
+  "non_slot_positions_in_batch": 5666,
+  "argmax_equals_device_token_at_slot": 3,
+  "argmax_hit_rate_at_slot": 0.012,
+  "lt_main": 6.249547004699707,
+  "lt_slot": 7.492798328399658,
+  "n_slot": 250,
+  "channel_live": true,
+  "channel_effective_at_init": false,
+  "effectiveness_note": "init 期 g=0 ⇒ 注入=0 ⇒ argmax_hit 应≈基线水平; 训练后须复核 g_dev 与 argmax_hit (GEN34_POST_TRAIN_PROBE)"
+ },
+ "pass": true
+}

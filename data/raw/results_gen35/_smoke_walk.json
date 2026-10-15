@@ -1,0 +1,242 @@
+{
+ "schema": "gen35-eval-walk/1",
+ "generated": "2026-09-24T15:20:19+0800",
+ "ckpt": "scratch/ccp/gen34/ckpt/deep_slotA_formal_6000.pt",
+ "ckpt_md5": "fd3576b7c2af8d70c46462aed86309a4",
+ "seg": "exam_deep",
+ "n": 2,
+ "table": {
+  "n": 2,
+  "first_hit": 2,
+  "exact_hit": 2,
+  "terminated_end": 2,
+  "over_run": 0
+ },
+ "model": {
+  "md5": "fd3576b7c2af8d70c46462aed86309a4",
+  "step": 6000,
+  "missing": 0,
+  "unexpected": 0,
+  "slot": {
+   "slot_cond": true,
+   "slot_dev": true,
+   "slot_beta": 8.0,
+   "lam_slot": 3.0,
+   "n_slot_kinds": 8,
+   "slot_params": 4610,
+   "g_pos": 0.2368537336587906,
+   "g_dev": 0.20014561712741852
+  }
+ },
+ "wall_s": 1.79,
+ "rows": [
+  {
+   "ri": 0,
+   "name": "gen32_ind_nest_300008",
+   "cls": "ind",
+   "family": "gen32_ind_nest",
+   "seg": "exam_deep",
+   "arm": "pure_plan",
+   "head": "theorem gen32_ind_nest_300008 (p f : ℕ → ℤ)\n    (p0 : p 0 = 5) (pstep : ∀ k, p (k + 1) = p k + ((4 * k ^ 3 + 53 * k ^ 2 + 166 * k + 125) - (4 * k ^ 3 + 5 * k ^ 2 - 2 * k - 5)))\n    (f0 : f 0 = 4) (fstep : ∀ k, f (k + 1) = f k + 1 * p k) :",
+   "concl": "∀ n : ℕ, f n = 4 - 12 * n + n ^ 2 + 12 * n ^ 3 + 4 * n ^ 4",
+   "chain": {
+    "walked": [
+     "gen32_nest_solve",
+     "gen32_nest_fold",
+     "gen32_nest_solve",
+     "gen32_nest_delta",
+     "gen32_nest_close"
+    ],
+    "gold": [
+     "gen32_nest_solve",
+     "gen32_nest_fold",
+     "gen32_nest_solve",
+     "gen32_nest_delta",
+     "gen32_nest_close"
+    ],
+    "first_hit": true,
+    "exact_hit": true,
+    "prefix_hit": true,
+    "over_run": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 12,
+    "args_src_hist": {
+     "device_state_gold_proxy": 5
+    },
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 185,
+      "pred": "gen32_nest_solve",
+      "gold": "gen32_nest_solve",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99997,
+      "margin": 0.99996,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 186,
+      "pred": "gen32_nest_fold",
+      "gold": "gen32_nest_fold",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99994,
+      "margin": 0.99993,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 185,
+      "pred": "gen32_nest_solve",
+      "gold": "gen32_nest_solve",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99984,
+      "margin": 0.99973,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 3,
+      "pred_idx": 187,
+      "pred": "gen32_nest_delta",
+      "gold": "gen32_nest_delta",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99995,
+      "margin": 0.99992,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 4,
+      "pred_idx": 188,
+      "pred": "gen32_nest_close",
+      "gold": "gen32_nest_close",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99989,
+      "margin": 0.99983,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 5,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   }
+  },
+  {
+   "ri": 1,
+   "name": "gen32_ind_nest_300015",
+   "cls": "ind",
+   "family": "gen32_ind_nest",
+   "seg": "exam_deep",
+   "arm": "pure_plan",
+   "head": "theorem gen32_ind_nest_300015 (g f : ℕ → ℤ)\n    (g0 : g 0 = -12) (gstep : ∀ k, g (k + 1) = g k + (48 * k ^ 2 + 96 * k + 24))\n    (f0 : f 0 = 16) (fstep : ∀ k, f (k + 1) = f k + 1 * g k) :",
+   "concl": "∀ n : ℕ, f n = 16 + (n : ℤ) * (0 + (n : ℤ) * (-16 + (n : ℤ) * (0 + (n : ℤ) * (4)))) + (7 ^ 2 - 7 * 7)",
+   "chain": {
+    "walked": [
+     "gen32_nest_solve",
+     "gen32_nest_fold",
+     "gen32_nest_solve",
+     "gen32_nest_delta",
+     "gen32_nest_close"
+    ],
+    "gold": [
+     "gen32_nest_solve",
+     "gen32_nest_fold",
+     "gen32_nest_solve",
+     "gen32_nest_delta",
+     "gen32_nest_close"
+    ],
+    "first_hit": true,
+    "exact_hit": true,
+    "prefix_hit": true,
+    "over_run": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 12,
+    "args_src_hist": {
+     "device_state_gold_proxy": 5
+    },
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 185,
+      "pred": "gen32_nest_solve",
+      "gold": "gen32_nest_solve",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99997,
+      "margin": 0.99995,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 186,
+      "pred": "gen32_nest_fold",
+      "gold": "gen32_nest_fold",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99989,
+      "margin": 0.99984,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 185,
+      "pred": "gen32_nest_solve",
+      "gold": "gen32_nest_solve",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.9999,
+      "margin": 0.99981,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 3,
+      "pred_idx": 187,
+      "pred": "gen32_nest_delta",
+      "gold": "gen32_nest_delta",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99997,
+      "margin": 0.99995,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 4,
+      "pred_idx": 188,
+      "pred": "gen32_nest_close",
+      "gold": "gen32_nest_close",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99994,
+      "margin": 0.99991,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 5,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99999,
+      "margin": 0.99999,
+      "stop": "END"
+     }
+    ]
+   }
+  }
+ ]
+}

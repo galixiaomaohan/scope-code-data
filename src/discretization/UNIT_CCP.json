@@ -1,0 +1,174 @@
+{
+ "schema": "ccp-unit/1",
+ "master": 20260923,
+ "per_class": 12,
+ "classes": {
+  "ind": {
+   "n": 12,
+   "gen_fail": {},
+   "bridge_produced": 12,
+   "U2_cert_ok": 24,
+   "U2_cert_steps": 24,
+   "U3_whitelist": 12,
+   "U6_neg_truefail": 12,
+   "U7_checker_nonvacuous": 24,
+   "U7_n": 24,
+   "cert_kinds": {
+    "ccp_ind_recurrence_cert": 12,
+    "ccp_ring_identity_cert": 12
+   },
+   "fams": {
+    "ind_lin": 4,
+    "ind_aff2": 4,
+    "ind_aff3": 4
+   },
+   "U4_lean_ok": 12,
+   "U4_n": 12,
+   "U5_floor_hard": 12,
+   "U5_floor_n": 12,
+   "U5_closers": {},
+   "U6_neg_n": 12,
+   "U6_neg_notfail": [],
+   "U6_neg_unbuildable": [],
+   "U6_truefail_rate": 1.0
+  },
+  "ineq": {
+   "n": 12,
+   "gen_fail": {
+    "ineq_diff2:ineq_bridge_mismatch": 4,
+    "ineq_sq2:ineq_bridge_mismatch": 5,
+    "ineq_diff_sq:ineq_bridge_mismatch": 5,
+    "ineq_sq2_mult:ineq_bridge_mismatch": 3,
+    "ineq_sq1:ineq_bridge_mismatch": 3
+   },
+   "bridge_produced": 12,
+   "U2_cert_ok": 24,
+   "U2_cert_steps": 24,
+   "U3_whitelist": 12,
+   "U6_neg_truefail": 10,
+   "U7_checker_nonvacuous": 24,
+   "U7_n": 24,
+   "cert_kinds": {
+    "ccp_ineq_sos_cert": 12,
+    "ccp_ineq_close_cert": 12
+   },
+   "fams": {
+    "ineq_sq1": 4,
+    "ineq_sq2_mult": 3,
+    "ineq_diff2": 3,
+    "ineq_sq2": 1,
+    "ineq_diff_sq": 1
+   },
+   "U4_lean_ok": 12,
+   "U4_n": 12,
+   "U5_floor_hard": 11,
+   "U5_floor_n": 12,
+   "U5_closers": {
+    "nlinarith": 1
+   },
+   "U6_neg_n": 12,
+   "U6_neg_notfail": [
+    "ccp_ineq_diff2_000012",
+    "ccp_ineq_sq2_000013"
+   ],
+   "U6_neg_unbuildable": [],
+   "U6_truefail_rate": 0.8333
+  },
+  "nt": {
+   "n": 12,
+   "gen_fail": {},
+   "bridge_produced": 12,
+   "U2_cert_ok": 36,
+   "U2_cert_steps": 36,
+   "U3_whitelist": 12,
+   "U6_neg_truefail": 12,
+   "U7_checker_nonvacuous": 36,
+   "U7_n": 36,
+   "cert_kinds": {
+    "ccp_shape_cert": 24,
+    "ccp_nt_dvd_cert": 12
+   },
+   "fams": {
+    "nt_dvd_mix": 4,
+    "nt_dvd_prod": 4,
+    "nt_dvd_lin_ctrl": 4
+   },
+   "U4_lean_ok": 12,
+   "U4_n": 12,
+   "U5_floor_hard": 8,
+   "U5_floor_n": 12,
+   "U5_closers": {
+    "omega": 4
+   },
+   "U6_neg_n": 12,
+   "U6_neg_notfail": [],
+   "U6_neg_unbuildable": [],
+   "U6_truefail_rate": 1.0
+  }
+ },
+ "U8_valid_anchor": {
+  "induction_rec": [],
+  "induction_sum": [
+   "mathd_numbertheory_24",
+   "mathd_numbertheory_24.variants.digits",
+   "numbertheory_sumkmulnckeqnmul2pownm1"
+  ],
+  "sos_bound": [
+   "algebra_sqineq_2at2pclta2c2p41pc",
+   "algebra_binomnegdiscrineq_10alt28asqp1",
+   "algebra_sqineq_36azm9asqle36zsq"
+  ],
+  "bound_chain": [
+   "algebra_apb4leq8ta4pb4",
+   "mathd_algebra_144",
+   "imo_1966_p5"
+  ],
+  "div_closure": [
+   "imo_1984_p2",
+   "imo_1964_p1_2",
+   "induction_divisibility_3divnto3m2n"
+  ],
+  "mod_arith": [
+   "mathd_numbertheory_780",
+   "mathd_numbertheory_13",
+   "mathd_numbertheory_64"
+  ]
+ },
+ "technique_anchor": {
+  "purpose": "F-09: U8_valid_anchor[induction_rec] 为空 = 机械链口径, 非「题库无归纳题」; 本字段给出按技巧锚定的名单与机械链吸走方向",
+  "induction_rec": {
+   "by_name_family": {
+    "rule": "Valid 题名含 'induct' (CCP_PILOT_SPEC.md:7 的 induction_* 题名族口径)",
+    "n": 8,
+    "names": [
+     "induction_sum2kp1npqsqm1",
+     "induction_divisibility_3divnto3m2n",
+     "induction_sum_1oktkp1",
+     "induction_sum_odd",
+     "induction_divisibility_9div10tonm1",
+     "induction_divisibility_3div2tooddnp1",
+     "induction_ineq_nsqlefactn",
+     "induction_seq_mul2pnp1"
+    ],
+    "mechanical_label_of_anchored": {
+     "sum_manip": 3,
+     "div_closure": 3,
+     "sos_bound": 1,
+     "subst_compute": 1
+    }
+   },
+   "by_structure": {
+    "rule": "Valid 中 _feat 判为归纳结构 (forall ∧ (hypchain ∨ powvar))",
+    "n": 2,
+    "names": [
+     "numbertheory_aneqprodakp4_anmsqrtanp1eq2",
+     "imo_1987_p6"
+    ],
+    "mechanical_label_of_anchored": {
+     "analysis_eval": 2
+    }
+   }
+  },
+  "n": 8
+ }
+}

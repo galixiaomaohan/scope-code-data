@@ -1,0 +1,19 @@
+group,step_k,n_frames,mean_entropy_nats,sem_entropy,mean_p_max
+Certified items,0,191,0.000103,2.5e-05,0.999991
+Certified items,1,191,0.000231,0.000131,0.999972
+Certified items,2,191,2.3e-05,6e-06,0.999998
+Certified items,3,191,2.5e-05,1e-05,0.999998
+Certified items,4,191,0.027108,0.008109,0.988709
+Certified items,5,191,0.026496,0.007861,0.989244
+Certified items,6,123,0.029667,0.01034,0.987726
+Certified items,7,58,9.1e-05,2.4e-05,0.999993
+Certified items,8,24,8e-06,1e-06,1.0
+Certified items,9,24,0.000126,2.2e-05,0.99999
+Failed items,0,27,8.4e-05,6.2e-05,0.999993
+Failed items,1,27,0.000125,3.9e-05,0.99999
+Failed items,2,27,2.3e-05,1.3e-05,0.999998
+Failed items,3,27,1.2e-05,5e-06,0.999999
+Failed items,4,27,0.190757,0.04918,0.918021
+Failed items,5,27,0.121832,0.045245,0.942339
+Failed items,6,11,0.007299,0.00644,0.998717
+Failed items,7,4,1.1e-05,6e-06,0.999999

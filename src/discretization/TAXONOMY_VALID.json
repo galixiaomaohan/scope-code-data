@@ -1,0 +1,229 @@
+{
+ "split": "Valid(256)-设计段-未读Test",
+ "counts": {
+  "domain": {
+   "combinatorics": 36,
+   "algebra": 158,
+   "numbertheory": 28,
+   "inequality": 28,
+   "analysis": 6
+  },
+  "tech": {
+   "substitution_compute": 175,
+   "bounding_squeeze": 57,
+   "summation_counting": 14,
+   "divisibility_modular": 10
+  },
+  "struct": {
+   "solve_value": 219,
+   "prove_identity": 11,
+   "prove_inequality": 15,
+   "prove_divisibility": 9,
+   "count_or_exist": 1,
+   "other": 1
+  },
+  "source": {
+   "amc/aime": 84,
+   "mathd": 138,
+   "other": 34
+  }
+ },
+ "dom_struct": {
+  "combinatorics|solve_value": 30,
+  "algebra|solve_value": 149,
+  "numbertheory|solve_value": 18,
+  "combinatorics|prove_identity": 4,
+  "inequality|prove_inequality": 12,
+  "inequality|solve_value": 16,
+  "numbertheory|prove_divisibility": 9,
+  "algebra|count_or_exist": 1,
+  "analysis|solve_value": 6,
+  "combinatorics|prove_inequality": 2,
+  "algebra|other": 1,
+  "algebra|prove_identity": 7,
+  "numbertheory|prove_inequality": 1
+ },
+ "examples": {
+  "combinatorics|solve_value": [
+   "amc12a_2019_p21",
+   "mathd_numbertheory_149",
+   "amc12a_2008_p4"
+  ],
+  "algebra|solve_value": [
+   "amc12a_2015_p10",
+   "amc12a_2008_p8",
+   "mathd_algebra_182"
+  ],
+  "numbertheory|solve_value": [
+   "mathd_numbertheory_169",
+   "mathd_numbertheory_188",
+   "amc12b_2002_p11"
+  ],
+  "combinatorics|prove_identity": [
+   "induction_sum2kp1npqsqm1",
+   "induction_sum_1oktkp1",
+   "numbertheory_nckeqnm1ckpnm1ckm1"
+  ],
+  "inequality|prove_inequality": [
+   "imo_1984_p2",
+   "algebra_apb4leq8ta4pb4",
+   "algebra_amgm_faxinrrp2msqrt2geq2mxm1div2x"
+  ],
+  "inequality|solve_value": [
+   "imo_2006_p3",
+   "mathd_numbertheory_33",
+   "mathd_numbertheory_33.variants.answer_tag"
+  ],
+  "numbertheory|prove_divisibility": [
+   "imo_1964_p1_2",
+   "induction_divisibility_3divnto3m2n",
+   "algebra_xmysqpymzsqpzmxsqeqxyz_xpypzp6dvdx3y3z3"
+  ],
+  "algebra|count_or_exist": [
+   "imo_1987_p4"
+  ],
+  "analysis|solve_value": [
+   "imo_1965_p1",
+   "mathd_algebra_151",
+   "amc12b_2003_p17"
+  ],
+  "combinatorics|prove_inequality": [
+   "algebra_amgm_prod1toneq1_sum1tongeqn",
+   "imo_1978_p5"
+  ],
+  "algebra|other": [
+   "amc12b_2021_p21.variants.tsum"
+  ],
+  "algebra|prove_identity": [
+   "algebra_2rootsintpoly_am10tap11eqasqpam110",
+   "imo_1988_p6",
+   "numbertheory_xsqpysqintdenomeq"
+  ],
+  "numbertheory|prove_inequality": [
+   "imo_1987_p6"
+  ]
+ },
+ "style_templates_top30": [
+  [
+   "v=v(#)",
+   24
+  ],
+  [
+   "v#=v(#)",
+   6
+  ],
+  [
+   "v=v(#/#)",
+   5
+  ],
+  [
+   "v.v=v(#)",
+   5
+  ],
+  [
+   "v-v=v(#)",
+   5
+  ],
+  [
+   "#%#=v(#)",
+   4
+  ],
+  [
+   "v*v=v(#)",
+   3
+  ],
+  [
+   "#^#%#=v(#)",
+   3
+  ],
+  [
+   "(v,v)=v((#,-#))",
+   3
+  ],
+  [
+   "v=v(-#)",
+   3
+  ],
+  [
+   "v(v#)=v(#)",
+   3
+  ],
+  [
+   "↑(v#).v+(v#).v=v(#)",
+   2
+  ],
+  [
+   "v.v(#*v)=v(#)",
+   2
+  ],
+  [
+   "v^#%#=#∨v^#%#=#",
+   2
+  ],
+  [
+   "v.v##=v(#)",
+   2
+  ],
+  [
+   "∑v∈v,v=v(#)",
+   2
+  ],
+  [
+   "#!%#=v(#)",
+   2
+  ],
+  [
+   "v+v=v(#)",
+   2
+  ],
+  [
+   "v%#=v(#)",
+   2
+  ],
+  [
+   "v=#∧v=-#",
+   2
+  ],
+  [
+   "#∣v",
+   2
+  ],
+  [
+   "(∑v∈v.v##,v^v^#)*∑v∈v.v##,#/v^v^#=v(#)",
+   1
+  ],
+  [
+   "v^#=v(#*v.v#)",
+   1
+  ],
+  [
+   "#*(#*v+#)=v(#*v+#)",
+   1
+  ],
+  [
+   "(v+v:ℚ)/#=v(#)",
+   1
+  ],
+  [
+   "v.v#!#=v(#)",
+   1
+  ],
+  [
+   "v+v+v=v(#)",
+   1
+  ],
+  [
+   "(v,v)=v((-#,#))",
+   1
+  ],
+  [
+   "↑(∑v∈v.vv,(#*v+#))=↑(v+#)^#-(#:ℤ)",
+   1
+  ],
+  [
+   "∑v∈v.v(vv=>v%#=#∧v%#=#)(v.v#),v=v(#)",
+   1
+  ]
+ ],
+ "style_templates_distinct": 193
+}

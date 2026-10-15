@@ -1,0 +1,528 @@
+[iface] aligned重标: E||v||=1.000 scale×1.000
+[argv] {'cmd': 'train', 'arm': 'latq', 'bs': 6, 'gates': 'tf,depth', 'ckevery': 16000, 'accum': 8, 'afam': 'perm', 'aexplicit': True, 'nca': False, 'steps': 32000, 'iface': 'aligned', 'warmup': 0, 'kex': 8, 'scratch': False, 'lrpeak': 0.0003, 'tag': '_v15'}
+C:\Users\zhou\Desktop\文件处理\vibconding\TCAboost\research\probes\dyn_train.py.txt:312: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:837.)
+  mce = float(ce_l)
+[dyn_latq] it=0 T=1 loss=4.24192 e1=1.362 edeep=0.000 efin=1.362 warm=n 0.00 it/s
+C:\Users\zhou\AppData\Roaming\Python\Python313\site-packages\torch\utils\checkpoint.py:232: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  check_backward_validity(args)
+[probe-id] it=0 e_id_med=1.4179 e_id_t4=1.4179
+[dyn_latq] it=50 T=1 loss=2.98177 e1=1.391 edeep=0.000 efin=1.391 warm=n 1.11 it/s
+[dyn_latq] it=100 T=1 loss=3.01711 e1=1.294 edeep=0.000 efin=1.294 warm=n 1.12 it/s
+[dyn_latq] it=150 T=1 loss=2.97557 e1=1.232 edeep=0.000 efin=1.232 warm=n 1.13 it/s
+[dyn_latq] it=200 T=1 loss=2.87442 e1=1.350 edeep=0.000 efin=1.350 warm=n 1.13 it/s
+[dyn_latq] it=250 T=1 loss=2.84998 e1=1.206 edeep=0.000 efin=1.206 warm=n 1.15 it/s
+[gate-probe] it=250 tmax=1 tf_p=1.00 e2_tf=1.407 e_fin@tmax=1.348
+[dyn_latq] it=300 T=1 loss=2.94285 e1=1.227 edeep=0.000 efin=1.227 warm=n 1.16 it/s
+[dyn_latq] it=350 T=1 loss=2.88358 e1=1.242 edeep=0.000 efin=1.242 warm=n 1.16 it/s
+[dyn_latq] it=400 T=1 loss=2.88158 e1=1.304 edeep=0.000 efin=1.304 warm=n 1.17 it/s
+[dyn_latq] it=450 T=1 loss=2.88112 e1=1.324 edeep=0.000 efin=1.324 warm=n 1.16 it/s
+[dyn_latq] it=500 T=1 loss=2.89025 e1=1.281 edeep=0.000 efin=1.281 warm=n 1.16 it/s
+[gate-probe] it=500 tmax=1 tf_p=1.00 e2_tf=1.419 e_fin@tmax=1.365
+[probe-id] it=500 e_id_med=1.2577 e_id_t4=1.1897
+[dyn_latq] it=550 T=1 loss=2.87753 e1=1.226 edeep=0.000 efin=1.226 warm=n 1.17 it/s
+[dyn_latq] it=600 T=1 loss=2.93811 e1=1.032 edeep=0.000 efin=1.032 warm=n 1.17 it/s
+[dyn_latq] it=650 T=1 loss=2.92039 e1=1.349 edeep=0.000 efin=1.349 warm=n 1.18 it/s
+[dyn_latq] it=700 T=1 loss=2.88082 e1=1.339 edeep=0.000 efin=1.339 warm=n 1.18 it/s
+[dyn_latq] it=750 T=1 loss=2.92661 e1=1.338 edeep=0.000 efin=1.338 warm=n 1.19 it/s
+[gate-probe] it=750 tmax=1 tf_p=1.00 e2_tf=1.489 e_fin@tmax=1.462
+[dyn_latq] it=800 T=1 loss=2.87362 e1=1.142 edeep=0.000 efin=1.142 warm=n 1.19 it/s
+[dyn_latq] it=850 T=1 loss=2.89902 e1=1.419 edeep=0.000 efin=1.419 warm=n 1.19 it/s
+[dyn_latq] it=900 T=1 loss=2.87535 e1=1.257 edeep=0.000 efin=1.257 warm=n 1.18 it/s
+[dyn_latq] it=950 T=1 loss=2.77760 e1=1.384 edeep=0.000 efin=1.384 warm=n 1.18 it/s
+[dyn_latq] it=1000 T=1 loss=2.79169 e1=1.326 edeep=0.000 efin=1.326 warm=n 1.18 it/s
+[gate-probe] it=1000 tmax=1 tf_p=1.00 e2_tf=1.473 e_fin@tmax=1.422
+[probe-id] it=1000 e_id_med=1.3191 e_id_t4=1.2781
+[dyn_latq] it=1050 T=1 loss=2.83008 e1=1.430 edeep=0.000 efin=1.430 warm=n 1.18 it/s
+[dyn_latq] it=1100 T=1 loss=2.74779 e1=1.389 edeep=0.000 efin=1.389 warm=n 1.18 it/s
+[dyn_latq] it=1150 T=1 loss=2.85872 e1=1.565 edeep=0.000 efin=1.565 warm=n 1.18 it/s
+[dyn_latq] it=1200 T=1 loss=2.81811 e1=1.567 edeep=0.000 efin=1.567 warm=n 1.18 it/s
+[dyn_latq] it=1250 T=1 loss=2.78202 e1=1.322 edeep=0.000 efin=1.322 warm=n 1.18 it/s
+[gate-probe] it=1250 tmax=1 tf_p=1.00 e2_tf=1.437 e_fin@tmax=1.418
+[dyn_latq] it=1300 T=1 loss=2.86476 e1=1.534 edeep=0.000 efin=1.534 warm=n 1.18 it/s
+[dyn_latq] it=1350 T=1 loss=2.83529 e1=1.371 edeep=0.000 efin=1.371 warm=n 1.18 it/s
+[dyn_latq] it=1400 T=1 loss=2.87444 e1=1.418 edeep=0.000 efin=1.418 warm=n 1.18 it/s
+[dyn_latq] it=1450 T=1 loss=2.78067 e1=1.486 edeep=0.000 efin=1.486 warm=n 1.18 it/s
+[dyn_latq] it=1500 T=1 loss=2.82739 e1=1.523 edeep=0.000 efin=1.523 warm=n 1.19 it/s
+[gate-probe] it=1500 tmax=1 tf_p=1.00 e2_tf=1.485 e_fin@tmax=1.453
+[probe-id] it=1500 e_id_med=1.3420 e_id_t4=1.2298
+[dyn_latq] it=1550 T=1 loss=2.77177 e1=1.700 edeep=0.000 efin=1.700 warm=n 1.18 it/s
+[dyn_latq] it=1600 T=1 loss=2.83086 e1=1.007 edeep=0.000 efin=1.007 warm=n 1.19 it/s
+[dyn_latq] it=1650 T=1 loss=2.77884 e1=1.623 edeep=0.000 efin=1.623 warm=n 1.19 it/s
+[dyn_latq] it=1700 T=1 loss=2.80684 e1=1.275 edeep=0.000 efin=1.275 warm=n 1.19 it/s
+[dyn_latq] it=1750 T=1 loss=2.76706 e1=1.358 edeep=0.000 efin=1.358 warm=n 1.19 it/s
+[gate-probe] it=1750 tmax=1 tf_p=1.00 e2_tf=1.663 e_fin@tmax=1.468
+[dyn_latq] it=1800 T=1 loss=2.80066 e1=1.526 edeep=0.000 efin=1.526 warm=n 1.19 it/s
+[dyn_latq] it=1850 T=1 loss=2.85030 e1=1.019 edeep=0.000 efin=1.019 warm=n 1.19 it/s
+[dyn_latq] it=1900 T=1 loss=2.84503 e1=1.400 edeep=0.000 efin=1.400 warm=n 1.19 it/s
+[dyn_latq] it=1950 T=1 loss=2.74963 e1=1.298 edeep=0.000 efin=1.298 warm=n 1.19 it/s
+[dyn_latq] it=2000 T=1 loss=2.85733 e1=1.473 edeep=0.000 efin=1.473 warm=n 1.19 it/s
+[gate-probe] it=2000 tmax=1 tf_p=1.00 e2_tf=1.596 e_fin@tmax=1.391
+[probe-id] it=2000 e_id_med=1.0214 e_id_t4=0.9089
+[dyn_latq] it=2050 T=1 loss=2.82533 e1=1.707 edeep=0.000 efin=1.707 warm=n 1.20 it/s
+[dyn_latq] it=2100 T=1 loss=2.82381 e1=1.681 edeep=0.000 efin=1.681 warm=n 1.20 it/s
+[dyn_latq] it=2150 T=1 loss=2.77740 e1=1.526 edeep=0.000 efin=1.526 warm=n 1.20 it/s
+[dyn_latq] it=2200 T=1 loss=2.78962 e1=1.762 edeep=0.000 efin=1.762 warm=n 1.20 it/s
+[dyn_latq] it=2250 T=1 loss=2.77688 e1=1.547 edeep=0.000 efin=1.547 warm=n 1.20 it/s
+[gate-probe] it=2250 tmax=1 tf_p=1.00 e2_tf=1.627 e_fin@tmax=1.500
+[dyn_latq] it=2300 T=1 loss=2.74169 e1=1.152 edeep=0.000 efin=1.152 warm=n 1.20 it/s
+[dyn_latq] it=2350 T=1 loss=2.77141 e1=1.061 edeep=0.000 efin=1.061 warm=n 1.19 it/s
+[dyn_latq] it=2400 T=1 loss=2.69012 e1=1.121 edeep=0.000 efin=1.121 warm=n 1.19 it/s
+[dyn_latq] it=2450 T=1 loss=2.68979 e1=1.581 edeep=0.000 efin=1.581 warm=n 1.19 it/s
+[dyn_latq] it=2500 T=1 loss=2.75869 e1=1.381 edeep=0.000 efin=1.381 warm=n 1.19 it/s
+[gate-probe] it=2500 tmax=1 tf_p=1.00 e2_tf=1.551 e_fin@tmax=1.297
+[probe-id] it=2500 e_id_med=1.0545 e_id_t4=1.0545
+[dyn_latq] it=2550 T=1 loss=2.71196 e1=1.162 edeep=0.000 efin=1.162 warm=n 1.19 it/s
+[dyn_latq] it=2600 T=1 loss=2.80382 e1=1.545 edeep=0.000 efin=1.545 warm=n 1.19 it/s
+[dyn_latq] it=2650 T=1 loss=2.74776 e1=1.677 edeep=0.000 efin=1.677 warm=n 1.19 it/s
+[dyn_latq] it=2700 T=1 loss=2.66786 e1=1.256 edeep=0.000 efin=1.256 warm=n 1.19 it/s
+[dyn_latq] it=2750 T=1 loss=2.60362 e1=1.038 edeep=0.000 efin=1.038 warm=n 1.20 it/s
+[gate-probe] it=2750 tmax=1 tf_p=1.00 e2_tf=1.691 e_fin@tmax=1.481
+[dyn_latq] it=2800 T=1 loss=2.82283 e1=1.293 edeep=0.000 efin=1.293 warm=n 1.20 it/s
+[dyn_latq] it=2850 T=1 loss=2.69722 e1=1.363 edeep=0.000 efin=1.363 warm=n 1.20 it/s
+[dyn_latq] it=2900 T=1 loss=2.76292 e1=1.251 edeep=0.000 efin=1.251 warm=n 1.20 it/s
+[dyn_latq] it=2950 T=1 loss=2.75149 e1=1.303 edeep=0.000 efin=1.303 warm=n 1.20 it/s
+[dyn_latq] it=3000 T=1 loss=2.71699 e1=1.240 edeep=0.000 efin=1.240 warm=n 1.20 it/s
+[gate-dep] STALL it=3000 距上次进级3000步 tmax=1 e_fin=1.313
+[gate-probe] it=3000 tmax=1 tf_p=1.00 e2_tf=1.408 e_fin@tmax=1.313
+[probe-id] it=3000 e_id_med=1.2460 e_id_t4=1.1363
+[dyn_latq] it=3050 T=1 loss=2.73110 e1=1.250 edeep=0.000 efin=1.250 warm=n 1.20 it/s
+[dyn_latq] it=3100 T=1 loss=2.67998 e1=1.397 edeep=0.000 efin=1.397 warm=n 1.20 it/s
+[dyn_latq] it=3150 T=1 loss=2.76504 e1=1.540 edeep=0.000 efin=1.540 warm=n 1.20 it/s
+[dyn_latq] it=3200 T=1 loss=2.76688 e1=1.659 edeep=0.000 efin=1.659 warm=n 1.20 it/s
+[dyn_latq] it=3250 T=1 loss=2.75539 e1=1.509 edeep=0.000 efin=1.509 warm=n 1.20 it/s
+[gate-probe] it=3250 tmax=1 tf_p=1.00 e2_tf=1.664 e_fin@tmax=1.423
+[dyn_latq] it=3300 T=1 loss=2.66498 e1=1.218 edeep=0.000 efin=1.218 warm=n 1.20 it/s
+[dyn_latq] it=3350 T=1 loss=2.73639 e1=1.738 edeep=0.000 efin=1.738 warm=n 1.20 it/s
+[dyn_latq] it=3400 T=1 loss=2.64467 e1=1.256 edeep=0.000 efin=1.256 warm=n 1.20 it/s
+[dyn_latq] it=3450 T=1 loss=2.69522 e1=1.206 edeep=0.000 efin=1.206 warm=n 1.20 it/s
+[dyn_latq] it=3500 T=1 loss=2.77105 e1=1.565 edeep=0.000 efin=1.565 warm=n 1.20 it/s
+[gate-probe] it=3500 tmax=1 tf_p=1.00 e2_tf=1.499 e_fin@tmax=1.433
+[probe-id] it=3500 e_id_med=1.3854 e_id_t4=1.3854
+[dyn_latq] it=3550 T=1 loss=2.69250 e1=1.519 edeep=0.000 efin=1.519 warm=n 1.20 it/s
+[dyn_latq] it=3600 T=1 loss=2.71977 e1=1.340 edeep=0.000 efin=1.340 warm=n 1.20 it/s
+[dyn_latq] it=3650 T=1 loss=2.74315 e1=1.514 edeep=0.000 efin=1.514 warm=n 1.20 it/s
+[dyn_latq] it=3700 T=1 loss=2.67672 e1=1.400 edeep=0.000 efin=1.400 warm=n 1.20 it/s
+[dyn_latq] it=3750 T=1 loss=2.71485 e1=1.210 edeep=0.000 efin=1.210 warm=n 1.20 it/s
+[gate-probe] it=3750 tmax=1 tf_p=1.00 e2_tf=1.531 e_fin@tmax=1.424
+[dyn_latq] it=3800 T=1 loss=2.73610 e1=1.346 edeep=0.000 efin=1.346 warm=n 1.20 it/s
+[dyn_latq] it=3850 T=1 loss=2.70981 e1=1.369 edeep=0.000 efin=1.369 warm=n 1.20 it/s
+[dyn_latq] it=3900 T=1 loss=2.76057 e1=1.471 edeep=0.000 efin=1.471 warm=n 1.20 it/s
+[dyn_latq] it=3950 T=1 loss=2.74675 e1=1.274 edeep=0.000 efin=1.274 warm=n 1.20 it/s
+[dyn_latq] it=4000 T=1 loss=2.60595 e1=1.374 edeep=0.000 efin=1.374 warm=n 1.20 it/s
+[gate-probe] it=4000 tmax=1 tf_p=1.00 e2_tf=1.692 e_fin@tmax=1.591
+[probe-id] it=4000 e_id_med=1.1333 e_id_t4=1.1111
+[dyn_latq] it=4050 T=1 loss=2.78296 e1=1.791 edeep=0.000 efin=1.791 warm=n 1.20 it/s
+[dyn_latq] it=4100 T=1 loss=2.69177 e1=1.444 edeep=0.000 efin=1.444 warm=n 1.19 it/s
+[dyn_latq] it=4150 T=1 loss=2.73804 e1=1.358 edeep=0.000 efin=1.358 warm=n 1.19 it/s
+[dyn_latq] it=4200 T=1 loss=2.70882 e1=1.191 edeep=0.000 efin=1.191 warm=n 1.19 it/s
+[dyn_latq] it=4250 T=1 loss=2.70623 e1=1.408 edeep=0.000 efin=1.408 warm=n 1.19 it/s
+[gate-probe] it=4250 tmax=1 tf_p=1.00 e2_tf=1.396 e_fin@tmax=1.362
+[dyn_latq] it=4300 T=1 loss=2.72689 e1=1.291 edeep=0.000 efin=1.291 warm=n 1.19 it/s
+[dyn_latq] it=4350 T=1 loss=2.70338 e1=1.322 edeep=0.000 efin=1.322 warm=n 1.19 it/s
+[dyn_latq] it=4400 T=1 loss=2.75056 e1=1.253 edeep=0.000 efin=1.253 warm=n 1.19 it/s
+[dyn_latq] it=4450 T=1 loss=2.71697 e1=1.368 edeep=0.000 efin=1.368 warm=n 1.19 it/s
+[dyn_latq] it=4500 T=1 loss=2.68594 e1=1.367 edeep=0.000 efin=1.367 warm=n 1.18 it/s
+[gate-probe] it=4500 tmax=1 tf_p=1.00 e2_tf=1.540 e_fin@tmax=1.446
+[probe-id] it=4500 e_id_med=1.2358 e_id_t4=1.1953
+[dyn_latq] it=4550 T=1 loss=2.71707 e1=1.492 edeep=0.000 efin=1.492 warm=n 1.18 it/s
+[dyn_latq] it=4600 T=1 loss=2.71508 e1=1.338 edeep=0.000 efin=1.338 warm=n 1.18 it/s
+[dyn_latq] it=4650 T=1 loss=2.72828 e1=1.296 edeep=0.000 efin=1.296 warm=n 1.18 it/s
+[dyn_latq] it=4700 T=1 loss=2.63621 e1=1.436 edeep=0.000 efin=1.436 warm=n 1.18 it/s
+[dyn_latq] it=4750 T=1 loss=2.74374 e1=1.339 edeep=0.000 efin=1.339 warm=n 1.18 it/s
+[gate-probe] it=4750 tmax=1 tf_p=1.00 e2_tf=1.594 e_fin@tmax=1.395
+[dyn_latq] it=4800 T=1 loss=2.74901 e1=1.319 edeep=0.000 efin=1.319 warm=n 1.18 it/s
+[dyn_latq] it=4850 T=1 loss=2.75753 e1=1.981 edeep=0.000 efin=1.981 warm=n 1.18 it/s
+[dyn_latq] it=4900 T=1 loss=2.75105 e1=1.350 edeep=0.000 efin=1.350 warm=n 1.18 it/s
+[dyn_latq] it=4950 T=1 loss=2.79713 e1=1.476 edeep=0.000 efin=1.476 warm=n 1.18 it/s
+[dyn_latq] it=5000 T=1 loss=2.69223 e1=1.585 edeep=0.000 efin=1.585 warm=n 1.18 it/s
+[gate-probe] it=5000 tmax=1 tf_p=1.00 e2_tf=1.796 e_fin@tmax=1.503
+[probe-id] it=5000 e_id_med=1.5103 e_id_t4=1.5087
+[dyn_latq] it=5050 T=1 loss=2.72508 e1=1.149 edeep=0.000 efin=1.149 warm=n 1.18 it/s
+[dyn_latq] it=5100 T=1 loss=2.71503 e1=1.448 edeep=0.000 efin=1.448 warm=n 1.18 it/s
+[dyn_latq] it=5150 T=1 loss=2.73730 e1=1.189 edeep=0.000 efin=1.189 warm=n 1.18 it/s
+[dyn_latq] it=5200 T=1 loss=2.66911 e1=1.385 edeep=0.000 efin=1.385 warm=n 1.18 it/s
+[dyn_latq] it=5250 T=1 loss=2.74399 e1=1.372 edeep=0.000 efin=1.372 warm=n 1.18 it/s
+[gate-probe] it=5250 tmax=1 tf_p=1.00 e2_tf=1.528 e_fin@tmax=1.404
+[dyn_latq] it=5300 T=1 loss=2.75320 e1=1.383 edeep=0.000 efin=1.383 warm=n 1.18 it/s
+[dyn_latq] it=5350 T=1 loss=2.62058 e1=1.343 edeep=0.000 efin=1.343 warm=n 1.18 it/s
+[dyn_latq] it=5400 T=1 loss=2.65123 e1=1.380 edeep=0.000 efin=1.380 warm=n 1.17 it/s
+[dyn_latq] it=5450 T=1 loss=2.67047 e1=1.310 edeep=0.000 efin=1.310 warm=n 1.17 it/s
+[dyn_latq] it=5500 T=1 loss=2.65695 e1=1.229 edeep=0.000 efin=1.229 warm=n 1.17 it/s
+[gate-probe] it=5500 tmax=1 tf_p=1.00 e2_tf=1.548 e_fin@tmax=1.437
+[probe-id] it=5500 e_id_med=1.2037 e_id_t4=1.1367
+[dyn_latq] it=5550 T=1 loss=2.63737 e1=1.234 edeep=0.000 efin=1.234 warm=n 1.17 it/s
+[dyn_latq] it=5600 T=1 loss=2.69649 e1=1.171 edeep=0.000 efin=1.171 warm=n 1.17 it/s
+[dyn_latq] it=5650 T=1 loss=2.54658 e1=1.707 edeep=0.000 efin=1.707 warm=n 1.17 it/s
+[dyn_latq] it=5700 T=1 loss=2.63325 e1=1.660 edeep=0.000 efin=1.660 warm=n 1.17 it/s
+[dyn_latq] it=5750 T=1 loss=2.66030 e1=1.286 edeep=0.000 efin=1.286 warm=n 1.17 it/s
+[gate-probe] it=5750 tmax=1 tf_p=1.00 e2_tf=1.470 e_fin@tmax=1.346
+[dyn_latq] it=5800 T=1 loss=2.65336 e1=1.079 edeep=0.000 efin=1.079 warm=n 1.17 it/s
+[dyn_latq] it=5850 T=1 loss=2.63238 e1=1.568 edeep=0.000 efin=1.568 warm=n 1.17 it/s
+[dyn_latq] it=5900 T=1 loss=2.60723 e1=1.430 edeep=0.000 efin=1.430 warm=n 1.17 it/s
+[dyn_latq] it=5950 T=1 loss=2.59282 e1=1.341 edeep=0.000 efin=1.341 warm=n 1.17 it/s
+[dyn_latq] it=6000 T=1 loss=2.56266 e1=1.326 edeep=0.000 efin=1.326 warm=n 1.17 it/s
+[gate-dep] STALL it=6000 距上次进级6000步 tmax=1 e_fin=1.387
+[gate-probe] it=6000 tmax=1 tf_p=1.00 e2_tf=1.630 e_fin@tmax=1.387
+[probe-id] it=6000 e_id_med=1.3428 e_id_t4=1.2192
+[dyn_latq] it=6050 T=1 loss=2.62369 e1=1.361 edeep=0.000 efin=1.361 warm=n 1.17 it/s
+[dyn_latq] it=6100 T=1 loss=2.62826 e1=1.256 edeep=0.000 efin=1.256 warm=n 1.17 it/s
+[dyn_latq] it=6150 T=1 loss=2.56790 e1=1.210 edeep=0.000 efin=1.210 warm=n 1.17 it/s
+[dyn_latq] it=6200 T=1 loss=2.58521 e1=1.190 edeep=0.000 efin=1.190 warm=n 1.17 it/s
+[dyn_latq] it=6250 T=1 loss=2.45246 e1=1.342 edeep=0.000 efin=1.342 warm=n 1.17 it/s
+[gate-probe] it=6250 tmax=1 tf_p=1.00 e2_tf=1.515 e_fin@tmax=1.393
+[dyn_latq] it=6300 T=1 loss=2.45084 e1=1.367 edeep=0.000 efin=1.367 warm=n 1.17 it/s
+[dyn_latq] it=6350 T=1 loss=2.50893 e1=1.422 edeep=0.000 efin=1.422 warm=n 1.17 it/s
+[dyn_latq] it=6400 T=1 loss=2.50503 e1=1.332 edeep=0.000 efin=1.332 warm=n 1.17 it/s
+[dyn_latq] it=6450 T=1 loss=2.55486 e1=1.500 edeep=0.000 efin=1.500 warm=n 1.17 it/s
+[dyn_latq] it=6500 T=1 loss=2.63145 e1=1.100 edeep=0.000 efin=1.100 warm=n 1.17 it/s
+[gate-probe] it=6500 tmax=1 tf_p=1.00 e2_tf=1.610 e_fin@tmax=1.194
+[probe-id] it=6500 e_id_med=1.2287 e_id_t4=1.1360
+[dyn_latq] it=6550 T=1 loss=2.55492 e1=1.391 edeep=0.000 efin=1.391 warm=n 1.17 it/s
+[dyn_latq] it=6600 T=1 loss=2.53244 e1=1.178 edeep=0.000 efin=1.178 warm=n 1.17 it/s
+[dyn_latq] it=6650 T=1 loss=2.47458 e1=1.244 edeep=0.000 efin=1.244 warm=n 1.17 it/s
+[dyn_latq] it=6700 T=1 loss=2.48394 e1=0.991 edeep=0.000 efin=0.991 warm=n 1.17 it/s
+[dyn_latq] it=6750 T=1 loss=2.50923 e1=1.087 edeep=0.000 efin=1.087 warm=n 1.18 it/s
+[gate-probe] it=6750 tmax=1 tf_p=1.00 e2_tf=1.494 e_fin@tmax=1.228
+[dyn_latq] it=6800 T=1 loss=2.45624 e1=1.147 edeep=0.000 efin=1.147 warm=n 1.18 it/s
+[dyn_latq] it=6850 T=1 loss=2.46797 e1=1.080 edeep=0.000 efin=1.080 warm=n 1.18 it/s
+[dyn_latq] it=6900 T=1 loss=2.42044 e1=1.263 edeep=0.000 efin=1.263 warm=n 1.18 it/s
+[dyn_latq] it=6950 T=1 loss=2.43052 e1=1.305 edeep=0.000 efin=1.305 warm=n 1.18 it/s
+[dyn_latq] it=7000 T=1 loss=2.48714 e1=1.229 edeep=0.000 efin=1.229 warm=n 1.18 it/s
+[gate-probe] it=7000 tmax=1 tf_p=1.00 e2_tf=1.501 e_fin@tmax=1.377
+[probe-id] it=7000 e_id_med=1.0559 e_id_t4=0.9794
+[dyn_latq] it=7050 T=1 loss=2.41945 e1=1.414 edeep=0.000 efin=1.414 warm=n 1.18 it/s
+[dyn_latq] it=7100 T=1 loss=2.48655 e1=0.893 edeep=0.000 efin=0.893 warm=n 1.18 it/s
+[dyn_latq] it=7150 T=1 loss=2.36553 e1=1.235 edeep=0.000 efin=1.235 warm=n 1.18 it/s
+[dyn_latq] it=7200 T=1 loss=2.45381 e1=1.038 edeep=0.000 efin=1.038 warm=n 1.18 it/s
+[dyn_latq] it=7250 T=1 loss=2.43967 e1=1.264 edeep=0.000 efin=1.264 warm=n 1.18 it/s
+[gate-probe] it=7250 tmax=1 tf_p=1.00 e2_tf=1.461 e_fin@tmax=1.069
+[dyn_latq] it=7300 T=1 loss=2.42703 e1=1.357 edeep=0.000 efin=1.357 warm=n 1.18 it/s
+[dyn_latq] it=7350 T=1 loss=2.37263 e1=1.240 edeep=0.000 efin=1.240 warm=n 1.18 it/s
+[dyn_latq] it=7400 T=1 loss=2.47565 e1=1.459 edeep=0.000 efin=1.459 warm=n 1.18 it/s
+[dyn_latq] it=7450 T=1 loss=2.34058 e1=1.146 edeep=0.000 efin=1.146 warm=n 1.18 it/s
+[dyn_latq] it=7500 T=1 loss=2.26722 e1=1.149 edeep=0.000 efin=1.149 warm=n 1.18 it/s
+[gate-probe] it=7500 tmax=1 tf_p=1.00 e2_tf=1.449 e_fin@tmax=1.179
+[probe-id] it=7500 e_id_med=1.0744 e_id_t4=0.9699
+[dyn_latq] it=7550 T=1 loss=2.32163 e1=1.248 edeep=0.000 efin=1.248 warm=n 1.18 it/s
+[dyn_latq] it=7600 T=1 loss=2.23408 e1=0.840 edeep=0.000 efin=0.840 warm=n 1.18 it/s
+[dyn_latq] it=7650 T=1 loss=2.25223 e1=1.233 edeep=0.000 efin=1.233 warm=n 1.18 it/s
+[dyn_latq] it=7700 T=1 loss=2.19413 e1=1.149 edeep=0.000 efin=1.149 warm=n 1.18 it/s
+[dyn_latq] it=7750 T=1 loss=2.19230 e1=1.083 edeep=0.000 efin=1.083 warm=n 1.18 it/s
+[gate-probe] it=7750 tmax=1 tf_p=1.00 e2_tf=1.067 e_fin@tmax=0.960
+[dyn_latq] it=7800 T=1 loss=2.18050 e1=1.011 edeep=0.000 efin=1.011 warm=n 1.18 it/s
+[dyn_latq] it=7850 T=1 loss=2.17940 e1=0.705 edeep=0.000 efin=0.705 warm=n 1.18 it/s
+[dyn_latq] it=7900 T=1 loss=2.24322 e1=1.234 edeep=0.000 efin=1.234 warm=n 1.18 it/s
+[dyn_latq] it=7950 T=1 loss=2.04634 e1=0.469 edeep=0.000 efin=0.469 warm=n 1.18 it/s
+[dyn_latq] it=8000 T=1 loss=2.13174 e1=0.858 edeep=0.000 efin=0.858 warm=n 1.18 it/s
+[gate-probe] it=8000 tmax=1 tf_p=1.00 e2_tf=1.236 e_fin@tmax=1.020
+[probe-id] it=8000 e_id_med=1.0134 e_id_t4=1.0170
+[dyn_latq] it=8050 T=1 loss=2.19838 e1=0.882 edeep=0.000 efin=0.882 warm=n 1.18 it/s
+[dyn_latq] it=8100 T=1 loss=2.15564 e1=1.268 edeep=0.000 efin=1.268 warm=n 1.18 it/s
+[dyn_latq] it=8150 T=1 loss=2.09624 e1=0.910 edeep=0.000 efin=0.910 warm=n 1.18 it/s
+[dyn_latq] it=8200 T=1 loss=2.12735 e1=0.928 edeep=0.000 efin=0.928 warm=n 1.18 it/s
+[dyn_latq] it=8250 T=1 loss=2.07604 e1=1.010 edeep=0.000 efin=1.010 warm=n 1.18 it/s
+[gate-probe] it=8250 tmax=1 tf_p=1.00 e2_tf=1.185 e_fin@tmax=1.014
+[dyn_latq] it=8300 T=1 loss=2.05101 e1=0.906 edeep=0.000 efin=0.906 warm=n 1.18 it/s
+[dyn_latq] it=8350 T=1 loss=2.10304 e1=0.965 edeep=0.000 efin=0.965 warm=n 1.18 it/s
+[dyn_latq] it=8400 T=1 loss=2.13922 e1=0.783 edeep=0.000 efin=0.783 warm=n 1.18 it/s
+[dyn_latq] it=8450 T=1 loss=2.13534 e1=0.980 edeep=0.000 efin=0.980 warm=n 1.18 it/s
+[dyn_latq] it=8500 T=1 loss=2.09396 e1=0.674 edeep=0.000 efin=0.674 warm=n 1.18 it/s
+[gate-probe] it=8500 tmax=1 tf_p=1.00 e2_tf=1.216 e_fin@tmax=1.042
+[probe-id] it=8500 e_id_med=1.0636 e_id_t4=0.9904
+[dyn_latq] it=8550 T=1 loss=2.05868 e1=1.122 edeep=0.000 efin=1.122 warm=n 1.18 it/s
+[dyn_latq] it=8600 T=1 loss=2.06603 e1=0.790 edeep=0.000 efin=0.790 warm=n 1.18 it/s
+[dyn_latq] it=8650 T=1 loss=2.06494 e1=1.068 edeep=0.000 efin=1.068 warm=n 1.18 it/s
+[dyn_latq] it=8700 T=1 loss=2.07476 e1=1.013 edeep=0.000 efin=1.013 warm=n 1.18 it/s
+[dyn_latq] it=8750 T=1 loss=2.04304 e1=0.858 edeep=0.000 efin=0.858 warm=n 1.18 it/s
+[gate-probe] it=8750 tmax=1 tf_p=1.00 e2_tf=1.225 e_fin@tmax=1.045
+[dyn_latq] it=8800 T=1 loss=2.00985 e1=0.937 edeep=0.000 efin=0.937 warm=n 1.18 it/s
+[dyn_latq] it=8850 T=1 loss=1.93203 e1=1.007 edeep=0.000 efin=1.007 warm=n 1.18 it/s
+[dyn_latq] it=8900 T=1 loss=1.96463 e1=0.879 edeep=0.000 efin=0.879 warm=n 1.18 it/s
+[dyn_latq] it=8950 T=1 loss=1.86672 e1=0.985 edeep=0.000 efin=0.985 warm=n 1.18 it/s
+[dyn_latq] it=9000 T=1 loss=1.96345 e1=1.469 edeep=0.000 efin=1.469 warm=n 1.18 it/s
+[gate-dep] STALL it=9000 距上次进级9000步 tmax=1 e_fin=0.901
+[gate-probe] it=9000 tmax=1 tf_p=1.00 e2_tf=1.235 e_fin@tmax=0.901
+[probe-id] it=9000 e_id_med=0.7437 e_id_t4=0.6395
+[dyn_latq] it=9050 T=1 loss=1.88047 e1=0.772 edeep=0.000 efin=0.772 warm=n 1.18 it/s
+[dyn_latq] it=9100 T=1 loss=1.94619 e1=0.504 edeep=0.000 efin=0.504 warm=n 1.18 it/s
+[dyn_latq] it=9150 T=1 loss=1.88315 e1=0.704 edeep=0.000 efin=0.704 warm=n 1.18 it/s
+[dyn_latq] it=9200 T=1 loss=1.92873 e1=1.088 edeep=0.000 efin=1.088 warm=n 1.18 it/s
+[dyn_latq] it=9250 T=1 loss=1.91992 e1=0.643 edeep=0.000 efin=0.643 warm=n 1.18 it/s
+[gate-probe] it=9250 tmax=1 tf_p=1.00 e2_tf=1.073 e_fin@tmax=0.899
+[dyn_latq] it=9300 T=1 loss=1.88442 e1=0.959 edeep=0.000 efin=0.959 warm=n 1.18 it/s
+[dyn_latq] it=9350 T=1 loss=1.82205 e1=0.663 edeep=0.000 efin=0.663 warm=n 1.18 it/s
+[dyn_latq] it=9400 T=1 loss=1.82429 e1=0.992 edeep=0.000 efin=0.992 warm=n 1.18 it/s
+[dyn_latq] it=9450 T=1 loss=1.94871 e1=0.855 edeep=0.000 efin=0.855 warm=n 1.18 it/s
+[dyn_latq] it=9500 T=1 loss=1.86370 e1=0.642 edeep=0.000 efin=0.642 warm=n 1.18 it/s
+[gate-probe] it=9500 tmax=1 tf_p=1.00 e2_tf=0.827 e_fin@tmax=0.634
+[probe-id] it=9500 e_id_med=0.7998 e_id_t4=0.7318
+[dyn_latq] it=9550 T=1 loss=1.70977 e1=0.668 edeep=0.000 efin=0.668 warm=n 1.18 it/s
+[dyn_latq] it=9600 T=1 loss=1.80488 e1=0.905 edeep=0.000 efin=0.905 warm=n 1.18 it/s
+[dyn_latq] it=9650 T=1 loss=1.88850 e1=0.521 edeep=0.000 efin=0.521 warm=n 1.19 it/s
+[dyn_latq] it=9700 T=1 loss=1.74746 e1=0.892 edeep=0.000 efin=0.892 warm=n 1.19 it/s
+[dyn_latq] it=9750 T=1 loss=1.75608 e1=0.516 edeep=0.000 efin=0.516 warm=n 1.19 it/s
+[gate-probe] it=9750 tmax=1 tf_p=1.00 e2_tf=1.017 e_fin@tmax=0.765
+[dyn_latq] it=9800 T=1 loss=1.66500 e1=0.633 edeep=0.000 efin=0.633 warm=n 1.19 it/s
+[dyn_latq] it=9850 T=1 loss=1.80572 e1=0.765 edeep=0.000 efin=0.765 warm=n 1.19 it/s
+[dyn_latq] it=9900 T=1 loss=1.72356 e1=0.947 edeep=0.000 efin=0.947 warm=n 1.19 it/s
+[dyn_latq] it=9950 T=1 loss=1.70895 e1=0.720 edeep=0.000 efin=0.720 warm=n 1.19 it/s
+[dyn_latq] it=10000 T=1 loss=1.79831 e1=0.757 edeep=0.000 efin=0.757 warm=n 1.19 it/s
+[gate-probe] it=10000 tmax=1 tf_p=1.00 e2_tf=0.944 e_fin@tmax=0.572
+[probe-id] it=10000 e_id_med=0.5433 e_id_t4=0.5066
+[dyn_latq] it=10050 T=1 loss=1.73685 e1=0.911 edeep=0.000 efin=0.911 warm=n 1.19 it/s
+[dyn_latq] it=10100 T=1 loss=1.74073 e1=0.618 edeep=0.000 efin=0.618 warm=n 1.19 it/s
+[dyn_latq] it=10150 T=1 loss=1.75428 e1=0.744 edeep=0.000 efin=0.744 warm=n 1.19 it/s
+[dyn_latq] it=10200 T=1 loss=1.71939 e1=0.655 edeep=0.000 efin=0.655 warm=n 1.19 it/s
+[dyn_latq] it=10250 T=1 loss=1.58407 e1=0.621 edeep=0.000 efin=0.621 warm=n 1.19 it/s
+[gate-probe] it=10250 tmax=1 tf_p=1.00 e2_tf=0.823 e_fin@tmax=0.633
+[dyn_latq] it=10300 T=1 loss=1.62528 e1=0.736 edeep=0.000 efin=0.736 warm=n 1.19 it/s
+[dyn_latq] it=10350 T=1 loss=1.58787 e1=0.749 edeep=0.000 efin=0.749 warm=n 1.19 it/s
+[dyn_latq] it=10400 T=1 loss=1.68774 e1=0.699 edeep=0.000 efin=0.699 warm=n 1.19 it/s
+[dyn_latq] it=10450 T=1 loss=1.68149 e1=0.632 edeep=0.000 efin=0.632 warm=n 1.19 it/s
+[dyn_latq] it=10500 T=1 loss=1.69414 e1=0.621 edeep=0.000 efin=0.621 warm=n 1.19 it/s
+[gate-probe] it=10500 tmax=1 tf_p=1.00 e2_tf=0.844 e_fin@tmax=0.709
+[probe-id] it=10500 e_id_med=0.6407 e_id_t4=0.5700
+[dyn_latq] it=10550 T=1 loss=1.57182 e1=0.544 edeep=0.000 efin=0.544 warm=n 1.19 it/s
+[dyn_latq] it=10600 T=1 loss=1.62946 e1=0.608 edeep=0.000 efin=0.608 warm=n 1.19 it/s
+[dyn_latq] it=10650 T=1 loss=1.59591 e1=0.476 edeep=0.000 efin=0.476 warm=n 1.19 it/s
+[dyn_latq] it=10700 T=1 loss=1.58303 e1=0.598 edeep=0.000 efin=0.598 warm=n 1.19 it/s
+[dyn_latq] it=10750 T=1 loss=1.59616 e1=0.477 edeep=0.000 efin=0.477 warm=n 1.19 it/s
+[gate-probe] it=10750 tmax=1 tf_p=1.00 e2_tf=0.769 e_fin@tmax=0.632
+[dyn_latq] it=10800 T=1 loss=1.59633 e1=0.598 edeep=0.000 efin=0.598 warm=n 1.19 it/s
+[dyn_latq] it=10850 T=1 loss=1.64950 e1=0.461 edeep=0.000 efin=0.461 warm=n 1.19 it/s
+[dyn_latq] it=10900 T=1 loss=1.56363 e1=0.489 edeep=0.000 efin=0.489 warm=n 1.19 it/s
+[dyn_latq] it=10950 T=1 loss=1.54793 e1=0.337 edeep=0.000 efin=0.337 warm=n 1.19 it/s
+[dyn_latq] it=11000 T=1 loss=1.60187 e1=0.456 edeep=0.000 efin=0.456 warm=n 1.19 it/s
+[gate-dep] it=11000 e_fin@1=0.496<0.5 tmax->2
+[gate-probe] it=11000 tmax=1 tf_p=1.00 e2_tf=0.682 e_fin@tmax=0.496
+[probe-id] it=11000 e_id_med=0.4906 e_id_t4=0.4817
+[dyn_latq] it=11050 T=2 loss=1.57147 e1=0.483 edeep=0.505 efin=0.505 warm=n 1.19 it/s
+[dyn_latq] it=11100 T=2 loss=1.45811 e1=0.391 edeep=0.408 efin=0.408 warm=n 1.18 it/s
+[dyn_latq] it=11150 T=2 loss=1.52443 e1=0.691 edeep=0.373 efin=0.373 warm=n 1.18 it/s
+[dyn_latq] it=11200 T=1 loss=1.59686 e1=0.281 edeep=0.000 efin=0.281 warm=n 1.18 it/s
+[dyn_latq] it=11250 T=2 loss=1.58463 e1=0.244 edeep=0.533 efin=0.533 warm=n 1.18 it/s
+[gate-probe] it=11250 tmax=2 tf_p=1.00 e2_tf=1.034 e_fin@tmax=0.923
+[dyn_latq] it=11300 T=2 loss=1.44171 e1=0.305 edeep=0.447 efin=0.447 warm=n 1.17 it/s
+[dyn_latq] it=11350 T=1 loss=1.45328 e1=0.285 edeep=0.000 efin=0.285 warm=n 1.17 it/s
+[dyn_latq] it=11400 T=2 loss=1.46246 e1=0.258 edeep=0.535 efin=0.535 warm=n 1.17 it/s
+[dyn_latq] it=11450 T=1 loss=1.47079 e1=0.574 edeep=0.000 efin=0.574 warm=n 1.17 it/s
+[dyn_latq] it=11500 T=2 loss=1.52071 e1=0.606 edeep=0.384 efin=0.384 warm=n 1.17 it/s
+[gate-probe] it=11500 tmax=2 tf_p=1.00 e2_tf=0.742 e_fin@tmax=0.761
+[probe-id] it=11500 e_id_med=0.6549 e_id_t4=0.6572
+[dyn_latq] it=11550 T=1 loss=1.49059 e1=0.258 edeep=0.000 efin=0.258 warm=n 1.16 it/s
+[dyn_latq] it=11600 T=2 loss=1.39321 e1=0.225 edeep=0.789 efin=0.789 warm=n 1.16 it/s
+[dyn_latq] it=11650 T=2 loss=1.43289 e1=0.408 edeep=0.523 efin=0.523 warm=n 1.16 it/s
+[dyn_latq] it=11700 T=1 loss=1.46354 e1=0.287 edeep=0.000 efin=0.287 warm=n 1.16 it/s
+[dyn_latq] it=11750 T=2 loss=1.54526 e1=0.306 edeep=0.291 efin=0.291 warm=n 1.16 it/s
+[gate-probe] it=11750 tmax=2 tf_p=1.00 e2_tf=0.646 e_fin@tmax=0.733
+[dyn_latq] it=11800 T=2 loss=1.37191 e1=0.204 edeep=0.409 efin=0.409 warm=n 1.15 it/s
+[dyn_latq] it=11850 T=2 loss=1.33663 e1=0.745 edeep=0.281 efin=0.281 warm=n 1.15 it/s
+[dyn_latq] it=11900 T=1 loss=1.28388 e1=0.438 edeep=0.000 efin=0.438 warm=n 1.15 it/s
+[dyn_latq] it=11950 T=1 loss=1.34032 e1=0.245 edeep=0.000 efin=0.245 warm=n 1.15 it/s
+[dyn_latq] it=12000 T=1 loss=1.29606 e1=0.306 edeep=0.000 efin=0.306 warm=n 1.15 it/s
+[gate-probe] it=12000 tmax=2 tf_p=1.00 e2_tf=0.412 e_fin@tmax=0.520
+[probe-id] it=12000 e_id_med=0.6124 e_id_t4=0.6181
+[dyn_latq] it=12050 T=2 loss=1.31207 e1=0.330 edeep=0.250 efin=0.250 warm=n 1.15 it/s
+[dyn_latq] it=12100 T=2 loss=1.24535 e1=0.186 edeep=0.435 efin=0.435 warm=n 1.14 it/s
+[dyn_latq] it=12150 T=1 loss=1.36032 e1=0.239 edeep=0.000 efin=0.239 warm=n 1.14 it/s
+[dyn_latq] it=12200 T=1 loss=1.39454 e1=0.397 edeep=0.000 efin=0.397 warm=n 1.14 it/s
+[dyn_latq] it=12250 T=2 loss=1.29859 e1=0.319 edeep=0.478 efin=0.478 warm=n 1.14 it/s
+[gate-dep] it=12250 e_fin@2=0.333<0.5 tmax->3
+[gate-probe] it=12250 tmax=2 tf_p=1.00 e2_tf=0.423 e_fin@tmax=0.333
+[dyn_latq] it=12300 T=3 loss=1.26814 e1=0.153 edeep=0.309 efin=0.309 warm=n 1.13 it/s
+[dyn_latq] it=12350 T=2 loss=1.26270 e1=0.129 edeep=0.350 efin=0.350 warm=n 1.13 it/s
+[dyn_latq] it=12400 T=1 loss=1.21132 e1=0.281 edeep=0.000 efin=0.281 warm=n 1.13 it/s
+[dyn_latq] it=12450 T=2 loss=1.21196 e1=0.202 edeep=0.226 efin=0.226 warm=n 1.12 it/s
+[dyn_latq] it=12500 T=2 loss=1.17067 e1=0.164 edeep=0.251 efin=0.251 warm=n 1.12 it/s
+[gate-probe] it=12500 tmax=3 tf_p=1.00 e2_tf=0.366 e_fin@tmax=0.547
+[probe-id] it=12500 e_id_med=0.2884 e_id_t4=0.2979
+[dyn_latq] it=12550 T=2 loss=1.13743 e1=0.195 edeep=0.282 efin=0.282 warm=n 1.12 it/s
+[dyn_latq] it=12600 T=2 loss=1.05412 e1=0.299 edeep=0.196 efin=0.196 warm=n 1.11 it/s
+[dyn_latq] it=12650 T=2 loss=1.10181 e1=0.176 edeep=0.217 efin=0.217 warm=n 1.11 it/s
+[dyn_latq] it=12700 T=3 loss=1.06273 e1=0.167 edeep=0.201 efin=0.208 warm=n 1.11 it/s
+[dyn_latq] it=12750 T=3 loss=1.02011 e1=0.166 edeep=0.166 efin=0.133 warm=n 1.10 it/s
+[gate-dep] it=12750 e_fin@3=0.228<0.5 tmax->4
+[gate-probe] it=12750 tmax=3 tf_p=1.00 e2_tf=0.223 e_fin@tmax=0.228
+[dyn_latq] it=12800 T=2 loss=0.99421 e1=0.161 edeep=0.140 efin=0.140 warm=n 1.09 it/s
+[dyn_latq] it=12850 T=4 loss=1.01789 e1=0.128 edeep=0.176 efin=0.176 warm=n 1.08 it/s
+[dyn_latq] it=12900 T=3 loss=0.89046 e1=0.147 edeep=0.138 efin=0.135 warm=n 1.08 it/s
+[dyn_latq] it=12950 T=1 loss=0.94584 e1=0.119 edeep=0.000 efin=0.119 warm=n 1.07 it/s
+[dyn_latq] it=13000 T=4 loss=0.94273 e1=0.118 edeep=0.138 efin=0.123 warm=n 1.06 it/s
+[gate-tf] it=13000 e2_tf=0.175 tf_p->0.95
+[gate-dep] it=13000 e_fin@4=0.234<0.5 tmax->5
+[gate-probe] it=13000 tmax=4 tf_p=0.95 e2_tf=0.175 e_fin@tmax=0.234
+[probe-id] it=13000 e_id_med=0.2269 e_id_t4=0.2743
+[dyn_latq] it=13050 T=3 loss=0.88205 e1=0.139 edeep=0.163 efin=0.169 warm=n 1.05 it/s
+[dyn_latq] it=13100 T=4 loss=0.88240 e1=0.107 edeep=0.121 efin=0.103 warm=n 1.04 it/s
+[dyn_latq] it=13150 T=2 loss=0.85685 e1=0.113 edeep=0.124 efin=0.124 warm=n 1.03 it/s
+[dyn_latq] it=13200 T=5 loss=0.93202 e1=0.096 edeep=0.142 efin=0.104 warm=n 1.02 it/s
+[dyn_latq] it=13250 T=2 loss=0.93293 e1=0.145 edeep=0.141 efin=0.141 warm=n 1.02 it/s
+[gate-dep] it=13250 e_fin@5=0.272<0.3 tmax->6
+[gate-probe] it=13250 tmax=5 tf_p=0.95 e2_tf=0.154 e_fin@tmax=0.272
+[dyn_latq] it=13300 T=2 loss=0.84077 e1=0.124 edeep=0.124 efin=0.124 warm=n 1.01 it/s
+[dyn_latq] it=13350 T=1 loss=0.82144 e1=0.126 edeep=0.000 efin=0.126 warm=n 1.01 it/s
+[dyn_latq] it=13400 T=4 loss=0.92056 e1=0.160 edeep=0.129 efin=0.119 warm=n 1.00 it/s
+[dyn_latq] it=13450 T=5 loss=0.91321 e1=0.110 edeep=0.113 efin=0.124 warm=n 0.99 it/s
+[dyn_latq] it=13500 T=2 loss=0.82854 e1=0.126 edeep=0.110 efin=0.110 warm=n 0.99 it/s
+[gate-tf] it=13500 e2_tf=0.151 tf_p->0.90
+[gate-dep] it=13500 e_fin@6=0.232<0.3 tmax->7
+[gate-probe] it=13500 tmax=6 tf_p=0.90 e2_tf=0.151 e_fin@tmax=0.232
+[probe-id] it=13500 e_id_med=0.1427 e_id_t4=0.1766
+[dyn_latq] it=13550 T=7 loss=0.82119 e1=0.147 edeep=0.139 efin=0.115 warm=n 0.98 it/s
+[dyn_latq] it=13600 T=3 loss=0.84351 e1=0.083 edeep=0.131 efin=0.131 warm=n 0.97 it/s
+[dyn_latq] it=13650 T=3 loss=0.74985 e1=0.089 edeep=0.114 efin=0.092 warm=n 0.96 it/s
+[dyn_latq] it=13700 T=4 loss=0.79448 e1=0.127 edeep=0.134 efin=0.148 warm=n 0.96 it/s
+[dyn_latq] it=13750 T=5 loss=0.84968 e1=0.110 edeep=0.116 efin=0.117 warm=n 0.95 it/s
+[gate-dep] it=13750 e_fin@7=0.228<0.3 tmax->8
+[gate-probe] it=13750 tmax=7 tf_p=0.90 e2_tf=0.137 e_fin@tmax=0.228
+[dyn_latq] it=13800 T=4 loss=0.87860 e1=0.120 edeep=0.132 efin=0.123 warm=n 0.94 it/s
+[dyn_latq] it=13850 T=3 loss=0.77079 e1=0.120 edeep=0.115 efin=0.115 warm=n 0.93 it/s
+[dyn_latq] it=13900 T=8 loss=0.80036 e1=0.115 edeep=0.132 efin=0.128 warm=n 0.92 it/s
+[dyn_latq] it=13950 T=3 loss=0.78782 e1=0.117 edeep=0.113 efin=0.107 warm=n 0.92 it/s
+[dyn_latq] it=14000 T=5 loss=0.74764 e1=0.127 edeep=0.113 efin=0.112 warm=n 0.91 it/s
+[gate-tf] it=14000 e2_tf=0.147 tf_p->0.85
+[gate-dep] it=14000 e_fin@8=0.225<0.3 tmax->9
+[gate-probe] it=14000 tmax=8 tf_p=0.85 e2_tf=0.147 e_fin@tmax=0.225
+[probe-id] it=14000 e_id_med=0.1271 e_id_t4=0.1271
+[dyn_latq] it=14050 T=3 loss=0.81286 e1=0.126 edeep=0.138 efin=0.138 warm=n 0.90 it/s
+[dyn_latq] it=14100 T=1 loss=0.80420 e1=0.106 edeep=0.000 efin=0.106 warm=n 0.89 it/s
+[dyn_latq] it=14150 T=2 loss=0.77069 e1=0.116 edeep=0.113 efin=0.113 warm=n 0.89 it/s
+[dyn_latq] it=14200 T=5 loss=0.81034 e1=0.102 edeep=0.093 efin=0.108 warm=n 0.88 it/s
+[dyn_latq] it=14250 T=5 loss=0.76145 e1=0.114 edeep=0.120 efin=0.117 warm=n 0.87 it/s
+[gate-probe] it=14250 tmax=9 tf_p=0.85 e2_tf=0.134 e_fin@tmax=0.251
+[dyn_latq] it=14300 T=1 loss=0.62653 e1=0.109 edeep=0.000 efin=0.109 warm=n 0.86 it/s
+[dyn_latq] it=14350 T=7 loss=0.72091 e1=0.107 edeep=0.123 efin=0.125 warm=n 0.86 it/s
+[dyn_latq] it=14400 T=9 loss=0.73630 e1=0.113 edeep=0.122 efin=0.122 warm=n 0.85 it/s
+[dyn_latq] it=14450 T=4 loss=0.77624 e1=0.122 edeep=0.119 efin=0.119 warm=n 0.84 it/s
+[dyn_latq] it=14500 T=8 loss=0.69117 e1=0.137 edeep=0.133 efin=0.132 warm=n 0.84 it/s
+[gate-tf] it=14500 e2_tf=0.117 tf_p->0.80
+[gate-probe] it=14500 tmax=9 tf_p=0.80 e2_tf=0.117 e_fin@tmax=0.229
+[probe-id] it=14500 e_id_med=0.1228 e_id_t4=0.1228
+[dyn_latq] it=14550 T=7 loss=0.73204 e1=0.096 edeep=0.107 efin=0.087 warm=n 0.83 it/s
+[dyn_latq] it=14600 T=6 loss=0.69309 e1=0.125 edeep=0.129 efin=0.105 warm=n 0.82 it/s
+[dyn_latq] it=14650 T=9 loss=0.78059 e1=0.135 edeep=0.140 efin=0.135 warm=n 0.82 it/s
+[dyn_latq] it=14700 T=5 loss=0.69777 e1=0.106 edeep=0.115 efin=0.115 warm=n 0.81 it/s
+[dyn_latq] it=14750 T=9 loss=0.69293 e1=0.120 edeep=0.112 efin=0.101 warm=n 0.80 it/s
+[gate-probe] it=14750 tmax=9 tf_p=0.80 e2_tf=0.122 e_fin@tmax=0.211
+[dyn_latq] it=14800 T=6 loss=0.77938 e1=0.075 edeep=0.117 efin=0.120 warm=n 0.80 it/s
+[dyn_latq] it=14850 T=5 loss=0.67211 e1=0.083 edeep=0.098 efin=0.094 warm=n 0.79 it/s
+[dyn_latq] it=14900 T=2 loss=0.62933 e1=0.129 edeep=0.126 efin=0.126 warm=n 0.79 it/s
+[dyn_latq] it=14950 T=2 loss=0.70490 e1=0.108 edeep=0.111 efin=0.111 warm=n 0.78 it/s
+[dyn_latq] it=15000 T=5 loss=0.71654 e1=0.109 edeep=0.115 efin=0.106 warm=n 0.78 it/s
+[gate-tf] it=15000 e2_tf=0.131 tf_p->0.75
+[gate-probe] it=15000 tmax=9 tf_p=0.75 e2_tf=0.131 e_fin@tmax=0.213
+[probe-id] it=15000 e_id_med=0.1296 e_id_t4=0.1296
+[dyn_latq] it=15050 T=1 loss=0.74617 e1=0.094 edeep=0.000 efin=0.094 warm=n 0.77 it/s
+[dyn_latq] it=15100 T=7 loss=0.66514 e1=0.104 edeep=0.097 efin=0.097 warm=n 0.77 it/s
+[dyn_latq] it=15150 T=8 loss=0.68793 e1=0.132 edeep=0.123 efin=0.111 warm=n 0.76 it/s
+[dyn_latq] it=15200 T=2 loss=0.66202 e1=0.108 edeep=0.096 efin=0.096 warm=n 0.76 it/s
+[dyn_latq] it=15250 T=7 loss=0.59484 e1=0.105 edeep=0.101 efin=0.099 warm=n 0.75 it/s
+[gate-dep] it=15250 e_fin@9=0.199<0.2 tmax->10
+[gate-probe] it=15250 tmax=9 tf_p=0.75 e2_tf=0.131 e_fin@tmax=0.199
+[dyn_latq] it=15300 T=2 loss=0.71027 e1=0.132 edeep=0.110 efin=0.110 warm=n 0.75 it/s
+[dyn_latq] it=15350 T=4 loss=0.60889 e1=0.102 edeep=0.102 efin=0.090 warm=n 0.74 it/s
+[dyn_latq] it=15400 T=2 loss=0.71804 e1=0.106 edeep=0.107 efin=0.107 warm=n 0.74 it/s
+[dyn_latq] it=15450 T=3 loss=0.68280 e1=0.112 edeep=0.113 efin=0.104 warm=n 0.74 it/s
+[dyn_latq] it=15500 T=4 loss=0.61869 e1=0.095 edeep=0.116 efin=0.111 warm=n 0.73 it/s
+[gate-tf] it=15500 e2_tf=0.135 tf_p->0.70
+[gate-probe] it=15500 tmax=10 tf_p=0.70 e2_tf=0.135 e_fin@tmax=0.217
+[probe-id] it=15500 e_id_med=0.1440 e_id_t4=0.1561
+[dyn_latq] it=15550 T=9 loss=0.73793 e1=0.116 edeep=0.112 efin=0.104 warm=n 0.73 it/s
+[dyn_latq] it=15600 T=3 loss=0.76938 e1=0.141 edeep=0.123 efin=0.113 warm=n 0.72 it/s
+[dyn_latq] it=15650 T=1 loss=0.70786 e1=0.109 edeep=0.000 efin=0.109 warm=n 0.72 it/s
+[dyn_latq] it=15700 T=6 loss=0.72492 e1=0.141 edeep=0.130 efin=0.139 warm=n 0.71 it/s
+[dyn_latq] it=15750 T=2 loss=0.64262 e1=0.110 edeep=0.115 efin=0.115 warm=n 0.71 it/s
+[gate-dep] it=15750 e_fin@10=0.183<0.2 tmax->11
+[gate-probe] it=15750 tmax=10 tf_p=0.70 e2_tf=0.121 e_fin@tmax=0.183
+[dyn_latq] it=15800 T=5 loss=0.69788 e1=0.110 edeep=0.114 efin=0.110 warm=n 0.70 it/s
+[dyn_latq] it=15850 T=9 loss=0.72226 e1=0.103 edeep=0.103 efin=0.103 warm=n 0.70 it/s
+[dyn_latq] it=15900 T=6 loss=0.68923 e1=0.108 edeep=0.111 efin=0.106 warm=n 0.69 it/s
+[dyn_latq] it=15950 T=8 loss=0.74605 e1=0.104 edeep=0.108 efin=0.099 warm=n 0.69 it/s
+[ckpt-m] ckpt/dyn_latq_v15_m16k
+[dyn_latq] it=16000 T=7 loss=0.64665 e1=0.086 edeep=0.095 efin=0.078 warm=n 0.68 it/s
+[gate-tf] it=16000 e2_tf=0.121 tf_p->0.65
+[gate-dep] it=16000 e_fin@11=0.173<0.2 tmax->12
+[gate-probe] it=16000 tmax=11 tf_p=0.65 e2_tf=0.121 e_fin@tmax=0.173
+[probe-id] it=16000 e_id_med=0.1001 e_id_t4=0.1001
+[dyn_latq] it=16050 T=5 loss=0.67803 e1=0.118 edeep=0.113 efin=0.102 warm=n 0.68 it/s
+[dyn_latq] it=16100 T=6 loss=0.74612 e1=0.093 edeep=0.119 efin=0.090 warm=n 0.67 it/s
+[dyn_latq] it=16150 T=12 loss=0.69779 e1=0.118 edeep=0.104 efin=0.102 warm=n 0.67 it/s
+[dyn_latq] it=16200 T=4 loss=0.70381 e1=0.122 edeep=0.116 efin=0.116 warm=n 0.66 it/s
+[dyn_latq] it=16250 T=6 loss=0.62015 e1=0.100 edeep=0.104 efin=0.081 warm=n 0.66 it/s
+[gate-dep] it=16250 e_fin@12=0.169<0.2 tmax->13
+[gate-probe] it=16250 tmax=12 tf_p=0.65 e2_tf=0.133 e_fin@tmax=0.169
+[dyn_latq] it=16300 T=8 loss=0.73228 e1=0.109 edeep=0.113 efin=0.095 warm=n 0.65 it/s
+[dyn_latq] it=16350 T=7 loss=0.58580 e1=0.099 edeep=0.101 efin=0.101 warm=n 0.65 it/s
+[dyn_latq] it=16400 T=5 loss=0.60633 e1=0.126 edeep=0.124 efin=0.129 warm=n 0.64 it/s
+[dyn_latq] it=16450 T=13 loss=0.67594 e1=0.130 edeep=0.129 efin=0.123 warm=n 0.64 it/s
+[dyn_latq] it=16500 T=5 loss=0.64758 e1=0.087 edeep=0.098 efin=0.098 warm=n 0.64 it/s
+[gate-tf] it=16500 e2_tf=0.121 tf_p->0.60
+[gate-probe] it=16500 tmax=13 tf_p=0.60 e2_tf=0.121 e_fin@tmax=0.153
+[probe-id] it=16500 e_id_med=0.1653 e_id_t4=0.1653
+[dyn_latq] it=16550 T=7 loss=0.65843 e1=0.092 edeep=0.104 efin=0.097 warm=n 0.63 it/s
+[dyn_latq] it=16600 T=12 loss=0.68373 e1=0.089 edeep=0.107 efin=0.101 warm=n 0.63 it/s
+[dyn_latq] it=16650 T=8 loss=0.71741 e1=0.110 edeep=0.112 efin=0.112 warm=n 0.62 it/s
+[dyn_latq] it=16700 T=8 loss=0.76257 e1=0.099 edeep=0.113 efin=0.110 warm=n 0.62 it/s
+[dyn_latq] it=16750 T=4 loss=0.62242 e1=0.103 edeep=0.096 efin=0.087 warm=n 0.62 it/s
+[gate-dep] it=16750 e_fin@13=0.149<0.15 tmax->14
+[gate-probe] it=16750 tmax=13 tf_p=0.60 e2_tf=0.112 e_fin@tmax=0.149
+[dyn_latq] it=16800 T=8 loss=0.58716 e1=0.093 edeep=0.112 efin=0.107 warm=n 0.61 it/s
+[dyn_latq] it=16850 T=10 loss=0.65503 e1=0.120 edeep=0.119 efin=0.101 warm=n 0.61 it/s
+[dyn_latq] it=16900 T=5 loss=0.64747 e1=0.117 edeep=0.099 efin=0.099 warm=n 0.60 it/s
+[dyn_latq] it=16950 T=5 loss=0.76372 e1=0.102 edeep=0.103 efin=0.103 warm=n 0.60 it/s
+[dyn_latq] it=17000 T=2 loss=0.58446 e1=0.111 edeep=0.107 efin=0.107 warm=n 0.59 it/s
+[gate-tf] it=17000 e2_tf=0.124 tf_p->0.55
+[gate-dep] it=17000 e_fin@14=0.149<0.15 tmax->15
+[gate-probe] it=17000 tmax=14 tf_p=0.55 e2_tf=0.124 e_fin@tmax=0.149
+[probe-id] it=17000 e_id_med=0.1340 e_id_t4=0.1340
+[dyn_latq] it=17050 T=2 loss=0.77401 e1=0.135 edeep=0.150 efin=0.150 warm=n 0.59 it/s
+[dyn_latq] it=17100 T=11 loss=0.73892 e1=0.110 edeep=0.118 efin=0.118 warm=n 0.59 it/s
+[dyn_latq] it=17150 T=13 loss=0.75049 e1=0.106 edeep=0.116 efin=0.106 warm=n 0.58 it/s
+[dyn_latq] it=17200 T=1 loss=0.74196 e1=0.119 edeep=0.000 efin=0.119 warm=n 0.58 it/s
+[dyn_latq] it=17250 T=12 loss=0.77275 e1=0.120 edeep=0.120 efin=0.137 warm=n 0.57 it/s
+[gate-probe] it=17250 tmax=15 tf_p=0.55 e2_tf=0.135 e_fin@tmax=0.166
+[dyn_latq] it=17300 T=14 loss=0.70488 e1=0.147 edeep=0.151 efin=0.146 warm=n 0.57 it/s
+[dyn_latq] it=17350 T=13 loss=0.72449 e1=0.126 edeep=0.126 efin=0.116 warm=n 0.57 it/s
+[dyn_latq] it=17400 T=13 loss=0.61475 e1=0.112 edeep=0.120 efin=0.103 warm=n 0.56 it/s
+[dyn_latq] it=17450 T=5 loss=0.67653 e1=0.117 edeep=0.114 efin=0.113 warm=n 0.56 it/s
+[dyn_latq] it=17500 T=2 loss=0.64564 e1=0.113 edeep=0.113 efin=0.113 warm=n 0.55 it/s
+[gate-tf] it=17500 e2_tf=0.111 tf_p->0.50
+[gate-dep] it=17500 e_fin@15=0.135<0.15 tmax->16
+[gate-probe] it=17500 tmax=15 tf_p=0.50 e2_tf=0.111 e_fin@tmax=0.135
+[probe-id] it=17500 e_id_med=0.1318 e_id_t4=0.1442
+[dyn_latq] it=17550 T=9 loss=0.63451 e1=0.108 edeep=0.114 efin=0.114 warm=n 0.55 it/s
+[dyn_latq] it=17600 T=15 loss=0.69152 e1=0.116 edeep=0.121 efin=0.111 warm=n 0.55 it/s
+[dyn_latq] it=17650 T=11 loss=0.69387 e1=0.119 edeep=0.129 efin=0.110 warm=n 0.54 it/s
+[dyn_latq] it=17700 T=12 loss=0.63190 e1=0.108 edeep=0.104 efin=0.102 warm=n 0.54 it/s
+[dyn_latq] it=17750 T=10 loss=0.66773 e1=0.125 edeep=0.113 efin=0.113 warm=n 0.54 it/s
+[gate-probe] it=17750 tmax=16 tf_p=0.50 e2_tf=0.120 e_fin@tmax=0.167
+[dyn_latq] it=17800 T=9 loss=0.64963 e1=0.122 edeep=0.124 efin=0.119 warm=n 0.53 it/s
+[dyn_latq] it=17850 T=13 loss=0.65702 e1=0.111 edeep=0.114 efin=0.096 warm=n 0.53 it/s
+[dyn_latq] it=17900 T=5 loss=0.70477 e1=0.093 edeep=0.096 efin=0.097 warm=n 0.53 it/s
+[dyn_latq] it=17950 T=14 loss=0.71441 e1=0.107 edeep=0.101 efin=0.109 warm=n 0.52 it/s
+[dyn_latq] it=18000 T=13 loss=0.64911 e1=0.091 edeep=0.099 efin=0.093 warm=n 0.52 it/s
+[gate-tf] it=18000 e2_tf=0.122 tf_p->0.45
+[gate-probe] it=18000 tmax=16 tf_p=0.45 e2_tf=0.122 e_fin@tmax=0.150
+[probe-id] it=18000 e_id_med=0.0916 e_id_t4=0.0916
+[dyn_latq] it=18050 T=4 loss=0.68629 e1=0.132 edeep=0.136 efin=0.126 warm=n 0.52 it/s
+[dyn_latq] it=18100 T=16 loss=0.64152 e1=0.128 edeep=0.121 efin=0.121 warm=n 0.51 it/s
+[dyn_latq] it=18150 T=11 loss=0.72746 e1=0.129 edeep=0.110 efin=0.109 warm=n 0.51 it/s
+[dyn_latq] it=18200 T=15 loss=0.77901 e1=0.120 edeep=0.128 efin=0.115 warm=n 0.51 it/s
+[dyn_latq] it=18250 T=9 loss=0.66454 e1=0.132 edeep=0.128 efin=0.128 warm=n 0.50 it/s
+[gate-probe] it=18250 tmax=16 tf_p=0.45 e2_tf=0.114 e_fin@tmax=0.147
+[dyn_latq] it=18300 T=1 loss=0.64026 e1=0.122 edeep=0.000 efin=0.122 warm=n 0.50 it/s
+[dyn_latq] it=18350 T=10 loss=0.64537 e1=0.165 edeep=0.128 efin=0.114 warm=n 0.50 it/s
+[dyn_latq] it=18400 T=8 loss=0.67175 e1=0.097 edeep=0.133 efin=0.119 warm=n 0.49 it/s
+[dyn_latq] it=18450 T=12 loss=0.77905 e1=0.107 edeep=0.112 efin=0.111 warm=n 0.49 it/s
+[dyn_latq] it=18500 T=13 loss=0.70010 e1=0.104 edeep=0.109 efin=0.109 warm=n 0.49 it/s
+[gate-tf] it=18500 e2_tf=0.119 tf_p->0.40
+[gate-probe] it=18500 tmax=16 tf_p=0.40 e2_tf=0.119 e_fin@tmax=0.153
+[probe-id] it=18500 e_id_med=0.1643 e_id_t4=0.1643
+[dyn_latq] it=18550 T=1 loss=0.66805 e1=0.104 edeep=0.000 efin=0.104 warm=n 0.48 it/s
+[dyn_latq] it=18600 T=9 loss=0.71135 e1=0.118 edeep=0.105 efin=0.104 warm=n 0.48 it/s
+[dyn_latq] it=18650 T=3 loss=0.65995 e1=0.113 edeep=0.113 efin=0.082 warm=n 0.48 it/s
+[dyn_latq] it=18700 T=15 loss=0.64687 e1=0.103 edeep=0.100 efin=0.081 warm=n 0.48 it/s
+[dyn_latq] it=18750 T=2 loss=0.70241 e1=0.112 edeep=0.110 efin=0.110 warm=n 0.47 it/s
+[gate-probe] it=18750 tmax=16 tf_p=0.40 e2_tf=0.132 e_fin@tmax=0.167
+[dyn_latq] it=18800 T=3 loss=0.70849 e1=0.085 edeep=0.094 efin=0.096 warm=n 0.47 it/s

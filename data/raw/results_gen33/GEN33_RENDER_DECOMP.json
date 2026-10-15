@@ -1,0 +1,108 @@
+{
+ "schema": "gen33-render-decomp/1",
+ "note": "事后诊断件 (非预注册判据): 分解 M1_D=0 的机理。teacher-forced token acc 高 ≠ 证明可判: 骨架 token 占绝大多数, 整数系数 token 才是内容轴。",
+ "exam": {
+  "base": {
+   "n": 218,
+   "skeleton_identical": 20,
+   "skeleton_rate": 0.091743,
+   "full_string_exact": 0,
+   "int_position_hit": 1149,
+   "int_position_tot": 7861,
+   "int_position_rate": 0.146165,
+   "render_shorter_than_gold": 33,
+   "render_longer_than_gold": 142,
+   "have_lines_gold_total": 1120,
+   "have_lines_render_total": 2195,
+   "by_cls": {
+    "ind": {
+     "n": 37,
+     "skel": 20,
+     "exact": 0,
+     "num_hit": 496,
+     "num_tot": 693,
+     "skeleton_rate": 0.540541,
+     "int_position_rate": 0.715729
+    },
+    "ineq": {
+     "n": 181,
+     "skel": 0,
+     "exact": 0,
+     "num_hit": 653,
+     "num_tot": 7168,
+     "skeleton_rate": 0.0,
+     "int_position_rate": 0.091099
+    }
+   }
+  },
+  "attn": {
+   "n": 218,
+   "skeleton_identical": 19,
+   "skeleton_rate": 0.087156,
+   "full_string_exact": 0,
+   "int_position_hit": 1189,
+   "int_position_tot": 8090,
+   "int_position_rate": 0.146972,
+   "render_shorter_than_gold": 24,
+   "render_longer_than_gold": 151,
+   "have_lines_gold_total": 1120,
+   "have_lines_render_total": 1409,
+   "by_cls": {
+    "ind": {
+     "n": 37,
+     "skel": 19,
+     "exact": 0,
+     "num_hit": 474,
+     "num_tot": 688,
+     "skeleton_rate": 0.513514,
+     "int_position_rate": 0.688953
+    },
+    "ineq": {
+     "n": 181,
+     "skel": 0,
+     "exact": 0,
+     "num_hit": 715,
+     "num_tot": 7402,
+     "skeleton_rate": 0.0,
+     "int_position_rate": 0.096596
+    }
+   }
+  }
+ },
+ "ctrl_a_held_n20": {
+  "decomp": {
+   "n": 20,
+   "skeleton_identical": 14,
+   "skeleton_rate": 0.7,
+   "full_string_exact": 1,
+   "int_position_hit": 236,
+   "int_position_tot": 298,
+   "int_position_rate": 0.791946,
+   "render_shorter_than_gold": 0,
+   "render_longer_than_gold": 0,
+   "have_lines_gold_total": 40,
+   "have_lines_render_total": 40,
+   "by_cls": {
+    "ind": {
+     "n": 20,
+     "skel": 14,
+     "exact": 1,
+     "num_hit": 236,
+     "num_tot": 298,
+     "skeleton_rate": 0.7,
+     "int_position_rate": 0.791946
+    }
+   }
+  },
+  "judge": {
+   "n": 20,
+   "certified": 1,
+   "reasons": {
+    "lean_reject_sorry": 19,
+    "autoimplicit_dependent": 19,
+    "sorry_ax": 19
+   }
+  },
+  "note": "同分布控制 (非考题留出段 20 行, 基线臂, device 口径): 用于区分『考题迁移失败』与『渲染通道本身失败』"
+ }
+}

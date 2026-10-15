@@ -1,0 +1,40 @@
+{
+ "schema": "gen33-judge/1",
+ "generated": "2026-09-24T14:26:48+0800",
+ "judge_md5_before": "7c31b58da9d7228cee31b9be581fe5dd",
+ "tags": [
+  "slotA",
+  "slotB",
+  "base"
+ ],
+ "judge_entry": "drct_common (冻结 7c31b58d) via gen33_eval.judge_texts (batch) / DC.judge_attempt (literal, reverse)",
+ "c5_rule": "异常 != 分歧; agree 仅在双侧均确定判决时定义",
+ "batch": {
+  "slotA": {
+   "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen34/out/GEN33_PRESCREEN_TRACE_slotA.jsonl",
+   "md5": "5342a92a6225581e1ac5822cec26194f",
+   "n": 218,
+   "certified": 1,
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "certified_rate": 0.004587
+  },
+  "slotB": {
+   "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen34/out/GEN33_PRESCREEN_TRACE_slotB.jsonl",
+   "md5": "19aeb1ffe8837a78539a5c4e698d27b0",
+   "n": 218,
+   "certified": 0,
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "certified_rate": 0.0
+  },
+  "base": {
+   "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen34/out/GEN33_PRESCREEN_TRACE_base.jsonl",
+   "md5": "4e14054b827802952486cc4722d59138",
+   "n": 218,
+   "certified": 0,
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "certified_rate": 0.0
+  }
+ },
+ "judge_md5_after": "7c31b58da9d7228cee31b9be581fe5dd",
+ "judge_unchanged": true
+}

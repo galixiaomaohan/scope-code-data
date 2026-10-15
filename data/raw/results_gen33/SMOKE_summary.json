@@ -1,0 +1,690 @@
+{
+ "schema": "ccp-a-hybrid-smoke/2",
+ "tag": "deep_smoke",
+ "run_kind": "smoke",
+ "headline": "冒烟: 机械通路连通证据",
+ "generated": "2026-09-24T04:43:22+0800",
+ "law": "变更 74 (混合主臂) + 变更 75 (红线 R0) + gen27 修正令 (CRIT-1..LOW-16)",
+ "arch": "V32 链头 (step 168 / slot 24x238) + LM 渲染头, 同体单序列联合训练",
+ "track": {
+  "body": "/home/data/ZHC/tcaboost/research/models/SmolLM2-135M",
+  "body_dtype": "fp32",
+  "dual_track_disclosure": "MED-11: 本批只跑 135M 轨; 1.7B 轨代码路径存在 (CCPModel.dyn=True / cast_body bf16) 但**未接未跑**, 不作任何读数",
+  "params_M": 135.5
+ },
+ "cache": {
+  "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen33/cache/deep_all.bin",
+  "md5": "e54430eb6a23d7a3b27bd3c91c9b1074",
+  "n_rows": 2399,
+  "segments": {
+   "a_train": [
+    0,
+    2162
+   ],
+   "a_held": [
+    2162,
+    2399
+   ]
+  },
+  "n_train": 2162,
+  "n_held": 237
+ },
+ "sidecar": {
+  "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen33/out/DEEP_RENDER_SIDECAR.jsonl",
+  "md5": "8cf9e68e639079b88a2ac0ffda234b64",
+  "n": 2399
+ },
+ "init": {
+  "path": "ckpt/sla_v31f.pt",
+  "info": {
+   "value_head_rows_copied": 151,
+   "ccp_rows_parent_copy": {
+    "161": 156,
+    "162": 158,
+    "163": 157,
+    "164": 158,
+    "165": 155,
+    "166": 160,
+    "167": 160,
+    "168": 161,
+    "169": 162,
+    "170": 161,
+    "171": 162,
+    "172": 161,
+    "173": 162,
+    "174": 163,
+    "175": 163,
+    "176": 164,
+    "177": 164,
+    "178": 164,
+    "179": 161,
+    "180": 162,
+    "181": 161,
+    "182": 162,
+    "183": 164,
+    "184": 164,
+    "185": 168,
+    "186": 170,
+    "187": 172,
+    "188": 171,
+    "189": 174,
+    "190": 175,
+    "191": 176,
+    "192": 177,
+    "193": 178
+   },
+   "n_params": 135484706,
+   "head": 194,
+   "nvals": 352
+  }
+ },
+ "plan_attn": {
+  "enabled": false,
+  "note": "gen30 处理臂未开 (基线等价路径)"
+ },
+ "objective": {
+  "form": "L = L_step + (lam_bind/NSLOT)*L_slot + lam_txt*L_text",
+  "lam_bind": 1.0,
+  "lam_txt": 1.0,
+  "NSLOT": 24,
+  "crit1_fix": "渲染段自回归错位 (位置 p 标签 = ids[p+1]); 见单测 MISALIGN"
+ },
+ "plan": {
+  "steps": 20,
+  "bs": 6,
+  "md5": "814db75b090edd251818ad6184ca327b",
+  "held_hits": 0,
+  "interleave": "3 类 × 2 题/步"
+ },
+ "coverage_med6": {
+  "cls_pool": {
+   "ind": 1446,
+   "ineq": 716
+  },
+  "seen_unique_final": {
+   "ind": 60,
+   "ineq": 60
+  },
+  "deviation": "交错混喂按最小类截断 ⇒ 单 epoch 只覆盖各类 per×批数 行; 跨 epoch 重洗扩大覆盖 (seen 列入曲线逐 10 步)"
+ },
+ "micro": {
+  "token_cap": 9000,
+  "total_micro_batches": 20
+ },
+ "eval_med9": {
+  "eval_rows": 48,
+  "rotate": 1,
+  "held_pool": 237
+ },
+ "gpu": {
+  "dev": "cuda:1",
+  "used": 11,
+  "total": 12282,
+  "free": 12271
+ },
+ "steps_done": 20,
+ "stopped_nan": false,
+ "curve": {
+  "path": "scratch/ccp/gen33/out/SMOKE_curve.jsonl",
+  "md5": "ccae294c68698fe9a7d3a51502cc8c22",
+  "first": {
+   "step": 1,
+   "loss": 18.31477,
+   "chain": 10.87288,
+   "slot": 6.02133,
+   "text": 7.19099,
+   "gn": 62.7993,
+   "lr": 1.6e-06,
+   "pa_delta_max": 0.0,
+   "ps_delta_max": 0.0,
+   "L": 931,
+   "micro": 1,
+   "nv": 47,
+   "nbf": 62,
+   "ntxt": 1402,
+   "secs": 4.58,
+   "batch_cls": [
+    "ind",
+    "ind",
+    "ind",
+    "ineq",
+    "ineq",
+    "ineq"
+   ],
+   "batch_cls_counts": {
+    "ind": 3,
+    "ineq": 3
+   },
+   "seen": {
+    "ind": 3,
+    "ineq": 3
+   }
+  },
+  "last": {
+   "step": 20,
+   "loss": 8.2141,
+   "chain": 3.27477,
+   "slot": 5.61585,
+   "text": 4.70533,
+   "gn": 25.9445,
+   "lr": 1.68e-05,
+   "pa_delta_max": 0.0,
+   "ps_delta_max": 0.0,
+   "L": 818,
+   "micro": 1,
+   "nv": 47,
+   "nbf": 61,
+   "ntxt": 1288,
+   "secs": 18.18,
+   "batch_cls": [
+    "ind",
+    "ind",
+    "ind",
+    "ineq",
+    "ineq",
+    "ineq"
+   ],
+   "batch_cls_counts": {
+    "ind": 3,
+    "ineq": 3
+   },
+   "seen": {
+    "ind": 60,
+    "ineq": 60
+   },
+   "eval": {
+    "n_rows": 48,
+    "sel_top1": 0.3263888888888889,
+    "n_frames": 288,
+    "slot_top1": 0.0,
+    "slot_top1_nonunk": 0.0,
+    "n_slots": 1152,
+    "render_tok_acc": 0.22124485023939428,
+    "n_render_tok": 8981
+   },
+   "eval_idx": [
+    2162,
+    2163,
+    2164,
+    2165,
+    2166,
+    2167,
+    2168,
+    2169,
+    2170,
+    2171,
+    2172,
+    2173,
+    2174,
+    2175,
+    2176,
+    2177,
+    2178,
+    2179,
+    2180,
+    2181,
+    2182,
+    2183,
+    2184,
+    2185,
+    2186,
+    2187,
+    2188,
+    2189,
+    2190,
+    2191,
+    2192,
+    2193,
+    2194,
+    2195,
+    2196,
+    2197,
+    2198,
+    2199,
+    2200,
+    2201,
+    2202,
+    2203,
+    2204,
+    2205,
+    2206,
+    2207,
+    2208,
+    2209
+   ]
+  },
+  "min": {
+   "loss": 8.2141,
+   "chain": 3.27477,
+   "slot": 5.37258,
+   "text": 4.08101
+  }
+ },
+ "has_three_curves": true,
+ "ckpt": {
+  "path": "scratch/ccp/gen33/ckpt/deep_base_smoke20.pt",
+  "md5": "83c046a136fe85016cc3c7e4a17ab201"
+ },
+ "samples": [
+  {
+   "ri": 2162,
+   "name": "gen32_ind_nest_200001",
+   "cls": "ind",
+   "seg": "a_held",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "gen32_nest_solve"
+    ],
+    "gold": [
+     "gen32_nest_solve",
+     "gen32_nest_fold",
+     "gen32_nest_solve",
+     "gen32_nest_delta",
+     "gen32_nest_close"
+    ],
+    "first_hit": true,
+    "exact_hit": false,
+    "prefix_hit": true,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 12,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 185,
+      "pred": "gen32_nest_solve",
+      "gold": "gen32_nest_solve",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.12291,
+      "margin": 0.00717,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "gen32_nest_fold",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.98677,
+      "margin": 0.98518,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "(g f6666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666",
+    "n_tok": 160,
+    "body": "(g f6666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 0,
+    "rate": 0.0,
+    "per_op": [
+     {
+      "op": "gen32_nest_solve",
+      "hit": false,
+      "keywords": [
+       "induction",
+       "hstep",
+       "ih",
+       "ring",
+       "norm_num",
+       "solve"
+      ]
+     }
+    ]
+   },
+   "err": null
+  },
+  {
+   "ri": 2163,
+   "name": "gen32_ind_nest_200002",
+   "cls": "ind",
+   "seg": "a_held",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "gen32_nest_solve"
+    ],
+    "gold": [
+     "gen32_nest_solve",
+     "gen32_nest_fold",
+     "gen32_nest_solve",
+     "gen32_nest_delta",
+     "gen32_nest_close"
+    ],
+    "first_hit": true,
+    "exact_hit": false,
+    "prefix_hit": true,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 12,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 185,
+      "pred": "gen32_nest_solve",
+      "gold": "gen32_nest_solve",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.09054,
+      "margin": 0.00511,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "gen32_nest_fold",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.62528,
+      "margin": 0.58756,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "g f (g0 : g 0 = 5) (g1 : ∀ k, g (k + 1) = f k + 1 * g k) ⊢ ∀ n : ℕ, f n = n ^ 4 - 4 * n ^ 3 + 8 * n + 4 - 8 * 3 + 8 * 3 + 8 * 3 + 8 * 3 + 8 * 3 + 8 * 3 + 8 * 3 + 8 * 3 + 8 * 3 + 8 * 3 + 8 * 3 + 8 * 3 + 8 * 3 + 8 * 3 + 8 *",
+    "n_tok": 160,
+    "body": "g f (g0 : g 0 = 5) (g1 : ∀ k, g (k + 1) = f k + 1 * g k) ⊢ ∀ n : ℕ, f n = n ^ 4 - 4 * n ^ 3 + 8 * n + 4 - 8 * 3 + 8 * 3 + 8 * 3 + 8 * 3 + 8 * 3 + 8 * 3 + 8 * 3 + 8 * 3 + 8 * 3 + 8 * 3 + 8 * 3 + 8 * 3 + 8 * 3 + 8 * 3 + 8 *"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 0,
+    "rate": 0.0,
+    "per_op": [
+     {
+      "op": "gen32_nest_solve",
+      "hit": false,
+      "keywords": [
+       "induction",
+       "hstep",
+       "ih",
+       "ring",
+       "norm_num",
+       "solve"
+      ]
+     }
+    ]
+   },
+   "err": null
+  },
+  {
+   "ri": 2164,
+   "name": "gen32_ind_nest_200023",
+   "cls": "ind",
+   "seg": "a_held",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "gen32_nest_solve"
+    ],
+    "gold": [
+     "gen32_nest_solve",
+     "gen32_nest_fold",
+     "gen32_nest_solve",
+     "gen32_nest_delta",
+     "gen32_nest_close"
+    ],
+    "first_hit": true,
+    "exact_hit": false,
+    "prefix_hit": true,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 12,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 185,
+      "pred": "gen32_nest_solve",
+      "gold": "gen32_nest_solve",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.13319,
+      "margin": 0.00829,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "gen32_nest_fold",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.20528,
+      "margin": 0.10415,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "(p f : ℕ → ℤ)\n(p0 : p 0 = 3)\n(pstep : ∀ k, p (k + 3) = p 3)\n(p step (3) (3)\n(p step (3) (3)\n(p step (3) (3)\n(p step (3) (3)\n(f0 : f 0 = -3 + (66666666666666666666666666666666666666666666666666666666666666",
+    "n_tok": 160,
+    "body": "(p f : ℕ → ℤ)\n(p0 : p 0 = 3)\n(pstep : ∀ k, p (k + 3) = p 3)\n(p step (3) (3)\n(p step (3) (3)\n(p step (3) (3)\n(p step (3) (3)\n(f0 : f 0 = -3 + (66666666666666666666666666666666666666666666666666666666666666"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 0,
+    "rate": 0.0,
+    "per_op": [
+     {
+      "op": "gen32_nest_solve",
+      "hit": false,
+      "keywords": [
+       "induction",
+       "hstep",
+       "ih",
+       "ring",
+       "norm_num",
+       "solve"
+      ]
+     }
+    ]
+   },
+   "err": null
+  },
+  {
+   "ri": 2165,
+   "name": "gen32_ind_nest_200044",
+   "cls": "ind",
+   "seg": "a_held",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "gen32_nest_solve"
+    ],
+    "gold": [
+     "gen32_nest_solve",
+     "gen32_nest_fold",
+     "gen32_nest_solve",
+     "gen32_nest_delta",
+     "gen32_nest_close"
+    ],
+    "first_hit": true,
+    "exact_hit": false,
+    "prefix_hit": true,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 12,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 185,
+      "pred": "gen32_nest_solve",
+      "gold": "gen32_nest_solve",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.13055,
+      "margin": 0.0081,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "gen32_nest_fold",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.3696,
+      "margin": 0.29134,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "(p f : ℕ → ℤ)\n(p0 : p 8)\n(p8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888",
+    "n_tok": 160,
+    "body": "(p f : ℕ → ℤ)\n(p0 : p 8)\n(p8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 0,
+    "rate": 0.0,
+    "per_op": [
+     {
+      "op": "gen32_nest_solve",
+      "hit": false,
+      "keywords": [
+       "induction",
+       "hstep",
+       "ih",
+       "ring",
+       "norm_num",
+       "solve"
+      ]
+     }
+    ]
+   },
+   "err": null
+  },
+  {
+   "ri": 2166,
+   "name": "gen32_ind_nest_200048",
+   "cls": "ind",
+   "seg": "a_held",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "gen32_nest_solve"
+    ],
+    "gold": [
+     "gen32_nest_solve",
+     "gen32_nest_fold",
+     "gen32_nest_solve",
+     "gen32_nest_delta",
+     "gen32_nest_close"
+    ],
+    "first_hit": true,
+    "exact_hit": false,
+    "prefix_hit": true,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 12,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 185,
+      "pred": "gen32_nest_solve",
+      "gold": "gen32_nest_solve",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.1154,
+      "margin": 0.0067,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "gen32_nest_fold",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.38886,
+      "margin": 0.32021,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "g777.b stan.b�7.b�7.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��",
+    "n_tok": 160,
+    "body": "g777.b stan.b�7.b�7.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��.b��"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 0,
+    "rate": 0.0,
+    "per_op": [
+     {
+      "op": "gen32_nest_solve",
+      "hit": false,
+      "keywords": [
+       "induction",
+       "hstep",
+       "ih",
+       "ring",
+       "norm_num",
+       "solve"
+      ]
+     }
+    ]
+   },
+   "err": null
+  }
+ ],
+ "sample_table": {
+  "n": 5,
+  "n_chain_rows": 5,
+  "n_chain_scored": 5,
+  "certified": null,
+  "first_hit": 1.0,
+  "exact_hit": 0.0,
+  "slot_col": 0.0,
+  "consistency": 0.0,
+  "op_out_of_space": 0,
+  "terminated_end": 5,
+  "render_tok_mean": 160.0,
+  "n_err": 0
+ },
+ "wall_s": 58.72
+}

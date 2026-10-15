@@ -1,0 +1,19 @@
+{
+ "schema": "gen34-tf-slot-acc/1",
+ "ckpt": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen33/ckpt/deep_base_formal_6000.pt",
+ "ckpt_md5": "0e30990b063d6a3a387f6c52b96f66ea",
+ "arch": "g33",
+ "slot_dev_flag": 0,
+ "boost": 0.0,
+ "n_rows": 48,
+ "seg": "a_held",
+ "tooltip": "teacher-forced 口径 (标签 = 金标下一 token): tf_slot_acc = 槽位 token 命中率; tf_skel_acc = 非槽位 token 命中率; row_slot_all_correct = 该行槽位 token 全对的行数",
+ "n_slot_tok": 692,
+ "slot_hit": 640,
+ "tf_slot_acc": 0.924855,
+ "n_skel_tok": 8289,
+ "skel_hit": 8132,
+ "tf_skel_acc": 0.981059,
+ "row_slot_all_correct": 15,
+ "row_slot_rows": 48
+}

@@ -1,0 +1,250 @@
+{
+ "schema": "gen44-s8-litall-summary/1",
+ "created": "2026-09-27T01:23:51+0800",
+ "provenance": [
+  {
+   "file": "GEN44_S8_REJUDGE_LITALL_s0.json",
+   "md5": "66c07708259b5da3bc4b9d025a9f0257",
+   "n": 708,
+   "n_agree": 614,
+   "wall_s": 17213.5,
+   "judge_ok": true,
+   "created": "2026-09-26T23:27:43+0800"
+  },
+  {
+   "file": "GEN44_S8_REJUDGE_LITALL_s1.json",
+   "md5": "13da3eb793641efbf0574fb4884d4199",
+   "n": 708,
+   "n_agree": 612,
+   "wall_s": 17413.4,
+   "judge_ok": true,
+   "created": "2026-09-26T23:31:03+0800"
+  },
+  {
+   "file": "GEN44_S8_REJUDGE_LITALL_s2.json",
+   "md5": "8a72c4bbcd5d9ab027be74f8b1a4e727",
+   "n": 708,
+   "n_agree": 605,
+   "wall_s": 17210.7,
+   "judge_ok": true,
+   "created": "2026-09-26T23:27:39+0800"
+  },
+  {
+   "file": "GEN44_S8_REJUDGE_LITALL_s3.json",
+   "md5": "08113abfb0a4b4f7d1d37e65f306bd4f",
+   "n": 708,
+   "n_agree": 603,
+   "wall_s": 17831.5,
+   "judge_ok": true,
+   "created": "2026-09-26T23:38:01+0800"
+  },
+  {
+   "file": "GEN44_S8_REJUDGE_LITALL_s4.json",
+   "md5": "bb62e2a44fbc5e4cd4d3a68790810fa3",
+   "n": 708,
+   "n_agree": 597,
+   "wall_s": 17838.5,
+   "judge_ok": true,
+   "created": "2026-09-26T23:38:07+0800"
+  }
+ ],
+ "n_rows": 3540,
+ "n_scored": 3536,
+ "caliper": {
+  "n_judged": 3536,
+  "lit_certified": 2132,
+  "rate": 0.6029,
+  "wilson95": [
+   0.5867,
+   0.6189
+  ],
+  "batch_certified_first_pass": 2015,
+  "batch_rate": 0.5699,
+  "net_delta_lit_minus_batch": 117
+ },
+ "two_way": {
+  "n_agree": 3031,
+  "n_disagree": 505,
+  "false_accept_corrected": 194,
+  "false_reject_promoted": 311,
+  "net": 117,
+  "identity_check": true,
+  "share_of_disagree": {
+   "fa": 0.3842,
+   "fr": 0.6158
+  }
+ },
+ "proof_md5_same_as_manifest": "3536/3536",
+ "by_vol_fam_literal": {
+  "A1": {
+   "n": 2011,
+   "lit": 1460,
+   "bat": 1486,
+   "fa": 186,
+   "fr": 160,
+   "n_bn1": 880,
+   "fa_bn1": 55,
+   "fr_bn1": 124,
+   "lit_rate": 0.726,
+   "lit_wilson95": [
+    0.7061,
+    0.7451
+   ],
+   "bat_rate": 0.7389
+  },
+  "b1": {
+   "n": 810,
+   "lit": 354,
+   "bat": 293,
+   "fa": 2,
+   "fr": 63,
+   "n_bn1": 684,
+   "fa_bn1": 2,
+   "fr_bn1": 59,
+   "lit_rate": 0.437,
+   "lit_wilson95": [
+    0.4033,
+    0.4714
+   ],
+   "bat_rate": 0.3617
+  },
+  "b2": {
+   "n": 306,
+   "lit": 201,
+   "bat": 170,
+   "fa": 2,
+   "fr": 33,
+   "n_bn1": 168,
+   "fa_bn1": 2,
+   "fr_bn1": 27,
+   "lit_rate": 0.6569,
+   "lit_wilson95": [
+    0.602,
+    0.7078
+   ],
+   "bat_rate": 0.5556
+  },
+  "b3": {
+   "n": 26,
+   "lit": 6,
+   "bat": 5,
+   "fa": 0,
+   "fr": 1,
+   "n_bn1": 23,
+   "fa_bn1": 0,
+   "fr_bn1": 1,
+   "lit_rate": 0.2308,
+   "lit_wilson95": [
+    0.1103,
+    0.4205
+   ],
+   "bat_rate": 0.1923
+  },
+  "b4": {
+   "n": 2,
+   "lit": 2,
+   "bat": 1,
+   "fa": 0,
+   "fr": 1,
+   "n_bn1": 1,
+   "fa_bn1": 0,
+   "fr_bn1": 0,
+   "lit_rate": 1.0,
+   "lit_wilson95": [
+    0.3424,
+    1.0
+   ],
+   "bat_rate": 0.5
+  },
+  "b5": {
+   "n": 10,
+   "lit": 1,
+   "bat": 1,
+   "fa": 0,
+   "fr": 0,
+   "n_bn1": 8,
+   "fa_bn1": 0,
+   "fr_bn1": 0,
+   "lit_rate": 0.1,
+   "lit_wilson95": [
+    0.0179,
+    0.4042
+   ],
+   "bat_rate": 0.1
+  },
+  "b6": {
+   "n": 85,
+   "lit": 35,
+   "bat": 22,
+   "fa": 2,
+   "fr": 15,
+   "n_bn1": 81,
+   "fa_bn1": 2,
+   "fr_bn1": 15,
+   "lit_rate": 0.4118,
+   "lit_wilson95": [
+    0.3132,
+    0.518
+   ],
+   "bat_rate": 0.2588
+  },
+  "b7": {
+   "n": 201,
+   "lit": 48,
+   "bat": 26,
+   "fa": 2,
+   "fr": 24,
+   "n_bn1": 183,
+   "fa_bn1": 2,
+   "fr_bn1": 24,
+   "lit_rate": 0.2388,
+   "lit_wilson95": [
+    0.1851,
+    0.3023
+   ],
+   "bat_rate": 0.1294
+  },
+  "b8": {
+   "n": 74,
+   "lit": 20,
+   "bat": 8,
+   "fa": 0,
+   "fr": 12,
+   "n_bn1": 72,
+   "fa_bn1": 0,
+   "fr_bn1": 11,
+   "lit_rate": 0.2703,
+   "lit_wilson95": [
+    0.1823,
+    0.3809
+   ],
+   "bat_rate": 0.1081
+  },
+  "b9": {
+   "n": 11,
+   "lit": 5,
+   "bat": 3,
+   "fa": 0,
+   "fr": 2,
+   "n_bn1": 5,
+   "fa_bn1": 0,
+   "fr_bn1": 1,
+   "lit_rate": 0.4545,
+   "lit_wilson95": [
+    0.2127,
+    0.7199
+   ],
+   "bat_rate": 0.2727
+  }
+ },
+ "lit_reject_reasons": {
+  "lean_reject_sorry": 1279,
+  "lean_reject": 122,
+  "autoimplicit_dependent": 3
+ },
+ "lit_reject_reasons_on_corrected_false_accepts": {
+  "lean_reject_sorry": 165,
+  "lean_reject": 29
+ },
+ "note": "字面口径 = 冻结判卷件 judge_attempt 逐行单 theorem 判读 (drct_common.py 7c31b58da9d7228cee31b9be581fe5dd, 判前判后双验); 与批判同渲染文本 (proof_md5 == manifest, 一致率须 100%)。第一遍批判受 D-S8F-1 污染, 已降级为过程记录。"
+}

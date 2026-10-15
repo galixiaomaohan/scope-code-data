@@ -1,0 +1,20 @@
+# Python dependencies of the SCOPE code and data package.
+# The experiment runtime (src/experiments, src/latent, src/discretization) was
+# developed and run under the versions listed under "experiment host"; the
+# figure-extraction scripts (figures_src/extract) and the regeneration entry
+# point run_all.py work under the "local reproduction" set on a CPU-only
+# machine.
+
+# --- experiment host (single Linux host, 3x RTX 4070 Ti 12G) ---
+torch==2.8.0            # training and inference (cu128 build on the host)
+transformers==4.57.6    # SmolLM2-135M backbone and DeepSeek comparison models
+sympy>=1.12             # discretization checks and family parsers
+pyarrow>=15             # Lean-Workbook parquet ingestion (gen44_extract_lwb)
+
+# --- local reproduction (figures_src/extract + run_all.py) ---
+numpy>=1.26             # exact UMAP coordinates additionally need the 2.0.x
+                        # line (experiment host used 2.0.2; see DATA_README.md)
+pandas>=2.0
+matplotlib>=3.8
+umap-learn==0.5.12      # exact embedding reproduction; see DATA_README.md for
+                        # the version-sensitivity note on Fig. 2 coordinates

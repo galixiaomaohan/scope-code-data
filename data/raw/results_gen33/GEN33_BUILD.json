@@ -1,0 +1,210 @@
+{
+ "schema": "gen33-deep-build/1",
+ "generated": "2026-09-24T04:41:48+0800",
+ "law": {
+  "用户令": "现在应该开始直接训练模型，并批卷",
+  "预注册": "scratch/ccp/gen33/V33_DESIGN.md"
+ },
+ "parent_ledger": {
+  "gen30_hybrid": {
+   "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen30/gen30_hybrid.py",
+   "md5": "4f630a796190d510c0b17010fc1b1beb",
+   "bytes": 33534
+  },
+  "gen30_eval": {
+   "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen30/gen30_eval.py",
+   "md5": "e5b66c319fe646dfbb16ff25860323da",
+   "bytes": 36448
+  },
+  "gen30_planattn": {
+   "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen30/gen30_planattn.py",
+   "md5": "0da0a2dc9d5fd29cab6d587b196bdd4f",
+   "bytes": 33302
+  },
+  "gen26_hybuild": {
+   "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen26/gen26_hybuild.py",
+   "md5": "4314c847e7c04fbdac80a5a2b7c77f75",
+   "bytes": 25435
+  },
+  "gen26s_vocab3": {
+   "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen26/gen26s_vocab3.py",
+   "md5": "7c6f5c19e53680619f1c54a56390995f",
+   "bytes": 21269
+  },
+  "gen13_ccp_cachefull": {
+   "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen13/ccp_cachefull.py",
+   "md5": "e7ba70c7c7370e296aa41e38b596296b",
+   "bytes": 20548
+  },
+  "drct_common": {
+   "path": "/home/data/ZHC/tcaboost/research/scratch/drct/drct_common.py",
+   "md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "bytes": 12167
+  },
+  "vocab_v3": {
+   "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen26/out/CCP_VOCAB_V3.json",
+   "md5": "e921401d4b9ecb3f74a730ef4aa36b4f",
+   "bytes": 39761
+  },
+  "allow_v3": {
+   "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen26/cache/ccp_allow_v3.bin",
+   "md5": "f2fbb932cb2b0d628c6d190e63b54787",
+   "bytes": 1562880
+  },
+  "deep_corpus": {
+   "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen32/DEEP_CORPUS_V1.jsonl",
+   "md5": "1ab45aab5bed22ef63b39d4c77080adb",
+   "bytes": 24651123
+  },
+  "exam_cand": {
+   "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen32/EXAM_DEEP_CANDIDATE.json",
+   "md5": "780dbb5ef83328a0b804473839a309e3",
+   "bytes": 3781382
+  }
+ },
+ "corpus": {
+  "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen32/DEEP_CORPUS_V1.jsonl",
+  "md5": "1ab45aab5bed22ef63b39d4c77080adb",
+  "n_rows": 2399,
+  "chain_hist": {
+   "5": 1136,
+   "6": 330,
+   "7": 133,
+   "9": 800
+  },
+  "by_family": {
+   "gen32_ind_nest": 800,
+   "gen32_ind_tower": 800,
+   "gen32_ineq_cascade": 799
+  },
+  "by_cls": {
+   "ind": 1600,
+   "ineq": 799
+  },
+  "n_steps": 15791,
+  "resid_nonzero": "15791/15791"
+ },
+ "split": {
+  "rule": "md5(name)[:8] % 10 == 7 -> a_held",
+  "a_train": 2162,
+  "a_held": 237,
+  "train_by_cls": {
+   "ind": 1446,
+   "ineq": 716
+  },
+  "held_by_cls": {
+   "ind": 154,
+   "ineq": 83
+  }
+ },
+ "vocab": {
+  "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen33/cache/CCP_VOCAB_V4.json",
+  "md5": "d0af2aa8ce64bf006969282ff7c89d9f",
+  "head": 194,
+  "n_vals": 352,
+  "END": 154,
+  "MS": 24
+ },
+ "cache": {
+  "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen33/cache/deep_all.bin",
+  "md5": "e54430eb6a23d7a3b27bd3c91c9b1074",
+  "segments": {
+   "a_train": [
+    0,
+    2162
+   ],
+   "a_held": [
+    2162,
+    2399
+   ]
+  },
+  "roundtrip_ok": true,
+  "roundtrip_checks": {
+   "n_rows": true,
+   "labels_feat": true,
+   "labels_range": true,
+   "labels_has_new_ops": true,
+   "bsl_len": true,
+   "ids": true,
+   "bsl_range": true,
+   "desc": true,
+   "res_load": true,
+   "hdr": true,
+   "res_frames_nonzero": true
+  },
+  "L": {
+   "max": 396,
+   "p50": 210,
+   "mean": 218.3
+  },
+  "labels_max": 10,
+  "t4": [
+   [
+    1,
+    0,
+    0,
+    0
+   ]
+  ],
+  "slot_sup_rate": 0.1725,
+  "unk_fallback": 48200,
+  "oob_fallback": 1470,
+  "frames": 18190,
+  "slot_unk_by_frame": {
+   "4": 9596,
+   "3": 7374,
+   "1": 7196,
+   "0": 7121,
+   "2": 6399,
+   "8": 4000,
+   "5": 3452,
+   "7": 2400
+  }
+ },
+ "device": {
+  "verify_vs_gold": {
+   "schema": "gen33-device-vs-gold/1",
+   "n_step": 15791,
+   "n_eq": 15791,
+   "n_ne": 0,
+   "n_err": 0,
+   "eq_rate": 1.0,
+   "bitwise_equal": true,
+   "bad_examples": []
+  },
+  "frame_gate": {
+   "schema": "gen33-frame-consistency/1",
+   "n_sample": 35,
+   "strata": [
+    "gen32_ind_nest|5",
+    "gen32_ind_tower|9",
+    "gen32_ineq_cascade|5",
+    "gen32_ineq_cascade|6",
+    "gen32_ineq_cascade|7"
+   ],
+   "n_bad": 0,
+   "bad": [],
+   "desc_diff_total": 0,
+   "pass": true,
+   "rule": "同 ctx 下 (a) 载荷=行内 res 与 (b) 载荷=装置现算 res 两次构帧, 帧序列 desc 逐位比对; desc_diff=0 且 bsl/labels 相等才过"
+  },
+  "entry": "gen33_device (装置现算, 禁止读金标链状态)"
+ },
+ "render": {
+  "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen33/out/DEEP_RENDER_SIDECAR.jsonl",
+  "md5": "8cf9e68e639079b88a2ac0ffda234b64",
+  "n": 2399,
+  "token_sum": 1127977,
+  "token_max": 768,
+  "layout": "[M_TASK] + tok(prompt) + tok(target); 损失仅 target 段",
+  "roundtrip_checks": {
+   "n": true,
+   "ids": true,
+   "np": true,
+   "seg": true,
+   "no_gold_res": true
+  },
+  "prompt_tmpl_md5": "fcac370916a0b01017962a57ebc85928"
+ },
+ "wall_s": 222.72
+}

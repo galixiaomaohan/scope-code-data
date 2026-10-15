@@ -1,0 +1,45 @@
+{
+ "schema": "gen37-infer/1",
+ "generated": "2026-09-25T02:03:03+0800",
+ "player": "gen37",
+ "arm": "g37_dsrl_int8_greedy",
+ "model": "models/DeepSeek-Prover-V1.5-RL",
+ "model_dir": "/home/data/ZHC/tcaboost/research/models/DeepSeek-Prover-V1.5-RL",
+ "model_load_mode": "load_in_8bit=True (与 UN-030 同式)",
+ "n_problems": 3,
+ "ctx": 4096,
+ "dev": "cuda:1",
+ "sampling": {
+  "greedy": true,
+  "do_sample": false,
+  "max_new_tokens_cap": 1024
+ },
+ "T1_tokens": {
+  "input_sum": 691,
+  "output_sum": 146,
+  "input_per_q": 230.33,
+  "output_per_q": 48.67
+ },
+ "T2_wall": {
+  "decode_wall_sum_s": 22.9,
+  "batch_wall_s": 24.2,
+  "secs_per_q_decode": 7.64,
+  "secs_per_q_batch": 8.07,
+  "toks_per_s_output": 6.37,
+  "toks_per_s_batch": 6.03,
+  "problems_per_h": 30.0
+ },
+ "T3_vram": {
+  "nvidia_smi_peak_mib": 8157,
+  "device": "RTX 4070 SUPER 12282MiB (GPU1)"
+ },
+ "attempts_file": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen37/out/GEN37_DSRL_smoke_attempts.jsonl",
+ "judge_md5_at_launch": "7c31b58da9d7228cee31b9be581fe5dd",
+ "stop_strings": [
+  "\ntheorem ",
+  "\nTheorem",
+  "\n### ",
+  "\nComplete the following"
+ ],
+ "resource_note": "decode_wall_sum = 逐题 generate 墙钟和 (纯模型时间); batch_wall 含 tokenize/写盘; tok/s 以 output/decode_wall 为主读数"
+}

@@ -1,0 +1,40 @@
+{
+ "schema": "gen37-build/1",
+ "generated": "2026-09-25T02:01:09+0800",
+ "exam": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen33/out/DEEP_EXAM_SIDECAR.jsonl",
+ "exam_md5": "104c8bb65efb2a8118d6e03cf46edd98",
+ "n_exam": 218,
+ "exam_lineage_note": "gen33 C4 后有效深考卷 218 (与 gen35 M1_F 同卷; 同卷同判卷件)",
+ "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+ "judge_path": "/home/data/ZHC/tcaboost/research/scratch/drct/drct_common.py",
+ "model_dir": "/home/data/ZHC/tcaboost/research/models/DeepSeek-Prover-V1.5-RL",
+ "n_prompts": 218,
+ "prompt_form": "DeepSeek-Prover-V1.5 quick_start 补全式 (zero-shot)",
+ "header": "import MiniF2F.ProblemImports\nopen scoped Real Nat Topology Polynomial",
+ "header_disclosure": "E3 官方头 (本地 miniF2F statements-only 裁决); HF 原式含 import Mathlib/Aesop + set_option maxHeartbeats 0 + open BigOperators Real Nat Topology Rat — 差异已登记, 与 UN-030 同式",
+ "prompt_min_chars": 250,
+ "prompt_max_chars": 502,
+ "by_family": {
+  "gen32_ind_nest": {
+   "n": 13,
+   "cls": "ind"
+  },
+  "gen32_ind_tower": {
+   "n": 24,
+   "cls": "ind"
+  },
+  "gen32_ineq_cascade": {
+   "n": 181,
+   "cls": "ineq"
+  }
+ },
+ "prompts_md5": "219e67ed51ae8de2769ec0feb9b37023",
+ "tok_check": {
+  "tokenizer_json_md5": "eb3eee8ca2b5b2b3608d8a3c5e7babaf",
+  "n": 218,
+  "prompt_tokens_min": 113,
+  "prompt_tokens_max": 288,
+  "prompt_tokens_sum": 34132,
+  "ctx_4096_headroom_min": 3808
+ }
+}

@@ -1,0 +1,598 @@
+{
+ "schema": "ccp-vocab/4",
+ "law": {
+  "用户令": "现在应该开始直接训练模型，并批卷",
+  "设计": "scratch/ccp/gen32/DEEP_REPORT.md §7 (集成设计注)",
+  "预注册": "scratch/ccp/gen33/V33_DESIGN.md §2"
+ },
+ "v3": {
+  "vocab": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen26/out/CCP_VOCAB_V3.json",
+  "md5": "e921401d4b9ecb3f74a730ef4aa36b4f",
+  "allow": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen26/cache/ccp_allow_v3.bin",
+  "allow_md5": "f2fbb932cb2b0d628c6d190e63b54787"
+ },
+ "policy": {
+  "upgrade": "升版 (禁就地改 v2/v3); 既有 0..184 逐字节不动",
+  "value_space": "**不变** (n_vals_ext 352; 本批零新增值)",
+  "no_hot_start": "step_head/allow/value_head/lat_tab 四处变宽 ⇒ 体热启+头全新建",
+  "init": "新算子行权重由 init_map 父行复制 (load_init_ccp 语义)"
+ },
+ "ops": {
+  "head": 194,
+  "n_new": 9,
+  "new": {
+   "gen32_nest_solve": 185,
+   "gen32_nest_fold": 186,
+   "gen32_nest_delta": 187,
+   "gen32_nest_close": 188,
+   "gen32_sos_block": 189,
+   "gen32_sos_cross": 190,
+   "gen32_sos_tail_zero": 191,
+   "gen32_sos_tail_square": 192,
+   "gen32_sos_tail_other": 193
+  },
+  "legal_idx_sorted": [
+   161,
+   162,
+   163,
+   164,
+   165,
+   166,
+   167,
+   168,
+   169,
+   170,
+   171,
+   172,
+   173,
+   174,
+   175,
+   176,
+   177,
+   178,
+   179,
+   180,
+   181,
+   182,
+   183,
+   184,
+   185,
+   186,
+   187,
+   188,
+   189,
+   190,
+   191,
+   192,
+   193
+  ],
+  "n_legal": 33,
+  "end_idx": 154
+ },
+ "init_map": {
+  "161": {
+   "name": "ccp_ind_recurrence",
+   "parent": "skel_induction_scheme",
+   "parent_idx": 156
+  },
+  "162": {
+   "name": "ccp_ring_identity",
+   "parent": "skel_leaf_close",
+   "parent_idx": 158
+  },
+  "163": {
+   "name": "ccp_ineq_sos",
+   "parent": "skel_subgoal_focus",
+   "parent_idx": 157
+  },
+  "164": {
+   "name": "ccp_ineq_close",
+   "parent": "skel_leaf_close",
+   "parent_idx": 158
+  },
+  "165": {
+   "name": "ccp_nt_dvd_witness",
+   "parent": "skel_case_split",
+   "parent_idx": 155
+  },
+  "166": {
+   "name": "ccp_nt_dvd_combine",
+   "parent": "skel_qed_check",
+   "parent_idx": 160
+  },
+  "167": {
+   "name": "ccp_nt_dvd_prod_combine",
+   "parent": "skel_qed_check",
+   "parent_idx": 160
+  },
+  "168": {
+   "name": "bh_ind_sum_d1",
+   "parent": "ccp_ind_recurrence",
+   "parent_idx": 161
+  },
+  "169": {
+   "name": "bh_ind_close_sq2",
+   "parent": "ccp_ring_identity",
+   "parent_idx": 162
+  },
+  "170": {
+   "name": "bh_ind_sum_d3",
+   "parent": "ccp_ind_recurrence",
+   "parent_idx": 161
+  },
+  "171": {
+   "name": "bh_ind_close_sq4",
+   "parent": "ccp_ring_identity",
+   "parent_idx": 162
+  },
+  "172": {
+   "name": "bh_ind_geo",
+   "parent": "ccp_ind_recurrence",
+   "parent_idx": 161
+  },
+  "173": {
+   "name": "bh_ind_close_const",
+   "parent": "ccp_ring_identity",
+   "parent_idx": 162
+  },
+  "174": {
+   "name": "bh_ineq_block",
+   "parent": "ccp_ineq_sos",
+   "parent_idx": 163
+  },
+  "175": {
+   "name": "bh_ineq_cross",
+   "parent": "ccp_ineq_sos",
+   "parent_idx": 163
+  },
+  "176": {
+   "name": "bh_ineq_tail_zero",
+   "parent": "ccp_ineq_close",
+   "parent_idx": 164
+  },
+  "177": {
+   "name": "bh_ineq_tail_square",
+   "parent": "ccp_ineq_close",
+   "parent_idx": 164
+  },
+  "178": {
+   "name": "bh_ineq_tail_other",
+   "parent": "ccp_ineq_close",
+   "parent_idx": 164
+  },
+  "179": {
+   "name": "g24_ind_ratio",
+   "parent": "ccp_ind_recurrence",
+   "parent_idx": 161
+  },
+  "180": {
+   "name": "g24_ind_ratio_close",
+   "parent": "ccp_ring_identity",
+   "parent_idx": 162
+  },
+  "181": {
+   "name": "g24_ind_pf",
+   "parent": "ccp_ind_recurrence",
+   "parent_idx": 161
+  },
+  "182": {
+   "name": "g24_ind_pf_close",
+   "parent": "ccp_ring_identity",
+   "parent_idx": 162
+  },
+  "183": {
+   "name": "g24_ineq_ht",
+   "parent": "ccp_ineq_close",
+   "parent_idx": 164
+  },
+  "184": {
+   "name": "g24_ineq_ht2",
+   "parent": "ccp_ineq_close",
+   "parent_idx": 164
+  },
+  "185": {
+   "name": "gen32_nest_solve",
+   "parent": "bh_ind_sum_d1",
+   "parent_idx": 168
+  },
+  "186": {
+   "name": "gen32_nest_fold",
+   "parent": "bh_ind_sum_d3",
+   "parent_idx": 170
+  },
+  "187": {
+   "name": "gen32_nest_delta",
+   "parent": "bh_ind_geo",
+   "parent_idx": 172
+  },
+  "188": {
+   "name": "gen32_nest_close",
+   "parent": "bh_ind_close_sq4",
+   "parent_idx": 171
+  },
+  "189": {
+   "name": "gen32_sos_block",
+   "parent": "bh_ineq_block",
+   "parent_idx": 174
+  },
+  "190": {
+   "name": "gen32_sos_cross",
+   "parent": "bh_ineq_cross",
+   "parent_idx": 175
+  },
+  "191": {
+   "name": "gen32_sos_tail_zero",
+   "parent": "bh_ineq_tail_zero",
+   "parent_idx": 176
+  },
+  "192": {
+   "name": "gen32_sos_tail_square",
+   "parent": "bh_ineq_tail_square",
+   "parent_idx": 177
+  },
+  "193": {
+   "name": "gen32_sos_tail_other",
+   "parent": "bh_ineq_tail_other",
+   "parent_idx": 178
+  }
+ },
+ "init_map_new": {
+  "185": {
+   "name": "gen32_nest_solve",
+   "parent": "bh_ind_sum_d1",
+   "parent_idx": 168
+  },
+  "186": {
+   "name": "gen32_nest_fold",
+   "parent": "bh_ind_sum_d3",
+   "parent_idx": 170
+  },
+  "187": {
+   "name": "gen32_nest_delta",
+   "parent": "bh_ind_geo",
+   "parent_idx": 172
+  },
+  "188": {
+   "name": "gen32_nest_close",
+   "parent": "bh_ind_close_sq4",
+   "parent_idx": 171
+  },
+  "189": {
+   "name": "gen32_sos_block",
+   "parent": "bh_ineq_block",
+   "parent_idx": 174
+  },
+  "190": {
+   "name": "gen32_sos_cross",
+   "parent": "bh_ineq_cross",
+   "parent_idx": 175
+  },
+  "191": {
+   "name": "gen32_sos_tail_zero",
+   "parent": "bh_ineq_tail_zero",
+   "parent_idx": 176
+  },
+  "192": {
+   "name": "gen32_sos_tail_square",
+   "parent": "bh_ineq_tail_square",
+   "parent_idx": 177
+  },
+  "193": {
+   "name": "gen32_sos_tail_other",
+   "parent": "bh_ineq_tail_other",
+   "parent_idx": 178
+  }
+ },
+ "value_space": {
+  "n_vals_ext": 352,
+  "n_digest": 64,
+  "digest_idx_range": [
+   288,
+   351
+  ],
+  "new_values_added": 0,
+  "lossy_note": "文本槽摘要有损 (64 桶); 桶内碰撞允许且登记 (v3 同式)"
+ },
+ "slot_schema_v4_new": {
+  "gen32_nest_solve": [
+   {
+    "path": "level",
+    "kind": "str",
+    "n_allowed": 65
+   },
+   {
+    "path": "nv",
+    "kind": "int",
+    "n_allowed": 194
+   },
+   {
+    "path": "v0",
+    "kind": "int",
+    "n_allowed": 194
+   },
+   {
+    "path": "deg",
+    "kind": "int",
+    "n_allowed": 194
+   },
+   {
+    "path": "S",
+    "kind": "str",
+    "n_allowed": 65
+   }
+  ],
+  "gen32_nest_fold": [
+   {
+    "path": "level",
+    "kind": "str",
+    "n_allowed": 65
+   },
+   {
+    "path": "nv",
+    "kind": "int",
+    "n_allowed": 194
+   },
+   {
+    "path": "scale",
+    "kind": "int",
+    "n_allowed": 194
+   },
+   {
+    "path": "lower",
+    "kind": "str",
+    "n_allowed": 65
+   }
+  ],
+  "gen32_nest_delta": [
+   {
+    "path": "level",
+    "kind": "str",
+    "n_allowed": 65
+   },
+   {
+    "path": "nv",
+    "kind": "int",
+    "n_allowed": 194
+   },
+   {
+    "path": "upper",
+    "kind": "str",
+    "n_allowed": 65
+   },
+   {
+    "path": "inc",
+    "kind": "str",
+    "n_allowed": 65
+   }
+  ],
+  "gen32_nest_close": [
+   {
+    "path": "level",
+    "kind": "str",
+    "n_allowed": 65
+   },
+   {
+    "path": "nv",
+    "kind": "int",
+    "n_allowed": 194
+   },
+   {
+    "path": "P",
+    "kind": "str",
+    "n_allowed": 65
+   },
+   {
+    "path": "T",
+    "kind": "str",
+    "n_allowed": 65
+   },
+   {
+    "path": "cls",
+    "kind": "str",
+    "n_allowed": 65
+   },
+   {
+    "path": "sq",
+    "kind": "list",
+    "n_allowed": 65
+   }
+  ],
+  "gen32_sos_block": [
+   {
+    "path": "ell",
+    "kind": "str",
+    "n_allowed": 65
+   },
+   {
+    "path": "mult",
+    "kind": "int",
+    "n_allowed": 194
+   },
+   {
+    "path": "vars",
+    "kind": "list",
+    "n_allowed": 65
+   },
+   {
+    "path": "R_in",
+    "kind": "str",
+    "n_allowed": 65
+   },
+   {
+    "path": "hint_idx",
+    "kind": "int",
+    "n_allowed": 194
+   }
+  ],
+  "gen32_sos_cross": [
+   {
+    "path": "ell",
+    "kind": "str",
+    "n_allowed": 65
+   },
+   {
+    "path": "mult",
+    "kind": "int",
+    "n_allowed": 194
+   },
+   {
+    "path": "vars",
+    "kind": "list",
+    "n_allowed": 65
+   },
+   {
+    "path": "R_in",
+    "kind": "str",
+    "n_allowed": 65
+   },
+   {
+    "path": "hint_idx",
+    "kind": "int",
+    "n_allowed": 194
+   }
+  ],
+  "gen32_sos_tail_zero": [
+   {
+    "path": "vars",
+    "kind": "list",
+    "n_allowed": 65
+   },
+   {
+    "path": "rho",
+    "kind": "int",
+    "n_allowed": 194
+   },
+   {
+    "path": "hints",
+    "kind": "list",
+    "n_allowed": 65
+   },
+   {
+    "path": "goal_dom",
+    "kind": "str",
+    "n_allowed": 65
+   },
+   {
+    "path": "hints_poly",
+    "kind": "list",
+    "n_allowed": 65
+   }
+  ],
+  "gen32_sos_tail_square": [
+   {
+    "path": "vars",
+    "kind": "list",
+    "n_allowed": 65
+   },
+   {
+    "path": "rho",
+    "kind": "int",
+    "n_allowed": 194
+   },
+   {
+    "path": "hints",
+    "kind": "list",
+    "n_allowed": 65
+   },
+   {
+    "path": "goal_dom",
+    "kind": "str",
+    "n_allowed": 65
+   },
+   {
+    "path": "hints_poly",
+    "kind": "list",
+    "n_allowed": 65
+   },
+   {
+    "path": "sq",
+    "kind": "int",
+    "n_allowed": 194
+   }
+  ],
+  "gen32_sos_tail_other": [
+   {
+    "path": "vars",
+    "kind": "list",
+    "n_allowed": 65
+   },
+   {
+    "path": "rho",
+    "kind": "int",
+    "n_allowed": 194
+   },
+   {
+    "path": "hints",
+    "kind": "list",
+    "n_allowed": 65
+   },
+   {
+    "path": "goal_dom",
+    "kind": "str",
+    "n_allowed": 65
+   },
+   {
+    "path": "hints_poly",
+    "kind": "list",
+    "n_allowed": 65
+   }
+  ]
+ },
+ "n_slots_new_ops": {
+  "gen32_nest_solve": 5,
+  "gen32_nest_fold": 4,
+  "gen32_nest_delta": 4,
+  "gen32_nest_close": 6,
+  "gen32_sos_block": 5,
+  "gen32_sos_cross": 5,
+  "gen32_sos_tail_zero": 5,
+  "gen32_sos_tail_square": 6,
+  "gen32_sos_tail_other": 5
+ },
+ "allow": {
+  "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen33/cache/ccp_allow_v4.bin",
+  "shape": [
+   194,
+   24,
+   352
+  ],
+  "rows_0_184_bitwise_equal_v3": true,
+  "sum_new_rows": {
+   "gen32_nest_solve": 712,
+   "gen32_nest_fold": 518,
+   "gen32_nest_delta": 389,
+   "gen32_nest_close": 519,
+   "gen32_sos_block": 583,
+   "gen32_sos_cross": 583,
+   "gen32_sos_tail_zero": 454,
+   "gen32_sos_tail_square": 648,
+   "gen32_sos_tail_other": 454
+  },
+  "sum_all": 90781,
+  "sum_v3": 85921
+ },
+ "vocab_v4": {
+  "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen33/cache/CCP_VOCAB_V4.json",
+  "md5": "d0af2aa8ce64bf006969282ff7c89d9f",
+  "head": 194,
+  "n_vals_ext": 352
+ },
+ "readback": {
+  "head": true,
+  "n_vals": true,
+  "end": true,
+  "old_allow_bitwise": true,
+  "init_map_194": true,
+  "legal_has_9": true,
+  "old_ops_unchanged": true,
+  "old_extra_values_unchanged": true,
+  "old_slot_schema_unchanged": true
+ },
+ "readback_ok": true,
+ "ctx4": {
+  "names_head_len": 194,
+  "per_has_new": true,
+  "NVALUES": 352,
+  "n_legal_names": 33
+ }
+}

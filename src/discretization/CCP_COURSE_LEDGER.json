@@ -1,0 +1,11 @@
+{
+ "schema": "ccp-ledger/1",
+ "classes": {
+  "nt": {
+   "n_problems": 750,
+   "n_rows": 3000,
+   "rows_md5": "6296cca4c0789663bffb9e2ae4f9ce57",
+   "report_md5": "d9f8ed7166646bae9d188291bf9f54f7"
+  }
+ }
+}

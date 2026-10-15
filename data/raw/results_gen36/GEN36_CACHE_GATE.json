@@ -1,0 +1,97 @@
+{
+ "schema": "gen36-cache-gate/1",
+ "scope": "cascade",
+ "dry_run": 0,
+ "cache_in": {
+  "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen33/cache/deep_all.bin",
+  "md5": "e54430eb6a23d7a3b27bd3c91c9b1074",
+  "bytes": 8375223
+ },
+ "cache_out": {
+  "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen36/cache/deep_all_a2.bin",
+  "md5": "17f889c6a2f9bc112645fea5832cb3ad",
+  "bytes": 8375223
+ },
+ "hdr": [
+  2399,
+  1,
+  730,
+  731,
+  732,
+  733,
+  734,
+  740,
+  25,
+  10,
+  154,
+  161,
+  194,
+  24,
+  352,
+  1
+ ],
+ "n_rows": 2399,
+ "G2a_parse_xcheck": {
+  "n_res_cmp": 15791,
+  "bad": 0
+ },
+ "G2_byte_gate_identical": false,
+ "G2b_roundtrip_read_ok": true,
+ "n_rt_bad": 0,
+ "G3a_last_const_eq_rho": {
+  "n": 799,
+  "ok": 799,
+  "rate": 1.0,
+  "bad": []
+ },
+ "G3b_shift_eq_device_chain": {
+  "n": 2993,
+  "ok": 2993,
+  "rate": 1.0,
+  "bad": []
+ },
+ "G3c_nontarget_rows_changed": 0,
+ "rho_dev_vs_meta": {
+  "n": 799,
+  "agree": 799
+ },
+ "n_target_rows": 799,
+ "n_shifted_vectors": 3761,
+ "n_hold_vectors": 830,
+ "n_none_vectors": 0,
+ "n_rows_dev_err": 0,
+ "segidx_src_cache": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen33/cache/deep_all.bin",
+ "parent_ledger_unchanged": {
+  "gen35_hybrid": "791496e5ab934140fd5c9fc2c4db9145",
+  "gen35_eval": "b9beac840e79e2348e57a9257779918d",
+  "gen35_common": "604087d12f254e9cadde80517de8d7db",
+  "gen35_compile": "6ebec49674edf6b43f9ac302614298cb",
+  "gen35_armrun": "bc22d1a69f2e02ade627b46db0b3aa1c",
+  "gen35_judge": "28238df3cb79eb53985b4191a38af7e4",
+  "gen35_tables": "121766a736b239b5684120f35bc85056",
+  "gen35_gate": "b716b9983e521d8fab7bf9bf946106d7",
+  "gen35_paeq": "16793583ff2a315f6b2ecba6c3ace779",
+  "gen34_hybrid": "094515124766d60499a81b7db2388ed4",
+  "gen34_eval": "5c5b646073ffa6ee9025e562c52e3f5c",
+  "gen33_device": "72bd5a9596d1a18b826fd6ffd4728e79",
+  "gen32_ops": "97f608e44bb9381eb6b82cdc58eded1a",
+  "gen32_poly": "610746a582f4a0f35f20ee9c6f451857",
+  "gen32_families": "5a0b321376aa1b5c85f3f382d213713e",
+  "gen32_corpus": "bfe8f0cbd3ea88fd414a7fbf1bb3e224",
+  "gen13_ccp_cachefull": "e7ba70c7c7370e296aa41e38b596296b",
+  "gen13_v32ccp_train": "19fa506d6867b855e87d48e7587c5dc5",
+  "drct_common": "7c31b58da9d7228cee31b9be581fe5dd",
+  "deep_corpus": "1ab45aab5bed22ef63b39d4c77080adb",
+  "exam_cand": "780dbb5ef83328a0b804473839a309e3",
+  "exam_sidecar": "104c8bb65efb2a8118d6e03cf46edd98",
+  "cache_g35": "e54430eb6a23d7a3b27bd3c91c9b1074",
+  "render_sidecar": "8cf9e68e639079b88a2ac0ffda234b64",
+  "slot_sidecar_corpus": "d9d47aed71f8b9caa4c879d5077bb9ba",
+  "slot_sidecar_exam": "c944210cd45cd450a3ae41348705a227",
+  "vocab_v4": "d0af2aa8ce64bf006969282ff7c89d9f",
+  "allow_v4": "e92911711b3f6fcfe43dcdeb35d84266",
+  "ckpt_gen35_plan": "eb0e1c603ed12e6994e5935e4ef7ed6d",
+  "walk_gen35": "5f1bd3025df101d8be9191eeaf7a7af4",
+  "tables_gen35": "169d38484e45eb84c9f9bfe59242cf80"
+ }
+}

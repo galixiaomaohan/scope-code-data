@@ -1,0 +1,13 @@
+{
+ "schema": "gen33-device-vs-gold/1",
+ "n_step": 15791,
+ "n_eq": 15791,
+ "n_ne": 0,
+ "n_err": 0,
+ "eq_rate": 1.0,
+ "bitwise_equal": true,
+ "bad_examples": [],
+ "corpus": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen32/DEEP_CORPUS_V1.jsonl",
+ "corpus_md5": "1ab45aab5bed22ef63b39d4c77080adb",
+ "entry": "gen33_device.dev_resid (装置现算, 不读行内 res)"
+}

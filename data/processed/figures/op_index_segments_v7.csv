@@ -1,0 +1,221 @@
+index,operator_name,segment,name_source,weight_row_l2,bias
+0,codebook_row,Base (legacy 161),v32registry_insertion_order,1.029699,-0.091759
+1,v31_codebook_row,Base (legacy 161),v32registry_insertion_order,1.126546,-0.102005
+2,v31_qsqrtd_arith,Base (legacy 161),v32registry_insertion_order,0.854775,-0.059031
+3,v31_census,Base (legacy 161),v32registry_insertion_order,0.994056,-0.064016
+4,solve_poly,Base (legacy 161),v32registry_insertion_order,0.824499,-0.023554
+5,solve_poly_exact,Base (legacy 161),v32registry_insertion_order,0.844959,-0.049857
+6,math_solve_linear_system,Base (legacy 161),v32registry_insertion_order,0.920925,-0.045397
+7,math_simplify_expr,Base (legacy 161),v32registry_insertion_order,0.825665,-0.021348
+8,math_expand_expr,Base (legacy 161),v32registry_insertion_order,1.149307,-0.058711
+9,math_factor_expr,Base (legacy 161),v32registry_insertion_order,0.861603,-0.061742
+10,math_differentiate,Base (legacy 161),v32registry_insertion_order,0.872285,-0.076392
+11,math_integrate_elementary,Base (legacy 161),v32registry_insertion_order,0.901,-0.036791
+12,math_numeric_root,Base (legacy 161),v32registry_insertion_order,0.849241,-0.025458
+13,math_series_truncate,Base (legacy 161),v32registry_insertion_order,0.869523,-0.053603
+14,math_unit_check,Base (legacy 161),v32registry_insertion_order,0.830398,-0.062679
+15,math_evaluate_expr,Base (legacy 161),v32registry_insertion_order,0.816837,-0.024989
+16,thm_quadratic_roots,Base (legacy 161),v32registry_insertion_order,0.836369,-0.053776
+17,thm_vieta,Base (legacy 161),v32registry_insertion_order,0.84796,-0.063599
+18,thm_ap_sum,Base (legacy 161),v32registry_insertion_order,0.819131,-0.049608
+19,thm_gp_sum,Base (legacy 161),v32registry_insertion_order,0.861583,-0.031712
+20,thm_binomial,Base (legacy 161),v32registry_insertion_order,0.878813,-0.050111
+21,thm_crt,Base (legacy 161),v32registry_insertion_order,0.871058,-0.051978
+22,thm_diff_squares,Base (legacy 161),v32registry_insertion_order,0.815477,-0.037594
+23,thm_amgm,Base (legacy 161),v32registry_insertion_order,0.768458,-0.037298
+24,thm_cauchy_schwarz,Base (legacy 161),v32registry_insertion_order,0.915687,-0.077267
+25,thm_triangle_ineq,Base (legacy 161),v32registry_insertion_order,0.829369,-0.046279
+26,thm_jensen,Base (legacy 161),v32registry_insertion_order,0.901834,-0.065543
+27,thm_mat2_inv,Base (legacy 161),v32registry_insertion_order,0.909063,-0.071154
+28,thm_cramer,Base (legacy 161),v32registry_insertion_order,0.846988,-0.059738
+29,thm_eig2,Base (legacy 161),v32registry_insertion_order,0.853334,-0.044118
+30,thm_rank_nullity,Base (legacy 161),v32registry_insertion_order,0.909732,-0.081269
+31,thm_cayley_hamilton,Base (legacy 161),v32registry_insertion_order,0.875757,-0.057935
+32,thm_spectral_radius,Base (legacy 161),v32registry_insertion_order,0.885048,-0.027996
+33,thm_derivative_table,Base (legacy 161),v32registry_insertion_order,0.787499,-0.071716
+34,thm_chain_rule,Base (legacy 161),v32registry_insertion_order,0.874691,-0.042174
+35,thm_integral_table,Base (legacy 161),v32registry_insertion_order,0.882288,-0.060849
+36,thm_ftc,Base (legacy 161),v32registry_insertion_order,0.842909,-0.075225
+37,thm_lhopital,Base (legacy 161),v32registry_insertion_order,1.061472,-0.100453
+38,thm_taylor_lagrange,Base (legacy 161),v32registry_insertion_order,1.042259,-0.052408
+39,thm_ratio_test,Base (legacy 161),v32registry_insertion_order,0.845944,-0.053558
+40,thm_root_test,Base (legacy 161),v32registry_insertion_order,0.872554,-0.035438
+41,thm_comparison_test,Base (legacy 161),v32registry_insertion_order,0.84203,-0.06171
+42,thm_bayes,Base (legacy 161),v32registry_insertion_order,1.003781,-0.048046
+43,thm_expectation_linear,Base (legacy 161),v32registry_insertion_order,1.087987,-0.09612
+44,thm_inclusion_exclusion,Base (legacy 161),v32registry_insertion_order,0.805858,-0.056729
+45,thm_pigeonhole,Base (legacy 161),v32registry_insertion_order,1.091103,-0.092797
+46,thm_mod_inverse,Base (legacy 161),v32registry_insertion_order,0.845556,-0.061944
+47,thm_fermat,Base (legacy 161),v32registry_insertion_order,0.820021,-0.027179
+48,thm_euler,Base (legacy 161),v32registry_insertion_order,0.842404,-0.031989
+49,thm_pythagorean,Base (legacy 161),v32registry_insertion_order,0.82095,-0.057132
+50,thm_angle_addition,Base (legacy 161),v32registry_insertion_order,1.150089,-0.056947
+51,strat_decompose,Base (legacy 161),v32registry_insertion_order,1.112825,-0.084165
+52,strat_induction,Base (legacy 161),v32registry_insertion_order,1.205342,-0.084265
+53,strat_contradiction,Base (legacy 161),v32registry_insertion_order,1.104151,-0.14979
+54,strat_case_split,Base (legacy 161),v32registry_insertion_order,1.196985,-0.104324
+55,strat_invariant_find,Base (legacy 161),v32registry_insertion_order,0.931169,-0.058217
+56,strat_extremal,Base (legacy 161),v32registry_insertion_order,0.875539,-0.063444
+57,strat_symmetry,Base (legacy 161),v32registry_insertion_order,1.156875,-0.085896
+58,strat_bound_tighten,Base (legacy 161),v32registry_insertion_order,0.885168,-0.079771
+59,code_exec_sandbox,Base (legacy 161),v32registry_insertion_order,0.981376,-0.050848
+60,code_ast_codebook,Base (legacy 161),v32registry_insertion_order,0.845072,-0.069305
+61,code_bounded_interp,Base (legacy 161),v32registry_insertion_order,0.941682,-0.060389
+62,code_property_test,Base (legacy 161),v32registry_insertion_order,0.963496,-0.082567
+63,code_vpair_split,Base (legacy 161),v32registry_insertion_order,0.872751,-0.059299
+64,ana_dep_graph,Base (legacy 161),v32registry_insertion_order,1.041025,-0.094086
+65,ana_dataflow,Base (legacy 161),v32registry_insertion_order,0.841741,-0.053483
+66,ana_complexity,Base (legacy 161),v32registry_insertion_order,0.875648,-0.03415
+67,ana_abstract_interp,Base (legacy 161),v32registry_insertion_order,0.879928,-0.026255
+68,ana_invariant_infer,Base (legacy 161),v32registry_insertion_order,0.989558,-0.091835
+69,ana_dead_code,Base (legacy 161),v32registry_insertion_order,0.850638,-0.034718
+70,rep_localize,Base (legacy 161),v32registry_insertion_order,1.049079,-0.109518
+71,rep_patch_gen,Base (legacy 161),v32registry_insertion_order,1.052581,-0.117285
+72,rep_regress_guard,Base (legacy 161),v32registry_insertion_order,0.889618,-0.030347
+73,rep_mutation_test,Base (legacy 161),v32registry_insertion_order,1.07775,-0.105698
+74,cbmc_bounded,Base (legacy 161),v32registry_insertion_order,0.943244,-0.078207
+75,tlc_modelcheck,Base (legacy 161),v32registry_insertion_order,0.960335,-0.105052
+76,symexec_slice,Base (legacy 161),v32registry_insertion_order,0.815493,-0.060342
+77,core_cross_check,Base (legacy 161),v32registry_insertion_order,0.956408,-0.035371
+78,logic_cnf_transform,Base (legacy 161),v32registry_insertion_order,1.124112,-0.079398
+79,logic_resolve_step,Base (legacy 161),v32registry_insertion_order,1.08036,-0.110049
+80,logic_unit_prop,Base (legacy 161),v32registry_insertion_order,0.841118,-0.067726
+81,logic_unify,Base (legacy 161),v32registry_insertion_order,1.01973,-0.07255
+82,logic_sat_verify,Base (legacy 161),v32registry_insertion_order,0.836766,-0.046075
+83,logic_sat_solve,Base (legacy 161),v32registry_insertion_order,0.87924,-0.062332
+84,logic_hilbert_prove,Base (legacy 161),v32registry_insertion_order,1.112405,-0.084158
+85,logic_arg_graph,Base (legacy 161),v32registry_insertion_order,1.010609,-0.103621
+86,logic_premise_trace,Base (legacy 161),v32registry_insertion_order,1.070265,-0.100818
+87,logic_tactic_step,Base (legacy 161),v32registry_insertion_order,1.044469,-0.057121
+88,logic_proof_search,Base (legacy 161),v32registry_insertion_order,0.880015,-0.077503
+89,logic_counterexample,Base (legacy 161),v32registry_insertion_order,0.853259,-0.034128
+90,sat_drat,Base (legacy 161),v32registry_insertion_order,1.052395,-0.08889
+91,smt_prooflog,Base (legacy 161),v32registry_insertion_order,1.087324,-0.104692
+92,model_check_ltl,Base (legacy 161),v32registry_insertion_order,1.044688,-0.071562
+93,lean_axioms,Base (legacy 161),v32registry_insertion_order,1.037885,-0.079571
+94,lean_bridge,Base (legacy 161),v32registry_insertion_order,1.116544,-0.138683
+95,mini_kernel_arith,Base (legacy 161),v32registry_insertion_order,1.042331,-0.105311
+96,agent_tool_registry,Base (legacy 161),v32registry_insertion_order,0.880835,-0.069955
+97,agent_call_loop,Base (legacy 161),v32registry_insertion_order,1.028062,-0.07348
+98,agent_ask_info,Base (legacy 161),v32registry_insertion_order,0.872586,-0.073057
+99,agent_plan_decompose,Base (legacy 161),v32registry_insertion_order,1.02382,-0.073357
+100,agent_memory_registry,Base (legacy 161),v32registry_insertion_order,1.0165,-0.095563
+101,agent_budget_governor,Base (legacy 161),v32registry_insertion_order,0.849081,-0.06372
+102,agent_committee,Base (legacy 161),v32registry_insertion_order,1.100587,-0.101342
+103,agent_llm_hint,Base (legacy 161),v32registry_insertion_order,1.055654,-0.063337
+104,agent_mcp_bridge,Base (legacy 161),v32registry_insertion_order,1.067976,-0.083519
+105,agent_replay_audit,Base (legacy 161),v32registry_insertion_order,1.091743,-0.107585
+106,spec_to_sig,Base (legacy 161),v32registry_insertion_order,1.055063,-0.08696
+107,sig_to_tests,Base (legacy 161),v32registry_insertion_order,0.962963,-0.101181
+108,tests_to_impl,Base (legacy 161),v32registry_insertion_order,1.048399,-0.07444
+109,refactor_equiv,Base (legacy 161),v32registry_insertion_order,0.98592,-0.051491
+110,build_repro,Base (legacy 161),v32registry_insertion_order,0.926266,-0.082091
+111,api_compat,Base (legacy 161),v32registry_insertion_order,1.064393,-0.081124
+112,dep_audit,Base (legacy 161),v32registry_insertion_order,1.023169,-0.062203
+113,ci_gate,Base (legacy 161),v32registry_insertion_order,1.084086,-0.06178
+114,doc_gen,Base (legacy 161),v32registry_insertion_order,1.000312,-0.08461
+115,proj_scaffold,Base (legacy 161),v32registry_insertion_order,1.123829,-0.072166
+116,cert_interval_eval,Base (legacy 161),v32registry_insertion_order,0.895961,-0.033366
+117,cert_newton_root,Base (legacy 161),v32registry_insertion_order,0.884928,-0.048933
+118,cert_lp,Base (legacy 161),v32registry_insertion_order,0.887587,-0.030579
+119,cert_lstsq,Base (legacy 161),v32registry_insertion_order,1.057332,-0.094451
+120,cert_series_bound,Base (legacy 161),v32registry_insertion_order,0.870615,-0.031813
+121,nt_lte,Base (legacy 161),v32registry_insertion_order,0.89263,-0.087812
+122,nt_hensel_lift,Base (legacy 161),v32registry_insertion_order,0.86699,-0.025116
+123,nt_pratt_cert,Base (legacy 161),v32registry_insertion_order,0.910075,-0.07715
+124,nt_miller_witness,Base (legacy 161),v32registry_insertion_order,0.828496,-0.060388
+125,nt_factor_cert,Base (legacy 161),v32registry_insertion_order,0.85902,-0.052329
+126,nt_order_mult,Base (legacy 161),v32registry_insertion_order,0.771193,-0.041927
+127,nt_jacobi_qr,Base (legacy 161),v32registry_insertion_order,0.858378,-0.026559
+128,nt_zsigmondy,Base (legacy 161),v32registry_insertion_order,0.803514,-0.060112
+129,arith_func_convolution,Base (legacy 161),v32registry_insertion_order,0.860569,-0.079782
+130,nt_valuation_ring,Base (legacy 161),v32registry_insertion_order,0.859417,-0.049276
+131,alg_cont_frac,Base (legacy 161),v32registry_insertion_order,0.818214,-0.073741
+132,alg_pell_solve,Base (legacy 161),v32registry_insertion_order,0.813485,-0.060227
+133,qf_gauss_reduce,Base (legacy 161),v32registry_insertion_order,0.824127,-0.04861
+134,mf_qexp_arith,Base (legacy 161),v32registry_insertion_order,0.847502,-0.068039
+135,mf_hecke_tp,Base (legacy 161),v32registry_insertion_order,0.912795,-0.050116
+136,ec_group_law,Base (legacy 161),v32registry_insertion_order,1.124488,-0.134573
+137,ec_nagell_lutz,Base (legacy 161),v32registry_insertion_order,1.105598,-0.105921
+138,curve_point_count_small,Base (legacy 161),v32registry_insertion_order,0.835915,-0.028239
+139,ec_frey_construct,Base (legacy 161),v32registry_insertion_order,0.852241,-0.040519
+140,psi_explicit_estimate,Base (legacy 161),v32registry_insertion_order,0.878501,-0.029351
+141,trans_gelfond_apply,Base (legacy 161),v32registry_insertion_order,1.105784,-0.145044
+142,goal_apply_theorem,Base (legacy 161),v32registry_insertion_order,0.996127,-0.101638
+143,lemma_instantiate,Base (legacy 161),v32registry_insertion_order,1.012765,-0.067745
+144,goal_transform,Base (legacy 161),v32registry_insertion_order,1.12218,-0.151709
+145,lemma_discover,Base (legacy 161),v32registry_insertion_order,0.925658,-0.079705
+146,ant_ring_integers,Base (legacy 161),v32registry_insertion_order,1.113506,-0.129258
+147,ec_descent_2,Base (legacy 161),v32registry_insertion_order,1.097299,-0.116302
+148,hasse_principle_check,Base (legacy 161),v32registry_insertion_order,1.122495,-0.136275
+149,mf_level_lowering,Base (legacy 161),v32registry_insertion_order,1.117789,-0.153016
+150,ls_match_certificate,Base (legacy 161),v32registry_insertion_order,1.117195,-0.107895
+151,ant_zero_free_region,Base (legacy 161),v32registry_insertion_order,1.100553,-0.112761
+152,circle_method_waring,Base (legacy 161),v32registry_insertion_order,1.127571,-0.13592
+153,p_adic_l_precision,Base (legacy 161),v32registry_insertion_order,1.120834,-0.11307
+154,v31_end_marker,Base (legacy 161),v32registry_end_sentinel,0.889112,0.0108
+155,skel_case_split,Base (legacy 161),v32registry_skel_block,0.829659,-0.032963
+156,skel_induction_scheme,Base (legacy 161),v32registry_skel_block,0.759084,-0.080389
+157,skel_subgoal_focus,Base (legacy 161),v32registry_skel_block,0.790092,-0.031861
+158,skel_leaf_close,Base (legacy 161),v32registry_skel_block,0.789425,-0.031095
+159,skel_contradiction_close,Base (legacy 161),v32registry_skel_block,0.884436,-0.053672
+160,skel_qed_check,Base (legacy 161),v32registry_skel_block,0.872385,-0.035042
+161,ccp_ind_recurrence,Deep-chain ext.,CCP_VOCAB_V7:ops_ccp,0.759084,-0.080389
+162,ccp_ring_identity,Deep-chain ext.,CCP_VOCAB_V7:ops_ccp,0.789425,-0.031095
+163,ccp_ineq_sos,Deep-chain ext.,CCP_VOCAB_V7:ops_ccp,0.790092,-0.031861
+164,ccp_ineq_close,Deep-chain ext.,CCP_VOCAB_V7:ops_ccp,0.789425,-0.031095
+165,ccp_nt_dvd_witness,Deep-chain ext.,CCP_VOCAB_V7:ops_ccp,0.829659,-0.032963
+166,ccp_nt_dvd_combine,Deep-chain ext.,CCP_VOCAB_V7:ops_ccp,0.872385,-0.035042
+167,ccp_nt_dvd_prod_combine,Deep-chain ext.,CCP_VOCAB_V7:ops_ccp,0.872385,-0.035042
+168,bh_ind_sum_d1,Deep-chain ext.,CCP_VOCAB_V7:ops_bh,0.759084,-0.080389
+169,bh_ind_close_sq2,Deep-chain ext.,CCP_VOCAB_V7:ops_bh,0.789425,-0.031095
+170,bh_ind_sum_d3,Deep-chain ext.,CCP_VOCAB_V7:ops_bh,0.759084,-0.080389
+171,bh_ind_close_sq4,Deep-chain ext.,CCP_VOCAB_V7:ops_bh,0.789425,-0.031095
+172,bh_ind_geo,Deep-chain ext.,CCP_VOCAB_V7:ops_bh,0.759084,-0.080389
+173,bh_ind_close_const,Deep-chain ext.,CCP_VOCAB_V7:ops_bh,0.789425,-0.031095
+174,bh_ineq_block,Deep-chain ext.,CCP_VOCAB_V7:ops_bh,0.790092,-0.031861
+175,bh_ineq_cross,Deep-chain ext.,CCP_VOCAB_V7:ops_bh,0.790092,-0.031861
+176,bh_ineq_tail_zero,Deep-chain ext.,CCP_VOCAB_V7:ops_bh,0.789425,-0.031095
+177,bh_ineq_tail_square,Deep-chain ext.,CCP_VOCAB_V7:ops_bh,0.789425,-0.031095
+178,bh_ineq_tail_other,Constr. curriculum,CCP_VOCAB_V7:ops_bh,0.789425,-0.031095
+179,g24_ind_ratio,Constr. curriculum,CCP_VOCAB_V7:ops_g24,0.759084,-0.080389
+180,g24_ind_ratio_close,Constr. curriculum,CCP_VOCAB_V7:ops_g24,0.789425,-0.031095
+181,g24_ind_pf,Constr. curriculum,CCP_VOCAB_V7:ops_g24,0.759084,-0.080389
+182,g24_ind_pf_close,Constr. curriculum,CCP_VOCAB_V7:ops_g24,0.789425,-0.031095
+183,g24_ineq_ht,Constr. curriculum,CCP_VOCAB_V7:ops_g24,0.789425,-0.031095
+184,g24_ineq_ht2,Constr. curriculum,CCP_VOCAB_V7:ops_g24,0.789425,-0.031095
+185,gen32_nest_solve,Deep-chain family,CCP_VOCAB_V7:ops_gen32,0.975224,-0.023139
+186,gen32_nest_fold,Deep-chain family,CCP_VOCAB_V7:ops_gen32,0.966227,-0.038737
+187,gen32_nest_delta,Deep-chain family,CCP_VOCAB_V7:ops_gen32,0.861591,-0.037506
+188,gen32_nest_close,Deep-chain family,CCP_VOCAB_V7:ops_gen32,1.039492,-0.011281
+189,gen32_sos_block,Deep-chain family,CCP_VOCAB_V7:ops_gen32,0.937955,0.029072
+190,gen32_sos_cross,Deep-chain family,CCP_VOCAB_V7:ops_gen32,0.873312,0.008955
+191,gen32_sos_tail_zero,Deep-chain family,CCP_VOCAB_V7:ops_gen32,0.944311,-0.005943
+192,gen32_sos_tail_square,Deep-chain family,CCP_VOCAB_V7:ops_gen32,0.728002,0.017254
+193,gen32_sos_tail_other,Deep-chain family,CCP_VOCAB_V7:ops_gen32,0.740684,0.018113
+194,g41_subst_bind,Subst. / eval.,CCP_VOCAB_V7:ops_g41,0.503179,-0.030253
+195,g41_subst_close,Subst. / eval.,CCP_VOCAB_V7:ops_g41,0.624014,-0.004993
+196,g41_eval_arith,Subst. / eval.,CCP_VOCAB_V7:ops_g41,0.602001,-0.003423
+197,g41_eval_mod,Subst. / eval.,CCP_VOCAB_V7:ops_g41,0.632589,0.00596
+198,g42_s_reduce,Routing,CCP_VOCAB_V7:ops_g42,0.583916,0.023989
+199,g42_s_poly,Routing,CCP_VOCAB_V7:ops_g42,0.743936,0.020044
+200,g42_s_eval,Routing,CCP_VOCAB_V7:ops_g42,0.716229,0.025222
+201,g42_s_mod,Routing,CCP_VOCAB_V7:ops_g42,0.632589,0.00596
+202,g42_s_lin,Routing,CCP_VOCAB_V7:ops_g42,0.531843,0.020245
+203,g42_s_omega,Routing,CCP_VOCAB_V7:ops_g42,0.660626,0.020572
+204,g42_s_pos,Routing,CCP_VOCAB_V7:ops_g42,0.629615,0.008582
+205,g42_sb_step,Routing,CCP_VOCAB_V7:ops_g42,0.532928,-0.015694
+206,g42_sb_close,Routing,CCP_VOCAB_V7:ops_g42,0.651241,0.01199
+207,g44_goal_split,Expansion,CCP_VOCAB_V7:ops_g44,0.522055,0.012481
+208,g44_intro_binder,Expansion,CCP_VOCAB_V7:ops_g44,0.596533,-0.00373
+209,g44_witness_solve,Expansion,CCP_VOCAB_V7:ops_g44,0.545754,0.020007
+210,g44_hyp_pred_ref,Expansion,CCP_VOCAB_V7:ops_g44,0.718506,0.019947
+211,g44_hyp_pred_expand,Expansion,CCP_VOCAB_V7:ops_g44,0.519337,0.015028
+212,g44_sqrt_iso,Expansion,CCP_VOCAB_V7:ops_g44,0.523488,0.011749
+213,g44_sqrt_sq,Expansion,CCP_VOCAB_V7:ops_g44,0.746692,0.017817
+214,g44_sqrt_close,Expansion,CCP_VOCAB_V7:ops_g44,0.524797,0.01176
+215,g44_pow_atom,Expansion,CCP_VOCAB_V7:ops_g44,0.723465,0.021385
+216,g44_pow_cap,Expansion,CCP_VOCAB_V7:ops_g44,0.680765,0.022442
+217,g44_fact_atom,Expansion,CCP_VOCAB_V7:ops_g44,0.702367,0.025352
+218,g44_lib_atom,Expansion,CCP_VOCAB_V7:ops_g44,0.669402,0.023029
+219,g44_relchain,Expansion,CCP_VOCAB_V7:ops_g44,0.536606,0.013277

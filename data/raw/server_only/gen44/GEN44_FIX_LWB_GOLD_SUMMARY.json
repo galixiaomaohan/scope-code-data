@@ -1,0 +1,110 @@
+{
+ "schema": "gen44-lwb-gold-summary/1",
+ "n_target": 2050,
+ "v1": {
+  "n_judged": 2050,
+  "n_certified": 1001,
+  "rate": 0.4883
+ },
+ "v2_gold_enum": {
+  "n_judged": 2050,
+  "n_unjd": 0,
+  "n_certified": 1496,
+  "rate": 0.7298,
+  "wilson95": [
+   0.7101,
+   0.7485
+  ],
+  "library_rate": 0.0107
+ },
+ "delta_on_common": {
+  "n_common": 2050,
+  "v1_cert": 1001,
+  "v2_cert": 1496,
+  "gained": 495,
+  "lost": 0,
+  "lost_names": [],
+  "gain_by_cand": {
+   "1": 451,
+   "2": 44
+  }
+ },
+ "cand_hist": {
+  "0": 1001,
+  "1": 451,
+  "2": 44
+ },
+ "by_route": {
+  "eval": {
+   "n": 664,
+   "v2_cert": 509,
+   "v2_rate": 0.7666,
+   "v2_wilson95": [
+    0.7329,
+    0.7972
+   ],
+   "v1_cert_on_common": 100,
+   "v1_rate_on_common": 0.1506
+  },
+  "g42_subst": {
+   "n": 71,
+   "v2_cert": 64,
+   "v2_rate": 0.9014,
+   "v2_wilson95": [
+    0.8102,
+    0.9514
+   ],
+   "v1_cert_on_common": 64,
+   "v1_rate_on_common": 0.9014
+  },
+  "lin": {
+   "n": 458,
+   "v2_cert": 381,
+   "v2_rate": 0.8319,
+   "v2_wilson95": [
+    0.7949,
+    0.8633
+   ],
+   "v1_cert_on_common": 352,
+   "v1_rate_on_common": 0.7686
+  },
+  "omega": {
+   "n": 313,
+   "v2_cert": 49,
+   "v2_rate": 0.1565,
+   "v2_wilson95": [
+    0.1205,
+    0.2009
+   ],
+   "v1_cert_on_common": 11,
+   "v1_rate_on_common": 0.0351
+  },
+  "poly": {
+   "n": 544,
+   "v2_cert": 493,
+   "v2_rate": 0.9062,
+   "v2_wilson95": [
+    0.8788,
+    0.928
+   ],
+   "v1_cert_on_common": 474,
+   "v1_rate_on_common": 0.8713
+  }
+ },
+ "by_subset": {
+  "lean_workbook": {
+   "n": 753,
+   "cert": 570,
+   "rate": 0.75697
+  },
+  "lean_workbook_plus": {
+   "n": 1297,
+   "cert": 926,
+   "rate": 0.71396
+  }
+ },
+ "renderer_md5": {
+  "gold_enum": "9063d26c7b85281e1d3e40b5afa08a4a"
+ },
+ "caveat": "v2 = **含渲染候选枚举的装置上界口径**; 不得与模型考试读数混用; 候选序 C1[v,close] -> C2[close] -> C3[v] -> C4/C5[v_alt,close]"
+}

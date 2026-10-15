@@ -1,0 +1,372 @@
+{
+  "_provenance": {
+    "gen44": "GEN44_FINAL_REPORT.md r3, md5 06b22f6a791cc41d2e14b976bee1eceb (transcript of the server report, shipped at data/raw/server_only/gen44/)",
+    "gen39": "T4_DAMAGE.json (shipped at data/raw/server_only/gen39/)",
+    "rule": "Every figure reading matches the manuscript and the raw files verbatim; values that were never measured do not appear"
+  },
+  "funnel": {
+    "denominator": 132378,
+    "denominator_note": "139,826 minus 7,448 (library-intrinsic C6 damage, a source-library issue)",
+    "in_domain": 48106,
+    "out_domain": 84267,
+    "rest": 5,
+    "judged": 3536,
+    "certified": 2132,
+    "rate": 0.6029,
+    "wilson": [
+      0.5867,
+      0.6189
+    ]
+  },
+  "gen44_families": [
+    {
+      "fam": "b1",
+      "model_cert": 87,
+      "model_judged": 246,
+      "tree_cert": 354,
+      "tree_judged": 810
+    },
+    {
+      "fam": "b2",
+      "model_cert": 158,
+      "model_judged": 229,
+      "tree_cert": 201,
+      "tree_judged": 306
+    },
+    {
+      "fam": "b3",
+      "model_cert": 5,
+      "model_judged": 21,
+      "tree_cert": 6,
+      "tree_judged": 26
+    },
+    {
+      "fam": "b4",
+      "model_cert": 2,
+      "model_judged": 2,
+      "tree_cert": 2,
+      "tree_judged": 2
+    },
+    {
+      "fam": "b5",
+      "model_cert": 1,
+      "model_judged": 6,
+      "tree_cert": 1,
+      "tree_judged": 10
+    },
+    {
+      "fam": "b6",
+      "model_cert": 0,
+      "model_judged": 0,
+      "tree_cert": 35,
+      "tree_judged": 85
+    },
+    {
+      "fam": "b7",
+      "model_cert": 13,
+      "model_judged": 57,
+      "tree_cert": 48,
+      "tree_judged": 201
+    },
+    {
+      "fam": "b8",
+      "model_cert": 13,
+      "model_judged": 60,
+      "tree_cert": 20,
+      "tree_judged": 74
+    },
+    {
+      "fam": "b9",
+      "model_cert": 2,
+      "model_judged": 2,
+      "tree_cert": 5,
+      "tree_judged": 11
+    }
+  ],
+  "gen44_totals": {
+    "model": {
+      "cert": 281,
+      "judged": 623,
+      "rate": 0.451,
+      "wilson": [
+        0.4124,
+        0.4903
+      ]
+    },
+    "tree": {
+      "cert": 672,
+      "judged": 1525,
+      "rate": 0.4407,
+      "wilson": [
+        0.416,
+        0.4659
+      ]
+    },
+    "note": "The two arms have different denominators (623 against 1,525); never compare them by division. Family b6 has 0/0 on the model side (chains not renderable) and is listed separately, not scored as zero."
+  },
+  "damage_cells": {
+    "_note": "Unit level: 1,680 judged units across 24 cells (six damage probabilities p by four payload-integer count bins; per-cell slot and n_damaged counts in T4_DAMAGE.json); expect = 1 - p",
+    "bins": {
+      "B1": 10.4,
+      "B2": 15.1,
+      "B3": 20.0,
+      "B4": 30.0
+    },
+    "cells": [
+      {
+        "p": 0.5,
+        "bin": "B1",
+        "n_damaged": 384,
+        "rate": 0.521,
+        "wilson": [
+          0.4849,
+          0.5569
+        ]
+      },
+      {
+        "p": 0.5,
+        "bin": "B2",
+        "n_damaged": 529,
+        "rate": 0.5024,
+        "wilson": [
+          0.4722,
+          0.5325
+        ]
+      },
+      {
+        "p": 0.5,
+        "bin": "B3",
+        "n_damaged": 709,
+        "rate": 0.5046,
+        "wilson": [
+          0.4785,
+          0.5307
+        ]
+      },
+      {
+        "p": 0.5,
+        "bin": "B4",
+        "n_damaged": 1113,
+        "rate": 0.5091,
+        "wilson": [
+          0.4882,
+          0.5301
+        ]
+      },
+      {
+        "p": 0.7,
+        "bin": "B1",
+        "n_damaged": 206,
+        "rate": 0.2873,
+        "wilson": [
+          0.2554,
+          0.3215
+        ]
+      },
+      {
+        "p": 0.7,
+        "bin": "B2",
+        "n_damaged": 326,
+        "rate": 0.3067,
+        "wilson": [
+          0.2797,
+          0.3351
+        ]
+      },
+      {
+        "p": 0.7,
+        "bin": "B3",
+        "n_damaged": 431,
+        "rate": 0.3014,
+        "wilson": [
+          0.2782,
+          0.3257
+        ]
+      },
+      {
+        "p": 0.7,
+        "bin": "B4",
+        "n_damaged": 567,
+        "rate": 0.2746,
+        "wilson": [
+          0.2558,
+          0.2942
+        ]
+      },
+      {
+        "p": 0.8,
+        "bin": "B1",
+        "n_damaged": 132,
+        "rate": 0.1878,
+        "wilson": [
+          0.1606,
+          0.2183
+        ]
+      },
+      {
+        "p": 0.8,
+        "bin": "B2",
+        "n_damaged": 228,
+        "rate": 0.2176,
+        "wilson": [
+          0.1936,
+          0.2435
+        ]
+      },
+      {
+        "p": 0.8,
+        "bin": "B3",
+        "n_damaged": 290,
+        "rate": 0.2074,
+        "wilson": [
+          0.187,
+          0.2295
+        ]
+      },
+      {
+        "p": 0.8,
+        "bin": "B4",
+        "n_damaged": 448,
+        "rate": 0.209,
+        "wilson": [
+          0.1923,
+          0.2267
+        ]
+      },
+      {
+        "p": 0.9,
+        "bin": "B1",
+        "n_damaged": 116,
+        "rate": 0.1578,
+        "wilson": [
+          0.1333,
+          0.186
+        ]
+      },
+      {
+        "p": 0.9,
+        "bin": "B2",
+        "n_damaged": 131,
+        "rate": 0.1238,
+        "wilson": [
+          0.1053,
+          0.145
+        ]
+      },
+      {
+        "p": 0.9,
+        "bin": "B3",
+        "n_damaged": 165,
+        "rate": 0.116,
+        "wilson": [
+          0.1003,
+          0.1336
+        ]
+      },
+      {
+        "p": 0.9,
+        "bin": "B4",
+        "n_damaged": 200,
+        "rate": 0.0938,
+        "wilson": [
+          0.0822,
+          0.1069
+        ]
+      },
+      {
+        "p": 0.95,
+        "bin": "B1",
+        "n_damaged": 97,
+        "rate": 0.129,
+        "wilson": [
+          0.1069,
+          0.1548
+        ]
+      },
+      {
+        "p": 0.95,
+        "bin": "B2",
+        "n_damaged": 94,
+        "rate": 0.0876,
+        "wilson": [
+          0.0721,
+          0.106
+        ]
+      },
+      {
+        "p": 0.95,
+        "bin": "B3",
+        "n_damaged": 118,
+        "rate": 0.0843,
+        "wilson": [
+          0.0708,
+          0.1
+        ]
+      },
+      {
+        "p": 0.95,
+        "bin": "B4",
+        "n_damaged": 156,
+        "rate": 0.0743,
+        "wilson": [
+          0.0638,
+          0.0863
+        ]
+      },
+      {
+        "p": 0.99,
+        "bin": "B1",
+        "n_damaged": 72,
+        "rate": 0.1001,
+        "wilson": [
+          0.0803,
+          0.1243
+        ]
+      },
+      {
+        "p": 0.99,
+        "bin": "B2",
+        "n_damaged": 74,
+        "rate": 0.0698,
+        "wilson": [
+          0.056,
+          0.0868
+        ]
+      },
+      {
+        "p": 0.99,
+        "bin": "B3",
+        "n_damaged": 76,
+        "rate": 0.0541,
+        "wilson": [
+          0.0434,
+          0.0671
+        ]
+      },
+      {
+        "p": 0.99,
+        "bin": "B4",
+        "n_damaged": 81,
+        "rate": 0.0384,
+        "wilson": [
+          0.031,
+          0.0475
+        ]
+      }
+    ],
+    "pooled_whole": {
+      "measured": 0.558,
+      "theory": 0.53,
+      "n_pool": 2617,
+      "n_trials": 3570,
+      "n_unit_judged": 1680,
+      "judge_exceptions": 0,
+      "payload_slots": {
+        "survived": 0,
+        "n": 432
+      },
+      "lemma_tower_rejected": 1164,
+      "single_slot_survival": "25/25"
+    }
+  }
+}

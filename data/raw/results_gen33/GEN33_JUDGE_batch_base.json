@@ -1,0 +1,22 @@
+{
+ "schema": "gen33-judge/1",
+ "generated": "2026-09-24T07:30:50+0800",
+ "judge_md5_before": "7c31b58da9d7228cee31b9be581fe5dd",
+ "tags": [
+  "base"
+ ],
+ "judge_entry": "drct_common (冻结 7c31b58d) via gen33_eval.judge_texts (batch) / DC.judge_attempt (literal, reverse)",
+ "c5_rule": "异常 != 分歧; agree 仅在双侧均确定判决时定义",
+ "batch": {
+  "base": {
+   "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen33/out/GEN33_PRESCREEN_TRACE_base.jsonl",
+   "md5": "4fa8fde2d352cfd9dc343a63d2fa5593",
+   "n": 218,
+   "certified": 0,
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "certified_rate": 0.0
+  }
+ },
+ "judge_md5_after": "7c31b58da9d7228cee31b9be581fe5dd",
+ "judge_unchanged": true
+}

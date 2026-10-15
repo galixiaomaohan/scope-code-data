@@ -1,0 +1,3451 @@
+{
+ "split": "Test(243)-事后标注段",
+ "nav_solved_per_state": {
+  "v32_off": 9,
+  "v32_on": 17
+ },
+ "layer_counts": {
+  "solved": 17,
+  "L1_translation": 160,
+  "L2_vocabulary": 64,
+  "L3_navigation": 2
+ },
+ "domain_counts": {
+  "algebra": 157,
+  "analysis": 11,
+  "combinatorics": 30,
+  "inequality": 28,
+  "numbertheory": 17
+ },
+ "domain_x_layer": {
+  "algebra|solved": 17,
+  "algebra|L1_translation": 84,
+  "analysis|L1_translation": 11,
+  "combinatorics|L1_translation": 30,
+  "algebra|L2_vocabulary": 54,
+  "inequality|L2_vocabulary": 9,
+  "inequality|L1_translation": 19,
+  "numbertheory|L1_translation": 16,
+  "numbertheory|L2_vocabulary": 1,
+  "algebra|L3_navigation": 2
+ },
+ "per_problem": {
+  "mathd_algebra_478": {
+   "class": "S_SUBST",
+   "why": [
+    "全部变量由等式假设确定"
+   ],
+   "layer": "solved",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "numbertheory_4x3m7y3neq2003": {
+   "class": "REJECT",
+   "why": [
+    "结论无关系符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "bounding_squeeze",
+    "struct": "other",
+    "source": "other"
+   }
+  },
+  "aime_1983_p1": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)",
+    "排除符号: 对数"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "analysis",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "amc12_2001_p5": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: Finset",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_algebra_141": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['a', 'b'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_3": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 有限和",
+    "排除符号: Finset",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "imo_1969_p2": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)",
+    "排除符号: 有限和",
+    "排除符号: Finset",
+    "排除符号: 存在量词",
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 三角",
+    "排除符号: π",
+    "排除符号: 函数类型",
+    "排除符号: 函数类型",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "prove_identity",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_algebra_209": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_1124": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['n'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "imo_1983_p6": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['a', 'b', 'c'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "inequality",
+    "tech": "bounding_squeeze",
+    "struct": "prove_inequality",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_numbertheory_237": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 有限和",
+    "排除符号: Finset",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_33": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['x', 'z'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "amc12b_2021_p3": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['x'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_numbertheory_299": {
+   "class": "C_CLOSED",
+   "why": [
+    "无 binder ⇒ 闭式题"
+   ],
+   "layer": "solved",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "amc12b_2020_p2": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "algebra_sqineq_unitcircatbpabsamblt1": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "inequality",
+    "tech": "substitution_compute",
+    "struct": "prove_inequality",
+    "source": "other"
+   }
+  },
+  "imo_1977_p6": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "inequality",
+    "tech": "substitution_compute",
+    "struct": "prove_identity",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_algebra_419": {
+   "class": "S_SUBST",
+   "why": [
+    "全部变量由等式假设确定"
+   ],
+   "layer": "solved",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "amc12a_2020_p10": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)",
+    "排除符号: 对数",
+    "排除符号: digits 函数项"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "imo_1960_p2": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)",
+    "排除符号: 集合",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "analysis",
+    "tech": "bounding_squeeze",
+    "struct": "prove_identity",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_numbertheory_427": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 有限和",
+    "排除符号: Finset",
+    "排除符号: 素数谓词",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "numbertheory",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "numbertheory_x5neqy2p4": {
+   "class": "REJECT",
+   "why": [
+    "结论无关系符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "bounding_squeeze",
+    "struct": "other",
+    "source": "other"
+   }
+  },
+  "imoshortlist_2007_algebra_p6": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 有限和",
+    "排除符号: Finset",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "substitution_compute",
+    "struct": "prove_inequality",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_algebra_398": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['a', 'c'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "imo_1963_p5": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)",
+    "排除符号: 三角",
+    "排除符号: π",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "analysis",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_numbertheory_430": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['a', 'b', 'c'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_459": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "induction_12dvd4expnp1p20": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['n'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "numbertheory",
+    "tech": "divisibility_modular",
+    "struct": "prove_divisibility",
+    "source": "other"
+   }
+  },
+  "mathd_algebra_320": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)",
+    "排除符号: 存在量词"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_137": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['x'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "imo_1997_p5": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "inequality",
+    "tech": "substitution_compute",
+    "struct": "prove_identity",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_numbertheory_277": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: gcd 函数项 (超出 v1 算术文法)",
+    "排除符号: lcm 函数项",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "numbertheory",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_559": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 存在量词",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "inequality",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_160": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['n', 'x'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_24": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['x'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_176": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['x'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "bounding_squeeze",
+    "struct": "prove_identity",
+    "source": "mathd"
+   }
+  },
+  "induction_nfactltnexpnm1ngt3": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "inequality",
+    "tech": "bounding_squeeze",
+    "struct": "prove_inequality",
+    "source": "other"
+   }
+  },
+  "mathd_algebra_208": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_353": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 有限和",
+    "排除符号: Finset"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "numbertheory_notequiv2i2jasqbsqdiv8": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 存在量词",
+    "排除符号: 全称量词",
+    "排除符号: 等价",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "other"
+   }
+  },
+  "mathd_algebra_156": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_12": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: Finset"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "numbertheory",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_345": {
+   "class": "C_CLOSED",
+   "why": [
+    "无 binder ⇒ 闭式题"
+   ],
+   "layer": "solved",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_447": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 有限和",
+    "排除符号: Finset",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "numbertheory",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_328": {
+   "class": "C_CLOSED",
+   "why": [
+    "无 binder ⇒ 闭式题"
+   ],
+   "layer": "L3_navigation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_451": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 有限和",
+    "排除符号: Finset",
+    "排除符号: 存在量词",
+    "排除符号: 全称量词",
+    "排除符号: 等价",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "aime_1997_p9": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: Int.floor 函数项"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "algebra_sqineq_at2malt1": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['a'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "inequality",
+    "tech": "bounding_squeeze",
+    "struct": "prove_inequality",
+    "source": "other"
+   }
+  },
+  "algebra_apbmpcneq0_aeq0anbeq0anceq0": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "other"
+   }
+  },
+  "mathd_algebra_171": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_227": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['n'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_188": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_765": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "inequality",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "imo_1959_p1": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: gcd 函数项 (超出 v1 算术文法)"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "numbertheory",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_numbertheory_175": {
+   "class": "C_CLOSED",
+   "why": [
+    "无 binder ⇒ 闭式题"
+   ],
+   "layer": "L3_navigation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "induction_sumkexp3eqsumksq": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 有限和",
+    "排除符号: Finset",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "substitution_compute",
+    "struct": "prove_identity",
+    "source": "other"
+   }
+  },
+  "numbertheory_fxeq4powxp6powxp9powx_f2powmdvdf2pown": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "numbertheory",
+    "tech": "substitution_compute",
+    "struct": "prove_divisibility",
+    "source": "other"
+   }
+  },
+  "imo_1992_p1": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "numbertheory",
+    "tech": "substitution_compute",
+    "struct": "prove_divisibility",
+    "source": "amc/aime"
+   }
+  },
+  "imo_1982_p1": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "aime_1987_p5": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['x', 'y'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_algebra_346": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_487": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "analysis",
+    "tech": "substitution_compute",
+    "struct": "other",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_728": {
+   "class": "C_CLOSED",
+   "why": [
+    "无 binder ⇒ 闭式题"
+   ],
+   "layer": "solved",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_184": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_552": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 有限和",
+    "排除符号: Finset",
+    "排除符号: 集合",
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: gcd 函数项 (超出 v1 算术文法)",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "amc12b_2021_p9": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)",
+    "排除符号: 对数"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "analysis",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "aime_1994_p3": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 全称量词",
+    "排除符号: 蕴含"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_algebra_44": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_215": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 有限和",
+    "排除符号: Finset",
+    "排除符号: 全称量词",
+    "排除符号: 等价",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_293": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['n'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_769": {
+   "class": "C_CLOSED",
+   "why": [
+    "无 binder ⇒ 闭式题"
+   ],
+   "layer": "solved",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_452": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_5": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 存在量词"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "inequality",
+    "tech": "substitution_compute",
+    "struct": "prove_inequality",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_207": {
+   "class": "C_CLOSED",
+   "why": [
+    "无 binder ⇒ 闭式题"
+   ],
+   "layer": "solved",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_342": {
+   "class": "C_CLOSED",
+   "why": [
+    "无 binder ⇒ 闭式题"
+   ],
+   "layer": "solved",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_483": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "amc12b_2020_p21": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)",
+    "排除符号: Finset",
+    "排除符号: 全称量词",
+    "排除符号: 等价",
+    "排除符号: Int.floor 函数项"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "amc12a_2003_p5": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['A', 'C', 'M'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_numbertheory_495": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: gcd 函数项 (超出 v1 算术文法)",
+    "排除符号: lcm 函数项",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "numbertheory",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_296": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "algebra_abpbcpcageq3_sumaonsqrtapbgeq3onsqrt2": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "analysis",
+    "tech": "bounding_squeeze",
+    "struct": "prove_inequality",
+    "source": "other"
+   }
+  },
+  "algebra_2varlineareq_fp3zeq11_3tfm1m5zeqn68_feqn10_zeq7": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "other"
+   }
+  },
+  "mathd_numbertheory_247": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['n'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "induction_pord1p1on2powklt5on2": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 有限积",
+    "排除符号: Finset",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "summation_counting",
+    "struct": "prove_inequality",
+    "source": "other"
+   }
+  },
+  "mathd_algebra_107": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['x', 'y'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "numbertheory_2pownm1prime_nprime": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 素数谓词",
+    "结论无关系符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "numbertheory",
+    "tech": "bounding_squeeze",
+    "struct": "other",
+    "source": "other"
+   }
+  },
+  "mathd_algebra_412": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['x'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "amc12a_2013_p4": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "prove_identity",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_algebra_392": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "prove_identity",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_314": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "numbertheory",
+    "tech": "substitution_compute",
+    "struct": "prove_divisibility",
+    "source": "mathd"
+   }
+  },
+  "induction_prod1p1onk3le3m1onn": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 有限积",
+    "排除符号: Finset",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "summation_counting",
+    "struct": "prove_inequality",
+    "source": "other"
+   }
+  },
+  "mathd_numbertheory_343": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 有限积",
+    "排除符号: Finset",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_756": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['a', 'b'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "amc12b_2002_p7": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['a', 'b', 'c'] 无法由等式假设消解 (假设: ['b', 'c'])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_algebra_80": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['x'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_457": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "numbertheory",
+    "tech": "divisibility_modular",
+    "struct": "prove_divisibility",
+    "source": "mathd"
+   }
+  },
+  "amc12_2000_p12": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_numbertheory_135": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: Finset",
+    "排除符号: digits 函数项"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_275": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_388": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['x'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "amc12a_2020_p7": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 有限和",
+    "排除符号: Finset",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "substitution_compute",
+    "struct": "prove_identity",
+    "source": "amc/aime"
+   }
+  },
+  "imo_1981_p6": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_algebra_263": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_34": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['x'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_764": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 有限和",
+    "排除符号: Finset",
+    "排除符号: 素数谓词",
+    "排除符号: ZMod (有限环, 超出 v1 算术文法)",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "amc12b_2021_p4": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "prove_identity",
+    "source": "amc/aime"
+   }
+  },
+  "imo_1962_p2": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)",
+    "排除符号: 集合",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "analysis",
+    "tech": "bounding_squeeze",
+    "struct": "prove_identity",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_algebra_170": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: Finset",
+    "排除符号: 全称量词",
+    "排除符号: 等价"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_432": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['x'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_598": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['a', 'b', 'c', 'd'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "algebra_bleqa_apbon2msqrtableqambsqon8b": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "inequality",
+    "tech": "bounding_squeeze",
+    "struct": "prove_inequality",
+    "source": "other"
+   }
+  },
+  "mathd_algebra_276": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 全称量词"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "amc12a_2021_p14": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)",
+    "排除符号: 有限和",
+    "排除符号: Finset",
+    "排除符号: 对数",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "algebra_sum1onsqrt2to1onsqrt10000lt198": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)",
+    "排除符号: 有限和",
+    "排除符号: Finset",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "summation_counting",
+    "struct": "prove_inequality",
+    "source": "other"
+   }
+  },
+  "mathd_numbertheory_618": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型",
+    "排除符号: gcd 函数项 (超出 v1 算术文法)"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "inequality",
+    "tech": "substitution_compute",
+    "struct": "prove_inequality",
+    "source": "mathd"
+   }
+  },
+  "amc12a_2020_p4": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: Finset",
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 等价",
+    "排除符号: digits 函数项"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "amc12b_2020_p6": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 存在量词",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "prove_identity",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_numbertheory_435": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 全称量词"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "inequality",
+    "tech": "substitution_compute",
+    "struct": "prove_inequality",
+    "source": "mathd"
+   }
+  },
+  "algebra_others_exirrpowirrrat": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 存在量词",
+    "结论含文法外字符",
+    "结论无关系符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "bounding_squeeze",
+    "struct": "count_or_exist",
+    "source": "other"
+   }
+  },
+  "mathd_algebra_427": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['x', 'y', 'z'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_76": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 全称量词",
+    "排除符号: 蕴含"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_99": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['n'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "algebra_9onxpypzleqsum2onxpy": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['x', 'y', 'z'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "inequality",
+    "tech": "bounding_squeeze",
+    "struct": "prove_inequality",
+    "source": "other"
+   }
+  },
+  "mathd_numbertheory_233": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: ZMod (有限环, 超出 v1 算术文法)"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "algebra_absapbon1pabsapbleqsumabsaon1pabsa": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['a', 'abs', 'b'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "inequality",
+    "tech": "bounding_squeeze",
+    "struct": "prove_inequality",
+    "source": "other"
+   }
+  },
+  "imo_1984_p6": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['a'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "imo_2001_p6": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符",
+    "结论无关系符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "other",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_numbertheory_321": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: ZMod (有限环, 超出 v1 算术文法)"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_17": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_153": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: Int.floor 函数项"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "algebra_sqineq_unitcircatbpamblt1": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['a', 'b'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "inequality",
+    "tech": "substitution_compute",
+    "struct": "prove_inequality",
+    "source": "other"
+   }
+  },
+  "amc12a_2021_p18": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 素数谓词",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "inequality",
+    "tech": "substitution_compute",
+    "struct": "prove_inequality",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_algebra_329": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['x', 'y'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "induction_pprime_pdvdapowpma": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 素数谓词"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "numbertheory",
+    "tech": "divisibility_modular",
+    "struct": "prove_divisibility",
+    "source": "other"
+   }
+  },
+  "amc12a_2021_p9": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 有限积",
+    "排除符号: Finset",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "aime_1984_p1": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 有限和",
+    "排除符号: Finset",
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "amc12a_2021_p22": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)",
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 三角",
+    "排除符号: 函数类型"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_numbertheory_229": {
+   "class": "C_CLOSED",
+   "why": [
+    "无 binder ⇒ 闭式题"
+   ],
+   "layer": "solved",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_100": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: gcd 函数项 (超出 v1 算术文法)",
+    "排除符号: lcm 函数项"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_313": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 复数"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "amc12b_2002_p4": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['n'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "amc12a_2002_p6": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 存在量词",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "inequality",
+    "tech": "bounding_squeeze",
+    "struct": "prove_inequality",
+    "source": "amc/aime"
+   }
+  },
+  "amc12a_2003_p23": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 有限积",
+    "排除符号: Finset",
+    "排除符号: 全称量词",
+    "排除符号: 等价"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_algebra_129": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['a'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "amc12b_2021_p18": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 复数"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_algebra_484": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)",
+    "排除符号: 对数"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "analysis",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_551": {
+   "class": "C_CLOSED",
+   "why": [
+    "无 binder ⇒ 闭式题"
+   ],
+   "layer": "solved",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_304": {
+   "class": "C_CLOSED",
+   "why": [
+    "无 binder ⇒ 闭式题"
+   ],
+   "layer": "solved",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "amc12a_2021_p8": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型",
+    "结论含文法外字符",
+    "结论无关系符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "other",
+    "source": "amc/aime"
+   }
+  },
+  "algebra_ineq_nto1onlt2m1on": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "inequality",
+    "tech": "bounding_squeeze",
+    "struct": "prove_inequality",
+    "source": "other"
+   }
+  },
+  "amc12b_2002_p19": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['a', 'b', 'c'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_numbertheory_341": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: digits 函数项"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_711": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "numbertheory",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "amc12b_2020_p22": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符",
+    "结论无关系符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "bounding_squeeze",
+    "struct": "other",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_algebra_113": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['x'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "inequality",
+    "tech": "bounding_squeeze",
+    "struct": "prove_inequality",
+    "source": "mathd"
+   }
+  },
+  "amc12a_2020_p9": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)",
+    "排除符号: Finset",
+    "排除符号: 全称量词",
+    "排除符号: 等价",
+    "排除符号: 三角"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "amc12_2000_p1": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "amc12a_2021_p19": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)",
+    "排除符号: Finset",
+    "排除符号: 全称量词",
+    "排除符号: 等价",
+    "排除符号: 三角",
+    "排除符号: 三角"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "algebra_amgm_sumasqdivbgeqsuma": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['a', 'b', 'c', 'd'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "inequality",
+    "tech": "bounding_squeeze",
+    "struct": "prove_inequality",
+    "source": "other"
+   }
+  },
+  "mathd_numbertheory_212": {
+   "class": "C_CLOSED",
+   "why": [
+    "无 binder ⇒ 闭式题"
+   ],
+   "layer": "solved",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_320": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['n'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_125": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['x'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "induction_1pxpownlt1pnx": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "inequality",
+    "tech": "bounding_squeeze",
+    "struct": "prove_inequality",
+    "source": "other"
+   }
+  },
+  "mathd_algebra_148": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "amc12a_2019_p12": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)",
+    "排除符号: 对数"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "analysis",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "induction_11div10tonmn1ton": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "numbertheory",
+    "tech": "divisibility_modular",
+    "struct": "prove_divisibility",
+    "source": "other"
+   }
+  },
+  "algebra_amgm_sum1toneqn_prod1tonleq1": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 有限和",
+    "排除符号: 有限积",
+    "排除符号: Finset",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "substitution_compute",
+    "struct": "prove_inequality",
+    "source": "other"
+   }
+  },
+  "imo_1985_p6": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 存在量词",
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "inequality",
+    "tech": "substitution_compute",
+    "struct": "prove_inequality",
+    "source": "amc/aime"
+   }
+  },
+  "amc12a_2020_p15": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_algebra_332": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "algebra_cubrtrp1oncubrtreq3_rcubp1onrcubeq5778": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['r'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "other"
+   }
+  },
+  "mathd_algebra_293": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "analysis",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_440": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['x'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_254": {
+   "class": "C_CLOSED",
+   "why": [
+    "无 binder ⇒ 闭式题"
+   ],
+   "layer": "solved",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "amc12_2000_p6": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 素数谓词",
+    "结论含文法外字符",
+    "结论无关系符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "bounding_squeeze",
+    "struct": "other",
+    "source": "amc/aime"
+   }
+  },
+  "aime_1988_p8": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_algebra_114": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "imo_2019_p1": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 存在量词",
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 等价",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_algebra_513": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_143": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_354": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['a', 'd'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "aime_1984_p7": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 全称量词",
+    "排除符号: 蕴含"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_algebra_246": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "aime_1983_p3": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)",
+    "排除符号: 有限积",
+    "排除符号: Finset",
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "numbertheory_3pow2pownm1mod2pownp3eq2pownp2": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['n'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "other"
+   }
+  },
+  "mathd_numbertheory_85": {
+   "class": "C_CLOSED",
+   "why": [
+    "无 binder ⇒ 闭式题"
+   ],
+   "layer": "solved",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "amc12_2001_p21": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "prove_identity",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_numbertheory_239": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 有限和",
+    "排除符号: Finset",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "amc12b_2002_p2": {
+   "class": "S_SUBST",
+   "why": [
+    "全部变量由等式假设确定"
+   ],
+   "layer": "solved",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_algebra_196": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 有限和",
+    "排除符号: Finset",
+    "排除符号: 全称量词",
+    "排除符号: 等价",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_342": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 有限和",
+    "排除符号: Finset"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_517": {
+   "class": "C_CLOSED",
+   "why": [
+    "无 binder ⇒ 闭式题"
+   ],
+   "layer": "solved",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "amc12a_2009_p7": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_algebra_270": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "amc12a_2021_p12": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: Int.floor 函数项"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_algebra_362": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['a', 'b'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_521": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['m'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "amc12a_2002_p13": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "other",
+    "source": "amc/aime"
+   }
+  },
+  "imo_1964_p2": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['a', 'b', 'c'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "inequality",
+    "tech": "bounding_squeeze",
+    "struct": "prove_inequality",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_algebra_289": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 素数谓词"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "amc12a_2021_p3": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "prove_identity",
+    "source": "amc/aime"
+   }
+  },
+  "amc12a_2008_p25": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)",
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "algebra_apbpceq2_abpbcpcaeq1_aleq1on3anbleq1ancleq4on3": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "inequality",
+    "tech": "substitution_compute",
+    "struct": "prove_inequality",
+    "source": "other"
+   }
+  },
+  "amc12b_2021_p1": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)",
+    "排除符号: Finset",
+    "排除符号: 全称量词",
+    "排除符号: 等价"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "algebra_apbon2pownleqapownpbpowon2": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['a', 'b', 'n'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "inequality",
+    "tech": "bounding_squeeze",
+    "struct": "prove_inequality",
+    "source": "other"
+   }
+  },
+  "imo_1968_p5_1": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)",
+    "排除符号: 存在量词",
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "inequality",
+    "tech": "substitution_compute",
+    "struct": "prove_identity",
+    "source": "amc/aime"
+   }
+  },
+  "aime_1990_p15": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['a', 'b', 'x', 'y'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_numbertheory_235": {
+   "class": "C_CLOSED",
+   "why": [
+    "无 binder ⇒ 闭式题"
+   ],
+   "layer": "solved",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "amc12b_2020_p13": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)",
+    "排除符号: 对数"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "analysis",
+    "tech": "bounding_squeeze",
+    "struct": "prove_identity",
+    "source": "amc/aime"
+   }
+  },
+  "amc12b_2021_p13": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)",
+    "排除符号: Finset",
+    "排除符号: 全称量词",
+    "排除符号: 等价",
+    "排除符号: 三角",
+    "排除符号: 三角"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_numbertheory_234": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['a', 'b'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "numbertheory_aoddbdiv4asqpbsqmod8eq1": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['a', 'b'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "other"
+   }
+  },
+  "mathd_numbertheory_222": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: gcd 函数项 (超出 v1 算术文法)",
+    "排除符号: lcm 函数项"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "aime_1999_p11": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)",
+    "排除符号: 有限和",
+    "排除符号: Finset",
+    "排除符号: 三角",
+    "排除符号: π",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_algebra_359": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['y'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "imo_1965_p2": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 蕴含",
+    "排除符号: 函数类型",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_algebra_288": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_127": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 有限和",
+    "排除符号: Finset",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "combinatorics",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "imo_1974_p3": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 有限和",
+    "排除符号: Finset",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "numbertheory",
+    "tech": "divisibility_modular",
+    "struct": "prove_divisibility",
+    "source": "amc/aime"
+   }
+  },
+  "aime_1991_p9": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)",
+    "排除符号: 三角",
+    "排除符号: 三角",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "amc12a_2009_p6": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['m', 'n', 'p', 'q'] 无法由等式假设消解 (假设: ['p', 'q'])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_algebra_158": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 有限和",
+    "排除符号: Finset"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "algebra_absxm1pabsxpabsxp1eqxp2_0leqxleq1": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "inequality",
+    "tech": "substitution_compute",
+    "struct": "prove_inequality",
+    "source": "other"
+   }
+  },
+  "aime_1990_p4": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['x'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_numbertheory_541": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['m', 'n'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_314": {
+   "class": "REJECT",
+   "why": [
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "amc12_2000_p20": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['x', 'y', 'z'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_algebra_302": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 复数"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "bounding_squeeze",
+    "struct": "prove_identity",
+    "source": "mathd"
+   }
+  },
+  "aime_1983_p2": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 集合",
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型",
+    "结论无关系符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "other",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_algebra_139": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "amc12a_2021_p25": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 全称量词",
+    "排除符号: 蕴含",
+    "排除符号: 函数类型",
+    "排除符号: digits 函数项"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "amc12a_2020_p25": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 有限和",
+    "排除符号: Finset",
+    "排除符号: 全称量词",
+    "排除符号: 等价",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_numbertheory_150": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 素数谓词",
+    "结论含文法外字符",
+    "结论无关系符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "numbertheory",
+    "tech": "bounding_squeeze",
+    "struct": "other",
+    "source": "mathd"
+   }
+  },
+  "aime_1989_p8": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['a', 'b', 'c', 'd', 'e', 'f'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_numbertheory_296": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 存在量词",
+    "结论含文法外字符"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "inequality",
+    "tech": "bounding_squeeze",
+    "struct": "prove_identity",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_142": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['b', 'm'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "numbertheory_exk2powkeqapb2mulbpa2_aeq1": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 存在量词"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "other"
+   }
+  },
+  "mathd_algebra_400": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['x'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "aime_1995_p7": {
+   "class": "REJECT",
+   "why": [
+    "排除符号: 实分析符号 (Real.*)",
+    "排除符号: 三角",
+    "排除符号: 三角",
+    "排除符号: gcd 函数项 (超出 v1 算术文法)"
+   ],
+   "layer": "L1_translation",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "amc/aime"
+   }
+  },
+  "mathd_numbertheory_185": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['n'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_441": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['x'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_numbertheory_582": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['n'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  },
+  "mathd_algebra_338": {
+   "class": "REJECT",
+   "why": [
+    "变量 ['a', 'b', 'c'] 无法由等式假设消解 (假设: [])"
+   ],
+   "layer": "L2_vocabulary",
+   "cls": {
+    "domain": "algebra",
+    "tech": "substitution_compute",
+    "struct": "solve_value",
+    "source": "mathd"
+   }
+  }
+ }
+}

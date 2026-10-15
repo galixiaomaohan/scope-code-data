@@ -1,0 +1,1544 @@
+{
+ "schema": "gen35-judge/1",
+ "generated": "2026-09-25T00:57:02+0800",
+ "judge_md5_before": "7c31b58da9d7228cee31b9be581fe5dd",
+ "src": "scratch/ccp/gen36/out/GEN36_PLAN_GW_ROWS.jsonl",
+ "src_tag": "gw",
+ "src_n": 218,
+ "pool": "certified",
+ "pool_n": 110,
+ "judge_entry": "drct_common (冻结 7c31b58d): gen23_prescreen_batch (批量) / DC.judge_attempt (字面, 反向)",
+ "c5_rule": "异常 != 分歧; agree 仅在双侧均确定判决时定义",
+ "literal_pool_note": "本臂池",
+ "literal_pool_n": 110,
+ "literal": {
+  "schema": "gen35-literal/1",
+  "n": 66,
+  "n_defined": 66,
+  "agree": 66,
+  "disagree": 0,
+  "exception": 0,
+  "not_executed": 0,
+  "literal_certified": 66,
+  "batch_certified": 66,
+  "by_family": {
+   "gen32_ind_nest": {
+    "n": 13,
+    "agree": 13,
+    "literal_cert": 13
+   },
+   "gen32_ind_tower": {
+    "n": 22,
+    "agree": 22,
+    "literal_cert": 22
+   },
+   "gen32_ineq_cascade": {
+    "n": 31,
+    "agree": 31,
+    "literal_cert": 31
+   }
+  },
+  "records": [
+   {
+    "name": "gen32_ind_nest_300143",
+    "family": "gen32_ind_nest",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.12
+    },
+    "literal_exc": null,
+    "wall_s": 30.43
+   },
+   {
+    "name": "gen32_ind_nest_300100",
+    "family": "gen32_ind_nest",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.14
+    },
+    "literal_exc": null,
+    "wall_s": 30.54
+   },
+   {
+    "name": "gen32_ind_nest_300116",
+    "family": "gen32_ind_nest",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.11
+    },
+    "literal_exc": null,
+    "wall_s": 30.22
+   },
+   {
+    "name": "gen32_ind_nest_300529",
+    "family": "gen32_ind_nest",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.11
+    },
+    "literal_exc": null,
+    "wall_s": 29.93
+   },
+   {
+    "name": "gen32_ind_nest_300392",
+    "family": "gen32_ind_nest",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.07
+    },
+    "literal_exc": null,
+    "wall_s": 30.46
+   },
+   {
+    "name": "gen32_ind_nest_300146",
+    "family": "gen32_ind_nest",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.13
+    },
+    "literal_exc": null,
+    "wall_s": 30.51
+   },
+   {
+    "name": "gen32_ind_nest_300337",
+    "family": "gen32_ind_nest",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.11
+    },
+    "literal_exc": null,
+    "wall_s": 30.44
+   },
+   {
+    "name": "gen32_ind_nest_300015",
+    "family": "gen32_ind_nest",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.19
+    },
+    "literal_exc": null,
+    "wall_s": 30.39
+   },
+   {
+    "name": "gen32_ind_nest_300008",
+    "family": "gen32_ind_nest",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.2
+    },
+    "literal_exc": null,
+    "wall_s": 30.51
+   },
+   {
+    "name": "gen32_ind_nest_300370",
+    "family": "gen32_ind_nest",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.08
+    },
+    "literal_exc": null,
+    "wall_s": 30.41
+   },
+   {
+    "name": "gen32_ind_nest_300090",
+    "family": "gen32_ind_nest",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.45
+    },
+    "literal_exc": null,
+    "wall_s": 30.87
+   },
+   {
+    "name": "gen32_ind_nest_300323",
+    "family": "gen32_ind_nest",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.2
+    },
+    "literal_exc": null,
+    "wall_s": 30.47
+   },
+   {
+    "name": "gen32_ind_nest_300345",
+    "family": "gen32_ind_nest",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.17
+    },
+    "literal_exc": null,
+    "wall_s": 30.47
+   },
+   {
+    "name": "gen32_ind_tower_300318",
+    "family": "gen32_ind_tower",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.08
+    },
+    "literal_exc": null,
+    "wall_s": 30.5
+   },
+   {
+    "name": "gen32_ind_tower_300647",
+    "family": "gen32_ind_tower",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.19
+    },
+    "literal_exc": null,
+    "wall_s": 30.54
+   },
+   {
+    "name": "gen32_ind_tower_300769",
+    "family": "gen32_ind_tower",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.17
+    },
+    "literal_exc": null,
+    "wall_s": 30.55
+   },
+   {
+    "name": "gen32_ind_tower_300053",
+    "family": "gen32_ind_tower",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.12
+    },
+    "literal_exc": null,
+    "wall_s": 30.47
+   },
+   {
+    "name": "gen32_ind_tower_300042",
+    "family": "gen32_ind_tower",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.17
+    },
+    "literal_exc": null,
+    "wall_s": 30.59
+   },
+   {
+    "name": "gen32_ind_tower_300167",
+    "family": "gen32_ind_tower",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.21
+    },
+    "literal_exc": null,
+    "wall_s": 30.64
+   },
+   {
+    "name": "gen32_ind_tower_300147",
+    "family": "gen32_ind_tower",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.15
+    },
+    "literal_exc": null,
+    "wall_s": 30.43
+   },
+   {
+    "name": "gen32_ind_tower_300029",
+    "family": "gen32_ind_tower",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.19
+    },
+    "literal_exc": null,
+    "wall_s": 30.53
+   },
+   {
+    "name": "gen32_ind_tower_300168",
+    "family": "gen32_ind_tower",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.16
+    },
+    "literal_exc": null,
+    "wall_s": 30.57
+   },
+   {
+    "name": "gen32_ind_tower_300108",
+    "family": "gen32_ind_tower",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.15
+    },
+    "literal_exc": null,
+    "wall_s": 30.48
+   },
+   {
+    "name": "gen32_ind_tower_300436",
+    "family": "gen32_ind_tower",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.24
+    },
+    "literal_exc": null,
+    "wall_s": 30.74
+   },
+   {
+    "name": "gen32_ind_tower_300823",
+    "family": "gen32_ind_tower",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.22
+    },
+    "literal_exc": null,
+    "wall_s": 30.52
+   },
+   {
+    "name": "gen32_ind_tower_300063",
+    "family": "gen32_ind_tower",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.13
+    },
+    "literal_exc": null,
+    "wall_s": 30.42
+   },
+   {
+    "name": "gen32_ind_tower_300153",
+    "family": "gen32_ind_tower",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.11
+    },
+    "literal_exc": null,
+    "wall_s": 30.36
+   },
+   {
+    "name": "gen32_ind_tower_300115",
+    "family": "gen32_ind_tower",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.25
+    },
+    "literal_exc": null,
+    "wall_s": 30.58
+   },
+   {
+    "name": "gen32_ind_tower_300460",
+    "family": "gen32_ind_tower",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.18
+    },
+    "literal_exc": null,
+    "wall_s": 30.57
+   },
+   {
+    "name": "gen32_ind_tower_300301",
+    "family": "gen32_ind_tower",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.22
+    },
+    "literal_exc": null,
+    "wall_s": 30.53
+   },
+   {
+    "name": "gen32_ind_tower_300078",
+    "family": "gen32_ind_tower",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.27
+    },
+    "literal_exc": null,
+    "wall_s": 30.73
+   },
+   {
+    "name": "gen32_ind_tower_300180",
+    "family": "gen32_ind_tower",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.13
+    },
+    "literal_exc": null,
+    "wall_s": 30.42
+   },
+   {
+    "name": "gen32_ind_tower_300162",
+    "family": "gen32_ind_tower",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.18
+    },
+    "literal_exc": null,
+    "wall_s": 30.55
+   },
+   {
+    "name": "gen32_ind_tower_300470",
+    "family": "gen32_ind_tower",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.28
+    },
+    "literal_exc": null,
+    "wall_s": 30.51
+   },
+   {
+    "name": "gen32_ind_tower_300487",
+    "family": "gen32_ind_tower",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.16
+    },
+    "literal_exc": null,
+    "wall_s": 30.62
+   },
+   {
+    "name": "gen32_ineq_cascade_300082",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.48
+    },
+    "literal_exc": null,
+    "wall_s": 31.57
+   },
+   {
+    "name": "gen32_ineq_cascade_300038",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.4
+    },
+    "literal_exc": null,
+    "wall_s": 31.36
+   },
+   {
+    "name": "gen32_ineq_cascade_300088",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.44
+    },
+    "literal_exc": null,
+    "wall_s": 32.39
+   },
+   {
+    "name": "gen32_ineq_cascade_300167",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.52
+    },
+    "literal_exc": null,
+    "wall_s": 31.41
+   },
+   {
+    "name": "gen32_ineq_cascade_300172",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.45
+    },
+    "literal_exc": null,
+    "wall_s": 31.54
+   },
+   {
+    "name": "gen32_ineq_cascade_300110",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.39
+    },
+    "literal_exc": null,
+    "wall_s": 31.55
+   },
+   {
+    "name": "gen32_ineq_cascade_300014",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.63
+    },
+    "literal_exc": null,
+    "wall_s": 32.17
+   },
+   {
+    "name": "gen32_ineq_cascade_300083",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.45
+    },
+    "literal_exc": null,
+    "wall_s": 31.2
+   },
+   {
+    "name": "gen32_ineq_cascade_300050",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.34
+    },
+    "literal_exc": null,
+    "wall_s": 30.98
+   },
+   {
+    "name": "gen32_ineq_cascade_300057",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.46
+    },
+    "literal_exc": null,
+    "wall_s": 31.29
+   },
+   {
+    "name": "gen32_ineq_cascade_300100",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.23
+    },
+    "literal_exc": null,
+    "wall_s": 30.77
+   },
+   {
+    "name": "gen32_ineq_cascade_300069",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.5
+    },
+    "literal_exc": null,
+    "wall_s": 31.43
+   },
+   {
+    "name": "gen32_ineq_cascade_300102",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.47
+    },
+    "literal_exc": null,
+    "wall_s": 31.19
+   },
+   {
+    "name": "gen32_ineq_cascade_300078",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.34
+    },
+    "literal_exc": null,
+    "wall_s": 31.13
+   },
+   {
+    "name": "gen32_ineq_cascade_300144",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.47
+    },
+    "literal_exc": null,
+    "wall_s": 31.53
+   },
+   {
+    "name": "gen32_ineq_cascade_300162",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.69
+    },
+    "literal_exc": null,
+    "wall_s": 32.15
+   },
+   {
+    "name": "gen32_ineq_cascade_300084",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.59
+    },
+    "literal_exc": null,
+    "wall_s": 31.89
+   },
+   {
+    "name": "gen32_ineq_cascade_300007",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.56
+    },
+    "literal_exc": null,
+    "wall_s": 31.85
+   },
+   {
+    "name": "gen32_ineq_cascade_300067",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.44
+    },
+    "literal_exc": null,
+    "wall_s": 31.1
+   },
+   {
+    "name": "gen32_ineq_cascade_300034",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.43
+    },
+    "literal_exc": null,
+    "wall_s": 31.17
+   },
+   {
+    "name": "gen32_ineq_cascade_300043",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.33
+    },
+    "literal_exc": null,
+    "wall_s": 31.1
+   },
+   {
+    "name": "gen32_ineq_cascade_300094",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.68
+    },
+    "literal_exc": null,
+    "wall_s": 32.03
+   },
+   {
+    "name": "gen32_ineq_cascade_300141",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.61
+    },
+    "literal_exc": null,
+    "wall_s": 31.68
+   },
+   {
+    "name": "gen32_ineq_cascade_300052",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.47
+    },
+    "literal_exc": null,
+    "wall_s": 31.31
+   },
+   {
+    "name": "gen32_ineq_cascade_300159",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.31
+    },
+    "literal_exc": null,
+    "wall_s": 30.96
+   },
+   {
+    "name": "gen32_ineq_cascade_300051",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.37
+    },
+    "literal_exc": null,
+    "wall_s": 30.83
+   },
+   {
+    "name": "gen32_ineq_cascade_300149",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.35
+    },
+    "literal_exc": null,
+    "wall_s": 31.09
+   },
+   {
+    "name": "gen32_ineq_cascade_300151",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.59
+    },
+    "literal_exc": null,
+    "wall_s": 31.89
+   },
+   {
+    "name": "gen32_ineq_cascade_300086",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.52
+    },
+    "literal_exc": null,
+    "wall_s": 31.65
+   },
+   {
+    "name": "gen32_ineq_cascade_300027",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.46
+    },
+    "literal_exc": null,
+    "wall_s": 31.46
+   },
+   {
+    "name": "gen32_ineq_cascade_300005",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "gw",
+    "literal_verdict": "certified",
+    "batch_verdict": "certified",
+    "literal_certified": true,
+    "batch_certified": true,
+    "xc_class": "agree",
+    "agree": true,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.41
+    },
+    "literal_exc": null,
+    "wall_s": 31.04
+   }
+  ]
+ },
+ "reverse": {
+  "schema": "gen35-reverse/1",
+  "n": 12,
+  "R1_trunc_rejected": 12,
+  "R2_swap_rejected": 12,
+  "R1_trunc_unexpectedly_certified": [],
+  "R2_swap_unexpectedly_certified": [],
+  "records": [
+   {
+    "name": "gen32_ineq_cascade_300014",
+    "n_lines": 8,
+    "n_keep": 4,
+    "R1_trunc_certified": false,
+    "R1_reasons": [
+     "lean_reject_sorry"
+    ],
+    "R2_swap_from": "gen32_ind_tower_300460",
+    "R2_swap_certified": false,
+    "R2_reasons": [
+     "lean_reject_sorry"
+    ]
+   },
+   {
+    "name": "gen32_ind_tower_300460",
+    "n_lines": 27,
+    "n_keep": 16,
+    "R1_trunc_certified": false,
+    "R1_reasons": [
+     "lean_reject_sorry"
+    ],
+    "R2_swap_from": "gen32_ineq_cascade_300001",
+    "R2_swap_certified": false,
+    "R2_reasons": [
+     "lean_reject_sorry"
+    ]
+   },
+   {
+    "name": "gen32_ineq_cascade_300001",
+    "n_lines": 7,
+    "n_keep": 4,
+    "R1_trunc_certified": false,
+    "R1_reasons": [
+     "lean_reject_sorry"
+    ],
+    "R2_swap_from": "gen32_ineq_cascade_300027",
+    "R2_swap_certified": false,
+    "R2_reasons": [
+     "lean_reject_sorry"
+    ]
+   },
+   {
+    "name": "gen32_ineq_cascade_300027",
+    "n_lines": 6,
+    "n_keep": 3,
+    "R1_trunc_certified": false,
+    "R1_reasons": [
+     "lean_reject_sorry"
+    ],
+    "R2_swap_from": "gen32_ineq_cascade_300166",
+    "R2_swap_certified": false,
+    "R2_reasons": [
+     "lean_reject_sorry"
+    ]
+   },
+   {
+    "name": "gen32_ineq_cascade_300166",
+    "n_lines": 6,
+    "n_keep": 3,
+    "R1_trunc_certified": false,
+    "R1_reasons": [
+     "lean_reject_sorry"
+    ],
+    "R2_swap_from": "gen32_ineq_cascade_300045",
+    "R2_swap_certified": false,
+    "R2_reasons": [
+     "lean_reject_sorry"
+    ]
+   },
+   {
+    "name": "gen32_ineq_cascade_300045",
+    "n_lines": 7,
+    "n_keep": 4,
+    "R1_trunc_certified": false,
+    "R1_reasons": [
+     "lean_reject_sorry"
+    ],
+    "R2_swap_from": "gen32_ineq_cascade_300067",
+    "R2_swap_certified": false,
+    "R2_reasons": [
+     "lean_reject_sorry"
+    ]
+   },
+   {
+    "name": "gen32_ineq_cascade_300067",
+    "n_lines": 7,
+    "n_keep": 4,
+    "R1_trunc_certified": false,
+    "R1_reasons": [
+     "lean_reject_sorry"
+    ],
+    "R2_swap_from": "gen32_ind_tower_300286",
+    "R2_swap_certified": false,
+    "R2_reasons": [
+     "lean_reject_sorry"
+    ]
+   },
+   {
+    "name": "gen32_ind_tower_300286",
+    "n_lines": 27,
+    "n_keep": 16,
+    "R1_trunc_certified": false,
+    "R1_reasons": [
+     "lean_reject_sorry"
+    ],
+    "R2_swap_from": "gen32_ind_nest_300100",
+    "R2_swap_certified": false,
+    "R2_reasons": [
+     "lean_reject_sorry"
+    ]
+   },
+   {
+    "name": "gen32_ind_nest_300100",
+    "n_lines": 19,
+    "n_keep": 11,
+    "R1_trunc_certified": false,
+    "R1_reasons": [
+     "lean_reject_sorry"
+    ],
+    "R2_swap_from": "gen32_ineq_cascade_300172",
+    "R2_swap_certified": false,
+    "R2_reasons": [
+     "lean_reject_sorry"
+    ]
+   },
+   {
+    "name": "gen32_ineq_cascade_300172",
+    "n_lines": 6,
+    "n_keep": 3,
+    "R1_trunc_certified": false,
+    "R1_reasons": [
+     "lean_reject_sorry"
+    ],
+    "R2_swap_from": "gen32_ineq_cascade_300120",
+    "R2_swap_certified": false,
+    "R2_reasons": [
+     "lean_reject_sorry"
+    ]
+   },
+   {
+    "name": "gen32_ineq_cascade_300120",
+    "n_lines": 7,
+    "n_keep": 4,
+    "R1_trunc_certified": false,
+    "R1_reasons": [
+     "lean_reject_sorry"
+    ],
+    "R2_swap_from": "gen32_ind_nest_300116",
+    "R2_swap_certified": false,
+    "R2_reasons": [
+     "lean_reject_sorry"
+    ]
+   },
+   {
+    "name": "gen32_ind_nest_300116",
+    "n_lines": 19,
+    "n_keep": 11,
+    "R1_trunc_certified": false,
+    "R1_reasons": [
+     "lean_reject_sorry"
+    ],
+    "R2_swap_from": "gen32_ineq_cascade_300014",
+    "R2_swap_certified": false,
+    "R2_reasons": [
+     "lean_reject_sorry"
+    ]
+   }
+  ]
+ },
+ "judge_md5_after": "7c31b58da9d7228cee31b9be581fe5dd",
+ "judge_unchanged": true
+}

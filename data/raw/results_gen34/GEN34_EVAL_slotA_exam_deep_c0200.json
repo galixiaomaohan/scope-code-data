@@ -1,0 +1,3713 @@
+{
+ "schema": "gen34-eval/1",
+ "generated": "2026-09-24T13:58:02+0800",
+ "arm": "hybrid",
+ "seg": "exam_deep",
+ "args_mode": "device",
+ "n": 18,
+ "table": {
+  "n": 18,
+  "n_chain_rows": 18,
+  "n_chain_scored": 18,
+  "certified": null,
+  "first_hit": 1.0,
+  "exact_hit": 0.5,
+  "slot_col": 0.0,
+  "consistency": 0.5296296296296296,
+  "op_out_of_space": 0,
+  "terminated_end": 18,
+  "render_tok_mean": 346.4,
+  "n_err": 0
+ },
+ "model": {
+  "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen34/ckpt/deep_slotA_formal_6000.pt",
+  "md5": "fd3576b7c2af8d70c46462aed86309a4",
+  "step": 6000,
+  "missing": 0,
+  "unexpected": 0,
+  "pa_missing": [],
+  "slot": {
+   "slot_cond": true,
+   "slot_dev": true,
+   "slot_beta": 8.0,
+   "lam_slot": 3.0,
+   "n_slot_kinds": 8,
+   "slot_params": 4610,
+   "g_pos": 0.2368537336587906,
+   "g_dev": 0.20014561712741852
+  }
+ },
+ "columns": [
+  "certified",
+  "first_hit",
+  "exact_hit",
+  "slot_col",
+  "consistency"
+ ],
+ "inputs": {
+  "cache": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen33/cache/deep_all.bin",
+  "side": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen33/out/DEEP_RENDER_SIDECAR.jsonl",
+  "exam_side": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen33/out/DEEP_EXAM_SIDECAR.jsonl",
+  "ckpt": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen34/ckpt/deep_slotA_formal_6000.pt",
+  "judge": false
+ },
+ "bridge_errors": [],
+ "rows": [
+  {
+   "ri": 200,
+   "name": "gen32_ineq_cascade_300171",
+   "cls": "ineq",
+   "seg": "exam_deep",
+   "int_acc": {
+    "naive_hit": 5,
+    "naive_tot": 78,
+    "naive_rate": 0.064103,
+    "content_hit": 9,
+    "content_tot": 78,
+    "content_rate": 0.115385
+   },
+   "slot_diag": {
+    "n_boost": 0,
+    "n_desync": 1,
+    "n_slot_pos": 0,
+    "dev_err": null
+   },
+   "arm": "hybrid",
+   "args_mode": "device",
+   "chain": {
+    "walked": [
+     "gen32_sos_cross",
+     "gen32_sos_cross",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_zero"
+    ],
+    "gold": [
+     "gen32_sos_cross",
+     "gen32_sos_cross",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_square"
+    ],
+    "first_hit": true,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 12,
+    "args_src_hist": {
+     "device_state_gold_proxy": 5
+    },
+    "bridge_fallback": 0,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 190,
+      "pred": "gen32_sos_cross",
+      "gold": "gen32_sos_cross",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99995,
+      "margin": 0.99993,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 190,
+      "pred": "gen32_sos_cross",
+      "gold": "gen32_sos_cross",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.9999,
+      "margin": 0.99986,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99993,
+      "margin": 0.99991,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 3,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99994,
+      "margin": 0.9999,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 4,
+      "pred_idx": 191,
+      "pred": "gen32_sos_tail_zero",
+      "gold": "gen32_sos_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.6662,
+      "margin": 0.36449,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 5,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99999,
+      "margin": 0.99999,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nhave h : (0:ℚ) ≤ 1 * (- 2 * x + 2 * w - 1) ^ 2 := by\n  intro zero => 2 * (2 * z - 2 * z) ^ 4 := by\n  intro zero => 2 * (2 * w - 8) ^ 4 := by\n  intro zero => 2 * (v - 4) ^ 4 + 12 * w - 1 := by\n  intro zero => 4 * w + 12 * (0:ℚ) ^ 4 + 2 * (2 * x - 3) ^ 2 := by\n  intro zero => 4 * (0:ℚ) ^ 4 + 2 * (2 * u - 12) ^ 2 := by\n  intro zero => 4 * (0:ℚ) ^ 4 + 2 * (2 * w - 8) ^ 2 + 12 * (0:ℚ) ^ 4 + 2 * (2 * x - 3) ^ 2 := by\n  intro zero => 4 * (0:ℚ) ^ 4 + 2 * (2 * w - 1) ^ 2 := by\n  intro zero => 1 * (0:ℚ) ^ 4 + 2 * (2 * z - 3) ^ 2 := by\n  intro zero => 4 * (0:ℚ) ^ 4 + 2 * (2 * w - 1) ^ 2 := by\n  intro zero => 1 * (0:ℚ) ^ 4 + 2 * (2 * x - 3) ^ 2 := by\n  intro zero => 4 * (0:ℚ",
+    "n_tok": 384,
+    "body": "have h : (0:ℚ) ≤ 1 * (- 2 * x + 2 * w - 1) ^ 2 := by\n  intro zero => 2 * (2 * z - 2 * z) ^ 4 := by\n  intro zero => 2 * (2 * w - 8) ^ 4 := by\n  intro zero => 2 * (v - 4) ^ 4 + 12 * w - 1 := by\n  intro zero => 4 * w + 12 * (0:ℚ) ^ 4 + 2 * (2 * x - 3) ^ 2 := by\n  intro zero => 4 * (0:ℚ) ^ 4 + 2 * (2 * u - 12) ^ 2 := by\n  intro zero => 4 * (0:ℚ) ^ 4 + 2 * (2 * w - 8) ^ 2 + 12 * (0:ℚ) ^ 4 + 2 * (2 * x - 3) ^ 2 := by\n  intro zero => 4 * (0:ℚ) ^ 4 + 2 * (2 * w - 1) ^ 2 := by\n  intro zero => 1 * (0:ℚ) ^ 4 + 2 * (2 * z - 3) ^ 2 := by\n  intro zero => 4 * (0:ℚ) ^ 4 + 2 * (2 * w - 1) ^ 2 := by\n  intro zero => 1 * (0:ℚ) ^ 4 + 2 * (2 * x - 3) ^ 2 := by\n  intro zero => 4 * (0:ℚ"
+   },
+   "consistency": {
+    "n": 5,
+    "n_noreg": 0,
+    "hit": 0,
+    "rate": 0.0,
+    "per_op": [
+     {
+      "op": "gen32_sos_cross",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "mul_nonneg",
+       "pow_two"
+      ]
+     },
+     {
+      "op": "gen32_sos_cross",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "mul_nonneg",
+       "pow_two"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_tail_zero",
+      "hit": false,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "linarith"
+      ]
+     }
+    ]
+   },
+   "err": null
+  },
+  {
+   "ri": 201,
+   "name": "gen32_ineq_cascade_300172",
+   "cls": "ineq",
+   "seg": "exam_deep",
+   "int_acc": {
+    "naive_hit": 9,
+    "naive_tot": 57,
+    "naive_rate": 0.157895,
+    "content_hit": 14,
+    "content_tot": 54,
+    "content_rate": 0.259259
+   },
+   "slot_diag": {
+    "n_boost": 2,
+    "n_desync": 1,
+    "n_slot_pos": 2,
+    "dev_err": null
+   },
+   "arm": "hybrid",
+   "args_mode": "device",
+   "chain": {
+    "walked": [
+     "gen32_sos_cross",
+     "gen32_sos_cross",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_other"
+    ],
+    "gold": [
+     "gen32_sos_cross",
+     "gen32_sos_cross",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_square"
+    ],
+    "first_hit": true,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 12,
+    "args_src_hist": {
+     "device_state_gold_proxy": 5
+    },
+    "bridge_fallback": 0,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 190,
+      "pred": "gen32_sos_cross",
+      "gold": "gen32_sos_cross",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99997,
+      "margin": 0.99996,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 190,
+      "pred": "gen32_sos_cross",
+      "gold": "gen32_sos_cross",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99993,
+      "margin": 0.9999,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99995,
+      "margin": 0.99994,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 3,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99997,
+      "margin": 0.99995,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 4,
+      "pred_idx": 193,
+      "pred": "gen32_sos_tail_other",
+      "gold": "gen32_sos_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.70107,
+      "margin": 0.40975,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 5,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99996,
+      "margin": 0.99993,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nhave h1 : (0:ℚ) ≤ 1 * (- y + z + 2 * x - 1) ^ rugu : (0:ℚ) ≤ 1 * (- 2 * x + 3) ^ 2 := by\n  intro n\n  induction n with\n    rw - 2 * (- 2 * x + 3) ^ 2 := by\n    rw - 1 * (u - 3) := by\n    ring\nhave h2 : (0:ℚ) ≤ 2 * (- y + 12 * (w - 3) ^ 2 := by\n  intro n\n  induction n with\n    rw - 1 * (0:ℚ) := by\n    rw - 4 := by\n    ring\nhave h3 : (0:ℚ) ≤ 3 * (2 * x - 3) ^ 2 := by\nrw - 198 * (2 * n ^ 2 := by\nrw - 84 * n := by\nrw - 364 * n := by\nrw - 360 * n ^ 2 := by\nrw - 372 * n ^ 1 := by\nrw - 360 * n ^ 2 := by\nrw - 360 * n ^ 1 := by\nrw - 84 * n ^ 2 := by\nrw - 4 * n ^ 3 := by\nrw - 12 * n ^ 2 := by\nrw - 12 * n + 1 := by\nrw - 3 + 144 * n + 2 := by\nrw - 3 + 120 * n",
+    "n_tok": 384,
+    "body": "have h1 : (0:ℚ) ≤ 1 * (- y + z + 2 * x - 1) ^ rugu : (0:ℚ) ≤ 1 * (- 2 * x + 3) ^ 2 := by\n  intro n\n  induction n with\n    rw - 2 * (- 2 * x + 3) ^ 2 := by\n    rw - 1 * (u - 3) := by\n    ring\nhave h2 : (0:ℚ) ≤ 2 * (- y + 12 * (w - 3) ^ 2 := by\n  intro n\n  induction n with\n    rw - 1 * (0:ℚ) := by\n    rw - 4 := by\n    ring\nhave h3 : (0:ℚ) ≤ 3 * (2 * x - 3) ^ 2 := by\nrw - 198 * (2 * n ^ 2 := by\nrw - 84 * n := by\nrw - 364 * n := by\nrw - 360 * n ^ 2 := by\nrw - 372 * n ^ 1 := by\nrw - 360 * n ^ 2 := by\nrw - 360 * n ^ 1 := by\nrw - 84 * n ^ 2 := by\nrw - 4 * n ^ 3 := by\nrw - 12 * n ^ 2 := by\nrw - 12 * n + 1 := by\nrw - 3 + 144 * n + 2 := by\nrw - 3 + 120 * n"
+   },
+   "consistency": {
+    "n": 5,
+    "n_noreg": 0,
+    "hit": 0,
+    "rate": 0.0,
+    "per_op": [
+     {
+      "op": "gen32_sos_cross",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "mul_nonneg",
+       "pow_two"
+      ]
+     },
+     {
+      "op": "gen32_sos_cross",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "mul_nonneg",
+       "pow_two"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_tail_other",
+      "hit": false,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "linarith",
+       "norm_num"
+      ]
+     }
+    ]
+   },
+   "err": null
+  },
+  {
+   "ri": 202,
+   "name": "gen32_ineq_cascade_300173",
+   "cls": "ineq",
+   "seg": "exam_deep",
+   "int_acc": {
+    "naive_hit": 10,
+    "naive_tot": 56,
+    "naive_rate": 0.178571,
+    "content_hit": 7,
+    "content_tot": 42,
+    "content_rate": 0.166667
+   },
+   "slot_diag": {
+    "n_boost": 1,
+    "n_desync": 1,
+    "n_slot_pos": 1,
+    "dev_err": null
+   },
+   "arm": "hybrid",
+   "args_mode": "device",
+   "chain": {
+    "walked": [
+     "gen32_sos_cross",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_other"
+    ],
+    "gold": [
+     "gen32_sos_cross",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_other"
+    ],
+    "first_hit": true,
+    "exact_hit": true,
+    "prefix_hit": true,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 12,
+    "args_src_hist": {
+     "device_state_gold_proxy": 6
+    },
+    "bridge_fallback": 0,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 190,
+      "pred": "gen32_sos_cross",
+      "gold": "gen32_sos_cross",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99999,
+      "margin": 0.99999,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99972,
+      "margin": 0.99955,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 3,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 4,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99997,
+      "margin": 0.99995,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 5,
+      "pred_idx": 193,
+      "pred": "gen32_sos_tail_other",
+      "gold": "gen32_sos_tail_other",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.86856,
+      "margin": 0.73729,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 6,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99999,
+      "margin": 0.99998,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nhave h1 : (0 * w - 2) ^ 2 := by positivity\nhave h2 : (0 * w - 3) ^ 2 := by positivity\nhave h3 : (0 * w - 3) ^ 2 := by positivity\nhave h4 : (0 * w - 3) ^ 2 := by positivity\nhave h5 : (0 * w - 3) ^ 2 := by positivity\nhave h4 : (0 * v - 4) ^ 2 := by positivity\nhave h5 : (0 * w - 3) ^ 2 := by positivity\nhave h4 : (0 * w - 3) ^ 2 := by positivity\nhave h5 : (0 * v - 4) ^ 2 := by positivity\nhave h4 : (0 * w - 3) ^ 2 := by positivity\nhave h5 : (0 * w - 3) ^ 2 := by positivity\nhave h5 : (0 * v - 1) ^ 2 := by positivity\nhave h4 : (0 * w - 3) ^ 2 := by positivity\nhave h5 : (0 * w - 3) ^ 2 := by positivity\n```",
+    "n_tok": 271,
+    "body": "have h1 : (0 * w - 2) ^ 2 := by positivity\nhave h2 : (0 * w - 3) ^ 2 := by positivity\nhave h3 : (0 * w - 3) ^ 2 := by positivity\nhave h4 : (0 * w - 3) ^ 2 := by positivity\nhave h5 : (0 * w - 3) ^ 2 := by positivity\nhave h4 : (0 * v - 4) ^ 2 := by positivity\nhave h5 : (0 * w - 3) ^ 2 := by positivity\nhave h4 : (0 * w - 3) ^ 2 := by positivity\nhave h5 : (0 * v - 4) ^ 2 := by positivity\nhave h4 : (0 * w - 3) ^ 2 := by positivity\nhave h5 : (0 * w - 3) ^ 2 := by positivity\nhave h5 : (0 * v - 1) ^ 2 := by positivity\nhave h4 : (0 * w - 3) ^ 2 := by positivity\nhave h5 : (0 * w - 3) ^ 2 := by positivity"
+   },
+   "consistency": {
+    "n": 6,
+    "n_noreg": 0,
+    "hit": 6,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "gen32_sos_cross",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "mul_nonneg",
+       "pow_two"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_tail_other",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "linarith",
+       "norm_num"
+      ]
+     }
+    ]
+   },
+   "err": null
+  },
+  {
+   "ri": 203,
+   "name": "gen32_ineq_cascade_300174",
+   "cls": "ineq",
+   "seg": "exam_deep",
+   "int_acc": {
+    "naive_hit": 11,
+    "naive_tot": 69,
+    "naive_rate": 0.15942,
+    "content_hit": 14,
+    "content_tot": 65,
+    "content_rate": 0.215385
+   },
+   "slot_diag": {
+    "n_boost": 3,
+    "n_desync": 1,
+    "n_slot_pos": 3,
+    "dev_err": null
+   },
+   "arm": "hybrid",
+   "args_mode": "device",
+   "chain": {
+    "walked": [
+     "gen32_sos_cross",
+     "gen32_sos_cross",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_square"
+    ],
+    "gold": [
+     "gen32_sos_cross",
+     "gen32_sos_cross",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_square"
+    ],
+    "first_hit": true,
+    "exact_hit": true,
+    "prefix_hit": true,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 12,
+    "args_src_hist": {
+     "device_state_gold_proxy": 5
+    },
+    "bridge_fallback": 0,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 190,
+      "pred": "gen32_sos_cross",
+      "gold": "gen32_sos_cross",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99991,
+      "margin": 0.99984,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 190,
+      "pred": "gen32_sos_cross",
+      "gold": "gen32_sos_cross",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.9999,
+      "margin": 0.99981,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99996,
+      "margin": 0.99992,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 3,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99998,
+      "margin": 0.99996,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 4,
+      "pred_idx": 192,
+      "pred": "gen32_sos_tail_square",
+      "gold": "gen32_sos_tail_square",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99136,
+      "margin": 0.98273,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 5,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99995,
+      "margin": 0.9999,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nhave h1 : (0:ℚ) ≤ 1 * (- 2 * y + 2 * z - 1) ^ rugu - 1 * u + 2 * (2 * u) ^ 2 + 2 * x : (0:ℚ) ≤ 1 * (2 * z - 3) ^ 2 := by positivity\nhave h2 : (0:ℚ) ≤ 1 * (2 * y + 2 * z - 3) ^ 2 := by positivity\nhave h3 : (0:ℚ) ≤ 2 * (x) ^ 2 := by positivity\nhave h4 : (0:ℚ) ≤ 1 * (2 * (2 * y - 3) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (x) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (2 * (2 * z - 3) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (2 * (2 * y - 1) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 1 * (2 * x) ^ 3 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (2 * (2 * z - 3) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (x) ^ 4 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (2 * (2 * y - 1) ^ 3 := by positivity\nhave hrho : (0:ℚ",
+    "n_tok": 384,
+    "body": "have h1 : (0:ℚ) ≤ 1 * (- 2 * y + 2 * z - 1) ^ rugu - 1 * u + 2 * (2 * u) ^ 2 + 2 * x : (0:ℚ) ≤ 1 * (2 * z - 3) ^ 2 := by positivity\nhave h2 : (0:ℚ) ≤ 1 * (2 * y + 2 * z - 3) ^ 2 := by positivity\nhave h3 : (0:ℚ) ≤ 2 * (x) ^ 2 := by positivity\nhave h4 : (0:ℚ) ≤ 1 * (2 * (2 * y - 3) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (x) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (2 * (2 * z - 3) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (2 * (2 * y - 1) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 1 * (2 * x) ^ 3 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (2 * (2 * z - 3) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (x) ^ 4 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (2 * (2 * y - 1) ^ 3 := by positivity\nhave hrho : (0:ℚ"
+   },
+   "consistency": {
+    "n": 5,
+    "n_noreg": 0,
+    "hit": 5,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "gen32_sos_cross",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "mul_nonneg",
+       "pow_two"
+      ]
+     },
+     {
+      "op": "gen32_sos_cross",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "mul_nonneg",
+       "pow_two"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_tail_square",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "sq_nonneg",
+       "pow"
+      ]
+     }
+    ]
+   },
+   "err": null
+  },
+  {
+   "ri": 204,
+   "name": "gen32_ineq_cascade_300175",
+   "cls": "ineq",
+   "seg": "exam_deep",
+   "int_acc": {
+    "naive_hit": 11,
+    "naive_tot": 43,
+    "naive_rate": 0.255814,
+    "content_hit": 7,
+    "content_tot": 39,
+    "content_rate": 0.179487
+   },
+   "slot_diag": {
+    "n_boost": 2,
+    "n_desync": 1,
+    "n_slot_pos": 2,
+    "dev_err": null
+   },
+   "arm": "hybrid",
+   "args_mode": "device",
+   "chain": {
+    "walked": [
+     "gen32_sos_cross",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_other"
+    ],
+    "gold": [
+     "gen32_sos_cross",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_other"
+    ],
+    "first_hit": true,
+    "exact_hit": true,
+    "prefix_hit": true,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 12,
+    "args_src_hist": {
+     "device_state_gold_proxy": 5
+    },
+    "bridge_fallback": 0,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 190,
+      "pred": "gen32_sos_cross",
+      "gold": "gen32_sos_cross",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99969,
+      "margin": 0.99942,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99996,
+      "margin": 0.99994,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99998,
+      "margin": 0.99997,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 3,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99998,
+      "margin": 0.99997,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 4,
+      "pred_idx": 193,
+      "pred": "gen32_sos_tail_other",
+      "gold": "gen32_sos_tail_other",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99949,
+      "margin": 0.99921,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 5,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99993,
+      "margin": 0.99988,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nhave h1 : (0:ℚ) ≤ 1 * (- 2 * w + y) ^ 2 := by\n  intro zero =>\n    rw - 2 * (2 * x) ^ 2 - 1 := by\n  induction zero =>\n    rw - 16 := by\n  induction zero =>\n    rw - 144 := by\n    push_cast\n    push_cast\n    ring\nhave h2 : (0:ℚ) ≤ 2 * (z - 2 * w - 1) ^ 2 := by\n  intro zero =>\n    rw - 4 * (u - 1) := by\n  induction zero =>\n    rw - 4 := by\n  induction zero =>\n    rw - 72 := by\n    push_cast\n    ring\nhave h3 : (0:ℚ) ≤ 2 * (2 * x) ^ 2 := by\n  intro zero =>\n    rw - 72 := by\n  induction zero =>\n    rw - 72 := by\n    push_cast\n    ring\nhave h4 : (0:ℚ) ≤ 1 * (2 * x) ^ 4 := by\n  intro zero =>\n    rw - 72 := by\n    push_cast\n    ring\nrw - 40 := by\n  intro zero =>\n    rw - 72 := by\n    ring\nrw - 72 := by\n  intro zero =>\n    rw - 72 := by\n    ring\nrw - 144 := by\n  intro zero =>\n    rw - 72 := by\n  induction zero =>\n    rw - 72 := by\n  induction zero =>\n    rw - 72 := by\n    push_cast\n    ring\nrw - 72",
+    "n_tok": 384,
+    "body": "have h1 : (0:ℚ) ≤ 1 * (- 2 * w + y) ^ 2 := by\n  intro zero =>\n    rw - 2 * (2 * x) ^ 2 - 1 := by\n  induction zero =>\n    rw - 16 := by\n  induction zero =>\n    rw - 144 := by\n    push_cast\n    push_cast\n    ring\nhave h2 : (0:ℚ) ≤ 2 * (z - 2 * w - 1) ^ 2 := by\n  intro zero =>\n    rw - 4 * (u - 1) := by\n  induction zero =>\n    rw - 4 := by\n  induction zero =>\n    rw - 72 := by\n    push_cast\n    ring\nhave h3 : (0:ℚ) ≤ 2 * (2 * x) ^ 2 := by\n  intro zero =>\n    rw - 72 := by\n  induction zero =>\n    rw - 72 := by\n    push_cast\n    ring\nhave h4 : (0:ℚ) ≤ 1 * (2 * x) ^ 4 := by\n  intro zero =>\n    rw - 72 := by\n    push_cast\n    ring\nrw - 40 := by\n  intro zero =>\n    rw - 72 := by\n    ring\nrw - 72 := by\n  intro zero =>\n    rw - 72 := by\n    ring\nrw - 144 := by\n  intro zero =>\n    rw - 72 := by\n  induction zero =>\n    rw - 72 := by\n  induction zero =>\n    rw - 72 := by\n    push_cast\n    ring\nrw - 72"
+   },
+   "consistency": {
+    "n": 5,
+    "n_noreg": 0,
+    "hit": 0,
+    "rate": 0.0,
+    "per_op": [
+     {
+      "op": "gen32_sos_cross",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "mul_nonneg",
+       "pow_two"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_tail_other",
+      "hit": false,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "linarith",
+       "norm_num"
+      ]
+     }
+    ]
+   },
+   "err": null
+  },
+  {
+   "ri": 205,
+   "name": "gen32_ineq_cascade_300176",
+   "cls": "ineq",
+   "seg": "exam_deep",
+   "int_acc": {
+    "naive_hit": 8,
+    "naive_tot": 53,
+    "naive_rate": 0.150943,
+    "content_hit": 3,
+    "content_tot": 53,
+    "content_rate": 0.056604
+   },
+   "slot_diag": {
+    "n_boost": 0,
+    "n_desync": 1,
+    "n_slot_pos": 0,
+    "dev_err": null
+   },
+   "arm": "hybrid",
+   "args_mode": "device",
+   "chain": {
+    "walked": [
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_zero"
+    ],
+    "gold": [
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_zero"
+    ],
+    "first_hit": true,
+    "exact_hit": true,
+    "prefix_hit": true,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 12,
+    "args_src_hist": {
+     "device_state_gold_proxy": 6
+    },
+    "bridge_fallback": 0,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99999,
+      "margin": 0.99998,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 3,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 4,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 5,
+      "pred_idx": 191,
+      "pred": "gen32_sos_tail_zero",
+      "gold": "gen32_sos_tail_zero",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.48835,
+      "margin": 0.13736,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 6,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99999,
+      "margin": 0.99999,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nhave hg : (0:ℚ) ≤ 3 * (y - 3 - 2)) ^ 2 := by positivity\nhave hf : (0:ℚ) ≤ 3 * (x - 4) ^ 2 := by positivity\nhave hg : (0:ℚ) ≤ 3 * (z - 3) ^ 2 := by positivity\nhave hf : (0:ℚ) ≤ 3 * (u - 3) ^ 2 := by positivity\nhave hg : (0:ℚ) ≤ 3 * (y - 1) ^ 2 := by positivity\nhave hf : (0:ℚ) ≤ 3 * (z - 3) ^ 2 := by positivity\nhave hg : (0:ℚ) ≤ 3 * (u - 3) ^ 2 := by positivity\nhave hf : (0:ℚ) ≤ 3 * (w - 1) ^ 2 := by positivity\nhave hg : (0:ℚ) ≤ 3 * (z - 3) ^ 2 := by positivity\nhave hf : (0:ℚ) ≤ 3 * (x - 1) ^ 2 := by positivity\nhave hg : (0:ℚ) ≤ 3 * (u - 3) ^ 2 := by positivity\nhave hf : (0:ℚ) ≤ 3 * (y - 1) ^ 2 := by positivity\nhave hg : (0:ℚ) ≤ 3 * (z - 3) ^ 2 := by positivity\n```",
+    "n_tok": 359,
+    "body": "have hg : (0:ℚ) ≤ 3 * (y - 3 - 2)) ^ 2 := by positivity\nhave hf : (0:ℚ) ≤ 3 * (x - 4) ^ 2 := by positivity\nhave hg : (0:ℚ) ≤ 3 * (z - 3) ^ 2 := by positivity\nhave hf : (0:ℚ) ≤ 3 * (u - 3) ^ 2 := by positivity\nhave hg : (0:ℚ) ≤ 3 * (y - 1) ^ 2 := by positivity\nhave hf : (0:ℚ) ≤ 3 * (z - 3) ^ 2 := by positivity\nhave hg : (0:ℚ) ≤ 3 * (u - 3) ^ 2 := by positivity\nhave hf : (0:ℚ) ≤ 3 * (w - 1) ^ 2 := by positivity\nhave hg : (0:ℚ) ≤ 3 * (z - 3) ^ 2 := by positivity\nhave hf : (0:ℚ) ≤ 3 * (x - 1) ^ 2 := by positivity\nhave hg : (0:ℚ) ≤ 3 * (u - 3) ^ 2 := by positivity\nhave hf : (0:ℚ) ≤ 3 * (y - 1) ^ 2 := by positivity\nhave hg : (0:ℚ) ≤ 3 * (z - 3) ^ 2 := by positivity"
+   },
+   "consistency": {
+    "n": 6,
+    "n_noreg": 0,
+    "hit": 6,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_tail_zero",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "linarith"
+      ]
+     }
+    ]
+   },
+   "err": null
+  },
+  {
+   "ri": 206,
+   "name": "gen32_ineq_cascade_300177",
+   "cls": "ineq",
+   "seg": "exam_deep",
+   "int_acc": {
+    "naive_hit": 4,
+    "naive_tot": 33,
+    "naive_rate": 0.121212,
+    "content_hit": 6,
+    "content_tot": 23,
+    "content_rate": 0.26087
+   },
+   "slot_diag": {
+    "n_boost": 0,
+    "n_desync": 1,
+    "n_slot_pos": 0,
+    "dev_err": null
+   },
+   "arm": "hybrid",
+   "args_mode": "device",
+   "chain": {
+    "walked": [
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_other"
+    ],
+    "gold": [
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_square"
+    ],
+    "first_hit": true,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 12,
+    "args_src_hist": {
+     "device_state_gold_proxy": 6
+    },
+    "bridge_fallback": 0,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 0.99999,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 3,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 4,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 5,
+      "pred_idx": 193,
+      "pred": "gen32_sos_tail_other",
+      "gold": "gen32_sos_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.54024,
+      "margin": 0.21412,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 6,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99999,
+      "margin": 0.99999,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nhave hg : (0:ℚ) ≤ 3 * (2 * z - 4) ^ 2 := by\n  intro n\n  induction n with\n  | zero => norm_num [u - 3]\n  | succ n ih =>\n    rw - 12 * (x - 1) ^ 2 := by\n  induction n with\n  | zero => norm_num [w - 3]\n  | succ n ih =>\n    rw - 3]\n    push_cast [y]\n    ring\n  induction n with\n  | zero => norm_num [z - 3]\n  | succ n ih =>\n    rw - 12 * (u - 3) ^ 2 := by\n  intro n with\n  | zero => norm_num [x - 3]\n  | succ n ih =>\n    rw - 3]\n    push_cast [3]\n    ring\n```",
+    "n_tok": 202,
+    "body": "have hg : (0:ℚ) ≤ 3 * (2 * z - 4) ^ 2 := by\n  intro n\n  induction n with\n  | zero => norm_num [u - 3]\n  | succ n ih =>\n    rw - 12 * (x - 1) ^ 2 := by\n  induction n with\n  | zero => norm_num [w - 3]\n  | succ n ih =>\n    rw - 3]\n    push_cast [y]\n    ring\n  induction n with\n  | zero => norm_num [z - 3]\n  | succ n ih =>\n    rw - 12 * (u - 3) ^ 2 := by\n  intro n with\n  | zero => norm_num [x - 3]\n  | succ n ih =>\n    rw - 3]\n    push_cast [3]\n    ring"
+   },
+   "consistency": {
+    "n": 6,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 0.16666666666666666,
+    "per_op": [
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_tail_other",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "linarith",
+       "norm_num"
+      ]
+     }
+    ]
+   },
+   "err": null
+  },
+  {
+   "ri": 207,
+   "name": "gen32_ineq_cascade_300178",
+   "cls": "ineq",
+   "seg": "exam_deep",
+   "int_acc": {
+    "naive_hit": 9,
+    "naive_tot": 70,
+    "naive_rate": 0.128571,
+    "content_hit": 7,
+    "content_tot": 64,
+    "content_rate": 0.109375
+   },
+   "slot_diag": {
+    "n_boost": 0,
+    "n_desync": 1,
+    "n_slot_pos": 0,
+    "dev_err": null
+   },
+   "arm": "hybrid",
+   "args_mode": "device",
+   "chain": {
+    "walked": [
+     "gen32_sos_cross",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_other"
+    ],
+    "gold": [
+     "gen32_sos_cross",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_zero"
+    ],
+    "first_hit": true,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 12,
+    "args_src_hist": {
+     "device_state_gold_proxy": 5
+    },
+    "bridge_fallback": 0,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 190,
+      "pred": "gen32_sos_cross",
+      "gold": "gen32_sos_cross",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99998,
+      "margin": 0.99996,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99998,
+      "margin": 0.99997,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99999,
+      "margin": 0.99999,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 3,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99999,
+      "margin": 0.99999,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 4,
+      "pred_idx": 193,
+      "pred": "gen32_sos_tail_other",
+      "gold": "gen32_sos_tail_zero",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.98258,
+      "margin": 0.97085,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 5,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99995,
+      "margin": 0.99991,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nhave h2 : (0:ℚ) ≤ 2 * (- 2 * w + 2 * u - 1) ^ 2 := by positivity\nhave h3 : (0:ℚ) ≤ 3 * (y - 4) ^ 2 := by positivity\nhave h4 : (0:ℚ) ≤ 3 * (2 * z - 3) ^ 2 := by positivity\nhave h5 : (0:ℚ) ≤ 3 * (2 * x - 1) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (2 * z - 3) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 3 * (2 * x - 1) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 3 * (2 * z - 3) ^ 2 := by positivity\nhave h4 : (0:ℚ) ≤ 3 * (2 * x - 1) ^ 2 := by positivity\nhave h5 : (0:ℚ) ≤ 3 * (2 * z - 3) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 3 * (2 * x - 1) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (u - 3) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 3 * (2 * z - 3) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 3 * (2 * x - 1) ^ 2 := by positivity\n```",
+    "n_tok": 384,
+    "body": "have h2 : (0:ℚ) ≤ 2 * (- 2 * w + 2 * u - 1) ^ 2 := by positivity\nhave h3 : (0:ℚ) ≤ 3 * (y - 4) ^ 2 := by positivity\nhave h4 : (0:ℚ) ≤ 3 * (2 * z - 3) ^ 2 := by positivity\nhave h5 : (0:ℚ) ≤ 3 * (2 * x - 1) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (2 * z - 3) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 3 * (2 * x - 1) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 3 * (2 * z - 3) ^ 2 := by positivity\nhave h4 : (0:ℚ) ≤ 3 * (2 * x - 1) ^ 2 := by positivity\nhave h5 : (0:ℚ) ≤ 3 * (2 * z - 3) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 3 * (2 * x - 1) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (u - 3) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 3 * (2 * z - 3) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 3 * (2 * x - 1) ^ 2 := by positivity"
+   },
+   "consistency": {
+    "n": 5,
+    "n_noreg": 0,
+    "hit": 5,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "gen32_sos_cross",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "mul_nonneg",
+       "pow_two"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_tail_other",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "linarith",
+       "norm_num"
+      ]
+     }
+    ]
+   },
+   "err": null
+  },
+  {
+   "ri": 208,
+   "name": "gen32_ineq_cascade_300179",
+   "cls": "ineq",
+   "seg": "exam_deep",
+   "int_acc": {
+    "naive_hit": 17,
+    "naive_tot": 68,
+    "naive_rate": 0.25,
+    "content_hit": 14,
+    "content_tot": 63,
+    "content_rate": 0.222222
+   },
+   "slot_diag": {
+    "n_boost": 13,
+    "n_desync": 1,
+    "n_slot_pos": 13,
+    "dev_err": null
+   },
+   "arm": "hybrid",
+   "args_mode": "device",
+   "chain": {
+    "walked": [
+     "gen32_sos_cross",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_square"
+    ],
+    "gold": [
+     "gen32_sos_cross",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_other"
+    ],
+    "first_hit": true,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 12,
+    "args_src_hist": {
+     "device_state_gold_proxy": 6
+    },
+    "bridge_fallback": 0,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 190,
+      "pred": "gen32_sos_cross",
+      "gold": "gen32_sos_cross",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99796,
+      "margin": 0.9967,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99995,
+      "margin": 0.99991,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 0.99999,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 3,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 4,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.9998,
+      "margin": 0.99961,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 5,
+      "pred_idx": 192,
+      "pred": "gen32_sos_tail_square",
+      "gold": "gen32_sos_tail_other",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.98915,
+      "margin": 0.9785,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 6,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99999,
+      "margin": 0.99999,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nhave h1 : (0:ℚ) ≤ 1 * (- y + 2 * z - 1) ^ 2 := by positivity\nhave h2 : (0:ℚ) ≤ 1 * (2 * w - 4) ^ 2 := by positivity\nhave h3 : (0:ℚ) ≤ 1 * (u - 3) ^ 2 := by positivity\nhave h4 : (0:ℚ) ≤ 1 * (2 * x - 1) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 1 * (2 * w - 4) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 1 * (2 * x - 3) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 1 * (2 * w - 4) ^ 2 := by positivity\nhave h4 : (0:ℚ) ≤ 1 * (2 * x - 3) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 1 * (2 * z - 1) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 1 * (2 * w - 4) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 1 * (2 * x - 3) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 1 * (2 * w - 4) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 1 * (u - 3) ^ 2 := by positivity\n```",
+    "n_tok": 381,
+    "body": "have h1 : (0:ℚ) ≤ 1 * (- y + 2 * z - 1) ^ 2 := by positivity\nhave h2 : (0:ℚ) ≤ 1 * (2 * w - 4) ^ 2 := by positivity\nhave h3 : (0:ℚ) ≤ 1 * (u - 3) ^ 2 := by positivity\nhave h4 : (0:ℚ) ≤ 1 * (2 * x - 1) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 1 * (2 * w - 4) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 1 * (2 * x - 3) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 1 * (2 * w - 4) ^ 2 := by positivity\nhave h4 : (0:ℚ) ≤ 1 * (2 * x - 3) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 1 * (2 * z - 1) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 1 * (2 * w - 4) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 1 * (2 * x - 3) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 1 * (2 * w - 4) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 1 * (u - 3) ^ 2 := by positivity"
+   },
+   "consistency": {
+    "n": 6,
+    "n_noreg": 0,
+    "hit": 6,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "gen32_sos_cross",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "mul_nonneg",
+       "pow_two"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_tail_square",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "sq_nonneg",
+       "pow"
+      ]
+     }
+    ]
+   },
+   "err": null
+  },
+  {
+   "ri": 209,
+   "name": "gen32_ineq_cascade_300180",
+   "cls": "ineq",
+   "seg": "exam_deep",
+   "int_acc": {
+    "naive_hit": 12,
+    "naive_tot": 71,
+    "naive_rate": 0.169014,
+    "content_hit": 15,
+    "content_tot": 66,
+    "content_rate": 0.227273
+   },
+   "slot_diag": {
+    "n_boost": 2,
+    "n_desync": 1,
+    "n_slot_pos": 2,
+    "dev_err": null
+   },
+   "arm": "hybrid",
+   "args_mode": "device",
+   "chain": {
+    "walked": [
+     "gen32_sos_cross",
+     "gen32_sos_cross",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_other"
+    ],
+    "gold": [
+     "gen32_sos_cross",
+     "gen32_sos_cross",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_square"
+    ],
+    "first_hit": true,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 12,
+    "args_src_hist": {
+     "device_state_gold_proxy": 5
+    },
+    "bridge_fallback": 0,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 190,
+      "pred": "gen32_sos_cross",
+      "gold": "gen32_sos_cross",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 0.99999,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 190,
+      "pred": "gen32_sos_cross",
+      "gold": "gen32_sos_cross",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99999,
+      "margin": 0.99998,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99991,
+      "margin": 0.99984,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 3,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99995,
+      "margin": 0.99993,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 4,
+      "pred_idx": 193,
+      "pred": "gen32_sos_tail_other",
+      "gold": "gen32_sos_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.98883,
+      "margin": 0.97776,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 5,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99995,
+      "margin": 0.99992,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nhave h1 : (0:ℚ) ≤ 2 * (- y + 2 * w - 1) ^ ory : (0:ℚ) ≤ 3 * (v - 1) ^ 2 := by positivity\nhave h2 : (0:ℚ) ≤ 2 * (z - 2 * x + 2) ^ 2 := by positivity\nhave h3 : (0:ℚ) ≤ 2 * (2 * w - 1) ^ 2 := by positivity\nhave h4 : (0:ℚ) ≤ 2 * (2 * x + 2) ^ 2 := by positivity\nhave h5 : (0:ℚ) ≤ 2 * (2 * w - 1) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (2 * w - 3) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (2 * x + 2) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (2 * z - 1) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (2 * (2 * w - 1) ^ 3 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (2 * (z - 1) ^ 3 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (2 * (2 * x - 3) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (2 * (2 * w - 3) ^ 3",
+    "n_tok": 384,
+    "body": "have h1 : (0:ℚ) ≤ 2 * (- y + 2 * w - 1) ^ ory : (0:ℚ) ≤ 3 * (v - 1) ^ 2 := by positivity\nhave h2 : (0:ℚ) ≤ 2 * (z - 2 * x + 2) ^ 2 := by positivity\nhave h3 : (0:ℚ) ≤ 2 * (2 * w - 1) ^ 2 := by positivity\nhave h4 : (0:ℚ) ≤ 2 * (2 * x + 2) ^ 2 := by positivity\nhave h5 : (0:ℚ) ≤ 2 * (2 * w - 1) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (2 * w - 3) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (2 * x + 2) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (2 * z - 1) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (2 * (2 * w - 1) ^ 3 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (2 * (z - 1) ^ 3 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (2 * (2 * x - 3) ^ 2 := by positivity\nhave hrho : (0:ℚ) ≤ 2 * (2 * (2 * w - 3) ^ 3"
+   },
+   "consistency": {
+    "n": 5,
+    "n_noreg": 0,
+    "hit": 5,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "gen32_sos_cross",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "mul_nonneg",
+       "pow_two"
+      ]
+     },
+     {
+      "op": "gen32_sos_cross",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "mul_nonneg",
+       "pow_two"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_tail_other",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "linarith",
+       "norm_num"
+      ]
+     }
+    ]
+   },
+   "err": null
+  },
+  {
+   "ri": 210,
+   "name": "gen32_ineq_cascade_300181",
+   "cls": "ineq",
+   "seg": "exam_deep",
+   "int_acc": {
+    "naive_hit": 6,
+    "naive_tot": 65,
+    "naive_rate": 0.092308,
+    "content_hit": 6,
+    "content_tot": 65,
+    "content_rate": 0.092308
+   },
+   "slot_diag": {
+    "n_boost": 0,
+    "n_desync": 1,
+    "n_slot_pos": 0,
+    "dev_err": null
+   },
+   "arm": "hybrid",
+   "args_mode": "device",
+   "chain": {
+    "walked": [
+     "gen32_sos_cross",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_other"
+    ],
+    "gold": [
+     "gen32_sos_cross",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_square"
+    ],
+    "first_hit": true,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 12,
+    "args_src_hist": {
+     "device_state_gold_proxy": 5
+    },
+    "bridge_fallback": 0,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 190,
+      "pred": "gen32_sos_cross",
+      "gold": "gen32_sos_cross",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99976,
+      "margin": 0.99958,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99939,
+      "margin": 0.99901,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99997,
+      "margin": 0.99995,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 3,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99998,
+      "margin": 0.99996,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 4,
+      "pred_idx": 193,
+      "pred": "gen32_sos_tail_other",
+      "gold": "gen32_sos_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99879,
+      "margin": 0.99809,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 5,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99992,
+      "margin": 0.99987,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nhave hg : (0:ℚ) ≤ 1 * (2 * y) ^ 2 - 12 * x - 3 := by\n  intro * + 1 * + 2 * + 10 * x + 10 := by\n  intro * + 1 : (0:ℚ) ≤ w - 1 * x + u - 3 := by\n  intro * + 1 : (0:ℚ) ≤ 4 * (2 * x - 4) ^ 2 := by\n  intro * + 10 : (0:ℚ) ≤ 10 * (2 * y) ^ 2 := by\n  intro * : (0:ℚ) ≤ 10 * (2 * x - 3) ^ 2 := by\n  intro * : (0:ℚ) ≤ 10 * (2 * x - 12) ^ 2 := by\n  intro * : (0:ℚ) ≤ 10 * (w - 3) ^ 2 := by\n  intro * : (0:ℚ) ≤ 4 * (2 * y) ^ 2 := by\n  intro * : (0:ℚ) ≤ 10 * (2 * x - 3) ^ 2 := by\n  intro * : (0:ℚ) ≤ 10 * (2 * y) ^ 2 := by\n  intro * : (0:ℚ) ≤ 10 * (2 * x - 3) ^ 2 := by\n  intro * : (0:ℚ) ≤ 10 * (2 * y) ^ 2 := by\n  intro * : (0:ℚ) ≤ 10 * (2 * y) ^ 2 := by",
+    "n_tok": 384,
+    "body": "have hg : (0:ℚ) ≤ 1 * (2 * y) ^ 2 - 12 * x - 3 := by\n  intro * + 1 * + 2 * + 10 * x + 10 := by\n  intro * + 1 : (0:ℚ) ≤ w - 1 * x + u - 3 := by\n  intro * + 1 : (0:ℚ) ≤ 4 * (2 * x - 4) ^ 2 := by\n  intro * + 10 : (0:ℚ) ≤ 10 * (2 * y) ^ 2 := by\n  intro * : (0:ℚ) ≤ 10 * (2 * x - 3) ^ 2 := by\n  intro * : (0:ℚ) ≤ 10 * (2 * x - 12) ^ 2 := by\n  intro * : (0:ℚ) ≤ 10 * (w - 3) ^ 2 := by\n  intro * : (0:ℚ) ≤ 4 * (2 * y) ^ 2 := by\n  intro * : (0:ℚ) ≤ 10 * (2 * x - 3) ^ 2 := by\n  intro * : (0:ℚ) ≤ 10 * (2 * y) ^ 2 := by\n  intro * : (0:ℚ) ≤ 10 * (2 * x - 3) ^ 2 := by\n  intro * : (0:ℚ) ≤ 10 * (2 * y) ^ 2 := by\n  intro * : (0:ℚ) ≤ 10 * (2 * y) ^ 2 := by"
+   },
+   "consistency": {
+    "n": 5,
+    "n_noreg": 0,
+    "hit": 0,
+    "rate": 0.0,
+    "per_op": [
+     {
+      "op": "gen32_sos_cross",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "mul_nonneg",
+       "pow_two"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_tail_other",
+      "hit": false,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "linarith",
+       "norm_num"
+      ]
+     }
+    ]
+   },
+   "err": null
+  },
+  {
+   "ri": 211,
+   "name": "gen32_ineq_cascade_300182",
+   "cls": "ineq",
+   "seg": "exam_deep",
+   "int_acc": {
+    "naive_hit": 9,
+    "naive_tot": 39,
+    "naive_rate": 0.230769,
+    "content_hit": 8,
+    "content_tot": 38,
+    "content_rate": 0.210526
+   },
+   "slot_diag": {
+    "n_boost": 2,
+    "n_desync": 1,
+    "n_slot_pos": 2,
+    "dev_err": null
+   },
+   "arm": "hybrid",
+   "args_mode": "device",
+   "chain": {
+    "walked": [
+     "gen32_sos_cross",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_other"
+    ],
+    "gold": [
+     "gen32_sos_cross",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_zero"
+    ],
+    "first_hit": true,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 12,
+    "args_src_hist": {
+     "device_state_gold_proxy": 6
+    },
+    "bridge_fallback": 0,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 190,
+      "pred": "gen32_sos_cross",
+      "gold": "gen32_sos_cross",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99983,
+      "margin": 0.99968,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99999,
+      "margin": 0.99999,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 3,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 4,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 5,
+      "pred_idx": 193,
+      "pred": "gen32_sos_tail_other",
+      "gold": "gen32_sos_tail_zero",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.88938,
+      "margin": 0.82599,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 6,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99998,
+      "margin": 0.99998,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nhave h1 : (0:ℚ) ≤ 1 * (2 * w - 3) ^ 2 := by\n  intro n\n  induction n with\n  | 2 * u ^ 2 := by\n  intro n\n  induction n with\n  | 3 * (0:ℚ) ≤ 3 * (0:ℚ) ^ 2 := by\n  intro n\n  induction n with\n  | 4 * (0:ℚ) ≤ 16 * v - 3]\n  induction n with\n  | 16 * (0:ℚ) ≤ 2 * u ^ 2 := by\n  intro n\n  induction n with\n  | 16 * (0:ℚ) ≤ 2 * w - 2]\n  induction n with\n  | 4 * (0:ℚ) ≤ 16 * v - 16]\n  norm_num [x] := by\n  intro n\n  induction n with\n  | 12 * (0:ℚ) ≤ 2 * w - 3]\n  norm_num [x] := by\n  intro n]\n  induction n with\n  | 4 * (0:ℚ) ≤ 12 * (0:ℚ) ≤ 2 * w - 3]\n  norm_num [x] := by\n  intro n\n```",
+    "n_tok": 289,
+    "body": "have h1 : (0:ℚ) ≤ 1 * (2 * w - 3) ^ 2 := by\n  intro n\n  induction n with\n  | 2 * u ^ 2 := by\n  intro n\n  induction n with\n  | 3 * (0:ℚ) ≤ 3 * (0:ℚ) ^ 2 := by\n  intro n\n  induction n with\n  | 4 * (0:ℚ) ≤ 16 * v - 3]\n  induction n with\n  | 16 * (0:ℚ) ≤ 2 * u ^ 2 := by\n  intro n\n  induction n with\n  | 16 * (0:ℚ) ≤ 2 * w - 2]\n  induction n with\n  | 4 * (0:ℚ) ≤ 16 * v - 16]\n  norm_num [x] := by\n  intro n\n  induction n with\n  | 12 * (0:ℚ) ≤ 2 * w - 3]\n  norm_num [x] := by\n  intro n]\n  induction n with\n  | 4 * (0:ℚ) ≤ 12 * (0:ℚ) ≤ 2 * w - 3]\n  norm_num [x] := by\n  intro n"
+   },
+   "consistency": {
+    "n": 6,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 0.16666666666666666,
+    "per_op": [
+     {
+      "op": "gen32_sos_cross",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "mul_nonneg",
+       "pow_two"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_tail_other",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "linarith",
+       "norm_num"
+      ]
+     }
+    ]
+   },
+   "err": null
+  },
+  {
+   "ri": 212,
+   "name": "gen32_ineq_cascade_300183",
+   "cls": "ineq",
+   "seg": "exam_deep",
+   "int_acc": {
+    "naive_hit": 9,
+    "naive_tot": 60,
+    "naive_rate": 0.15,
+    "content_hit": 6,
+    "content_tot": 60,
+    "content_rate": 0.1
+   },
+   "slot_diag": {
+    "n_boost": 0,
+    "n_desync": 1,
+    "n_slot_pos": 0,
+    "dev_err": null
+   },
+   "arm": "hybrid",
+   "args_mode": "device",
+   "chain": {
+    "walked": [
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_other"
+    ],
+    "gold": [
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_other"
+    ],
+    "first_hit": true,
+    "exact_hit": true,
+    "prefix_hit": true,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 12,
+    "args_src_hist": {
+     "device_state_gold_proxy": 6
+    },
+    "bridge_fallback": 0,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99999,
+      "margin": 0.99999,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 3,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 4,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 5,
+      "pred_idx": 193,
+      "pred": "gen32_sos_tail_other",
+      "gold": "gen32_sos_tail_other",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.93565,
+      "margin": 0.896,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 6,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99992,
+      "margin": 0.99986,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nhave hg : (0:ℚ) ≤ 3 * (2 * z - 4) ^ 2 := by positivity\nhave hf : (0:ℚ) ≤ 3 * (w - 2) ^ 2 := by positivity\nhave hu : (0:ℚ) ≤ 3 * (u - 3) ^ 2 := by positivity\nhave hv : (0:ℚ) ≤ 1 * (x - 4) ^ 2 := by positivity\nhave hg : (0:ℚ) ≤ 3 * (w - 3) ^ 2 := by positivity\nhave hf : (0:ℚ) ≤ 1 * (x - 1) ^ 2 := by positivity\nhave hu : (0:ℚ) ≤ 4 * (2 * y - 3) ^ 2 := by positivity\nhave hf : (0:ℚ) ≤ 3 * (u - 3) ^ 2 := by positivity\nhave hv : (0:ℚ) ≤ 1 * (2 * z - 16) ^ 2 := by positivity\nhave hu : (0:ℚ) ≤ 3 * (w - 3) ^ 2 := by positivity\nhave hg : (0:ℚ) ≤ 3 * (2 * y - 3) ^ 2 := by positivity\nhave hf : (0:ℚ) ≤ 1 * (x - 1) ^ 3 := by positivity\nhave hu : (0:ℚ) ≤ 4 * (2 * y - 3) ^ 2 := by positivity\nhave hv : (0:ℚ) ≤ 1 * (2 * z",
+    "n_tok": 384,
+    "body": "have hg : (0:ℚ) ≤ 3 * (2 * z - 4) ^ 2 := by positivity\nhave hf : (0:ℚ) ≤ 3 * (w - 2) ^ 2 := by positivity\nhave hu : (0:ℚ) ≤ 3 * (u - 3) ^ 2 := by positivity\nhave hv : (0:ℚ) ≤ 1 * (x - 4) ^ 2 := by positivity\nhave hg : (0:ℚ) ≤ 3 * (w - 3) ^ 2 := by positivity\nhave hf : (0:ℚ) ≤ 1 * (x - 1) ^ 2 := by positivity\nhave hu : (0:ℚ) ≤ 4 * (2 * y - 3) ^ 2 := by positivity\nhave hf : (0:ℚ) ≤ 3 * (u - 3) ^ 2 := by positivity\nhave hv : (0:ℚ) ≤ 1 * (2 * z - 16) ^ 2 := by positivity\nhave hu : (0:ℚ) ≤ 3 * (w - 3) ^ 2 := by positivity\nhave hg : (0:ℚ) ≤ 3 * (2 * y - 3) ^ 2 := by positivity\nhave hf : (0:ℚ) ≤ 1 * (x - 1) ^ 3 := by positivity\nhave hu : (0:ℚ) ≤ 4 * (2 * y - 3) ^ 2 := by positivity\nhave hv : (0:ℚ) ≤ 1 * (2 * z"
+   },
+   "consistency": {
+    "n": 6,
+    "n_noreg": 0,
+    "hit": 6,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_tail_other",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "linarith",
+       "norm_num"
+      ]
+     }
+    ]
+   },
+   "err": null
+  },
+  {
+   "ri": 213,
+   "name": "gen32_ineq_cascade_300184",
+   "cls": "ineq",
+   "seg": "exam_deep",
+   "int_acc": {
+    "naive_hit": 6,
+    "naive_tot": 69,
+    "naive_rate": 0.086957,
+    "content_hit": 5,
+    "content_tot": 54,
+    "content_rate": 0.092593
+   },
+   "slot_diag": {
+    "n_boost": 0,
+    "n_desync": 1,
+    "n_slot_pos": 0,
+    "dev_err": null
+   },
+   "arm": "hybrid",
+   "args_mode": "device",
+   "chain": {
+    "walked": [
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_zero"
+    ],
+    "gold": [
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_zero"
+    ],
+    "first_hit": true,
+    "exact_hit": true,
+    "prefix_hit": true,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 12,
+    "args_src_hist": {
+     "device_state_gold_proxy": 7
+    },
+    "bridge_fallback": 0,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99996,
+      "margin": 0.99995,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 3,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 4,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 5,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 0.99999,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 6,
+      "pred_idx": 191,
+      "pred": "gen32_sos_tail_zero",
+      "gold": "gen32_sos_tail_zero",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.95011,
+      "margin": 0.90191,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 7,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99999,
+      "margin": 0.99999,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nhave h3 : (0:ℚ) ≤ 2 * (v - 2) ^ 2 := by positivity\nhave h4 : (0:ℚ) ≤ 3 * (y) ^ 2 := by positivity\nhave h5 : (0:ℚ) ≤ 3 * (x - 1) ^ 2 := by positivity\nhave h6 : (0:ℚ) ≤ 2 * (z - 3) ^ 2 := by positivity\nhave h5 : (0:ℚ) ≤ 2 * (v - 2) ^ 2 := by positivity\nhave h6 : (0:ℚ) ≤ 3 * (u - 3) ^ 2 := by positivity\nhave h5 : (0:ℚ) ≤ 2 * (y) ^ 2 := by positivity\nhave h4 : (0:ℚ) ≤ 3 * (v - 1) ^ 2 := by positivity\nhave h5 : (0:ℚ) ≤ 3 * (w) ^ 2 := by positivity\nhave h6 : (0:ℚ) ≤ 2 * (z - 3) ^ 2 := by positivity\nhave h5 : (0:ℚ) ≤ 3 * (x - 1) ^ 3 := by positivity\nhave h5 : (0:ℚ) ≤ 2 * (v - 3) ^ 2 := by positivity\nhave h6 : (0:ℚ) ≤ 3 * (u - 3) ^ 3 := by positivity\nhave h5 : (0:ℚ) ≤ 2 * (z - 3) ^ 2 := by positivity\nhave h5 : (0:ℚ) ≤",
+    "n_tok": 384,
+    "body": "have h3 : (0:ℚ) ≤ 2 * (v - 2) ^ 2 := by positivity\nhave h4 : (0:ℚ) ≤ 3 * (y) ^ 2 := by positivity\nhave h5 : (0:ℚ) ≤ 3 * (x - 1) ^ 2 := by positivity\nhave h6 : (0:ℚ) ≤ 2 * (z - 3) ^ 2 := by positivity\nhave h5 : (0:ℚ) ≤ 2 * (v - 2) ^ 2 := by positivity\nhave h6 : (0:ℚ) ≤ 3 * (u - 3) ^ 2 := by positivity\nhave h5 : (0:ℚ) ≤ 2 * (y) ^ 2 := by positivity\nhave h4 : (0:ℚ) ≤ 3 * (v - 1) ^ 2 := by positivity\nhave h5 : (0:ℚ) ≤ 3 * (w) ^ 2 := by positivity\nhave h6 : (0:ℚ) ≤ 2 * (z - 3) ^ 2 := by positivity\nhave h5 : (0:ℚ) ≤ 3 * (x - 1) ^ 3 := by positivity\nhave h5 : (0:ℚ) ≤ 2 * (v - 3) ^ 2 := by positivity\nhave h6 : (0:ℚ) ≤ 3 * (u - 3) ^ 3 := by positivity\nhave h5 : (0:ℚ) ≤ 2 * (z - 3) ^ 2 := by positivity\nhave h5 : (0:ℚ) ≤"
+   },
+   "consistency": {
+    "n": 7,
+    "n_noreg": 0,
+    "hit": 7,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_tail_zero",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "linarith"
+      ]
+     }
+    ]
+   },
+   "err": null
+  },
+  {
+   "ri": 214,
+   "name": "gen32_ineq_cascade_300186",
+   "cls": "ineq",
+   "seg": "exam_deep",
+   "int_acc": {
+    "naive_hit": 3,
+    "naive_tot": 25,
+    "naive_rate": 0.12,
+    "content_hit": 6,
+    "content_tot": 17,
+    "content_rate": 0.352941
+   },
+   "slot_diag": {
+    "n_boost": 0,
+    "n_desync": 1,
+    "n_slot_pos": 0,
+    "dev_err": null
+   },
+   "arm": "hybrid",
+   "args_mode": "device",
+   "chain": {
+    "walked": [
+     "gen32_sos_cross",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_other"
+    ],
+    "gold": [
+     "gen32_sos_cross",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_other"
+    ],
+    "first_hit": true,
+    "exact_hit": true,
+    "prefix_hit": true,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 12,
+    "args_src_hist": {
+     "device_state_gold_proxy": 5
+    },
+    "bridge_fallback": 0,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 190,
+      "pred": "gen32_sos_cross",
+      "gold": "gen32_sos_cross",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99991,
+      "margin": 0.99987,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99996,
+      "margin": 0.99994,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 3,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99997,
+      "margin": 0.99997,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 4,
+      "pred_idx": 193,
+      "pred": "gen32_sos_tail_other",
+      "gold": "gen32_sos_tail_other",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.92279,
+      "margin": 0.84607,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 5,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99992,
+      "margin": 0.99986,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nhave h4 : (0:ℚ) ≤ 1 * (- x + u - 3) ^ 2 := by\n  intro n\n  induction n with\n  | zero => norm_num [y]\n  | succ n ih =>\n    rw n ih,\n    push_cast\n    push_cast\n    ring\nhave hf : (0:ℚ) ≤ 2 * (- 3) ^ 2 := by\n  intro n\n  induction n with\n  | zero => norm_num [z]\n  | succ n ih =>\n    rw n ih,\n    push_cast\n    push_cast\n    ring\nrw n ih,\n    ring\nrw n ih,\n    ring\nring\n```",
+    "n_tok": 159,
+    "body": "have h4 : (0:ℚ) ≤ 1 * (- x + u - 3) ^ 2 := by\n  intro n\n  induction n with\n  | zero => norm_num [y]\n  | succ n ih =>\n    rw n ih,\n    push_cast\n    push_cast\n    ring\nhave hf : (0:ℚ) ≤ 2 * (- 3) ^ 2 := by\n  intro n\n  induction n with\n  | zero => norm_num [z]\n  | succ n ih =>\n    rw n ih,\n    push_cast\n    push_cast\n    ring\nrw n ih,\n    ring\nrw n ih,\n    ring\nring"
+   },
+   "consistency": {
+    "n": 5,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 0.2,
+    "per_op": [
+     {
+      "op": "gen32_sos_cross",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "mul_nonneg",
+       "pow_two"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_tail_other",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "linarith",
+       "norm_num"
+      ]
+     }
+    ]
+   },
+   "err": null
+  },
+  {
+   "ri": 215,
+   "name": "gen32_ineq_cascade_300187",
+   "cls": "ineq",
+   "seg": "exam_deep",
+   "int_acc": {
+    "naive_hit": 4,
+    "naive_tot": 55,
+    "naive_rate": 0.072727,
+    "content_hit": 8,
+    "content_tot": 51,
+    "content_rate": 0.156863
+   },
+   "slot_diag": {
+    "n_boost": 0,
+    "n_desync": 1,
+    "n_slot_pos": 0,
+    "dev_err": null
+   },
+   "arm": "hybrid",
+   "args_mode": "device",
+   "chain": {
+    "walked": [
+     "gen32_sos_cross",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_other"
+    ],
+    "gold": [
+     "gen32_sos_cross",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_other"
+    ],
+    "first_hit": true,
+    "exact_hit": true,
+    "prefix_hit": true,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 12,
+    "args_src_hist": {
+     "device_state_gold_proxy": 6
+    },
+    "bridge_fallback": 0,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 190,
+      "pred": "gen32_sos_cross",
+      "gold": "gen32_sos_cross",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99997,
+      "margin": 0.99996,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99994,
+      "margin": 0.99991,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99999,
+      "margin": 0.99999,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 3,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99999,
+      "margin": 0.99999,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 4,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99984,
+      "margin": 0.99975,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 5,
+      "pred_idx": 193,
+      "pred": "gen32_sos_tail_other",
+      "gold": "gen32_sos_tail_other",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99681,
+      "margin": 0.99457,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 6,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99997,
+      "margin": 0.99996,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nhave h : (0:ℚ) ≤ 1 * (- 2 * w + y - 2) ^ rugu - 16 * u - 36 * (0:ℚ) ^ 2 := by\n  intro zero =>\n    rw - 2 * (- 3 * (2 * u - 14 * w - 3) ^ 2 := by\n  induction,\n    push_cast\n    ring\nhave h4 : (0:ℚ) ≤ 3 * (z - 4) ^ 2 := by\n  intro zero =>\n    rw - 3 * (0:ℚ) ^ 2 := by\n  induction,\n    push_cast\n    ring\nhave h4 : (0:ℚ) ≤ 3 * (2 * (v - 4) ^ 2 := by\n  intro zero =>\n    rw - 3 * (0:ℚ) ^ 2 := by\n  induction,\n    push_cast\n    ring\nhave h4 : (0:ℚ) ≤ 3 * (2 * u - 18 * u) ^ 2 := by\n  intro zero =>\n    rw - 3 * (0:ℚ) ^ 2 := by\n  induction,\n    push_cast\n    ring\nh1 : (0:ℚ) ≤ 3 * (2 * w - 3) ^ 2 := by\n  intro zero =>\n    rw - 3 * (0:ℚ) ^ 2 := by\n  induction,\n    push_cast\n    ring\nrw - 3 * (0:ℚ) ^ 2 := by\n  intro zero =>\n    rw - 3 * (0:ℚ) ^ 2 := by\n  induction,\n    push_cast\n    ring\nr",
+    "n_tok": 384,
+    "body": "have h : (0:ℚ) ≤ 1 * (- 2 * w + y - 2) ^ rugu - 16 * u - 36 * (0:ℚ) ^ 2 := by\n  intro zero =>\n    rw - 2 * (- 3 * (2 * u - 14 * w - 3) ^ 2 := by\n  induction,\n    push_cast\n    ring\nhave h4 : (0:ℚ) ≤ 3 * (z - 4) ^ 2 := by\n  intro zero =>\n    rw - 3 * (0:ℚ) ^ 2 := by\n  induction,\n    push_cast\n    ring\nhave h4 : (0:ℚ) ≤ 3 * (2 * (v - 4) ^ 2 := by\n  intro zero =>\n    rw - 3 * (0:ℚ) ^ 2 := by\n  induction,\n    push_cast\n    ring\nhave h4 : (0:ℚ) ≤ 3 * (2 * u - 18 * u) ^ 2 := by\n  intro zero =>\n    rw - 3 * (0:ℚ) ^ 2 := by\n  induction,\n    push_cast\n    ring\nh1 : (0:ℚ) ≤ 3 * (2 * w - 3) ^ 2 := by\n  intro zero =>\n    rw - 3 * (0:ℚ) ^ 2 := by\n  induction,\n    push_cast\n    ring\nrw - 3 * (0:ℚ) ^ 2 := by\n  intro zero =>\n    rw - 3 * (0:ℚ) ^ 2 := by\n  induction,\n    push_cast\n    ring\nr"
+   },
+   "consistency": {
+    "n": 6,
+    "n_noreg": 0,
+    "hit": 0,
+    "rate": 0.0,
+    "per_op": [
+     {
+      "op": "gen32_sos_cross",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "mul_nonneg",
+       "pow_two"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_tail_other",
+      "hit": false,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "linarith",
+       "norm_num"
+      ]
+     }
+    ]
+   },
+   "err": null
+  },
+  {
+   "ri": 216,
+   "name": "gen32_ineq_cascade_300188",
+   "cls": "ineq",
+   "seg": "exam_deep",
+   "int_acc": {
+    "naive_hit": 12,
+    "naive_tot": 39,
+    "naive_rate": 0.307692,
+    "content_hit": 11,
+    "content_tot": 32,
+    "content_rate": 0.34375
+   },
+   "slot_diag": {
+    "n_boost": 4,
+    "n_desync": 1,
+    "n_slot_pos": 4,
+    "dev_err": null
+   },
+   "arm": "hybrid",
+   "args_mode": "device",
+   "chain": {
+    "walked": [
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_zero"
+    ],
+    "gold": [
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_other"
+    ],
+    "first_hit": true,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 12,
+    "args_src_hist": {
+     "device_state_gold_proxy": 7
+    },
+    "bridge_fallback": 0,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99997,
+      "margin": 0.99994,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 3,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 4,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 5,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99999,
+      "margin": 0.99998,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 6,
+      "pred_idx": 191,
+      "pred": "gen32_sos_tail_zero",
+      "gold": "gen32_sos_tail_other",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.93912,
+      "margin": 0.90148,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 7,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99999,
+      "margin": 0.99999,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nhave h1 : (0:ℚ) ≤ 1 * (2 * w) ^ 2 := by\n  intro n\n  induction n with\n  | zero => norm_num [2 * (y - 2) ^ 2]\n  | succ n ih =>\n    rw [u, ih]\n    push_cast\n    ring\nhave h2 : (0:ℚ) ≤ 1 * (2 * x - 1) ^ 2 := by\n  intro n\n  induction n with\n  | zero => norm_num [2 * (2 * v) ^ 2 + u n z - 3) := by\n  intro n\n  induction n with\n  | succ n ih =>\n    rw [z, ih]\n    push_cast\n    ring\nhave h3 : (0:ℚ) ≤ 2 * (2 * w) ^ 2 := by\n  intro n\n  induction n with\n  | zero => norm_num [u, ih]\n  | succ n ih =>\n    rw [2 * (2 * x - 1) ^ 2 + zh - 3) := by\n  intro n\n  induction n with\n  | zero => norm_num [u, ih]\n  | succ n ih =>\n    rw [2 * (2 * w) ^ 3 + 144 * (2 * x - 3) ^ 2 := by\n  intro n\n  induction n with\n  | zero => norm_num [u, ih]\n  | succ n ih =>\n    rw [z, ih]\n    push_cast\n    ring\n```",
+    "n_tok": 351,
+    "body": "have h1 : (0:ℚ) ≤ 1 * (2 * w) ^ 2 := by\n  intro n\n  induction n with\n  | zero => norm_num [2 * (y - 2) ^ 2]\n  | succ n ih =>\n    rw [u, ih]\n    push_cast\n    ring\nhave h2 : (0:ℚ) ≤ 1 * (2 * x - 1) ^ 2 := by\n  intro n\n  induction n with\n  | zero => norm_num [2 * (2 * v) ^ 2 + u n z - 3) := by\n  intro n\n  induction n with\n  | succ n ih =>\n    rw [z, ih]\n    push_cast\n    ring\nhave h3 : (0:ℚ) ≤ 2 * (2 * w) ^ 2 := by\n  intro n\n  induction n with\n  | zero => norm_num [u, ih]\n  | succ n ih =>\n    rw [2 * (2 * x - 1) ^ 2 + zh - 3) := by\n  intro n\n  induction n with\n  | zero => norm_num [u, ih]\n  | succ n ih =>\n    rw [2 * (2 * w) ^ 3 + 144 * (2 * x - 3) ^ 2 := by\n  intro n\n  induction n with\n  | zero => norm_num [u, ih]\n  | succ n ih =>\n    rw [z, ih]\n    push_cast\n    ring"
+   },
+   "consistency": {
+    "n": 7,
+    "n_noreg": 0,
+    "hit": 0,
+    "rate": 0.0,
+    "per_op": [
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": false,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_tail_zero",
+      "hit": false,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "linarith"
+      ]
+     }
+    ]
+   },
+   "err": null
+  },
+  {
+   "ri": 217,
+   "name": "gen32_ineq_cascade_300189",
+   "cls": "ineq",
+   "seg": "exam_deep",
+   "int_acc": {
+    "naive_hit": 12,
+    "naive_tot": 52,
+    "naive_rate": 0.230769,
+    "content_hit": 9,
+    "content_tot": 49,
+    "content_rate": 0.183673
+   },
+   "slot_diag": {
+    "n_boost": 0,
+    "n_desync": 1,
+    "n_slot_pos": 0,
+    "dev_err": null
+   },
+   "arm": "hybrid",
+   "args_mode": "device",
+   "chain": {
+    "walked": [
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_zero"
+    ],
+    "gold": [
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_block",
+     "gen32_sos_tail_zero"
+    ],
+    "first_hit": true,
+    "exact_hit": true,
+    "prefix_hit": true,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 12,
+    "args_src_hist": {
+     "device_state_gold_proxy": 7
+    },
+    "bridge_fallback": 0,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99958,
+      "margin": 0.9994,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99999,
+      "margin": 0.99999,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 0.99999,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 3,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 4,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99999,
+      "margin": 0.99998,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 5,
+      "pred_idx": 189,
+      "pred": "gen32_sos_block",
+      "gold": "gen32_sos_block",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99979,
+      "margin": 0.99965,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 6,
+      "pred_idx": 191,
+      "pred": "gen32_sos_tail_zero",
+      "gold": "gen32_sos_tail_zero",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.98856,
+      "margin": 0.97737,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 7,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nhave hg : (0:ℚ) ≤ 2 * (z) ^ 2 := by positivity\nhave hv : (0:ℚ) ≤ 3 * (x) ^ 2 := by positivity\nhave hg : (0:ℚ) ≤ 3 * (u) ^ 2 := by positivity\nhave h3 : (0:ℚ) ≤ 2 * (w - 2) ^ 2 := by positivity\nhave h4 : (0:ℚ) ≤ 3 * (v) ^ 2 := by positivity\nhave hu : (0:ℚ) ≤ 3 * (u) ^ 2 := by positivity\nhave hv : (0:ℚ) ≤ 2 * (z) ^ 2 := by positivity\nhave hg : (0:ℚ) ≤ 2 * (v - 1) ^ 2 := by positivity\nhave h3 : (0:ℚ) ≤ 3 * (u) ^ 2 := by positivity\nhave hg : (0:ℚ) ≤ 3 * (x - 3) ^ 2 := by positivity\nhave hv : (0:ℚ) ≤ 3 * (u) ^ 2 := by positivity\nhave hu : (0:ℚ) ≤ 3 * (v) ^ 2 := by positivity\nhave hg : (0:ℚ) ≤ 2 * (z) ^ 2 := by positivity\nhave hu : (0:ℚ) ≤ 3 * (u) ^ 3 := by positivity\nhave hv : (0:ℚ) ≤ 2 * (z) ^ 2 := by positivity\nhave hu : (0:ℚ) ≤",
+    "n_tok": 384,
+    "body": "have hg : (0:ℚ) ≤ 2 * (z) ^ 2 := by positivity\nhave hv : (0:ℚ) ≤ 3 * (x) ^ 2 := by positivity\nhave hg : (0:ℚ) ≤ 3 * (u) ^ 2 := by positivity\nhave h3 : (0:ℚ) ≤ 2 * (w - 2) ^ 2 := by positivity\nhave h4 : (0:ℚ) ≤ 3 * (v) ^ 2 := by positivity\nhave hu : (0:ℚ) ≤ 3 * (u) ^ 2 := by positivity\nhave hv : (0:ℚ) ≤ 2 * (z) ^ 2 := by positivity\nhave hg : (0:ℚ) ≤ 2 * (v - 1) ^ 2 := by positivity\nhave h3 : (0:ℚ) ≤ 3 * (u) ^ 2 := by positivity\nhave hg : (0:ℚ) ≤ 3 * (x - 3) ^ 2 := by positivity\nhave hv : (0:ℚ) ≤ 3 * (u) ^ 2 := by positivity\nhave hu : (0:ℚ) ≤ 3 * (v) ^ 2 := by positivity\nhave hg : (0:ℚ) ≤ 2 * (z) ^ 2 := by positivity\nhave hu : (0:ℚ) ≤ 3 * (u) ^ 3 := by positivity\nhave hv : (0:ℚ) ≤ 2 * (z) ^ 2 := by positivity\nhave hu : (0:ℚ) ≤"
+   },
+   "consistency": {
+    "n": 7,
+    "n_noreg": 0,
+    "hit": 7,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_block",
+      "hit": true,
+      "keywords": [
+       "positivity",
+       "sq_nonneg",
+       "nlinarith",
+       "pow_two",
+       "mul_self"
+      ]
+     },
+     {
+      "op": "gen32_sos_tail_zero",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "linarith"
+      ]
+     }
+    ]
+   },
+   "err": null
+  }
+ ],
+ "wall_s": 338.24
+}

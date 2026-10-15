@@ -1,0 +1,219 @@
+{
+ "schema": "ccp-a-corpus-v2f-stats/1",
+ "generated": "2026-09-23T20:04:49+0800",
+ "corpus": {
+  "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen28/A_CORPUS_V2F.jsonl",
+  "md5": "f935e1430b107bb01de657c0e3c0b29c",
+  "n_records": 9366
+ },
+ "splits": {
+  "train": 9366
+ },
+ "eligible_train": 9366,
+ "in_train_set": 9366,
+ "splits_note": "本件 = 训练流终态 (L0+L1'), 行内 split 恒为 'train' ⇒ splits 仅一键 'train'; 非训练角色 (考题/留出/负例/AUX/被减除) **不在本件内**, 其计数见 excluded_roles",
+ "eligible_rule": "行含 chain_ops ∧ proof_text/target ∧ split==train (gen26 消费口径统一)",
+ "excluded_roles": {
+  "gen23_synth_held": 236,
+  "gen23_exam_excluded": 1083,
+  "gen23_exam_disclosure": 1184,
+  "gen23_l2_neg": 220,
+  "gen23_train_ineligible_kept": 103,
+  "gen24_holdout_rows": 1253,
+  "gen24_holdout_stmtbody_keys": 1114,
+  "aux_rows": 1019,
+  "aux_rows_into_train": 0,
+  "v2f_removed_twin_rows": 43
+ },
+ "layer_note": "L0 = gen23 终态训练流; L1' = gen24 扩料 (原层见 v2.src_layer)",
+ "classes": {
+  "ind": {
+   "n_eligible_train": 5205,
+   "n_by_src": {
+    "gen24": 4561,
+    "gen23": 644
+   },
+   "n_by_layer": {
+    "L1'": 4561,
+    "L0": 644
+   },
+   "n_families": 5,
+   "prompt_tokens": {
+    "p50": 138,
+    "p90": 264,
+    "max": 278,
+    "sum": 933478
+   },
+   "target_tokens": {
+    "p50": 48,
+    "p90": 53,
+    "max": 53,
+    "sum": 258777
+   },
+   "n_lines": {
+    "p50": 7,
+    "max": 8
+   }
+  },
+  "ineq": {
+   "n_eligible_train": 3270,
+   "n_by_src": {
+    "gen24": 3040,
+    "gen23": 230
+   },
+   "n_by_layer": {
+    "L1'": 3040,
+    "L0": 230
+   },
+   "n_families": 7,
+   "prompt_tokens": {
+    "p50": 126,
+    "p90": 131,
+    "max": 132,
+    "sum": 387098
+   },
+   "target_tokens": {
+    "p50": 32,
+    "p90": 45,
+    "max": 46,
+    "sum": 110766
+   },
+   "n_lines": {
+    "p50": 1,
+    "max": 1
+   }
+  },
+  "nt": {
+   "n_eligible_train": 891,
+   "n_by_src": {
+    "gen24": 668,
+    "gen23": 223
+   },
+   "n_by_layer": {
+    "L1'": 668,
+    "L0": 223
+   },
+   "n_families": 1,
+   "prompt_tokens": {
+    "p50": 117,
+    "p90": 126,
+    "max": 133,
+    "sum": 104288
+   },
+   "target_tokens": {
+    "p50": 75,
+    "p90": 86,
+    "max": 92,
+    "sum": 67742
+   },
+   "n_lines": {
+    "p50": 3,
+    "max": 3
+   }
+  }
+ },
+ "totals": {
+  "n_eligible_train": 9366,
+  "n_by_src": {
+   "gen24": 8269,
+   "gen23": 1097
+  },
+  "n_by_cls": {
+   "ind": 5205,
+   "ineq": 3270,
+   "nt": 891
+  },
+  "n_by_layer": {
+   "L1'": 8269,
+   "L0": 1097
+  },
+  "n_families": 13,
+  "prompt_tokens_sum": 1424864,
+  "target_tokens_sum": 437285,
+  "one_epoch_tokens": 1862149,
+  "avg_tok_per_pair": 198.82
+ },
+ "tokenizer": {
+  "status": "ok",
+  "tokenizer": "models/SmolLM2-135M",
+  "add_special_tokens": false
+ },
+ "token_stats_definition": "p50/p90 = 线性插值分位 (index=(N-1)*q); token = SmolLM2-135M 真分词器, add_special_tokens=False, 对 prompt/target 全文编码 (含协议前缀与代码围栏)",
+ "token_stats_all": {
+  "prompt": {
+   "p50": 135,
+   "p90": 243,
+   "max": 278,
+   "sum": 1424864
+  },
+  "target": {
+   "p50": 48,
+   "p90": 53,
+   "max": 92,
+   "sum": 437285
+  },
+  "n": 9366
+ },
+ "replay": {
+  "definition": "gen23 GEN23_REPORT §1.7 口径: 样本槽位 = steps × batch; 135M: 6000×16 = 96000 槽, 1B: 12000×32 = 384000 槽; epochs = 槽位 / 对数; token 预算 = 槽位 × 本库实测 tok/对",
+  "n_pairs": 9366,
+  "avg_tok_per_pair": 198.82,
+  "one_epoch_tokens": 1862149,
+  "slots_135M": 96000,
+  "slots_1B": 384000,
+  "budget_tokens_135M": 19086729,
+  "budget_tokens_1B": 76346916,
+  "replay_epochs_135M": 10.25,
+  "replay_epochs_1B": 41,
+  "prev_v2": {
+   "n_pairs": 9409,
+   "replay_epochs_135M": 10.2,
+   "replay_epochs_1B": 40.81
+  },
+  "prev_v1_gen23": {
+   "n_pairs": 1188,
+   "replay_epochs_135M": 80.81,
+   "replay_epochs_1B": 323.23
+  }
+ },
+ "delta_vs_v2": {
+  "removed_rows": 43,
+  "removed_by_cls": {
+   "ineq": 34,
+   "ind": 7,
+   "nt": 2
+  },
+  "removed_tokens_prompt": 4209,
+  "removed_tokens_target": 1233,
+  "token_reconciliation": {
+   "v2_one_epoch_tokens": 1867591,
+   "removed_tokens": 5442,
+   "v2f_one_epoch_tokens": 1862149,
+   "adds_up": true
+  }
+ },
+ "provenance": {
+  "parent": {
+   "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen28/A_CORPUS_V2.jsonl",
+   "md5": "38f3d62f8746e09a3cc19074508404b8",
+   "n_rows": 9409
+  },
+  "removed_list": {
+   "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen28/A_CORPUS_V2F_REMOVED.jsonl",
+   "md5": "6d5d51866d5fe4f70889011830a9c63a",
+   "n_rows": 43
+  },
+  "prescription": {
+   "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen28/audit_work/TWIN_FINAL_V2.json",
+   "md5": "8070c301921c5214003ae35fdfc9ccde",
+   "field": "clean_train_rows_full_recommended",
+   "n": 43
+  },
+  "twin_recheck": {
+   "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen28/TWIN_RECHECK_V2F.json",
+   "md5": "575d84afe1f04ef4c7468943cc117756"
+  }
+ },
+ "self_md5_policy": "件内不自录 (见 GEN28_LEDGER.jsonl)",
+ "trace_path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen28/GEN28_V2F_TRACE.json"
+}

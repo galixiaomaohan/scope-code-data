@@ -1,0 +1,88 @@
+{
+ "schema": "gen35-eval/1",
+ "generated": "2026-09-25T02:39:25+0800",
+ "arm": "pure_plan",
+ "ckpt": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen36/ckpt/deep_plan_formal_a2wt5_6000.pt",
+ "ckpt_md5": "452c1683badf9d7e8b924af2a7bf1d6f",
+ "walk_table": {
+  "n": 218,
+  "first_hit": 218,
+  "exact_hit": 172,
+  "terminated_end": 218,
+  "over_run": 0
+ },
+ "compile": {
+  "n": 218,
+  "n_exact": 172,
+  "n_first": 218,
+  "n_overrun": 0,
+  "err_hist": {
+   "OP_MISMATCH": 46,
+   "CERT_REJECT": 1
+  },
+  "fam": {
+   "gen32_ind_nest": {
+    "n": 13,
+    "exact": 13,
+    "first": 13,
+    "n_emit": 39,
+    "n_mismatch": 0
+   },
+   "gen32_ind_tower": {
+    "n": 24,
+    "exact": 24,
+    "first": 24,
+    "n_emit": 96,
+    "n_mismatch": 0
+   },
+   "gen32_ineq_cascade": {
+    "n": 181,
+    "exact": 135,
+    "first": 181,
+    "n_emit": 1006,
+    "n_mismatch": 46
+   }
+  },
+  "empty_proof": 0,
+  "exact_rate": 0.788991,
+  "first_rate": 1.0
+ },
+ "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+ "flag": {
+  "lam_txt": 0.0,
+  "lam_bind": 1.0,
+  "slot_cond": 1,
+  "slot_dev": 1,
+  "note": "纯规划臂: 渲染 text 损失移除 (V35_DESIGN §3 P1); 渲染头输出不计分"
+ },
+ "judge": {
+  "n": 218,
+  "certified": 172,
+  "rate": 0.788991,
+  "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+  "wall_s": 293.6,
+  "reason_hist": {
+   "lean_reject_sorry": 46,
+   "autoimplicit_dependent": 46,
+   "sorry_ax": 46
+  },
+  "fam": {
+   "gen32_ind_nest": {
+    "n": 13,
+    "certified": 13,
+    "exact": 13
+   },
+   "gen32_ind_tower": {
+    "n": 24,
+    "certified": 24,
+    "exact": 24
+   },
+   "gen32_ineq_cascade": {
+    "n": 181,
+    "certified": 135,
+    "exact": 135
+   }
+  }
+ },
+ "rows_md5": "d801678630c29141a65b82737fb9e63d"
+}

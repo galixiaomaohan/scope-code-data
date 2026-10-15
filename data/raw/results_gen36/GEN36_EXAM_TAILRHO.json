@@ -1,0 +1,1088 @@
+{
+ "gen32_ineq_cascade_300001": {
+  "rho": "28",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300002": {
+  "rho": "7",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300003": {
+  "rho": "36",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300004": {
+  "rho": "14",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300005": {
+  "rho": "24",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300006": {
+  "rho": "16",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300007": {
+  "rho": "25",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300008": {
+  "rho": "12",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300009": {
+  "rho": "33",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300010": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300011": {
+  "rho": "9",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300012": {
+  "rho": "31",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300013": {
+  "rho": "16",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300014": {
+  "rho": "9",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300015": {
+  "rho": "25",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300016": {
+  "rho": "2",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300017": {
+  "rho": "4",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300018": {
+  "rho": "26",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300019": {
+  "rho": "32",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300020": {
+  "rho": "16",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300021": {
+  "rho": "4",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300022": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300023": {
+  "rho": "12",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300024": {
+  "rho": "36",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300025": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300026": {
+  "rho": "5",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300027": {
+  "rho": "9",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300030": {
+  "rho": "22",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300031": {
+  "rho": "36",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300032": {
+  "rho": "13",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300033": {
+  "rho": "18",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300034": {
+  "rho": "31",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300035": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300036": {
+  "rho": "19",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300037": {
+  "rho": "39",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300038": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300039": {
+  "rho": "36",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300040": {
+  "rho": "21",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300041": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300042": {
+  "rho": "49",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300043": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300044": {
+  "rho": "22",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300045": {
+  "rho": "9",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300047": {
+  "rho": "34",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300048": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300049": {
+  "rho": "27",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300050": {
+  "rho": "26",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300051": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300052": {
+  "rho": "49",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300053": {
+  "rho": "6",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300054": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300055": {
+  "rho": "34",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300056": {
+  "rho": "26",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300057": {
+  "rho": "25",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300058": {
+  "rho": "21",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300059": {
+  "rho": "4",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300060": {
+  "rho": "13",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300061": {
+  "rho": "8",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300062": {
+  "rho": "18",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300063": {
+  "rho": "25",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300064": {
+  "rho": "39",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300065": {
+  "rho": "29",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300066": {
+  "rho": "29",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300067": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300068": {
+  "rho": "27",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300069": {
+  "rho": "23",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300070": {
+  "rho": "35",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300071": {
+  "rho": "5",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300072": {
+  "rho": "16",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300073": {
+  "rho": "27",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300074": {
+  "rho": "19",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300075": {
+  "rho": "4",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300076": {
+  "rho": "15",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300077": {
+  "rho": "49",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300078": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300079": {
+  "rho": "16",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300080": {
+  "rho": "33",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300081": {
+  "rho": "35",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300082": {
+  "rho": "16",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300083": {
+  "rho": "22",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300084": {
+  "rho": "9",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300085": {
+  "rho": "4",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300086": {
+  "rho": "16",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300087": {
+  "rho": "36",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300088": {
+  "rho": "4",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300089": {
+  "rho": "16",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300090": {
+  "rho": "27",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300091": {
+  "rho": "16",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300092": {
+  "rho": "10",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300093": {
+  "rho": "49",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300094": {
+  "rho": "49",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300097": {
+  "rho": "36",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300098": {
+  "rho": "16",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300099": {
+  "rho": "29",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300100": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300101": {
+  "rho": "9",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300102": {
+  "rho": "49",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300103": {
+  "rho": "26",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300104": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300105": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300106": {
+  "rho": "21",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300107": {
+  "rho": "8",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300108": {
+  "rho": "22",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300109": {
+  "rho": "16",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300110": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300111": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300112": {
+  "rho": "36",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300113": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300115": {
+  "rho": "9",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300116": {
+  "rho": "25",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300117": {
+  "rho": "6",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300118": {
+  "rho": "10",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300119": {
+  "rho": "49",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300120": {
+  "rho": "16",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300121": {
+  "rho": "16",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300122": {
+  "rho": "6",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300123": {
+  "rho": "9",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300124": {
+  "rho": "36",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300125": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300126": {
+  "rho": "49",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300127": {
+  "rho": "2",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300128": {
+  "rho": "4",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300129": {
+  "rho": "13",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300130": {
+  "rho": "16",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300131": {
+  "rho": "38",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300132": {
+  "rho": "4",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300133": {
+  "rho": "24",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300134": {
+  "rho": "22",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300135": {
+  "rho": "2",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300136": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300137": {
+  "rho": "25",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300138": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300139": {
+  "rho": "16",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300140": {
+  "rho": "9",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300141": {
+  "rho": "25",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300142": {
+  "rho": "29",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300143": {
+  "rho": "49",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300144": {
+  "rho": "6",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300145": {
+  "rho": "36",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300146": {
+  "rho": "33",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300147": {
+  "rho": "9",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300148": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300149": {
+  "rho": "29",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300150": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300151": {
+  "rho": "24",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300152": {
+  "rho": "11",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300153": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300154": {
+  "rho": "26",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300155": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300156": {
+  "rho": "36",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300157": {
+  "rho": "4",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300158": {
+  "rho": "30",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300159": {
+  "rho": "29",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300160": {
+  "rho": "9",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300162": {
+  "rho": "9",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300163": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300164": {
+  "rho": "25",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300165": {
+  "rho": "16",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300166": {
+  "rho": "27",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300167": {
+  "rho": "39",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300168": {
+  "rho": "9",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300169": {
+  "rho": "27",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300170": {
+  "rho": "4",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300171": {
+  "rho": "16",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300172": {
+  "rho": "9",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300173": {
+  "rho": "26",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300174": {
+  "rho": "36",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300175": {
+  "rho": "21",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300176": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300177": {
+  "rho": "16",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300178": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300179": {
+  "rho": "39",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300180": {
+  "rho": "4",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300181": {
+  "rho": "36",
+  "cls_pred": "square",
+  "cls_gold": "square",
+  "cls_code": "square"
+ },
+ "gen32_ineq_cascade_300182": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300183": {
+  "rho": "38",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300184": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ },
+ "gen32_ineq_cascade_300186": {
+  "rho": "10",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300187": {
+  "rho": "11",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300188": {
+  "rho": "5",
+  "cls_pred": "other",
+  "cls_gold": "other",
+  "cls_code": "other"
+ },
+ "gen32_ineq_cascade_300189": {
+  "rho": "0",
+  "cls_pred": "zero",
+  "cls_gold": "zero",
+  "cls_code": "zero"
+ }
+}

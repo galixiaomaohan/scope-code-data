@@ -1,0 +1,124 @@
+{
+ "schema": "ccp-gate2-recheck/1",
+ "rule": "R4 覆盖比只在 len>=24 候选窗口上计算 (与 R2 拒档下限一致); 无长窗口时退化为最长窗口并标记 short_window_only",
+ "positive_control": {
+  "n": 6,
+  "caught": 6,
+  "detail": [
+   {
+    "i": 0,
+    "mut": "verbatim",
+    "verdict": "REJECT",
+    "max_R4": 1.0,
+    "counts": {
+     "R1": 2,
+     "R2": 1,
+     "R3": 0,
+     "R4": 13,
+     "R5": 0,
+     "R4rev": 0
+    }
+   },
+   {
+    "i": 0,
+    "mut": "spacing",
+    "verdict": "REJECT",
+    "max_R4": 1.0,
+    "counts": {
+     "R1": 2,
+     "R2": 1,
+     "R3": 0,
+     "R4": 13,
+     "R5": 0,
+     "R4rev": 0
+    }
+   },
+   {
+    "i": 100,
+    "mut": "verbatim",
+    "verdict": "REJECT",
+    "max_R4": 1.0,
+    "counts": {
+     "R1": 2,
+     "R2": 1,
+     "R3": 0,
+     "R4": 5,
+     "R5": 0,
+     "R4rev": 1
+    }
+   },
+   {
+    "i": 100,
+    "mut": "spacing",
+    "verdict": "REJECT",
+    "max_R4": 1.0,
+    "counts": {
+     "R1": 2,
+     "R2": 1,
+     "R3": 0,
+     "R4": 5,
+     "R5": 0,
+     "R4rev": 1
+    }
+   },
+   {
+    "i": 200,
+    "mut": "verbatim",
+    "verdict": "REJECT",
+    "max_R4": 1.0,
+    "counts": {
+     "R1": 2,
+     "R2": 1,
+     "R3": 0,
+     "R4": 24,
+     "R5": 0,
+     "R4rev": 22
+    }
+   },
+   {
+    "i": 200,
+    "mut": "spacing",
+    "verdict": "REJECT",
+    "max_R4": 1.0,
+    "counts": {
+     "R1": 2,
+     "R2": 1,
+     "R3": 0,
+     "R4": 24,
+     "R5": 0,
+     "R4rev": 22
+    }
+   }
+  ]
+ },
+ "classes": {
+  "ind": {
+   "n_rows": 3462,
+   "verdicts": {
+    "PASS": 3462
+   },
+   "max_R4": 0.0,
+   "rows_short_window_only": 0,
+   "nonpass_by_kind": {}
+  },
+  "ineq": {
+   "n_rows": 2919,
+   "verdicts": {
+    "PASS": 2919
+   },
+   "max_R4": 0.0,
+   "rows_short_window_only": 520,
+   "nonpass_by_kind": {}
+  },
+  "nt": {
+   "n_rows": 3000,
+   "verdicts": {
+    "PASS": 3000
+   },
+   "max_R4": 0.1429,
+   "rows_short_window_only": 0,
+   "nonpass_by_kind": {}
+  }
+ },
+ "gate_valid": true
+}

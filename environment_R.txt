@@ -1,0 +1,21 @@
+R version 4.6.1 (2026-06-24 ucrt)
+
+Packages used by figures_src/scripts_r (verified with the shipped scripts):
+  ggplot2      4.0.3
+  patchwork    1.3.2.9000   # development build installed on the working
+                            # host; the CRAN release 1.3.0 renders the same
+                            # layouts for these scripts
+  ggnewscale   0.5.2        # required by fig3_law1.R (layered colour scales)
+  viridisLite  0.4.3
+  svglite      2.2.2
+  ragg         1.5.2
+  jsonlite     2.0.0
+  scales       1.4.0
+
+Run each figure script with the working directory set to figures_src/:
+  Rscript scripts_r/fig_llm_06_hidden_trajectory.R
+"Times New Roman" must be available to the R graphics devices; the shared
+style aliases the base-14 Times faces when the named family is absent
+(scripts_r/pub_style_r.R). The strict panel-alignment audit is optional: it
+runs only when PANEL_AUDIT_SCRIPTS points at the auditing toolchain and
+degrades to writing the layout manifest otherwise.

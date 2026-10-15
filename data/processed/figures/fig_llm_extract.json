@@ -1,0 +1,40 @@
+{
+ "schema": "figllm-hidden-extract/1",
+ "ckpt": "<server training artifact, not shipped; md5 registered>",
+ "ckpt_md5": "8d7c81f0d69322cce1e4eda2b4660fdf",
+ "dev": "cuda:0",
+ "seg": "exam_deep",
+ "state_shift": 1,
+ "n_items_requested": 218,
+ "n_items_covered": 218,
+ "sampling": "all items",
+ "n_frames": 1552,
+ "n_items_pass": 191,
+ "n_items_fail": 27,
+ "n_legal_support": 60,
+ "h_dim": 1152,
+ "verify": {
+  "max_abs_Flinear_minus_head_logits": 0.0,
+  "tol": 0.001,
+  "passed": true,
+  "note": "h_t = concat(H[idxH], H[idxS]) reproduces the step logits the model used; pa_enable=0 in this eval path so the plan-attention delta is absent and the identity is exact up to fp error."
+ },
+ "entropy_stats": {
+  "all_mean": 0.01449462048969072,
+  "pass_mean": 0.010159156363636363,
+  "fail_mean": 0.048174073446327674,
+  "pass_n_frames": 1375,
+  "fail_n_frames": 177
+ },
+ "wall_s": 116.8,
+ "model_info": {
+  "md5": "8d7c81f0d69322cce1e4eda2b4660fdf",
+  "step": 6000,
+  "missing": 0,
+  "unexpected": 0
+ },
+ "outputs": {
+  "npz": "./hidden_frames.npz",
+  "csv": "./fig_hidden_entropy_frames.csv"
+ }
+}

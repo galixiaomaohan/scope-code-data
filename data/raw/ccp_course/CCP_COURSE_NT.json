@@ -1,0 +1,231 @@
+{
+ "schema": "ccp-course/1",
+ "cls": "nt",
+ "cls_zh": "数论整除闭包",
+ "master_seed": 20260923,
+ "n_problems": 750,
+ "n_rows": 3000,
+ "kind_mix": {
+  "pos": 2391,
+  "neg": 284,
+  "endfail": 325
+ },
+ "by_family": {
+  "nt_dvd_mix": 375,
+  "nt_dvd_prod": 375
+ },
+ "step_hist": {
+  "3": 750
+ },
+ "sup_ops": {
+  "ccp_nt_dvd_witness": 1500,
+  "ccp_nt_dvd_combine": 750
+ },
+ "op_whitelist": [
+  "ccp_ind_recurrence",
+  "ccp_ring_identity",
+  "ccp_ineq_sos",
+  "ccp_ineq_close",
+  "ccp_nt_dvd_witness",
+  "ccp_nt_dvd_combine",
+  "ccp_nt_dvd_prod_combine"
+ ],
+ "op_whitelist_ok": true,
+ "op_whitelist_violation": {
+  "non_whitelist": [],
+  "banned": []
+ },
+ "banned_absent": true,
+ "floor_bulk": {
+  "risk_menus": [
+   "omega",
+   "simp",
+   "decide"
+  ],
+  "n_dropped": 0,
+  "dropped_by_menu": {}
+ },
+ "floor_sample_8menu": {
+  "n": 100,
+  "hard": 100,
+  "closers": {}
+ },
+ "gate2_contam": {
+  "n": 3000,
+  "reject": 0,
+  "review": 750,
+  "max_R4": 0.333,
+  "pctl": {},
+  "internal_dup_rows": 1761,
+  "review_rows": 750,
+  "review_examples": [
+   {
+    "row": "ccp_nt_dvd_mix_000001",
+    "kind": "pos",
+    "max_R4": 0.333,
+    "n_review_refs": 2
+   },
+   {
+    "row": "ccp_nt_dvd_prod_000002",
+    "kind": "pos",
+    "max_R4": 0.333,
+    "n_review_refs": 1
+   },
+   {
+    "row": "ccp_nt_dvd_mix_000003",
+    "kind": "pos",
+    "max_R4": 0.333,
+    "n_review_refs": 1
+   },
+   {
+    "row": "ccp_nt_dvd_prod_000004",
+    "kind": "endfail",
+    "max_R4": 0.333,
+    "n_review_refs": 1
+   },
+   {
+    "row": "ccp_nt_dvd_mix_000005",
+    "kind": "pos",
+    "max_R4": 0.333,
+    "n_review_refs": 2
+   },
+   {
+    "row": "ccp_nt_dvd_mix_000007",
+    "kind": "pos",
+    "max_R4": 0.333,
+    "n_review_refs": 2
+   },
+   {
+    "row": "ccp_nt_dvd_prod_000008",
+    "kind": "pos",
+    "max_R4": 0.333,
+    "n_review_refs": 1
+   },
+   {
+    "row": "ccp_nt_dvd_mix_000009",
+    "kind": "endfail",
+    "max_R4": 0.333,
+    "n_review_refs": 2
+   },
+   {
+    "row": "ccp_nt_dvd_prod_000010",
+    "kind": "endfail",
+    "max_R4": 0.333,
+    "n_review_refs": 1
+   },
+   {
+    "row": "ccp_nt_dvd_mix_000011",
+    "kind": "pos",
+    "max_R4": 0.333,
+    "n_review_refs": 2
+   }
+  ],
+  "review_by_kind": {
+   "pos": 579,
+   "endfail": 96,
+   "neg": 75
+  },
+  "positive_control": {
+   "n": 6,
+   "caught": 6,
+   "detail": [
+    {
+     "i": 0,
+     "mut": "verbatim",
+     "verdict": "REJECT",
+     "max_R4": 1.0,
+     "counts": {
+      "R1": 2,
+      "R2": 1,
+      "R3": 0,
+      "R4": 13,
+      "R5": 0,
+      "R4rev": 0
+     }
+    },
+    {
+     "i": 0,
+     "mut": "spacing",
+     "verdict": "REJECT",
+     "max_R4": 1.0,
+     "counts": {
+      "R1": 2,
+      "R2": 1,
+      "R3": 0,
+      "R4": 13,
+      "R5": 0,
+      "R4rev": 0
+     }
+    },
+    {
+     "i": 100,
+     "mut": "verbatim",
+     "verdict": "REJECT",
+     "max_R4": 1.0,
+     "counts": {
+      "R1": 2,
+      "R2": 1,
+      "R3": 0,
+      "R4": 5,
+      "R5": 0,
+      "R4rev": 1
+     }
+    },
+    {
+     "i": 100,
+     "mut": "spacing",
+     "verdict": "REJECT",
+     "max_R4": 1.0,
+     "counts": {
+      "R1": 2,
+      "R2": 1,
+      "R3": 0,
+      "R4": 5,
+      "R5": 0,
+      "R4rev": 1
+     }
+    },
+    {
+     "i": 200,
+     "mut": "verbatim",
+     "verdict": "REJECT",
+     "max_R4": 1.0,
+     "counts": {
+      "R1": 2,
+      "R2": 1,
+      "R3": 0,
+      "R4": 24,
+      "R5": 0,
+      "R4rev": 22
+     }
+    },
+    {
+     "i": 200,
+     "mut": "spacing",
+     "verdict": "REJECT",
+     "max_R4": 1.0,
+     "counts": {
+      "R1": 2,
+      "R2": 1,
+      "R3": 0,
+      "R4": 24,
+      "R5": 0,
+      "R4rev": 22
+     }
+    }
+   ]
+  },
+  "gate_valid": true
+ },
+ "split": {
+  "n_train": 2680,
+  "n_held": 320,
+  "held_ratio": 0.1067
+ },
+ "gen_fail": {},
+ "rows_md5": "6296cca4c0789663bffb9e2ae4f9ce57",
+ "chains_md5": "e804809b6ab46548cdc064596c447fb4",
+ "gen_path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen/ccp_nt_rows.jsonl",
+ "chains_path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen/ccp_nt_chains.jsonl",
+ "elapsed_s": 868.4
+}

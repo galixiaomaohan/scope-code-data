@@ -1,0 +1,9 @@
+drct_problems.json md5=7bb077da5b5db6cb782070588e4b63d6
+locked_at= 2026-09-22T18:27:26
+n_problems=210 (L1:70 L2:70 L3:70)
+certs=210/210 simp_only+norm_num (certB 备证 0 需求)
+floor_closed_by_menu=0/210*8 (by construction, FLOOR_LEDGER.jsonl 可复核)
+contam_minif2f=0 hits (CONTAM_AUDIT.json)
+protocol_md5=67e90a2b447fbe51db258b6ad85e36c0
+generator_md5=6fb5e2f1d39590179d1645128e98c44b
+pre_arm_lock=true (此锁先于任何臂运行; 锁后改口径须 ESCALATION)

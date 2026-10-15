@@ -1,0 +1,31 @@
+{
+ "schema": "gen33-pa-eq/1",
+ "n_rows": 12,
+ "cache": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen33/cache/deep_all.bin",
+ "vocab": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen33/cache/CCP_VOCAB_V4.json",
+ "init": "ckpt/sla_v31f.pt",
+ "dev": "cuda:2",
+ "note": "PA-EQ: 零初始化注意力挂载不得改变基线输出 (三轴逐位)",
+ "axes": {
+  "A1_step_head_bitwise": true,
+  "A2_value_head_bitwise": true,
+  "A3_lm_head_bitwise": true,
+  "abs_max_diff": {
+   "lg": 0.0,
+   "zb": 0.0,
+   "lt": 0.0
+  }
+ },
+ "device_self_report": {
+  "pa_delta_max": {
+   "pa_delta_max": 0.0,
+   "ps_delta_max": 0.0
+  },
+  "ps_delta_max": {
+   "pa_delta_max": 0.0,
+   "ps_delta_max": 0.0
+  }
+ },
+ "pa_delta_max_zero": true,
+ "pass": true
+}

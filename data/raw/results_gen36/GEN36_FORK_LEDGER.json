@@ -1,0 +1,208 @@
+{
+ "schema": "gen36-fork-ledger/1",
+ "generated": "2026-09-25T00:56:49+0800",
+ "law": {
+  "pre": "scratch/ccp/gen36/V36_DESIGN.md §3"
+ },
+ "items": {
+  "gen36_hybrid.py": {
+   "src": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen35/gen35_hybrid.py",
+   "src_md5": "791496e5ab934140fd5c9fc2c4db9145",
+   "n_crlf_parent": 0,
+   "dst": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen36/gen36_hybrid.py",
+   "patches": [
+    {
+     "name": "header",
+     "hits": 1,
+     "expect": 1,
+     "mode": "prepend"
+    },
+    {
+     "name": "paths",
+     "hits": 1,
+     "expect": 1,
+     "old_head": "G35 = os.path.join(CCP, \"gen35\")            # gen35 fork 写面"
+    },
+    {
+     "name": "syspath",
+     "hits": 1,
+     "expect": 1,
+     "old_head": "G26, G30, G33, G34, G35, \"/home/data/ZHC/tcaboost/superoperator\"):"
+    },
+    {
+     "name": "helpers",
+     "hits": 1,
+     "expect": 1,
+     "old_head": "import numpy as np                                                    "
+    },
+    {
+     "name": "side_dflt",
+     "hits": 1,
+     "expect": 1,
+     "old_head": "ap.add_argument(\"--side\", default=os.path.join(OUT, \"DEEP_RENDER_SIDEC"
+    },
+    {
+     "name": "wt_arg",
+     "hits": 1,
+     "expect": 1,
+     "old_head": "ap.add_argument(\"--lam-txt\", type=float, default=1.0)"
+    },
+    {
+     "name": "wt_init",
+     "hits": 1,
+     "expect": 1,
+     "old_head": "        self.lam_txt = 1.0"
+    },
+    {
+     "name": "wt_lossf",
+     "hits": 1,
+     "expect": 1,
+     "old_head": "    # ---- 渲染段载荷 ----"
+    },
+    {
+     "name": "wt_wire",
+     "hits": 1,
+     "expect": 1,
+     "old_head": "model.lam_bind, model.lam_txt = a.lam_bind, a.lam_txt"
+    },
+    {
+     "name": "wt_obj",
+     "hits": 1,
+     "expect": 1,
+     "old_head": "\"lam_bind\": a.lam_bind, \"lam_txt\": a.lam_txt, \"NSLOT\": NSLOT,"
+    }
+   ],
+   "dst_md5": "8e4eabc83141dc750a2ffdf6a65bfffc",
+   "bytes": 49099,
+   "leftover_G35_refs": 3
+  },
+  "gen36_eval.py": {
+   "src": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen35/gen35_eval.py",
+   "src_md5": "b9beac840e79e2348e57a9257779918d",
+   "n_crlf_parent": 0,
+   "dst": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen36/gen36_eval.py",
+   "patches": [
+    {
+     "name": "header",
+     "hits": 1,
+     "expect": 1,
+     "mode": "prepend"
+    },
+    {
+     "name": "common",
+     "hits": 1,
+     "expect": 1,
+     "old_head": "import gen35_common as C"
+    },
+    {
+     "name": "paths",
+     "hits": 1,
+     "expect": 1,
+     "old_head": "OUT = C.G35 + \"/out\""
+    },
+    {
+     "name": "armrun",
+     "hits": 1,
+     "expect": 1,
+     "old_head": "import gen35_armrun as AR"
+    },
+    {
+     "name": "ckpt",
+     "hits": 1,
+     "expect": 1,
+     "old_head": "ap.add_argument(\"--ckpt\", default=C.G35 + \"/ckpt/deep_plan_formal_6000"
+    },
+    {
+     "name": "shift_arg",
+     "hits": 1,
+     "expect": 1,
+     "old_head": "ap.add_argument(\"--dev\", default=\"cuda:2\")"
+    },
+    {
+     "name": "shift_fn",
+     "hits": 1,
+     "expect": 1,
+     "old_head": "def build_args(a):"
+    },
+    {
+     "name": "shift_wire",
+     "hits": 1,
+     "expect": 1,
+     "old_head": "    na = build_args(a)"
+    }
+   ],
+   "dst_md5": "eea9c3dc320ecd3b5fb3e88e40f46b44",
+   "bytes": 10285
+  },
+  "gen36_armrun.py": {
+   "src": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen35/gen35_armrun.py",
+   "src_md5": "bc22d1a69f2e02ade627b46db0b3aa1c",
+   "n_crlf_parent": 0,
+   "dst": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen36/gen36_armrun.py",
+   "patches": [
+    {
+     "name": "header",
+     "hits": 1,
+     "expect": 1,
+     "mode": "prepend"
+    },
+    {
+     "name": "common",
+     "hits": 1,
+     "expect": 1,
+     "old_head": "import gen35_common as C"
+    },
+    {
+     "name": "lean",
+     "hits": 1,
+     "expect": 1,
+     "old_head": "LEAN = C.G35 + \"/lean\""
+    }
+   ],
+   "dst_md5": "1a3f1434399fa1ad14bc2c6af437e02c",
+   "bytes": 9253
+  },
+  "gen36_judge.py": {
+   "src": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen35/gen35_judge.py",
+   "src_md5": "28238df3cb79eb53985b4191a38af7e4",
+   "n_crlf_parent": 0,
+   "dst": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen36/gen36_judge.py",
+   "patches": [
+    {
+     "name": "header",
+     "hits": 1,
+     "expect": 1,
+     "mode": "prepend"
+    },
+    {
+     "name": "common",
+     "hits": 1,
+     "expect": 1,
+     "old_head": "import gen35_common as C"
+    },
+    {
+     "name": "out_dir",
+     "hits": 1,
+     "expect": 1,
+     "old_head": "OUT = C.G35 + \"/out\""
+    },
+    {
+     "name": "lean_dir",
+     "hits": 1,
+     "expect": 1,
+     "old_head": "LEAN = C.G35 + \"/lean\""
+    },
+    {
+     "name": "log",
+     "hits": 1,
+     "expect": 1,
+     "old_head": "default=C.G35 + \"/logs/gen35_judge.log\""
+    }
+   ],
+   "dst_md5": "85eabca608e8f7cb56b72c39fa118b51",
+   "bytes": 10724
+  }
+ },
+ "n_patches_total": 26,
+ "all_hits_ok": true
+}

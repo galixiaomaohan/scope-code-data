@@ -1,0 +1,173 @@
+{
+ "schema": "gen34-slots/1",
+ "generated": "2026-09-24T11:05:58+0800",
+ "law": {
+  "用户令": "你想到的解决方法是什么？派出智能体去做",
+  "预注册": "scratch/ccp/gen34/V34_DESIGN.md §1"
+ },
+ "parent_ledger": {
+  "gen33_hybrid": "05dad7ad536c4e8a3ab46428a7ea15bd",
+  "gen33_eval": "a264b41fb46d8582ddd8df00362947b3",
+  "gen33_planattn": "3c2b6d0bc2e90cf105006e7dcc77a74a",
+  "gen33_judge": "8d693cff9836729bf33559a2c84e6646",
+  "gen33_device": "72bd5a9596d1a18b826fd6ffd4728e79",
+  "gen32_families": "5a0b321376aa1b5c85f3f382d213713e",
+  "gen32_ops": "97f608e44bb9381eb6b82cdc58eded1a",
+  "gen32_corpus": "bfe8f0cbd3ea88fd414a7fbf1bb3e224",
+  "bh_poly": "c4a237b2237ad559bb1d368d6758c2ed",
+  "g33_common": "6c7181b5914526f9d79397978a265a3a",
+  "gen13_v32ccp_train": "19fa506d6867b855e87d48e7587c5dc5",
+  "gen13_ccp_cachefull": "e7ba70c7c7370e296aa41e38b596296b",
+  "drct_common": "7c31b58da9d7228cee31b9be581fe5dd",
+  "deep_corpus": "1ab45aab5bed22ef63b39d4c77080adb",
+  "exam_cand": "780dbb5ef83328a0b804473839a309e3",
+  "deep_all_bin": "e54430eb6a23d7a3b27bd3c91c9b1074",
+  "render_sidecar": "8cf9e68e639079b88a2ac0ffda234b64",
+  "exam_sidecar": "104c8bb65efb2a8118d6e03cf46edd98",
+  "c4_prefilter": "0d1890185ca6f79f069150552bf59ede",
+  "ckpt_base_gen33": "0e30990b063d6a3a387f6c52b96f66ea",
+  "vocab_v4": "d0af2aa8ce64bf006969282ff7c89d9f",
+  "allow_v4": "e92911711b3f6fcfe43dcdeb35d84266"
+ },
+ "tokenizer": {
+  "cls": "GPT2TokenizerFast",
+  "vocab_size": 49152
+ },
+ "corpus": {
+  "n": 2399,
+  "n_recon_eq": 2399,
+  "n_recon_ne": 0,
+  "n_recon_err": 0,
+  "n_lit_naive": 64153,
+  "n_lit_content": 52569,
+  "n_lit_content_attrib": 52569,
+  "n_slots": 63148,
+  "n_tok_unaligned": 0,
+  "kind_hist": {
+   "poly_coef": 31412,
+   "poly_exp": 13569,
+   "template": 8554,
+   "mult": 3792,
+   "ell_coef": 1602,
+   "ell_shift": 2997,
+   "tail_const": 1222
+  },
+  "src_class_hist": {
+   "0": 21085,
+   "1": 13569,
+   "6": 8554,
+   "4": 3792,
+   "2": 1602,
+   "3": 2997,
+   "5": 970
+  },
+  "bad": [],
+  "ne": [],
+  "by_family": {
+   "gen32_ind_nest": {
+    "n": 800,
+    "content": 10525,
+    "attrib": 10525,
+    "naive": 12125,
+    "cov": 1.0
+   },
+   "gen32_ind_tower": {
+    "n": 800,
+    "content": 24129,
+    "attrib": 24129,
+    "naive": 26529,
+    "cov": 1.0
+   },
+   "gen32_ineq_cascade": {
+    "n": 799,
+    "content": 17915,
+    "attrib": 17915,
+    "naive": 25499,
+    "cov": 1.0
+   }
+  },
+  "coverage": 1.0,
+  "recon_rate": 1.0
+ },
+ "exam": {
+  "n": 218,
+  "n_recon_eq": 218,
+  "n_recon_ne": 0,
+  "n_recon_err": 0,
+  "n_lit_naive": 6516,
+  "n_lit_content": 4674,
+  "n_lit_content_attrib": 4674,
+  "n_slots": 4963,
+  "n_tok_unaligned": 0,
+  "kind_hist": {
+   "poly_coef": 602,
+   "poly_exp": 198,
+   "template": 1966,
+   "mult": 872,
+   "ell_shift": 691,
+   "tail_const": 287,
+   "ell_coef": 347
+  },
+  "src_class_hist": {
+   "0": 378,
+   "1": 198,
+   "6": 1966,
+   "4": 872,
+   "3": 691,
+   "5": 222,
+   "2": 347
+  },
+  "bad": [],
+  "ne": [],
+  "by_family": {
+   "gen32_ind_nest": {
+    "n": 13,
+    "content": 167,
+    "attrib": 167,
+    "naive": 193,
+    "cov": 1.0
+   },
+   "gen32_ind_tower": {
+    "n": 24,
+    "content": 409,
+    "attrib": 409,
+    "naive": 481,
+    "cov": 1.0
+   },
+   "gen32_ineq_cascade": {
+    "n": 181,
+    "content": 4098,
+    "attrib": 4098,
+    "naive": 5842,
+    "cov": 1.0
+   }
+  },
+  "coverage": 1.0,
+  "recon_rate": 1.0
+ },
+ "artifacts": {
+  "slot_sidecar": {
+   "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen34/out/DEEP_SLOT_SIDECAR.jsonl",
+   "md5": "d9d47aed71f8b9caa4c879d5077bb9ba",
+   "n": 2399
+  },
+  "exam_slot_sidecar": {
+   "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen34/out/DEEP_EXAM_SLOT_SIDECAR.jsonl",
+   "md5": "c944210cd45cd450a3ae41348705a227",
+   "n": 218
+  }
+ },
+ "gate": {
+  "coverage_target": 0.95,
+  "coverage_stopline": 0.8,
+  "coverage_corpus": 1.0,
+  "coverage_exam": 1.0,
+  "pass": true,
+  "stopline_hit": false,
+  "tok_aligned_corpus": true,
+  "tok_aligned_exam": true,
+  "recon_rate_corpus": 1.0,
+  "recon_rate_exam": 1.0
+ },
+ "wall_s": 250.65
+}

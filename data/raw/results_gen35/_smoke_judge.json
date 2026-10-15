@@ -1,0 +1,144 @@
+{
+ "schema": "gen35-judge/1",
+ "generated": "2026-09-24T15:20:42+0800",
+ "judge_md5_before": "7c31b58da9d7228cee31b9be581fe5dd",
+ "src": "scratch/ccp/gen35/out/GEN35_COMPILED_CORPUS.jsonl",
+ "src_tag": "smoke",
+ "src_n": 2399,
+ "pool": "all",
+ "pool_n": 2399,
+ "judge_entry": "drct_common (冻结 7c31b58d): gen23_prescreen_batch (批量) / DC.judge_attempt (字面, 反向)",
+ "c5_rule": "异常 != 分歧; agree 仅在双侧均确定判决时定义",
+ "literal_pool_note": "本臂池",
+ "literal_pool_n": 2399,
+ "literal": {
+  "schema": "gen35-literal/1",
+  "n": 3,
+  "n_defined": 0,
+  "agree": 0,
+  "disagree": 0,
+  "exception": 0,
+  "not_executed": 3,
+  "literal_certified": 3,
+  "batch_certified": 0,
+  "by_family": {
+   "gen32_ind_nest": {
+    "n": 1,
+    "agree": 0,
+    "literal_cert": 1
+   },
+   "gen32_ind_tower": {
+    "n": 1,
+    "agree": 0,
+    "literal_cert": 1
+   },
+   "gen32_ineq_cascade": {
+    "n": 1,
+    "agree": 0,
+    "literal_cert": 1
+   }
+  },
+  "records": [
+   {
+    "name": "gen32_ind_nest_200613",
+    "family": "gen32_ind_nest",
+    "arm_tag": "smoke",
+    "literal_verdict": "certified",
+    "batch_verdict": "not_executed",
+    "literal_certified": true,
+    "batch_certified": null,
+    "xc_class": "not_executed",
+    "agree": null,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 9.81
+    },
+    "literal_exc": null,
+    "wall_s": 29.33
+   },
+   {
+    "name": "gen32_ind_tower_200425",
+    "family": "gen32_ind_tower",
+    "arm_tag": "smoke",
+    "literal_verdict": "certified",
+    "batch_verdict": "not_executed",
+    "literal_certified": true,
+    "batch_certified": null,
+    "xc_class": "not_executed",
+    "agree": null,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.19
+    },
+    "literal_exc": null,
+    "wall_s": 29.97
+   },
+   {
+    "name": "gen32_ineq_cascade_200301",
+    "family": "gen32_ineq_cascade",
+    "arm_tag": "smoke",
+    "literal_verdict": "certified",
+    "batch_verdict": "not_executed",
+    "literal_certified": true,
+    "batch_certified": null,
+    "xc_class": "not_executed",
+    "agree": null,
+    "literal_reasons": [],
+    "literal_lean": {
+     "rc": 0,
+     "accepted": true,
+     "sorry": false,
+     "secs": 10.1
+    },
+    "literal_exc": null,
+    "wall_s": 30.38
+   }
+  ]
+ },
+ "reverse": {
+  "schema": "gen35-reverse/1",
+  "n": 2,
+  "R1_trunc_rejected": 2,
+  "R2_swap_rejected": 2,
+  "R1_trunc_unexpectedly_certified": [],
+  "R2_swap_unexpectedly_certified": [],
+  "records": [
+   {
+    "name": "gen32_ind_tower_201409",
+    "n_lines": 26,
+    "n_keep": 15,
+    "R1_trunc_certified": false,
+    "R1_reasons": [
+     "lean_reject_sorry"
+    ],
+    "R2_swap_from": "gen32_ind_tower_200336",
+    "R2_swap_certified": false,
+    "R2_reasons": [
+     "lean_reject_sorry"
+    ]
+   },
+   {
+    "name": "gen32_ind_tower_200336",
+    "n_lines": 26,
+    "n_keep": 15,
+    "R1_trunc_certified": false,
+    "R1_reasons": [
+     "lean_reject_sorry"
+    ],
+    "R2_swap_from": "gen32_ind_tower_201409",
+    "R2_swap_certified": false,
+    "R2_reasons": [
+     "lean_reject_sorry"
+    ]
+   }
+  ]
+ },
+ "judge_md5_after": "7c31b58da9d7228cee31b9be581fe5dd",
+ "judge_unchanged": true
+}

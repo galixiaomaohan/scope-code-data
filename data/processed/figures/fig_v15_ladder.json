@@ -1,0 +1,144 @@
+{
+ "figure": "fig_v15_ladder",
+ "what": "Depth-curriculum ladder of run dyn_latq_v15, 18 800 steps. (a) the gate-probe depth t_max as a step function (dotted verticals = gate unlocks, red = gate stalls) with the sampled training-episode depth as a light backdrop; (b) probe e_fin and the 21-step mean of the training e_fin, log scale; (c) the sampled training depth T over time.",
+ "one_line_reading": "The gate unlocks depth monotonically 1 -> 16 over 15 events ending at step 17 500, and the probe error falls to 0.167 while the training step reaches e_fin = 0.096; the sampler never stops drawing shallow episodes, so this curve measures the gate trajectory, not the training mixture.",
+ "source": [
+  {
+   "path": "<original workstation path, not shipped>",
+   "md5": "014a0505706aa5faae4f536168031bd1",
+   "origin_note": "the only surviving copy of this run log is the workstation copy shipped in this package (data/raw/latent/)",
+   "role": "run log"
+  }
+ ],
+ "outputs": {
+  "png": "<original workstation path, not shipped>",
+  "gate_csv": "<original workstation path, not shipped>",
+  "train_csv": "<original workstation path, not shipped>",
+  "events_csv": "<original workstation path, not shipped>"
+ },
+ "method": "line-type regexes over the raw log; [gate-probe] gives the ladder, [dyn_latq] gives training episodes, [gate-dep]/[gate-tf] give gate transitions. The two depth quantities are separate marks.",
+ "readings": {
+  "n_train_rows": 377,
+  "n_gate_rows": 75,
+  "n_events": 30,
+  "train_depth_histogram": {
+   "1.0": 241,
+   "2.0": 37,
+   "3.0": 14,
+   "4.0": 12,
+   "5.0": 17,
+   "6.0": 6,
+   "7.0": 8,
+   "8.0": 9,
+   "9.0": 9,
+   "10.0": 3,
+   "11.0": 3,
+   "12.0": 5,
+   "13.0": 7,
+   "14.0": 2,
+   "15.0": 3,
+   "16.0": 1
+  },
+  "gate_tmax_max": 16,
+  "depth16_unlock_step": 17500,
+  "first_gate_row_at_tmax16": 17750,
+  "n_rows_at_tmax": 5,
+  "final_train_row": {
+   "step": 18800,
+   "T": 3,
+   "loss": 0.70849,
+   "efin": 0.096
+  },
+  "final_gate_row": {
+   "step": 18750,
+   "tmax": 16,
+   "tf_p": 0.4,
+   "efin": 0.167
+  },
+  "depth_unlocks": [
+   {
+    "step": 11000,
+    "depth": 2,
+    "efin": 0.496
+   },
+   {
+    "step": 12250,
+    "depth": 3,
+    "efin": 0.333
+   },
+   {
+    "step": 12750,
+    "depth": 4,
+    "efin": 0.228
+   },
+   {
+    "step": 13000,
+    "depth": 5,
+    "efin": 0.234
+   },
+   {
+    "step": 13250,
+    "depth": 6,
+    "efin": 0.272
+   },
+   {
+    "step": 13500,
+    "depth": 7,
+    "efin": 0.232
+   },
+   {
+    "step": 13750,
+    "depth": 8,
+    "efin": 0.228
+   },
+   {
+    "step": 14000,
+    "depth": 9,
+    "efin": 0.225
+   },
+   {
+    "step": 15250,
+    "depth": 10,
+    "efin": 0.199
+   },
+   {
+    "step": 15750,
+    "depth": 11,
+    "efin": 0.183
+   },
+   {
+    "step": 16000,
+    "depth": 12,
+    "efin": 0.173
+   },
+   {
+    "step": 16250,
+    "depth": 13,
+    "efin": 0.169
+   },
+   {
+    "step": 16750,
+    "depth": 14,
+    "efin": 0.149
+   },
+   {
+    "step": 17000,
+    "depth": 15,
+    "efin": 0.149
+   },
+   {
+    "step": 17500,
+    "depth": 16,
+    "efin": 0.135
+   }
+  ],
+  "n_stalls": 3,
+  "last_step": 18800
+ },
+ "caveats": [
+  "dyn_latq_v15.log is NOT on the server; docs/DEVIATIONS.md:425 states it was kept, but the file no longer exists there. Only the workstation copy survives (this figure's source).",
+  "'T=16' appears only in the gate-probe line; the deepest *training* episode in the log is T=15 (3 rows). The run was stopped at step 18 800 before its 32 000-step schedule finished.",
+  "the ladder's own reading is e_fin at the gate (0.167 at step 18 750); the training-step reading e_fin = 0.096 belongs to a T=3 episode and is not the depth-16 result. Do not quote 0.096 as the depth-16 error.",
+  "deviates from the brief's 'twin axis' suggestion: e_fin got its own panel because a shared frame made the ladder and the error curves unreadable."
+ ]
+}

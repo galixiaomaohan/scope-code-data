@@ -1,0 +1,49 @@
+{
+ "figure": "fig_hidden_trajectory",
+ "what": "UMAP embedding of the 1552 decision-frame hidden states h_t (1152-d, the exact input of the operator-selection head) collected while the final checkpoint walked the 218-item deep exam. (a) all frames coloured by problem family; (b) a deterministic sample of 80 chains drawn as polylines in step order; (c) all frames coloured by step index.",
+ "one_line_reading": "h_t is organised first by problem family -- the three families separate almost perfectly in the embedding (1-NN purity 0.999 against a chance level of 0.659) -- and then by the position inside the chain: consecutive frames of one item are far more similar than random frame pairs (cosine 0.607 vs 0.154), and the colour gradient in (c) shows the step index sweeping across the manifold. A chain therefore walks a family-specific route through state space rather than staying put.",
+ "source": [
+  {
+   "path": "./hidden_frames.npz",
+   "md5": "9acc097083d66ce52e5c886e7d53d645",
+   "role": "h_t capture (see fig_llm_extract.json for the identity check)"
+  }
+ ],
+ "outputs": {
+  "png": "../../../figures_src/output/fig_hidden_trajectory.png",
+  "csv": "./fig_hidden_trajectory.csv"
+ },
+ "method": "UMAP n_neighbors=15, min_dist=0.12, random_state=20260930, euclidean, on the raw 1152-d h_t (no prior PCA). Chain lines connect consecutive step indices of one item. Coherence numbers are computed in the full 1152-d space on L2-normalised vectors.",
+ "readings": {
+  "n_frames": 1552,
+  "h_dim": 1152,
+  "n_items": 218,
+  "n_items_in_trajectory_sample": 80,
+  "trajectory_sample_rule": "np.random.RandomState(20260930).choice over the item ids, no replacement",
+  "umap_seed": 20260930,
+  "nn1_family_purity_umap": 0.9987,
+  "chance_family_purity": 0.6586,
+  "adjacent_frame_cosine_mean": 0.6066,
+  "adjacent_frame_cosine_p05_p95": [
+   0.4306,
+   0.7897
+  ],
+  "random_pair_cosine_mean": 0.1542,
+  "n_adjacent_pairs": 1334,
+  "frames_per_family": {
+   "gen32_ind_nest": 78,
+   "gen32_ind_tower": 240,
+   "gen32_ineq_cascade": 1234
+  },
+  "items_per_family": {
+   "gen32_ind_nest": 13,
+   "gen32_ind_tower": 24,
+   "gen32_ineq_cascade": 181
+  }
+ },
+ "caveats": [
+  "UMAP coordinates depend on the seed and on n_neighbors; the family purity in this record is computed in the 2-D embedding and is a statement about the visualisation. The adjacent-vs-random cosine comparison is computed in the full 1152-d space and does not depend on the embedding.",
+  "Each (item, step) frame occurs exactly once in the capture, so no meaningful 'same item+step nearest neighbour' purity exists; trajectory structure is supported by the adjacent-vs-random cosine statistic and by panel (b), not by a step-index purity.",
+  "Frames are pooled across items; the per-item polylines in panel (b) are the only place where within-chain structure is claimed."
+ ]
+}

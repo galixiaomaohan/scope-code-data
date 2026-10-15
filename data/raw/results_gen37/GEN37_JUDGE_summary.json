@@ -1,0 +1,79 @@
+{
+ "schema": "gen37-judge/1",
+ "generated": "2026-09-25T03:19:09+0800",
+ "tag": "g37_a0",
+ "n": 218,
+ "denominator": "n (218 深考卷全卷; 无实测收敛问题: 每题一次尝试)",
+ "certified": 18,
+ "certified_rate": 0.082569,
+ "certified_pct": 8.2569,
+ "lean_raw_accepted": 18,
+ "reason_hist": {
+  "lean_reject_sorry": 177,
+  "lean_reject": 23
+ },
+ "exceptions": 0,
+ "exception_names": [],
+ "proof_empty": 0,
+ "by_family": {
+  "gen32_ind_nest": {
+   "n": 13,
+   "certified": 0
+  },
+  "gen32_ind_tower": {
+   "n": 24,
+   "certified": 0
+  },
+  "gen32_ineq_cascade": {
+   "n": 181,
+   "certified": 18
+  }
+ },
+ "by_cls": {
+  "ind": {
+   "n": 37,
+   "certified": 0
+  },
+  "ineq": {
+   "n": 181,
+   "certified": 18
+  }
+ },
+ "M1_H": "18/218 = 8.2569%",
+ "efficiency": {
+  "prompt_tokens_sum": 34132,
+  "completion_tokens_sum": 36626,
+  "prompt_tokens_per_q": 156.57,
+  "completion_tokens_per_q": 168.01,
+  "gen_wall_sum_s": 4333.1,
+  "gen_secs_per_q": 19.88,
+  "judge_wall_sum_s": 5698.7,
+  "judge_wall_batch_s": 211.1,
+  "toks_per_s_output": 8.45,
+  "note": "judge_wall_sum = 逐题判卷墙钟和 (含并行 CPU Lean); judge_wall_batch = 整批判卷墙钟 (jobs=32)"
+ },
+ "judge_md5_before": "7c31b58da9d7228cee31b9be581fe5dd",
+ "judge_md5_after": "7c31b58da9d7228cee31b9be581fe5dd",
+ "judge_entry": "drct_common.judge_attempt (冻结 7c31b58d; proof=DC.extract_proof(text))",
+ "certified_names": [
+  "gen32_ineq_cascade_300008",
+  "gen32_ineq_cascade_300020",
+  "gen32_ineq_cascade_300031",
+  "gen32_ineq_cascade_300034",
+  "gen32_ineq_cascade_300042",
+  "gen32_ineq_cascade_300050",
+  "gen32_ineq_cascade_300065",
+  "gen32_ineq_cascade_300070",
+  "gen32_ineq_cascade_300076",
+  "gen32_ineq_cascade_300077",
+  "gen32_ineq_cascade_300080",
+  "gen32_ineq_cascade_300081",
+  "gen32_ineq_cascade_300093",
+  "gen32_ineq_cascade_300145",
+  "gen32_ineq_cascade_300151",
+  "gen32_ineq_cascade_300153",
+  "gen32_ineq_cascade_300164",
+  "gen32_ineq_cascade_300167"
+ ],
+ "judge_unchanged": true
+}

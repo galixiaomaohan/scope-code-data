@@ -1,0 +1,17 @@
+{
+ "schema": "gen33-judge/1",
+ "generated": "2026-09-24T07:53:29+0800",
+ "judge_md5_before": "7c31b58da9d7228cee31b9be581fe5dd",
+ "tags": [
+  "base",
+  "attn"
+ ],
+ "judge_entry": "drct_common (冻结 7c31b58d) via gen33_eval.judge_texts (batch) / DC.judge_attempt (literal, reverse)",
+ "c5_rule": "异常 != 分歧; agree 仅在双侧均确定判决时定义",
+ "reverse": {
+  "n": 0,
+  "note": "certified 池不足 2, 反向核验不可做 (如实登记)"
+ },
+ "judge_md5_after": "7c31b58da9d7228cee31b9be581fe5dd",
+ "judge_unchanged": true
+}

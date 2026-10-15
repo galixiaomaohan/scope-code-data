@@ -1,0 +1,148 @@
+{
+ "schema": "gen36-erranalysis/1",
+ "src_walk": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen35/out/GEN35_EVAL_PLAN_WALK.json",
+ "src_walk_table": {
+  "n": 218,
+  "first_hit": 218,
+  "exact_hit": 117,
+  "terminated_end": 218,
+  "over_run": 0
+ },
+ "n": 218,
+ "n_exact": 117,
+ "n_bad": 101,
+ "exact_rate": 0.536697,
+ "A_family": {
+  "gen32_ind_nest": {
+   "n": 13,
+   "exact": 13,
+   "bad": 0
+  },
+  "gen32_ind_tower": {
+   "n": 24,
+   "exact": 24,
+   "bad": 0
+  },
+  "gen32_ineq_cascade": {
+   "n": 181,
+   "exact": 80,
+   "bad": 101
+  }
+ },
+ "B_first_div_pos_hist": {
+  "4": 40,
+  "5": 40,
+  "6": 21
+ },
+ "B_first_div_from_end_hist": {
+  "0": 101
+ },
+ "C_confusion_gold_to_pred": {
+  "gen32_sos_tail_square -> gen32_sos_tail_other": 41,
+  "gen32_sos_tail_other -> gen32_sos_tail_square": 24,
+  "gen32_sos_tail_zero -> gen32_sos_tail_other": 14,
+  "gen32_sos_tail_other -> gen32_sos_tail_zero": 8,
+  "gen32_sos_tail_square -> gen32_sos_tail_zero": 8,
+  "gen32_sos_tail_zero -> gen32_sos_tail_square": 6
+ },
+ "C_confusion_by_family": {
+  "gen32_ineq_cascade": {
+   "gen32_sos_tail_square -> gen32_sos_tail_other": 41,
+   "gen32_sos_tail_other -> gen32_sos_tail_square": 24,
+   "gen32_sos_tail_zero -> gen32_sos_tail_other": 14,
+   "gen32_sos_tail_other -> gen32_sos_tail_zero": 8,
+   "gen32_sos_tail_square -> gen32_sos_tail_zero": 8,
+   "gen32_sos_tail_zero -> gen32_sos_tail_square": 6
+  }
+ },
+ "D_tail_decoy_confusion": {
+  "square -> other": 41,
+  "other -> square": 24,
+  "zero -> other": 14,
+  "other -> zero": 8,
+  "square -> zero": 8,
+  "zero -> square": 6
+ },
+ "D_tail_pos_rows": 101,
+ "E_err_class": {
+  "only_tail_single": 101,
+  "mid_err": 0,
+  "multi_mismatch": 0,
+  "early_stop": 0,
+  "over_run": 0
+ },
+ "F_confidence": {
+  "err_p_max_mean": 0.847909,
+  "err_p_max_min": 0.43828,
+  "err_p_max_max": 0.99977,
+  "err_margin_mean": 0.713759,
+  "ok_margin_med_mean": 0.999963,
+  "n_confident_wrong(p>=0.9)": 55,
+  "n_err": 101
+ },
+ "G_tail_kind_by_row_truth": {
+  "None": {
+   "n": 37,
+   "exact": 37
+  },
+  "other": {
+   "n": 78,
+   "exact": 46
+  },
+  "square": {
+   "n": 72,
+   "exact": 23
+  },
+  "zero": {
+   "n": 31,
+   "exact": 11
+  }
+ },
+ "H_corpus_family_stats": {
+  "gen32_ind_nest": {
+   "n": 800,
+   "tail_kind": {
+    "None": 800
+   },
+   "chain_len": {
+    "5": 800
+   }
+  },
+  "gen32_ind_tower": {
+   "n": 800,
+   "tail_kind": {
+    "None": 800
+   },
+   "chain_len": {
+    "9": 800
+   }
+  },
+  "gen32_ineq_cascade": {
+   "n": 799,
+   "tail_kind": {
+    "other": 310,
+    "zero": 159,
+    "square": 330
+   },
+   "chain_len": {
+    "5": 336,
+    "6": 330,
+    "7": 133
+   }
+  }
+ },
+ "I_feat_tail": {
+  "gen32_ind_nest|cls_sq=None|rho=?": {
+   "None": 13
+  },
+  "gen32_ind_tower|cls_sq=None|rho=?": {
+   "None": 24
+  },
+  "gen32_ineq_cascade|cls_sq=None|rho=?": {
+   "other": 78,
+   "square": 72,
+   "zero": 31
+  }
+ },
+ "rows_md5_src": null
+}

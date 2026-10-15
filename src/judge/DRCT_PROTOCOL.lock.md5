@@ -1,0 +1,4 @@
+67e90a2b447fbe51db258b6ad85e36c0  DRCT_PROTOCOL.md (v1, 2026-09-22 17:5x, 被 A1 修订取代)
+34c38e453a84d8357e179da3a127bf73  DRCT_PROTOCOL.md (v2 = v1 + 修正A1 SFT-CoT, 2026-09-22 18:5x, 赛前修订: 零发射时点, LAUNCH_LOG.md 可证)
+7da7e6ed246857cf8341606802aa9519  DRCT_PROTOCOL.md (v3 = v2 + 修正A2 双向重训+G-D判决门+R1-R5, 2026-09-22 19:1x, 赛前修订: 守护零发射可证)
+7c31b58da9d7228cee31b9be581fe5dd  drct_common.py (frozen judging module; verified before and after every judged batch; shipped byte-identical in this package)

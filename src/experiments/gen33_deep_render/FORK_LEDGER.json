@@ -1,0 +1,33 @@
+{
+  "schema": "gen33-fork-ledger/1",
+  "here": "<original workstation path, not shipped>",
+  "files": {
+    "gen33_hybrid.py": {
+      "src": "gen30_hybrid.py",
+      "src_md5": "4f630a796190d510c0b17010fc1b1beb",
+      "out": "<original workstation path, not shipped>",
+      "out_md5": "05dad7ad536c4e8a3ab46428a7ea15bd",
+      "patches": 17,
+      "ok": true,
+      "bytes": 35524
+    },
+    "gen33_eval.py": {
+      "src": "gen30_eval.py",
+      "src_md5": "e5b66c319fe646dfbb16ff25860323da",
+      "out": "<original workstation path, not shipped>",
+      "out_md5": "a264b41fb46d8582ddd8df00362947b3",
+      "patches": 19,
+      "ok": true,
+      "bytes": 40656
+    },
+    "gen33_planattn.py": {
+      "src": "gen30_planattn.py",
+      "src_md5": "0da0a2dc9d5fd29cab6d587b196bdd4f",
+      "out": "<original workstation path, not shipped>",
+      "out_md5": "3c2b6d0bc2e90cf105006e7dcc77a74a",
+      "patches": 0,
+      "ok": true,
+      "bytes": 34448
+    }
+  }
+}

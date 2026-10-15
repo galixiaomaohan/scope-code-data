@@ -1,0 +1,129 @@
+{
+ "figure": "fig_head_geometry",
+ "what": "Two-dimensional embeddings of the 220 operator rows of the final checkpoint's selection head, coloured by the paper's 7-way vocabulary partition. (a) PCA of the head output projection $W_{head}$ (220x1152), all rows; (b) UMAP of the same matrix; (c) PCA recomputed on the 59 rows added after the legacy base only, which is the only zoom in which the added operators are visible.",
+ "one_line_reading": "The head's geometry does NOT carry the 7-way curriculum split: silhouette is negative (-0.094 over all 220 rows, -0.083 over the added 59). What it does carry is a legacy/added boundary -- 156/161 base rows (0.969) have their nearest neighbour inside the base block while the extension, curriculum, family and routing blocks score 0.000 each. Among the added rows the 1-NN purity is 0.407 against a chance level of 0.197, so there is real but coarse structure, not generation-aligned clusters.",
+ "source": [
+  {
+   "path": "<server training artifact, not shipped; md5 registered>",
+   "md5": "8d7c81f0d69322cce1e4eda2b4660fdf",
+   "role": "checkpoint",
+   "keys": {
+    "model.step_head.weight": [
+     220,
+     1152
+    ],
+    "model.step_head.bias": [
+     220
+    ],
+    "model.codebook.lat_tab": [
+     220,
+     64
+    ]
+   },
+   "declared_head": 220,
+   "step": 6000
+  },
+  {
+   "path": "<server training artifact, not shipped; md5 registered>",
+   "md5": "cf9f0c45b9acbc7bc9bc0c608c2469f3",
+   "role": "operator index registry 161..219"
+  },
+  {
+   "path": "../../../src/device/svokernel_v32/v32codebook.py",
+   "role": "base-name source (V32REGISTRY.names(), insertion order verified against the documented anchors 6/7/8/15/95)"
+  }
+ ],
+ "outputs": {
+  "png": "../../../figures_src/output/fig_head_geometry.png",
+  "csv": "./fig_head_geometry.csv",
+  "index_table": "./op_index_segments_v7.csv"
+ },
+ "method": "weights read straight out of the checkpoint on CPU (no forward pass); PCA by SVD on column-centred rows; UMAP n_neighbors=15, min_dist=0.15, random_state=20260930; separability by leave-one-out 1-NN purity (cosine) and by the mean silhouette computed directly from the distance matrix.",
+ "readings": {
+  "head_rows": 220,
+  "head_dim": 1152,
+  "n_added": 59,
+  "pc1_pc2_var_weight": [
+   0.177,
+   0.0731
+  ],
+  "pc1_pc2_var_addzoom": [
+   0.2886,
+   0.2223
+  ],
+  "pc1_pc2_var_lattab": [
+   0.1719,
+   0.073
+  ],
+  "nn1_purity_all": 0.7409,
+  "nn1_purity_added": 0.4068,
+  "chance_purity_all": 0.5497,
+  "chance_purity_added": 0.1968,
+  "silhouette_weight_all": -0.0939,
+  "silhouette_weight_added": -0.083,
+  "silhouette_lattab_all": -0.1101,
+  "silhouette_umap_all": -0.0307,
+  "umap_available": true,
+  "umap_seed": 20260930,
+  "base_names_resolved": true,
+  "per_segment": {
+   "Base (legacy 161)": {
+    "n": 161,
+    "mean_row_l2": 0.9467,
+    "mean_pairwise_cosine_within": 0.4895,
+    "self_nn": 156,
+    "self_nn_frac": 0.9689
+   },
+   "Deep-chain ext.": {
+    "n": 17,
+    "mean_row_l2": 0.7945,
+    "mean_pairwise_cosine_within": 0.6729,
+    "self_nn": 0,
+    "self_nn_frac": 0.0
+   },
+   "Constr. curriculum": {
+    "n": 7,
+    "mean_row_l2": 0.7808,
+    "mean_pairwise_cosine_within": 0.795,
+    "self_nn": 0,
+    "self_nn_frac": 0.0
+   },
+   "Deep-chain family": {
+    "n": 9,
+    "mean_row_l2": 0.8963,
+    "mean_pairwise_cosine_within": 0.1165,
+    "self_nn": 0,
+    "self_nn_frac": 0.0
+   },
+   "Subst. / eval.": {
+    "n": 4,
+    "mean_row_l2": 0.5904,
+    "mean_pairwise_cosine_within": 0.5315,
+    "self_nn": 1,
+    "self_nn_frac": 0.25
+   },
+   "Routing": {
+    "n": 9,
+    "mean_row_l2": 0.6314,
+    "mean_pairwise_cosine_within": 0.459,
+    "self_nn": 0,
+    "self_nn_frac": 0.0
+   },
+   "Expansion": {
+    "n": 13,
+    "mean_row_l2": 0.6161,
+    "mean_pairwise_cosine_within": 0.5046,
+    "self_nn": 6,
+    "self_nn_frac": 0.4615
+   }
+  }
+ },
+ "caveats": [
+  "NEGATIVE RESULT, registered deliberately: the naive claim 'the 7-way vocabulary partition is written into the head weights' is FALSE at this scale. The figure and this record state the measured alternative instead.",
+  "PC1+PC2 explain only 25% of the variance of $W_{head}$; a 2-D view is a weak summary and the negative silhouette is measured in the full 1152-d space, not in the projection.",
+  "The brief's index ranges are used verbatim. Index 178 ('bh_ineq_tail_other') is the one row that does not sit with its own bh_* family: it falls inside the 178..184 'construction curriculum' block because g24_* starts at 179.",
+  "Segment labels are the English forms used throughout the paper (base, deep-chain extension, construction curriculum, deep-chain family, substitution and evaluation, routing, expansion).",
+  "UMAP coordinates depend on the seed and on n_neighbors; panel (a) PCA is deterministic and is the one to quote quantitatively.",
+  "Base-block names for 0..153 come from V32REGISTRY insertion order, verified against the documented anchors (6=math_solve_linear_system, 7=math_simplify_expr, 8=math_expand_expr, 15=math_evaluate_expr, 95=mini_kernel_arith), because v32_op_index_map() returns an empty map without its data-loading build step."
+ ]
+}

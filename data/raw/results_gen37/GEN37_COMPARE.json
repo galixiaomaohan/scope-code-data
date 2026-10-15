@@ -1,0 +1,40 @@
+{
+ "schema": "gen37-compare/1",
+ "generated": "2026-09-25T03:39:01+0800",
+ "M1_H": "18/218 = 8.2569%",
+ "deepseek": {
+  "certified": 18,
+  "n": 218,
+  "rate": 0.08256880733944955,
+  "out_tokens_per_q": 168.01,
+  "in_tokens_per_q": 156.57,
+  "secs_per_q": 19.88,
+  "toks_per_s": 8.45
+ },
+ "ours_135m": {
+  "certified": 117,
+  "n": 218,
+  "rate": 0.536697,
+  "walk_wall_s": 115.16,
+  "secs_per_q": 0.528256880733945,
+  "chain_steps_per_q": 6.1192660550458715,
+  "render_tok_per_q": 0,
+  "emit_lines": 1087
+ },
+ "judge_wall": {
+  "deepseek_batch_s": 211.1,
+  "ours_batch_s": 241.9
+ },
+ "dual": {
+  "literal_n": 18,
+  "literal_agree": 18,
+  "R1_rejected": 9,
+  "R2_rejected": 8
+ },
+ "oath": {
+  "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+  "judge_frozen_ok": true,
+  "single_card_only": "GPU2",
+  "other_gpus": "GPU0 (LT 用户红线) / GPU1 (保留区) 零占用"
+ }
+}

@@ -1,0 +1,251 @@
+{
+ "schema": "gen35-chainread/1",
+ "generated": "2026-09-24T15:17:25+0800",
+ "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+ "arm": "slotA",
+ "note": "存量链 = gen34 A 臂 hold-out 外的考卷走链 (零训练, 只读)",
+ "n_exam": 218,
+ "n_chains_loaded": 218,
+ "chain_exact_hit_infile": 121,
+ "chain_first_hit_infile": 218,
+ "judge_gold": {
+  "n": 218,
+  "certified": 218,
+  "rate": 1.0,
+  "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+  "wall_s": 332.2,
+  "reason_hist": {},
+  "fam": {
+   "gen32_ind_nest": {
+    "n": 13,
+    "certified": 13,
+    "exact": 13
+   },
+   "gen32_ind_tower": {
+    "n": 24,
+    "certified": 24,
+    "exact": 24
+   },
+   "gen32_ineq_cascade": {
+    "n": 181,
+    "certified": 181,
+    "exact": 181
+   }
+  }
+ },
+ "judge_stored": {
+  "n": 218,
+  "certified": 121,
+  "rate": 0.555046,
+  "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+  "wall_s": 241.9,
+  "reason_hist": {
+   "lean_reject_sorry": 97,
+   "autoimplicit_dependent": 97,
+   "sorry_ax": 97
+  },
+  "fam": {
+   "gen32_ind_nest": {
+    "n": 13,
+    "certified": 13,
+    "exact": 13
+   },
+   "gen32_ind_tower": {
+    "n": 24,
+    "certified": 24,
+    "exact": 24
+   },
+   "gen32_ineq_cascade": {
+    "n": 181,
+    "certified": 84,
+    "exact": 84
+   }
+  }
+ },
+ "compile_gold": {
+  "n": 218,
+  "n_exact": 218,
+  "n_first": 218,
+  "n_overrun": 0,
+  "err_hist": {},
+  "fam": {
+   "gen32_ind_nest": {
+    "n": 13,
+    "exact": 13,
+    "first": 13,
+    "n_emit": 39,
+    "n_mismatch": 0
+   },
+   "gen32_ind_tower": {
+    "n": 24,
+    "exact": 24,
+    "first": 24,
+    "n_emit": 96,
+    "n_mismatch": 0
+   },
+   "gen32_ineq_cascade": {
+    "n": 181,
+    "exact": 181,
+    "first": 181,
+    "n_emit": 1053,
+    "n_mismatch": 0
+   }
+  },
+  "empty_proof": 0,
+  "exact_rate": 1.0,
+  "first_rate": 1.0
+ },
+ "compile_stored": {
+  "n": 218,
+  "n_exact": 121,
+  "n_first": 218,
+  "n_overrun": 0,
+  "err_hist": {
+   "OP_MISMATCH": 97
+  },
+  "fam": {
+   "gen32_ind_nest": {
+    "n": 13,
+    "exact": 13,
+    "first": 13,
+    "n_emit": 39,
+    "n_mismatch": 0
+   },
+   "gen32_ind_tower": {
+    "n": 24,
+    "exact": 24,
+    "first": 24,
+    "n_emit": 96,
+    "n_mismatch": 0
+   },
+   "gen32_ineq_cascade": {
+    "n": 181,
+    "exact": 84,
+    "first": 181,
+    "n_emit": 956,
+    "n_mismatch": 97
+   }
+  },
+  "empty_proof": 0,
+  "exact_rate": 0.555046,
+  "first_rate": 1.0
+ },
+ "endpoint_gen34": {
+  "n": 218,
+  "certified": 1,
+  "certified_names": [
+   "gen32_ind_tower_300063"
+  ],
+  "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen34/out/GEN33_PRESCREEN_TRACE_slotA.jsonl",
+  "md5": "5342a92a6225581e1ac5822cec26194f",
+  "note": "gen34 官方端到端读数 (渲染=LLM), 本批只读不回改"
+ },
+ "aud1": {
+  "schema": "gen35-aud1/1",
+  "note": "零参数 (族众数链, 取自训练语料分布) 应用于考卷; 不用考卷标签",
+  "mode_by_family": {
+   "gen32_ind_nest": [
+    "gen32_nest_solve",
+    "gen32_nest_fold",
+    "gen32_nest_solve",
+    "gen32_nest_delta",
+    "gen32_nest_close"
+   ],
+   "gen32_ind_tower": [
+    "gen32_nest_solve",
+    "gen32_nest_delta",
+    "gen32_nest_fold",
+    "gen32_nest_solve",
+    "gen32_nest_delta",
+    "gen32_nest_fold",
+    "gen32_nest_solve",
+    "gen32_nest_delta",
+    "gen32_nest_close"
+   ],
+   "gen32_ineq_cascade": [
+    "gen32_sos_cross",
+    "gen32_sos_block",
+    "gen32_sos_block",
+    "gen32_sos_block",
+    "gen32_sos_tail_other"
+   ]
+  },
+  "n": 218,
+  "n_exact": 61,
+  "exact_rate": 0.279817,
+  "n_first": 143,
+  "first_rate": 0.655963,
+  "n_prefix": 61,
+  "prefix_rate": 0.279817,
+  "per_pos_acc": {
+   "0": 0.655963,
+   "1": 0.894495,
+   "2": 1.0,
+   "3": 1.0,
+   "4": 0.316514,
+   "5": 1.0,
+   "6": 1.0,
+   "7": 1.0,
+   "8": 1.0
+  }
+ },
+ "decode_buckets_stored": {
+  "walk_exact=True|walk_first=True|cert=True": 121,
+  "walk_exact=False|walk_first=True|cert=False": 97
+ },
+ "gate_upper_bound_pass": true,
+ "rows_md5": "61ebc156e4c28749e0e19591523d6f51",
+ "parent_ledger_unchanged": true,
+ "wall_s": 663.1,
+ "endpoint_gen34_anchor_all": {
+  "base": {
+   "n": 218,
+   "certified": 0,
+   "certified_names": [],
+   "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen34/out/GEN33_PRESCREEN_TRACE_base.jsonl",
+   "md5": "4e14054b827802952486cc4722d59138",
+   "note": "gen34 官方端到端读数 (渲染=LLM), 本批只读不回改"
+  },
+  "slotA": {
+   "n": 218,
+   "certified": 1,
+   "certified_names": [
+    "gen32_ind_tower_300063"
+   ],
+   "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen34/out/GEN33_PRESCREEN_TRACE_slotA.jsonl",
+   "md5": "5342a92a6225581e1ac5822cec26194f",
+   "note": "gen34 官方端到端读数 (渲染=LLM), 本批只读不回改"
+  },
+  "slotB": {
+   "n": 218,
+   "certified": 0,
+   "certified_names": [],
+   "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen34/out/GEN33_PRESCREEN_TRACE_slotB.jsonl",
+   "md5": "19aeb1ffe8837a78539a5c4e698d27b0",
+   "note": "gen34 官方端到端读数 (渲染=LLM), 本批只读不回改"
+  }
+ },
+ "corrections": [
+  {
+   "id": "E-1",
+   "field": "endpoint_gen34",
+   "before": {
+    "n": 0,
+    "certified": 0,
+    "note": "trace 缺失",
+    "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen34/out/GEN34_PRESCREEN_TRACE_slotA.jsonl"
+   },
+   "after": {
+    "n": 218,
+    "certified": 1,
+    "certified_names": [
+     "gen32_ind_tower_300063"
+    ],
+    "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen34/out/GEN33_PRESCREEN_TRACE_slotA.jsonl",
+    "md5": "5342a92a6225581e1ac5822cec26194f",
+    "note": "gen34 官方端到端读数 (渲染=LLM), 本批只读不回改"
+   },
+   "why": "gen34 fork 判卷产物沿父件命名 (GEN33_PRESCREEN_TRACE_*), 首版路径探测只含 GEN34_* 名 => 误读 0; 按实测路径修"
+  }
+ ]
+}

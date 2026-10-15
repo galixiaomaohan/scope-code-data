@@ -1,0 +1,108 @@
+{
+ "schema": "ccp-gen26r-baseline/1",
+ "side_md5": "83b5b7b29b21c6f80d2d55fc4feb2ea8",
+ "curve_md5": "2da55c66877e53361a059be41e7b2f62",
+ "n_train": 8898,
+ "n_held": 468,
+ "B1_chain_distinct": 8,
+ "B1_chain_hist": {
+  "ccp_ind_recurrence+ccp_ring_identity": 3150,
+  "g24_ineq_ht2": 1121,
+  "g24_ineq_ht": 1099,
+  "g24_ind_ratio+g24_ind_ratio_close": 1036,
+  "g24_ind_pf+g24_ind_pf_close": 1019,
+  "ccp_nt_dvd_witness+ccp_nt_dvd_witness+ccp_nt_dvd_combine": 891,
+  "ccp_ineq_close": 820,
+  "ccp_ineq_sos+ccp_ineq_close": 230
+ },
+ "B1_chain_distinct_by_cls": 8,
+ "B1_interpretation": "链种类数 = 8; 逐类链恒定 => 链 top-1 预测等价于 3 类分类",
+ "B2_target_template": {
+  "ind": {
+   "n_rows": 5205,
+   "n_distinct_targets": 4,
+   "mode_share": 0.3948,
+   "mode_tokens": 53
+  },
+  "ineq": {
+   "n_rows": 3270,
+   "n_distinct_targets": 1019,
+   "mode_share": 0.0226,
+   "mode_tokens": 19
+  },
+  "nt": {
+   "n_rows": 891,
+   "n_distinct_targets": 879,
+   "mode_share": 0.0022,
+   "mode_tokens": 76
+  }
+ },
+ "B2_note": "全库逐类去重, 非仅 ind",
+ "B3_eval_slice": {
+  "step": 6000,
+  "n": 48,
+  "idx_head": [
+   8922,
+   8923,
+   8924,
+   8925,
+   8926,
+   8927
+  ],
+  "idx_tail": [
+   8967,
+   8968,
+   8969
+  ],
+  "model_render_tok_acc": 0.9755154639175257
+ },
+ "B3_mode_baseline": {
+  "hit": 1461,
+  "tot": 2328,
+  "acc": 0.627577,
+  "rule": "训练同类的 target 逐位置众数 (零参数); 位置越界则跳过"
+ },
+ "B3_delta_vs_model": {
+  "model": 0.9755154639175257,
+  "baseline": 0.627577,
+  "delta_pp": 34.794,
+  "delta_tokens": 810
+ },
+ "B4_true_oldstyle_vs_fix": {
+  "per_row": [
+   {
+    "name": "ccp_ind_lin_000010",
+    "len": 182,
+    "np": 135,
+    "diff_pos": 48
+   },
+   {
+    "name": "ccp_ind_lin_000049",
+    "len": 185,
+    "np": 138,
+    "diff_pos": 48
+   },
+   {
+    "name": "ccp_ind_aff2_000053",
+    "len": 182,
+    "np": 134,
+    "diff_pos": 49
+   },
+   {
+    "name": "ccp_ind_aff2_000095",
+    "len": 181,
+    "np": 133,
+    "diff_pos": 49
+   },
+   {
+    "name": "ccp_ind_lin_000097",
+    "len": 182,
+    "np": 135,
+    "diff_pos": 48
+   }
+  ],
+  "total_diff_pos": 242,
+  "n_rows": 5,
+  "note": "真旧式=[np,len) 同位(自预测)+np-1 无标签; gen26 单测 MISALIGN3 的 237 = '全行同位' recon 变体 (把 np-1 也填成 ids[np-1]) 的差异数"
+ }
+}

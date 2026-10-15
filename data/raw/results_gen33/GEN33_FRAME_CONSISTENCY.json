@@ -1,0 +1,16 @@
+{
+ "schema": "gen33-frame-consistency/1",
+ "n_sample": 35,
+ "strata": [
+  "gen32_ind_nest|5",
+  "gen32_ind_tower|9",
+  "gen32_ineq_cascade|5",
+  "gen32_ineq_cascade|6",
+  "gen32_ineq_cascade|7"
+ ],
+ "n_bad": 0,
+ "bad": [],
+ "desc_diff_total": 0,
+ "pass": true,
+ "rule": "同 ctx 下 (a) 载荷=行内 res 与 (b) 载荷=装置现算 res 两次构帧, 帧序列 desc 逐位比对; desc_diff=0 且 bsl/labels 相等才过"
+}

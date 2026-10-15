@@ -1,0 +1,182 @@
+{
+ "schema": "ccp-seed-registry/2",
+ "revision": "gen15 (F-02): template_files_md5 刷新 (gen12 登记版 3/7 陈旧) + families.nt 刷新 (对照组不入课程) + generation_versions (每类生成时刻/当时代码哈希/产物 md5) + recompute_check 可执行 (--recompute-check, 只读)",
+ "master_seed": 20260923,
+ "seed_formula": "per-problem: int(md5('ccp|<master>|<cls>|<family>|<seq>')[:8], 16); seq 从 1 起, 按 FAM_OF[cls] 轮转族; 同 (master, cls, family, seq) 必得同题",
+ "master_constants": {
+  "ccp_families.MASTER_SEED(调用方)": 20260923,
+  "ccp_course.MASTER_SEED": 20260923,
+  "leak_avoidance": "与测试集种子 20260922 / SFT 90212026 / drct v2 92320260 不相交"
+ },
+ "families": {
+  "ind": [
+   "ind_lin",
+   "ind_aff2",
+   "ind_aff3"
+  ],
+  "ineq": [
+   "ineq_sq1",
+   "ineq_diff2",
+   "ineq_sq2",
+   "ineq_diff_sq",
+   "ineq_sq2_mult"
+  ],
+  "nt": [
+   "nt_dvd_mix",
+   "nt_dvd_prod"
+  ]
+ },
+ "probe_families": {
+  "ind": [
+   "ind_lin",
+   "ind_aff2",
+   "ind_aff3"
+  ],
+  "ineq": [
+   "ineq_sq1",
+   "ineq_diff2",
+   "ineq_sq2",
+   "ineq_diff_sq",
+   "ineq_sq2_mult"
+  ],
+  "nt": [
+   "nt_dvd_mix",
+   "nt_dvd_prod",
+   "nt_dvd_lin_ctrl"
+  ]
+ },
+ "row_mix": {
+  "pos": 0.8,
+  "endfail": 0.1,
+  "neg": 0.1,
+  "note": "镜像 drct_curriculum_v2; endfail=episode{'fail_op':'END','after':k}; neg=语义扰动真败 (CERT_REJECT/CONST_NOT_DIVISIBLE/RESIDUAL_NEGATIVE)"
+ },
+ "floor_risk_menus": {
+  "ind": [
+   "simp",
+   "omega",
+   "decide"
+  ],
+  "ineq": [
+   "nlinarith",
+   "linarith",
+   "simp",
+   "norm_num"
+  ],
+  "nt": [
+   "omega",
+   "simp",
+   "decide"
+  ]
+ },
+ "floor_8menu_sample": {
+  "n_per_class": 100,
+  "menus": [
+   "simp",
+   "norm_num",
+   "decide",
+   "linarith",
+   "nlinarith",
+   "omega",
+   "ring",
+   "rfl"
+  ]
+ },
+ "leftout_split": "按 ccp_name 的 md5 前 8 位取模 10 == 7 的行入留出 (内容分组, 约 10%)",
+ "template_files_md5": {
+  "ccp_families.py": "787e2af4230cf5c073fb6cbab27f8812",
+  "ccp_ops.py": "1be957ad38635dfe06d6ed926a06a049",
+  "ccp_check.py": "a2fcb5ff9a43c0f713e0575e2a1ed11b",
+  "ccp_bridge.py": "f5757621b929f86100b00db160580c76",
+  "ccp_course.py": "804e0c0fcb4adf60e4a82d89cf690b02",
+  "ccp_gate.py": "8aece6e7e6f43e0eadac939a2ee73d07",
+  "ccp_lean.py": "935e87e9af137baf04a2a3c4eed9d5be"
+ },
+ "generation_versions": {
+  "code_files_md5_at_registration": {
+   "ccp_families.py": "787e2af4230cf5c073fb6cbab27f8812",
+   "ccp_ops.py": "1be957ad38635dfe06d6ed926a06a049",
+   "ccp_check.py": "a2fcb5ff9a43c0f713e0575e2a1ed11b",
+   "ccp_bridge.py": "f5757621b929f86100b00db160580c76",
+   "ccp_course.py": "804e0c0fcb4adf60e4a82d89cf690b02",
+   "ccp_gate.py": "8aece6e7e6f43e0eadac939a2ee73d07",
+   "ccp_lean.py": "935e87e9af137baf04a2a3c4eed9d5be"
+  },
+  "code_bundle_md5": "1a3cfbaba1528833ecf4709a782cfe20",
+  "basis": "现装版代码 (gen15 登记时刻); 该版本由 --recompute-check 全量重生成对拍背书 —— gen12 登记时值 (10:45) 中 ccp_families/ccp_course/ccp_gate 三件早于终版课程, 不可用于复算; 见 recompute_check_evidence",
+  "classes": {
+   "ind": {
+    "rows_mtime": "2026-09-23T10:36:48+0800",
+    "chains_mtime": "2026-09-23T10:36:48+0800",
+    "course_json_mtime": "2026-09-23T10:36:48+0800",
+    "rows_md5": "8457f2a54643a08662f7751b4d45514e",
+    "chains_md5": "f3d660089ee2bdc3ca5ebb8d2caf93ac",
+    "n_rows": 3462,
+    "n_problems": 1154,
+    "course_declared_rows_md5": "8457f2a54643a08662f7751b4d45514e",
+    "course_declared_chains_md5": "f3d660089ee2bdc3ca5ebb8d2caf93ac",
+    "rows_md5_matches_course_json": true,
+    "chains_md5_matches_course_json": true,
+    "floor_n_dropped": 0
+   },
+   "ineq": {
+    "rows_mtime": "2026-09-23T10:34:39+0800",
+    "chains_mtime": "2026-09-23T10:34:39+0800",
+    "course_json_mtime": "2026-09-23T10:34:39+0800",
+    "rows_md5": "41279826aa311e38c278983410d2c794",
+    "chains_md5": "40d1ac59aa5ca3713def94c10a84b7dd",
+    "n_rows": 2919,
+    "n_problems": 973,
+    "course_declared_rows_md5": "41279826aa311e38c278983410d2c794",
+    "course_declared_chains_md5": "40d1ac59aa5ca3713def94c10a84b7dd",
+    "rows_md5_matches_course_json": true,
+    "chains_md5_matches_course_json": true,
+    "floor_n_dropped": 27
+   },
+   "nt": {
+    "rows_mtime": "2026-09-23T11:12:11+0800",
+    "chains_mtime": "2026-09-23T11:12:11+0800",
+    "course_json_mtime": "2026-09-23T11:12:11+0800",
+    "rows_md5": "6296cca4c0789663bffb9e2ae4f9ce57",
+    "chains_md5": "e804809b6ab46548cdc064596c447fb4",
+    "n_rows": 3000,
+    "n_problems": 750,
+    "course_declared_rows_md5": "6296cca4c0789663bffb9e2ae4f9ce57",
+    "course_declared_chains_md5": "e804809b6ab46548cdc064596c447fb4",
+    "rows_md5_matches_course_json": true,
+    "chains_md5_matches_course_json": true,
+    "floor_n_dropped": 0
+   }
+  }
+ },
+ "registry_generator": {
+  "file": "ccp_seedreg.py",
+  "md5": "5eb551c240b56d83470d485481a83348"
+ },
+ "recompute_cmd": "cd $SCOPE_RESEARCH_ROOT && PYTHONPATH=$SCOPE_SUPEROPERATOR $SCOPE_PYTHON scratch/ccp/ccp_course.py --cls <ind|ineq|nt> --rows-target 3000 [--skip-floor --skip-gate]",
+ "recompute_check": "重跑后 gen/ccp_<cls>_rows.jsonl 的 md5 应与本批一致 (地板/闸开关不影响生成确定性)",
+ "recompute_check_cmd": "cd $SCOPE_RESEARCH_ROOT && PYTHONPATH=$SCOPE_SUPEROPERATOR $SCOPE_PYTHON scratch/ccp/ccp_seedreg.py --recompute-check  (只读; 证据 = scratch/ccp/CCP_RECOMPUTE_CHECK.json)",
+ "banned_ops": [
+  "math_evaluate_expr"
+ ],
+ "proof_ops_whitelist": [
+  "ccp_ind_recurrence",
+  "ccp_ring_identity",
+  "ccp_ineq_sos",
+  "ccp_ineq_close",
+  "ccp_nt_dvd_witness",
+  "ccp_nt_dvd_combine",
+  "ccp_nt_dvd_prod_combine"
+ ],
+ "recompute_check_evidence": {
+  "path": "<server tree>/research/scratch/ccp/CCP_RECOMPUTE_CHECK.json",
+  "md5": "360c0b4b814a2866aa6bfe12ac24824d",
+  "ts": "2026-09-23T12:00:01+0800",
+  "all_ok": true,
+  "classes_ok": {
+   "ind": true,
+   "ineq": true,
+   "nt": true
+  }
+ }
+}

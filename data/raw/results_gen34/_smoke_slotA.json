@@ -1,0 +1,616 @@
+{
+ "schema": "gen34-eval/1",
+ "generated": "2026-09-24T11:15:59+0800",
+ "arm": "hybrid",
+ "seg": "exam_deep",
+ "args_mode": "device",
+ "n": 3,
+ "table": {
+  "n": 3,
+  "n_chain_rows": 3,
+  "n_chain_scored": 3,
+  "certified": null,
+  "first_hit": 1.0,
+  "exact_hit": 1.0,
+  "slot_col": 0.0,
+  "consistency": 1.0,
+  "op_out_of_space": 0,
+  "terminated_end": 3,
+  "render_tok_mean": 277.7,
+  "n_err": 0
+ },
+ "model": {
+  "path": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen34/ckpt/deep_slotA_formal_6000.pt",
+  "md5": "e18f65154a1dcc470ca8a2fb4573d4a5",
+  "step": 300,
+  "missing": 0,
+  "unexpected": 0,
+  "pa_missing": [],
+  "slot": {
+   "slot_cond": true,
+   "slot_dev": true,
+   "slot_beta": 8.0,
+   "lam_slot": 3.0,
+   "n_slot_kinds": 8,
+   "slot_params": 4610,
+   "g_pos": 0.01689222641289234,
+   "g_dev": 0.012468259781599045
+  }
+ },
+ "columns": [
+  "certified",
+  "first_hit",
+  "exact_hit",
+  "slot_col",
+  "consistency"
+ ],
+ "inputs": {
+  "cache": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen33/cache/deep_all.bin",
+  "side": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen33/out/DEEP_RENDER_SIDECAR.jsonl",
+  "exam_side": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen33/out/DEEP_EXAM_SIDECAR.jsonl",
+  "ckpt": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen34/ckpt/deep_slotA_formal_6000.pt",
+  "judge": false
+ },
+ "bridge_errors": [],
+ "rows": [
+  {
+   "ri": 0,
+   "name": "gen32_ind_nest_300008",
+   "cls": "ind",
+   "seg": "exam_deep",
+   "int_acc": {
+    "naive_hit": 3,
+    "naive_tot": 17,
+    "naive_rate": 0.176471,
+    "content_hit": 3,
+    "content_tot": 15,
+    "content_rate": 0.2
+   },
+   "slot_diag": {
+    "n_boost": 8,
+    "n_desync": 1,
+    "n_slot_pos": 8,
+    "dev_err": null
+   },
+   "arm": "hybrid",
+   "args_mode": "device",
+   "chain": {
+    "walked": [
+     "gen32_nest_solve",
+     "gen32_nest_fold",
+     "gen32_nest_solve",
+     "gen32_nest_delta",
+     "gen32_nest_close"
+    ],
+    "gold": [
+     "gen32_nest_solve",
+     "gen32_nest_fold",
+     "gen32_nest_solve",
+     "gen32_nest_delta",
+     "gen32_nest_close"
+    ],
+    "first_hit": true,
+    "exact_hit": true,
+    "prefix_hit": true,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 12,
+    "args_src_hist": {
+     "device_state_gold_proxy": 5
+    },
+    "bridge_fallback": 0,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 185,
+      "pred": "gen32_nest_solve",
+      "gold": "gen32_nest_solve",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99404,
+      "margin": 0.98986,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 186,
+      "pred": "gen32_nest_fold",
+      "gold": "gen32_nest_fold",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.96179,
+      "margin": 0.93383,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 185,
+      "pred": "gen32_nest_solve",
+      "gold": "gen32_nest_solve",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.98364,
+      "margin": 0.97117,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 3,
+      "pred_idx": 187,
+      "pred": "gen32_nest_delta",
+      "gold": "gen32_nest_delta",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.9787,
+      "margin": 0.97001,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 4,
+      "pred_idx": 188,
+      "pred": "gen32_nest_close",
+      "gold": "gen32_nest_close",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.98237,
+      "margin": 0.97777,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 5,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99894,
+      "margin": 0.99835,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nintro n\nhave hp : ∀ n, p n = 12 * n ^ 3 + 16 * n ^ 2 + 24 * n - 12 * n - 12 := by\n  intro n\n  induction n with\n  | zero => norm_num [p0]\n  | succ n ih =>\n    rw [pstep, ih]\n    push_cast\n    ring\nhave hf : ∀ n, f n = 12 * n ^ 3 + 4 * n ^ 4 - 12 * n ^ 2 + 12 * n - 12 := by\n  intro n\n  induction n with\n  | zero => norm_num [f0]\n  | succ n ih =>\n    rw [fstep, ih, hp n]\n    push_cast\n    ring\nrw [fstep, ih, hp n]\nring\n```",
+    "n_tok": 204,
+    "body": "intro n\nhave hp : ∀ n, p n = 12 * n ^ 3 + 16 * n ^ 2 + 24 * n - 12 * n - 12 := by\n  intro n\n  induction n with\n  | zero => norm_num [p0]\n  | succ n ih =>\n    rw [pstep, ih]\n    push_cast\n    ring\nhave hf : ∀ n, f n = 12 * n ^ 3 + 4 * n ^ 4 - 12 * n ^ 2 + 12 * n - 12 := by\n  intro n\n  induction n with\n  | zero => norm_num [f0]\n  | succ n ih =>\n    rw [fstep, ih, hp n]\n    push_cast\n    ring\nrw [fstep, ih, hp n]\nring"
+   },
+   "consistency": {
+    "n": 5,
+    "n_noreg": 0,
+    "hit": 5,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "gen32_nest_solve",
+      "hit": true,
+      "keywords": [
+       "induction",
+       "hstep",
+       "ih",
+       "ring",
+       "norm_num",
+       "solve"
+      ]
+     },
+     {
+      "op": "gen32_nest_fold",
+      "hit": true,
+      "keywords": [
+       "fold",
+       "rw",
+       "ring",
+       "mul"
+      ]
+     },
+     {
+      "op": "gen32_nest_solve",
+      "hit": true,
+      "keywords": [
+       "induction",
+       "hstep",
+       "ih",
+       "ring",
+       "norm_num",
+       "solve"
+      ]
+     },
+     {
+      "op": "gen32_nest_delta",
+      "hit": true,
+      "keywords": [
+       "delta",
+       "shift",
+       "ring",
+       "telescop"
+      ]
+     },
+     {
+      "op": "gen32_nest_close",
+      "hit": true,
+      "keywords": [
+       "ring",
+       "push_cast",
+       "norm_num",
+       "linarith",
+       "close"
+      ]
+     }
+    ]
+   },
+   "err": null
+  },
+  {
+   "ri": 1,
+   "name": "gen32_ind_nest_300015",
+   "cls": "ind",
+   "seg": "exam_deep",
+   "int_acc": {
+    "naive_hit": 2,
+    "naive_tot": 15,
+    "naive_rate": 0.133333,
+    "content_hit": 6,
+    "content_tot": 12,
+    "content_rate": 0.5
+   },
+   "slot_diag": {
+    "n_boost": 5,
+    "n_desync": 1,
+    "n_slot_pos": 5,
+    "dev_err": null
+   },
+   "arm": "hybrid",
+   "args_mode": "device",
+   "chain": {
+    "walked": [
+     "gen32_nest_solve",
+     "gen32_nest_fold",
+     "gen32_nest_solve",
+     "gen32_nest_delta",
+     "gen32_nest_close"
+    ],
+    "gold": [
+     "gen32_nest_solve",
+     "gen32_nest_fold",
+     "gen32_nest_solve",
+     "gen32_nest_delta",
+     "gen32_nest_close"
+    ],
+    "first_hit": true,
+    "exact_hit": true,
+    "prefix_hit": true,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 12,
+    "args_src_hist": {
+     "device_state_gold_proxy": 5
+    },
+    "bridge_fallback": 0,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 185,
+      "pred": "gen32_nest_solve",
+      "gold": "gen32_nest_solve",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99478,
+      "margin": 0.99137,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 186,
+      "pred": "gen32_nest_fold",
+      "gold": "gen32_nest_fold",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.97003,
+      "margin": 0.95068,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 185,
+      "pred": "gen32_nest_solve",
+      "gold": "gen32_nest_solve",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.97373,
+      "margin": 0.95309,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 3,
+      "pred_idx": 187,
+      "pred": "gen32_nest_delta",
+      "gold": "gen32_nest_delta",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.97675,
+      "margin": 0.96588,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 4,
+      "pred_idx": 188,
+      "pred": "gen32_nest_close",
+      "gold": "gen32_nest_close",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.98116,
+      "margin": 0.97639,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 5,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99831,
+      "margin": 0.99723,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nintro n\nhave hg : ∀ n, g n = 16 * n ^ 2 + 24 * n + 16 := by\n  intro n\n  induction n with\n  | zero => norm_num [g0]\n  | succ n ih =>\n    rw [gstep, ih]\n    push_cast\n    ring\nhave hf : ∀ n, f n = 16 * n ^ 2 + 16 * n + 16 := by\n  intro n\n  induction n with\n  | zero => norm_num [g0]\n  | succ n ih =>\n    rw [fstep, ih, hg n]\n    push_cast\n    ring\nhave hf : ∀ n, f n = 16 * n ^ 2 + 16 * n + 16 := by\n  intro n\n  induction n with\n  | zero => norm_num [f0]\n  | succ n ih =>\n    rw [fstep, ih, hf n]\n    push_cast\n    ring\nrw [hf]\nring\n```",
+    "n_tok": 245,
+    "body": "intro n\nhave hg : ∀ n, g n = 16 * n ^ 2 + 24 * n + 16 := by\n  intro n\n  induction n with\n  | zero => norm_num [g0]\n  | succ n ih =>\n    rw [gstep, ih]\n    push_cast\n    ring\nhave hf : ∀ n, f n = 16 * n ^ 2 + 16 * n + 16 := by\n  intro n\n  induction n with\n  | zero => norm_num [g0]\n  | succ n ih =>\n    rw [fstep, ih, hg n]\n    push_cast\n    ring\nhave hf : ∀ n, f n = 16 * n ^ 2 + 16 * n + 16 := by\n  intro n\n  induction n with\n  | zero => norm_num [f0]\n  | succ n ih =>\n    rw [fstep, ih, hf n]\n    push_cast\n    ring\nrw [hf]\nring"
+   },
+   "consistency": {
+    "n": 5,
+    "n_noreg": 0,
+    "hit": 5,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "gen32_nest_solve",
+      "hit": true,
+      "keywords": [
+       "induction",
+       "hstep",
+       "ih",
+       "ring",
+       "norm_num",
+       "solve"
+      ]
+     },
+     {
+      "op": "gen32_nest_fold",
+      "hit": true,
+      "keywords": [
+       "fold",
+       "rw",
+       "ring",
+       "mul"
+      ]
+     },
+     {
+      "op": "gen32_nest_solve",
+      "hit": true,
+      "keywords": [
+       "induction",
+       "hstep",
+       "ih",
+       "ring",
+       "norm_num",
+       "solve"
+      ]
+     },
+     {
+      "op": "gen32_nest_delta",
+      "hit": true,
+      "keywords": [
+       "delta",
+       "shift",
+       "ring",
+       "telescop"
+      ]
+     },
+     {
+      "op": "gen32_nest_close",
+      "hit": true,
+      "keywords": [
+       "ring",
+       "push_cast",
+       "norm_num",
+       "linarith",
+       "close"
+      ]
+     }
+    ]
+   },
+   "err": null
+  },
+  {
+   "ri": 2,
+   "name": "gen32_ind_nest_300090",
+   "cls": "ind",
+   "seg": "exam_deep",
+   "int_acc": {
+    "naive_hit": 1,
+    "naive_tot": 16,
+    "naive_rate": 0.0625,
+    "content_hit": 1,
+    "content_tot": 13,
+    "content_rate": 0.076923
+   },
+   "slot_diag": {
+    "n_boost": 2,
+    "n_desync": 1,
+    "n_slot_pos": 2,
+    "dev_err": null
+   },
+   "arm": "hybrid",
+   "args_mode": "device",
+   "chain": {
+    "walked": [
+     "gen32_nest_solve",
+     "gen32_nest_fold",
+     "gen32_nest_solve",
+     "gen32_nest_delta",
+     "gen32_nest_close"
+    ],
+    "gold": [
+     "gen32_nest_solve",
+     "gen32_nest_fold",
+     "gen32_nest_solve",
+     "gen32_nest_delta",
+     "gen32_nest_close"
+    ],
+    "first_hit": true,
+    "exact_hit": true,
+    "prefix_hit": true,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 12,
+    "args_src_hist": {
+     "device_state_gold_proxy": 5
+    },
+    "bridge_fallback": 0,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 185,
+      "pred": "gen32_nest_solve",
+      "gold": "gen32_nest_solve",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.99356,
+      "margin": 0.98906,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 186,
+      "pred": "gen32_nest_fold",
+      "gold": "gen32_nest_fold",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.95244,
+      "margin": 0.91456,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 185,
+      "pred": "gen32_nest_solve",
+      "gold": "gen32_nest_solve",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.98322,
+      "margin": 0.9706,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 3,
+      "pred_idx": 187,
+      "pred": "gen32_nest_delta",
+      "gold": "gen32_nest_delta",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.97738,
+      "margin": 0.96818,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 4,
+      "pred_idx": 188,
+      "pred": "gen32_nest_close",
+      "gold": "gen32_nest_close",
+      "gold_in_space": false,
+      "hit": true,
+      "p_max": 0.98213,
+      "margin": 0.97739,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 5,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99892,
+      "margin": 0.99834,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nintro n\nhave hp : ∀ n, p n = 1 - 2 * n ^ 2 := by\n  intro n\n  induction n with\n  | zero => norm_num [p0]\n  | succ n ih =>\n    rw [pstep, ih]\n    push_cast\n    ring\nhave hf : ∀ n, f n = 1 - 10 * n ^ 3 + 3 * n ^ 2 := by\n  intro n\n  induction n with\n  | zero => norm_num [f0]\n  | succ n ih =>\n    rw [fstep, ih, hp n]\n    push_cast\n    ring\nhave hf : ∀ n, p n = 1 - 4 * n ^ 4 + 10 * n ^ 3 := by\n  intro n\n  induction n with\n  | zero => norm_num [f0]\n  | succ n ih =>\n    rw [fstep, ih, hp n]\n    push_cast\n    ring\nrw [fstep, ih, hp n]\nrw [fstep, ih, hp n]\nrw [fstep, ih, hp n]\nrw [fstep, ih, hp n]\nrw [fstep, ih, hp n]\nrw [fstep, ih, hp n]\nrw [fstep, ih, hp n]\nrw [fstep, ih, hp n]\nrw [fstep, ih, hp n]\nrw [fstep, ih, hp n]\nrw [fstep, ih, hp n]\nrw [fstep, ih, hp n]\nrw",
+    "n_tok": 384,
+    "body": "intro n\nhave hp : ∀ n, p n = 1 - 2 * n ^ 2 := by\n  intro n\n  induction n with\n  | zero => norm_num [p0]\n  | succ n ih =>\n    rw [pstep, ih]\n    push_cast\n    ring\nhave hf : ∀ n, f n = 1 - 10 * n ^ 3 + 3 * n ^ 2 := by\n  intro n\n  induction n with\n  | zero => norm_num [f0]\n  | succ n ih =>\n    rw [fstep, ih, hp n]\n    push_cast\n    ring\nhave hf : ∀ n, p n = 1 - 4 * n ^ 4 + 10 * n ^ 3 := by\n  intro n\n  induction n with\n  | zero => norm_num [f0]\n  | succ n ih =>\n    rw [fstep, ih, hp n]\n    push_cast\n    ring\nrw [fstep, ih, hp n]\nrw [fstep, ih, hp n]\nrw [fstep, ih, hp n]\nrw [fstep, ih, hp n]\nrw [fstep, ih, hp n]\nrw [fstep, ih, hp n]\nrw [fstep, ih, hp n]\nrw [fstep, ih, hp n]\nrw [fstep, ih, hp n]\nrw [fstep, ih, hp n]\nrw [fstep, ih, hp n]\nrw [fstep, ih, hp n]\nrw"
+   },
+   "consistency": {
+    "n": 5,
+    "n_noreg": 0,
+    "hit": 5,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "gen32_nest_solve",
+      "hit": true,
+      "keywords": [
+       "induction",
+       "hstep",
+       "ih",
+       "ring",
+       "norm_num",
+       "solve"
+      ]
+     },
+     {
+      "op": "gen32_nest_fold",
+      "hit": true,
+      "keywords": [
+       "fold",
+       "rw",
+       "ring",
+       "mul"
+      ]
+     },
+     {
+      "op": "gen32_nest_solve",
+      "hit": true,
+      "keywords": [
+       "induction",
+       "hstep",
+       "ih",
+       "ring",
+       "norm_num",
+       "solve"
+      ]
+     },
+     {
+      "op": "gen32_nest_delta",
+      "hit": true,
+      "keywords": [
+       "delta",
+       "shift",
+       "ring",
+       "telescop"
+      ]
+     },
+     {
+      "op": "gen32_nest_close",
+      "hit": true,
+      "keywords": [
+       "ring",
+       "push_cast",
+       "norm_num",
+       "linarith",
+       "close"
+      ]
+     }
+    ]
+   },
+   "err": null
+  }
+ ],
+ "wall_s": 64.2
+}

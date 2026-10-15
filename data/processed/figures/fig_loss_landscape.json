@@ -1,0 +1,82 @@
+{
+ "figure": "fig_loss_landscape",
+ "what": "Filter-normalised loss landscape (Li et al. 2018) around the final checkpoint, on a 51x51 grid in [-0.20, 0.20]^2 along two random filter-normalised directions.",
+ "one_line_reading": "The tail-decision planning loss sits in a shallow but well-defined basin: loss(theta*) = 0.351398 nats and the value at the grid corners is 5.339758 nats (15.20x), so the optimum is a broad flat valley rather than a sharp spike -- consistent with the very low decision entropy measured in fig_step_entropy.",
+ "source": [
+  {
+   "path": "<server training artifact, not shipped; md5 registered>",
+   "md5": "8d7c81f0d69322cce1e4eda2b4660fdf",
+   "role": "centre theta*"
+  },
+  {
+   "path": "../../raw/results_gen34/DEEP_EXAM_SIDECAR.jsonl",
+   "md5": "104c8bb65efb2a8118d6e03cf46edd98",
+   "role": "exam items (gold operators for the loss targets)"
+  }
+ ],
+ "outputs": {
+  "png": "../../../figures_src/output/fig_loss_landscape.png",
+  "csv": "./fig_loss_landscape.csv"
+ },
+ "method": "theta(a,b) = theta* + a*d1 + b*d2 with d_i filter-normalised per tensor (d <- d/||d|| * ||theta||). Loss = mean cross-entropy of the operator head at decision step k=4 with the GOLD prefix (gold_ops[:5]), over a stratified sample of 32 exam items; the prefix is theta-independent so the loss is smooth.",
+ "readings": {
+  "grid": 51,
+  "delta": 0.2,
+  "loss_theta_star": 0.3513978044871191,
+  "loss_min": 0.2348931427258334,
+  "loss_max": 5.339757524430752,
+  "loss_max_over_star": 15.195762341840377,
+  "loss_mean": 1.064221177933542,
+  "loss_std": 0.8748518679435906,
+  "n_items_in_batch": 32,
+  "n_items_skipped": 0,
+  "skipped_ri": [],
+  "frame_step_k": 4,
+  "direction_seeds": [
+   20260930,
+   20260931
+  ],
+  "delta_calibration_scan": [
+   {
+    "delta": 0.05,
+    "loss_plus_d1": 0.3402640852436576,
+    "loss_minus_d1": 0.29110410497404393
+   },
+   {
+    "delta": 0.1,
+    "loss_plus_d1": 0.31052712778683333,
+    "loss_minus_d1": 0.27813941184178703
+   },
+   {
+    "delta": 0.15,
+    "loss_plus_d1": 0.2995847236164195,
+    "loss_minus_d1": 0.7896399691399125
+   },
+   {
+    "delta": 0.2,
+    "loss_plus_d1": 1.311128190063755,
+    "loss_minus_d1": 1.451073157513747
+   },
+   {
+    "delta": 0.3,
+    "loss_plus_d1": 3.070066070999019,
+    "loss_minus_d1": 4.543692324310541
+   }
+  ],
+  "max_factor_rule": 5.0,
+  "per_point_seconds": 1.371,
+  "grid_choice": "auto (largest of 51/41/31 whose projected cost fits 75% of the 5400 s budget)",
+  "radii_mean_parameter_relative": {
+   "g_pos": 1.0,
+   "g_dev": 1.0,
+   "lm.model.embed_tokens.weight": 1.00162
+  }
+ },
+ "caveats": [
+  "the loss mapped is the TAIL-DECISION planning loss at step k=4 only, not the full training objective (which also contains the slot and render terms). It is the loss that carries essentially all of the decision entropy and all of the failures, so it is the informative slice; it must not be quoted as 'the' training loss.",
+  "the batch is 32 exam items chosen by evenly spaced index (np.linspace over the exam order), so all three families are represented; it is not a random sample.",
+  "delta was chosen by a 1-D scan along +-d1 under the rule 'largest candidate whose loss stays within 5.0x of loss(theta*)'; the scan table is in the JSON. A different rule would give a different zoom level -- the SHAPE is the claim, not the absolute widths.",
+  "filter normalisation is per tensor, which is the standard recipe; the model's language-model head is included in the perturbation although it does not feed the operator head, so part of the perturbation budget is spent off-target."
+ ],
+ "replot_note": "figure redrawn from the stored grid by fig_loss_landscape_replot.py; the grid itself was not recomputed"
+}

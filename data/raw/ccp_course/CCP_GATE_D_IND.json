@@ -1,0 +1,11 @@
+{
+ "schema": "ccp-gate-d/1",
+ "cls": "ind",
+ "n_course_problems": 1154,
+ "n_checked": 600,
+ "n_ok": 600,
+ "n_fail": 0,
+ "sampling": "every 1-th up to 600",
+ "fails": [],
+ "all_ok": true
+}

@@ -1,0 +1,229 @@
+{
+ "schema": "gen33-ctrl2/1",
+ "generated": "2026-09-24T08:00:30+0800",
+ "judge_md5_before": "7c31b58da9d7228cee31b9be581fe5dd",
+ "M4_D_naked": {
+  "n": 30,
+  "certified": 0,
+  "certified_rate": 0.0,
+  "n_proof_nonempty": 30,
+  "table": {
+   "n": 30,
+   "n_chain_rows": 0,
+   "n_chain_scored": 0,
+   "certified": null,
+   "first_hit": null,
+   "exact_hit": null,
+   "slot_col": null,
+   "consistency": 0.0,
+   "op_out_of_space": 0,
+   "terminated_end": 0,
+   "render_tok_mean": 384.0,
+   "n_err": 0
+  },
+  "trace": "/home/data/ZHC/tcaboost/research/scratch/ccp/gen33/out/GEN33_PRESCREEN_TRACE_naked_n30.jsonl",
+  "trace_md5": "bb87edb2ad72c69aba927e985e664799",
+  "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+  "note": "零训练底座 (SmolLM2-135M) 直出; 预期 ≈ 0"
+ },
+ "reverse_gold": {
+  "schema": "gen33-reverse-gold/1",
+  "n": 12,
+  "gold_certified": 12,
+  "R1_trunc_rejected": 12,
+  "R2_swap_rejected": 12,
+  "R1_unexpectedly_certified": [],
+  "R2_unexpectedly_certified": [],
+  "substrate": "金标语料证明 (留出段抽样 12 题, 自身 certified=True)",
+  "why": "模型 certified 池 = 0/218 (两臂) ⇒ 按『模型产物』反向核验不可行 (如实登记); 改以金标底物同式反向, 目的不变 = 证判卷器非平凡",
+  "records": [
+   {
+    "name": "gen32_ind_nest_201411",
+    "n_lines": 19,
+    "n_keep": 11,
+    "gold_certified": true,
+    "R1_trunc_certified": false,
+    "R1_reasons": [
+     "lean_reject_sorry"
+    ],
+    "R2_swap_from": "gen32_ind_nest_200930",
+    "R2_swap_certified": false,
+    "R2_reasons": [
+     "lean_reject_sorry"
+    ]
+   },
+   {
+    "name": "gen32_ind_nest_200930",
+    "n_lines": 19,
+    "n_keep": 11,
+    "gold_certified": true,
+    "R1_trunc_certified": false,
+    "R1_reasons": [
+     "lean_reject_sorry"
+    ],
+    "R2_swap_from": "gen32_ind_nest_201175",
+    "R2_swap_certified": false,
+    "R2_reasons": [
+     "lean_reject_sorry"
+    ]
+   },
+   {
+    "name": "gen32_ind_nest_201175",
+    "n_lines": 18,
+    "n_keep": 10,
+    "gold_certified": true,
+    "R1_trunc_certified": false,
+    "R1_reasons": [
+     "lean_reject_sorry"
+    ],
+    "R2_swap_from": "gen32_ind_tower_200081",
+    "R2_swap_certified": false,
+    "R2_reasons": [
+     "lean_reject_sorry"
+    ]
+   },
+   {
+    "name": "gen32_ind_tower_200081",
+    "n_lines": 26,
+    "n_keep": 15,
+    "gold_certified": true,
+    "R1_trunc_certified": false,
+    "R1_reasons": [
+     "lean_reject_sorry"
+    ],
+    "R2_swap_from": "gen32_ineq_cascade_200482",
+    "R2_swap_certified": false,
+    "R2_reasons": [
+     "lean_reject_sorry"
+    ]
+   },
+   {
+    "name": "gen32_ineq_cascade_200482",
+    "n_lines": 8,
+    "n_keep": 4,
+    "gold_certified": true,
+    "R1_trunc_certified": false,
+    "R1_reasons": [
+     "lean_reject_sorry"
+    ],
+    "R2_swap_from": "gen32_ind_nest_200919",
+    "R2_swap_certified": false,
+    "R2_reasons": [
+     "lean_reject_sorry"
+    ]
+   },
+   {
+    "name": "gen32_ind_nest_200919",
+    "n_lines": 19,
+    "n_keep": 11,
+    "gold_certified": true,
+    "R1_trunc_certified": false,
+    "R1_reasons": [
+     "lean_reject_sorry"
+    ],
+    "R2_swap_from": "gen32_ind_tower_200443",
+    "R2_swap_certified": false,
+    "R2_reasons": [
+     "lean_reject_sorry"
+    ]
+   },
+   {
+    "name": "gen32_ind_tower_200443",
+    "n_lines": 26,
+    "n_keep": 15,
+    "gold_certified": true,
+    "R1_trunc_certified": false,
+    "R1_reasons": [
+     "lean_reject_sorry"
+    ],
+    "R2_swap_from": "gen32_ind_tower_201028",
+    "R2_swap_certified": false,
+    "R2_reasons": [
+     "lean_reject_sorry"
+    ]
+   },
+   {
+    "name": "gen32_ind_tower_201028",
+    "n_lines": 26,
+    "n_keep": 15,
+    "gold_certified": true,
+    "R1_trunc_certified": false,
+    "R1_reasons": [
+     "lean_reject_sorry"
+    ],
+    "R2_swap_from": "gen32_ind_nest_200761",
+    "R2_swap_certified": false,
+    "R2_reasons": [
+     "lean_reject_sorry"
+    ]
+   },
+   {
+    "name": "gen32_ind_nest_200761",
+    "n_lines": 18,
+    "n_keep": 10,
+    "gold_certified": true,
+    "R1_trunc_certified": false,
+    "R1_reasons": [
+     "lean_reject_sorry"
+    ],
+    "R2_swap_from": "gen32_ind_nest_200072",
+    "R2_swap_certified": false,
+    "R2_reasons": [
+     "lean_reject_sorry"
+    ]
+   },
+   {
+    "name": "gen32_ind_nest_200072",
+    "n_lines": 18,
+    "n_keep": 10,
+    "gold_certified": true,
+    "R1_trunc_certified": false,
+    "R1_reasons": [
+     "lean_reject_sorry"
+    ],
+    "R2_swap_from": "gen32_ineq_cascade_200517",
+    "R2_swap_certified": false,
+    "R2_reasons": [
+     "lean_reject_sorry"
+    ]
+   },
+   {
+    "name": "gen32_ineq_cascade_200517",
+    "n_lines": 6,
+    "n_keep": 3,
+    "gold_certified": true,
+    "R1_trunc_certified": false,
+    "R1_reasons": [
+     "lean_reject_sorry"
+    ],
+    "R2_swap_from": "gen32_ineq_cascade_200086",
+    "R2_swap_certified": false,
+    "R2_reasons": [
+     "lean_reject_sorry"
+    ]
+   },
+   {
+    "name": "gen32_ineq_cascade_200086",
+    "n_lines": 7,
+    "n_keep": 4,
+    "gold_certified": true,
+    "R1_trunc_certified": false,
+    "R1_reasons": [
+     "lean_reject_sorry"
+    ],
+    "R2_swap_from": "gen32_ind_nest_201411",
+    "R2_swap_certified": false,
+    "R2_reasons": [
+     "lean_reject_sorry"
+    ]
+   }
+  ]
+ },
+ "reverse_model_side": {
+  "n_certified_pool": 0,
+  "n": 0,
+  "note": "certified 池为 0 ⇒ 反向核验不可做 (如实登记)"
+ },
+ "judge_md5_after": "7c31b58da9d7228cee31b9be581fe5dd",
+ "judge_unchanged": true
+}

@@ -1,0 +1,61 @@
+{
+ "schema": "gen35-paeq/1",
+ "generated": "2026-09-24T15:14:48+0800",
+ "plan_md5": "3449fb7ad1ecd5d5dcdd55de34408916",
+ "plan_n": 6000,
+ "plan_file_md5": "89de9e657b1986c6acf3cdf944e721ca",
+ "plan_file_md5_gen34": "89de9e657b1986c6acf3cdf944e721ca",
+ "plan_md5_same_as_gen34": true,
+ "params": {
+  "n34": 135484706,
+  "n35": 135484706
+ },
+ "state_dict": {
+  "n_keys": 292,
+  "n_equal": 292,
+  "n_diff": 0,
+  "bad": []
+ },
+ "logits_first_step": {
+  "torch_equal": true,
+  "maxdiff": 0.0,
+  "n_dim": 3880,
+  "shape": [
+   20,
+   194
+  ],
+  "n_rows": 2
+ },
+ "grad_cut": {
+  "lam1": {
+   "total": 39.57372283935547,
+   "total_perturbed": 44.56446838378906,
+   "absdiff": 4.990745544433594,
+   "lt_main": 7.731470584869385,
+   "ntxt": 662,
+   "nbf": 32
+  },
+  "lam0": {
+   "total": 31.84225082397461,
+   "total_perturbed": 31.84225082397461,
+   "absdiff": 0.0,
+   "lt_main": 7.731470584869385,
+   "ntxt": 662,
+   "nbf": 32
+  },
+  "slot_side": {
+   "n_slot_target": 79,
+   "n_nonslot_target": 583,
+   "g_dev": 0.0,
+   "g_pos": 0.0,
+   "slot_cond": true,
+   "slot_dev": true
+  }
+ },
+ "text_term_dead_at_lam0": true,
+ "text_term_alive_at_lam1": true,
+ "slot_term_alive": true,
+ "pass": true,
+ "parent_ledger_unchanged": true,
+ "wall_s": 12.8
+}

@@ -1,0 +1,742 @@
+{
+ "schema": "gen33-ctrl-held/1",
+ "n": 20,
+ "certified": 1,
+ "reasons": {
+  "lean_reject_sorry": 19,
+  "autoimplicit_dependent": 19,
+  "sorry_ax": 19
+ },
+ "raw": [
+  {
+   "ip": 0,
+   "id": null,
+   "name": "gen32_ind_nest_200001",
+   "certified": false,
+   "reasons": [
+    "lean_reject_sorry",
+    "autoimplicit_dependent",
+    "sorry_ax"
+   ],
+   "lean": {
+    "rc": 1,
+    "accepted": false,
+    "sorry": true,
+    "err": [
+     "error:10: unsolved goals",
+     "error:18: unsolved goals"
+    ]
+   },
+   "n1n2": {
+    "n1_accepted": false,
+    "n2_accepted": false,
+    "n1_vacuous": false
+   },
+   "axioms": [
+    "propext",
+    "sorryAx",
+    "Quot.sound"
+   ],
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "lean_file": "gen33_ctrl_held_main_0000.lean",
+   "lean_secs": [
+    17.11,
+    17.26,
+    17.4
+   ]
+  },
+  {
+   "ip": 1,
+   "id": null,
+   "name": "gen32_ind_nest_200002",
+   "certified": false,
+   "reasons": [
+    "lean_reject_sorry",
+    "autoimplicit_dependent",
+    "sorry_ax"
+   ],
+   "lean": {
+    "rc": 1,
+    "accepted": false,
+    "sorry": true,
+    "err": [
+     "error:33: unsolved goals",
+     "error:41: unsolved goals"
+    ]
+   },
+   "n1n2": {
+    "n1_accepted": false,
+    "n2_accepted": false,
+    "n1_vacuous": false
+   },
+   "axioms": [
+    "propext",
+    "sorryAx"
+   ],
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "lean_file": "gen33_ctrl_held_main_0000.lean",
+   "lean_secs": [
+    17.11,
+    17.26,
+    17.4
+   ]
+  },
+  {
+   "ip": 2,
+   "id": null,
+   "name": "gen32_ind_nest_200023",
+   "certified": false,
+   "reasons": [
+    "lean_reject_sorry",
+    "autoimplicit_dependent",
+    "sorry_ax"
+   ],
+   "lean": {
+    "rc": 1,
+    "accepted": false,
+    "sorry": true,
+    "err": [
+     "error:55: unsolved goals",
+     "error:63: unsolved goals"
+    ]
+   },
+   "n1n2": {
+    "n1_accepted": false,
+    "n2_accepted": false,
+    "n1_vacuous": false
+   },
+   "axioms": [
+    "propext",
+    "sorryAx",
+    "Quot.sound"
+   ],
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "lean_file": "gen33_ctrl_held_main_0000.lean",
+   "lean_secs": [
+    17.11,
+    17.26,
+    17.4
+   ]
+  },
+  {
+   "ip": 3,
+   "id": null,
+   "name": "gen32_ind_nest_200044",
+   "certified": false,
+   "reasons": [
+    "lean_reject_sorry",
+    "autoimplicit_dependent",
+    "sorry_ax"
+   ],
+   "lean": {
+    "rc": 1,
+    "accepted": false,
+    "sorry": true,
+    "err": [
+     "error:78: unsolved goals",
+     "error:86: unsolved goals"
+    ]
+   },
+   "n1n2": {
+    "n1_accepted": false,
+    "n2_accepted": false,
+    "n1_vacuous": false
+   },
+   "axioms": [
+    "propext",
+    "sorryAx",
+    "Quot.sound"
+   ],
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "lean_file": "gen33_ctrl_held_main_0000.lean",
+   "lean_secs": [
+    17.11,
+    17.26,
+    17.4
+   ]
+  },
+  {
+   "ip": 4,
+   "id": null,
+   "name": "gen32_ind_nest_200048",
+   "certified": false,
+   "reasons": [
+    "lean_reject_sorry",
+    "autoimplicit_dependent",
+    "sorry_ax"
+   ],
+   "lean": {
+    "rc": 1,
+    "accepted": false,
+    "sorry": true,
+    "err": [
+     "error:101: unsolved goals",
+     "error:109: unsolved goals"
+    ]
+   },
+   "n1n2": {
+    "n1_accepted": false,
+    "n2_accepted": false,
+    "n1_vacuous": false
+   },
+   "axioms": [
+    "propext",
+    "sorryAx",
+    "Quot.sound"
+   ],
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "lean_file": "gen33_ctrl_held_main_0000.lean",
+   "lean_secs": [
+    17.11,
+    17.26,
+    17.4
+   ]
+  },
+  {
+   "ip": 5,
+   "id": null,
+   "name": "gen32_ind_nest_200055",
+   "certified": false,
+   "reasons": [
+    "lean_reject_sorry",
+    "autoimplicit_dependent",
+    "sorry_ax"
+   ],
+   "lean": {
+    "rc": 1,
+    "accepted": false,
+    "sorry": true,
+    "err": [
+     "error:124: unsolved goals",
+     "error:132: unsolved goals"
+    ]
+   },
+   "n1n2": {
+    "n1_accepted": false,
+    "n2_accepted": false,
+    "n1_vacuous": false
+   },
+   "axioms": [
+    "propext",
+    "sorryAx",
+    "Quot.sound"
+   ],
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "lean_file": "gen33_ctrl_held_main_0000.lean",
+   "lean_secs": [
+    17.11,
+    17.26,
+    17.4
+   ]
+  },
+  {
+   "ip": 6,
+   "id": null,
+   "name": "gen32_ind_nest_200072",
+   "certified": false,
+   "reasons": [
+    "lean_reject_sorry",
+    "autoimplicit_dependent",
+    "sorry_ax"
+   ],
+   "lean": {
+    "rc": 1,
+    "accepted": false,
+    "sorry": true,
+    "err": [
+     "error:147: unsolved goals",
+     "error:155: unsolved goals"
+    ]
+   },
+   "n1n2": {
+    "n1_accepted": false,
+    "n2_accepted": false,
+    "n1_vacuous": false
+   },
+   "axioms": [
+    "propext",
+    "sorryAx"
+   ],
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "lean_file": "gen33_ctrl_held_main_0000.lean",
+   "lean_secs": [
+    17.11,
+    17.26,
+    17.4
+   ]
+  },
+  {
+   "ip": 7,
+   "id": null,
+   "name": "gen32_ind_nest_200095",
+   "certified": false,
+   "reasons": [
+    "lean_reject_sorry",
+    "autoimplicit_dependent",
+    "sorry_ax"
+   ],
+   "lean": {
+    "rc": 1,
+    "accepted": false,
+    "sorry": true,
+    "err": [
+     "error:169: unsolved goals",
+     "error:176: unsolved goals"
+    ]
+   },
+   "n1n2": {
+    "n1_accepted": false,
+    "n2_accepted": false,
+    "n1_vacuous": false
+   },
+   "axioms": [
+    "propext",
+    "sorryAx",
+    "Quot.sound"
+   ],
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "lean_file": "gen33_ctrl_held_main_0000.lean",
+   "lean_secs": [
+    17.11,
+    17.26,
+    17.4
+   ]
+  },
+  {
+   "ip": 8,
+   "id": null,
+   "name": "gen32_ind_nest_200103",
+   "certified": false,
+   "reasons": [
+    "lean_reject_sorry",
+    "autoimplicit_dependent",
+    "sorry_ax"
+   ],
+   "lean": {
+    "rc": 1,
+    "accepted": false,
+    "sorry": true,
+    "err": [
+     "error:192: unsolved goals",
+     "error:200: unsolved goals"
+    ]
+   },
+   "n1n2": {
+    "n1_accepted": false,
+    "n2_accepted": false,
+    "n1_vacuous": false
+   },
+   "axioms": [
+    "propext",
+    "sorryAx",
+    "Quot.sound"
+   ],
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "lean_file": "gen33_ctrl_held_main_0000.lean",
+   "lean_secs": [
+    17.11,
+    17.26,
+    17.4
+   ]
+  },
+  {
+   "ip": 9,
+   "id": null,
+   "name": "gen32_ind_nest_200116",
+   "certified": false,
+   "reasons": [
+    "lean_reject_sorry",
+    "autoimplicit_dependent",
+    "sorry_ax"
+   ],
+   "lean": {
+    "rc": 1,
+    "accepted": false,
+    "sorry": true,
+    "err": [
+     "error:215: unsolved goals",
+     "error:223: unsolved goals"
+    ]
+   },
+   "n1n2": {
+    "n1_accepted": false,
+    "n2_accepted": false,
+    "n1_vacuous": false
+   },
+   "axioms": [
+    "propext",
+    "sorryAx"
+   ],
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "lean_file": "gen33_ctrl_held_main_0000.lean",
+   "lean_secs": [
+    17.11,
+    17.26,
+    17.4
+   ]
+  },
+  {
+   "ip": 10,
+   "id": null,
+   "name": "gen32_ind_nest_200125",
+   "certified": false,
+   "reasons": [
+    "lean_reject_sorry",
+    "autoimplicit_dependent",
+    "sorry_ax"
+   ],
+   "lean": {
+    "rc": 1,
+    "accepted": false,
+    "sorry": true,
+    "err": [
+     "error:238: unsolved goals",
+     "error:246: unsolved goals"
+    ]
+   },
+   "n1n2": {
+    "n1_accepted": false,
+    "n2_accepted": false,
+    "n1_vacuous": false
+   },
+   "axioms": [
+    "propext",
+    "sorryAx",
+    "Quot.sound"
+   ],
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "lean_file": "gen33_ctrl_held_main_0000.lean",
+   "lean_secs": [
+    17.11,
+    17.26,
+    17.4
+   ]
+  },
+  {
+   "ip": 11,
+   "id": null,
+   "name": "gen32_ind_nest_200144",
+   "certified": false,
+   "reasons": [
+    "lean_reject_sorry",
+    "autoimplicit_dependent",
+    "sorry_ax"
+   ],
+   "lean": {
+    "rc": 1,
+    "accepted": false,
+    "sorry": true,
+    "err": [
+     "error:260: unsolved goals",
+     "error:268: unsolved goals"
+    ]
+   },
+   "n1n2": {
+    "n1_accepted": false,
+    "n2_accepted": false,
+    "n1_vacuous": false
+   },
+   "axioms": [
+    "propext",
+    "sorryAx",
+    "Quot.sound"
+   ],
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "lean_file": "gen33_ctrl_held_main_0000.lean",
+   "lean_secs": [
+    17.11,
+    17.26,
+    17.4
+   ]
+  },
+  {
+   "ip": 12,
+   "id": null,
+   "name": "gen32_ind_nest_200179",
+   "certified": false,
+   "reasons": [
+    "lean_reject_sorry",
+    "autoimplicit_dependent",
+    "sorry_ax"
+   ],
+   "lean": {
+    "rc": 1,
+    "accepted": false,
+    "sorry": true,
+    "err": [
+     "error:283: unsolved goals",
+     "error:291: unsolved goals"
+    ]
+   },
+   "n1n2": {
+    "n1_accepted": false,
+    "n2_accepted": false,
+    "n1_vacuous": false
+   },
+   "axioms": [
+    "propext",
+    "sorryAx",
+    "Quot.sound"
+   ],
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "lean_file": "gen33_ctrl_held_main_0000.lean",
+   "lean_secs": [
+    17.11,
+    17.26,
+    17.4
+   ]
+  },
+  {
+   "ip": 13,
+   "id": null,
+   "name": "gen32_ind_nest_200188",
+   "certified": false,
+   "reasons": [
+    "lean_reject_sorry",
+    "autoimplicit_dependent",
+    "sorry_ax"
+   ],
+   "lean": {
+    "rc": 1,
+    "accepted": false,
+    "sorry": true,
+    "err": [
+     "error:306: unsolved goals",
+     "error:314: unsolved goals"
+    ]
+   },
+   "n1n2": {
+    "n1_accepted": false,
+    "n2_accepted": false,
+    "n1_vacuous": false
+   },
+   "axioms": [
+    "propext",
+    "sorryAx",
+    "Quot.sound"
+   ],
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "lean_file": "gen33_ctrl_held_main_0000.lean",
+   "lean_secs": [
+    17.11,
+    17.26,
+    17.4
+   ]
+  },
+  {
+   "ip": 14,
+   "id": null,
+   "name": "gen32_ind_nest_200189",
+   "certified": true,
+   "reasons": [],
+   "lean": {
+    "rc": 0,
+    "accepted": true,
+    "sorry": false,
+    "err": []
+   },
+   "n1n2": {
+    "n1_accepted": false,
+    "n2_accepted": true,
+    "n1_vacuous": false
+   },
+   "axioms": [
+    "propext",
+    "Quot.sound"
+   ],
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "lean_file": "gen33_ctrl_held_main_0000.lean",
+   "lean_secs": [
+    17.11,
+    17.26,
+    17.4
+   ]
+  },
+  {
+   "ip": 15,
+   "id": null,
+   "name": "gen32_ind_nest_200211",
+   "certified": false,
+   "reasons": [
+    "lean_reject_sorry",
+    "autoimplicit_dependent",
+    "sorry_ax"
+   ],
+   "lean": {
+    "rc": 1,
+    "accepted": false,
+    "sorry": true,
+    "err": [
+     "error:352: unsolved goals",
+     "error:360: unsolved goals"
+    ]
+   },
+   "n1n2": {
+    "n1_accepted": false,
+    "n2_accepted": false,
+    "n1_vacuous": false
+   },
+   "axioms": [
+    "propext",
+    "sorryAx",
+    "Quot.sound"
+   ],
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "lean_file": "gen33_ctrl_held_main_0000.lean",
+   "lean_secs": [
+    17.11,
+    17.26,
+    17.4
+   ]
+  },
+  {
+   "ip": 16,
+   "id": null,
+   "name": "gen32_ind_nest_200216",
+   "certified": false,
+   "reasons": [
+    "lean_reject_sorry",
+    "autoimplicit_dependent",
+    "sorry_ax"
+   ],
+   "lean": {
+    "rc": 1,
+    "accepted": false,
+    "sorry": true,
+    "err": [
+     "error:374: unsolved goals",
+     "error:382: unsolved goals"
+    ]
+   },
+   "n1n2": {
+    "n1_accepted": false,
+    "n2_accepted": false,
+    "n1_vacuous": false
+   },
+   "axioms": [
+    "propext",
+    "sorryAx",
+    "Quot.sound"
+   ],
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "lean_file": "gen33_ctrl_held_main_0000.lean",
+   "lean_secs": [
+    17.11,
+    17.26,
+    17.4
+   ]
+  },
+  {
+   "ip": 17,
+   "id": null,
+   "name": "gen32_ind_nest_200226",
+   "certified": false,
+   "reasons": [
+    "lean_reject_sorry",
+    "autoimplicit_dependent",
+    "sorry_ax"
+   ],
+   "lean": {
+    "rc": 1,
+    "accepted": false,
+    "sorry": true,
+    "err": [
+     "error:397: unsolved goals",
+     "error:405: unsolved goals"
+    ]
+   },
+   "n1n2": {
+    "n1_accepted": false,
+    "n2_accepted": false,
+    "n1_vacuous": false
+   },
+   "axioms": [
+    "propext",
+    "sorryAx",
+    "Quot.sound"
+   ],
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "lean_file": "gen33_ctrl_held_main_0000.lean",
+   "lean_secs": [
+    17.11,
+    17.26,
+    17.4
+   ]
+  },
+  {
+   "ip": 18,
+   "id": null,
+   "name": "gen32_ind_nest_200237",
+   "certified": false,
+   "reasons": [
+    "lean_reject_sorry",
+    "autoimplicit_dependent",
+    "sorry_ax"
+   ],
+   "lean": {
+    "rc": 1,
+    "accepted": false,
+    "sorry": true,
+    "err": [
+     "error:420: unsolved goals",
+     "error:428: unsolved goals"
+    ]
+   },
+   "n1n2": {
+    "n1_accepted": false,
+    "n2_accepted": false,
+    "n1_vacuous": false
+   },
+   "axioms": [
+    "propext",
+    "sorryAx",
+    "Quot.sound"
+   ],
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "lean_file": "gen33_ctrl_held_main_0000.lean",
+   "lean_secs": [
+    17.11,
+    17.26,
+    17.4
+   ]
+  },
+  {
+   "ip": 19,
+   "id": null,
+   "name": "gen32_ind_nest_200242",
+   "certified": false,
+   "reasons": [
+    "lean_reject_sorry",
+    "autoimplicit_dependent",
+    "sorry_ax"
+   ],
+   "lean": {
+    "rc": 1,
+    "accepted": false,
+    "sorry": true,
+    "err": [
+     "error:443: unsolved goals",
+     "error:451: unsolved goals"
+    ]
+   },
+   "n1n2": {
+    "n1_accepted": false,
+    "n2_accepted": false,
+    "n1_vacuous": false
+   },
+   "axioms": [
+    "propext",
+    "sorryAx"
+   ],
+   "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+   "lean_file": "gen33_ctrl_held_main_0000.lean",
+   "lean_secs": [
+    17.11,
+    17.26,
+    17.4
+   ]
+  }
+ ],
+ "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd",
+ "note": "in-distribution control (a_held 20 rows, base arm, device args-mode)"
+}

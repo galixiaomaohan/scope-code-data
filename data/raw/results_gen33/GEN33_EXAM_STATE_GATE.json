@@ -1,0 +1,10 @@
+{
+ "schema": "gen33-exam-state-gate/1",
+ "n_rows": 218,
+ "n_step": 1334,
+ "n_nonzero": 1334,
+ "n_bad_rows": 0,
+ "bad": [],
+ "pass": true,
+ "rule": "发考前实测: 有效卷逐行逐步装置现算, 8 维状态非全零且无异常; 任一不过即不发考"
+}

@@ -1,0 +1,8120 @@
+{
+ "schema": "ccp-a-hybrid-eval/2",
+ "generated": "2026-09-24T02:23:51+0800",
+ "arm": "hybrid",
+ "seg": "exam_v1",
+ "args_mode": "bridge",
+ "n": 80,
+ "table": {
+  "n": 80,
+  "n_chain_rows": 80,
+  "n_chain_scored": 80,
+  "certified": 0,
+  "first_hit": 0.0,
+  "exact_hit": 0.0,
+  "slot_col": 0.0,
+  "consistency": 0.9916666666666668,
+  "op_out_of_space": 0,
+  "terminated_end": 80,
+  "render_tok_mean": 88.7,
+  "n_err": 0,
+  "judge_md5": "7c31b58da9d7228cee31b9be581fe5dd"
+ },
+ "model": {
+  "path": "scratch/ccp/gen26/ckpt/hybrid_formal_f935e143_6000.pt",
+  "md5": "ac8d64a1c4f5600ac06a008be51521e1",
+  "step": 6000,
+  "missing": 0,
+  "unexpected": 0,
+  "pa_missing": []
+ },
+ "columns": [
+  "certified",
+  "first_hit",
+  "exact_hit",
+  "slot_col",
+  "consistency"
+ ],
+ "inputs": {
+  "cache": "scratch/ccp/gen26/cache/formal_v2f_all.bin",
+  "side": "scratch/ccp/gen26/out/V2F_RENDER_SIDECAR.jsonl",
+  "exam_side": "scratch/ccp/gen26/out/A_EXAM_SIDECAR.jsonl",
+  "ckpt": "scratch/ccp/gen26/ckpt/hybrid_formal_f935e143_6000.pt",
+  "judge": true
+ },
+ "bridge_errors": [],
+ "rows": [
+  {
+   "ri": 1003,
+   "name": "bh_ineq_tail_000337",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "g24_ineq_ht"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 183,
+      "pred": "g24_ineq_ht",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.60073,
+      "margin": 0.36554,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y - 1), sq_nonneg (x - y + 1),]\n```",
+    "n_tok": 59,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y - 1), sq_nonneg (x - y + 1),]"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "g24_ineq_ht",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1004,
+   "name": "bh_ineq_tail_000341",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_tail_zero"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99874,
+      "margin": 0.99814,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_tail_zero",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.9973,
+      "margin": 0.99631,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (z - y - z - 2), sq_nonneg (z - y - z + 1), sq_nonneg (z - y - z + 1), sq_nonneg (z - y - z + 1), sq_nonneg (z - y - z + 1), sq_nonneg (z - y - z + 1), sq_nonneg (z - y - z + 1), sq_nonneg (z - y - z + 1), sq_nonneg (z - y - z + 1), sq_nonneg (z - y - z + 1), sq_nonneg (z - y - z + ",
+    "n_tok": 160,
+    "body": "nlinarith [sq_nonneg (z - y - z - 2), sq_nonneg (z - y - z + 1), sq_nonneg (z - y - z + 1), sq_nonneg (z - y - z + 1), sq_nonneg (z - y - z + 1), sq_nonneg (z - y - z + 1), sq_nonneg (z - y - z + 1), sq_nonneg (z - y - z + 1), sq_nonneg (z - y - z + 1), sq_nonneg (z - y - z + 1), sq_nonneg (z - y - z +"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1005,
+   "name": "bh_ineq_tail_000348",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.78599,
+      "margin": 0.65211,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_other",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x + -2 * y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y + 5), sq_nonneg (x - y + 2), sq_nonneg (x - y + 1), sq_nonneg (x - y + 2), sq_nonneg (x - y + 3), sq_nonneg (x - y + 5),```",
+    "n_tok": 108,
+    "body": "nlinarith [sq_nonneg (x + -2 * y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y + 5), sq_nonneg (x - y + 2), sq_nonneg (x - y + 1), sq_nonneg (x - y + 2), sq_nonneg (x - y + 3), sq_nonneg (x - y + 5),"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1006,
+   "name": "bh_ineq_tail_000352",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_zero"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99828,
+      "margin": 0.99771,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99771,
+      "margin": 0.99717,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_zero",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (y - y - 3), sq_nonneg (x - y - 2), sq_nonneg (x - y + 2), sq_nonneg (x - y - 1),]\n```",
+    "n_tok": 59,
+    "body": "nlinarith [sq_nonneg (y - y - 3), sq_nonneg (x - y - 2), sq_nonneg (x - y + 2), sq_nonneg (x - y - 1),]"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1007,
+   "name": "bh_ineq_tail_000353",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.8782,
+      "margin": 0.76419,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99031,
+      "margin": 0.98457,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 4), sq_nonneg (x - y + 2), sq_nonneg (x - y - 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 1), t]\n```",
+    "n_tok": 72,
+    "body": "nlinarith [sq_nonneg (x - y - 4), sq_nonneg (x - y + 2), sq_nonneg (x - y - 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 1), t]"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1008,
+   "name": "bh_ineq_tail_000357",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.9999,
+      "margin": 0.99983,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99979,
+      "margin": 0.99972,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_other",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x + -2), sq_nonneg (y + -2), sq_nonneg (x + -2), sq_nonneg (y + -2),]\n```",
+    "n_tok": 51,
+    "body": "nlinarith [sq_nonneg (x + -2), sq_nonneg (y + -2), sq_nonneg (x + -2), sq_nonneg (y + -2),]"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1009,
+   "name": "bh_ineq_tail_000358",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99675,
+      "margin": 0.99543,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99845,
+      "margin": 0.99809,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_other",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 1, y - 2), sq_nonneg (x - y - 1), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_non",
+    "n_tok": 160,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 1, y - 2), sq_nonneg (x - y - 1), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_non"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1010,
+   "name": "bh_ineq_tail_000359",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "g24_ineq_ht2"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 184,
+      "pred": "g24_ineq_ht2",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.82725,
+      "margin": 0.66498,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 4), sq_nonneg (x - y + 1), sq_nonneg (x - y - 4), sq_nonneg (x - y - 3), sq_nonneg (x - y - 1),]\n```",
+    "n_tok": 71,
+    "body": "nlinarith [sq_nonneg (x - y - 4), sq_nonneg (x - y + 1), sq_nonneg (x - y - 4), sq_nonneg (x - y - 3), sq_nonneg (x - y - 1),]"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "g24_ineq_ht2",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1011,
+   "name": "bh_ineq_tail_000360",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.97973,
+      "margin": 0.97246,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99709,
+      "margin": 0.99591,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x + -2 * y - 4), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (",
+    "n_tok": 160,
+    "body": "nlinarith [sq_nonneg (x + -2 * y - 4), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg ("
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1012,
+   "name": "bh_ineq_tail_000364",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.59057,
+      "margin": 0.18371,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99981,
+      "margin": 0.99973,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_other",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y - 8), sq_nonneg (x - y - 4), sq_nonneg (x - y + 4), sq_nonneg (x - y - 1),]\n```",
+    "n_tok": 83,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y - 8), sq_nonneg (x - y - 4), sq_nonneg (x - y + 4), sq_nonneg (x - y - 1),]"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1013,
+   "name": "bh_ineq_tail_000370",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "g24_ineq_ht"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 183,
+      "pred": "g24_ineq_ht",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.42703,
+      "margin": 0.22813,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_other",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 2 * y - 6), sq_nonneg (x - y + 3), sq_nonneg (x - y + 1), sq_nonneg (x - y + 2), sq_nonneg (x - y + 3), sq_nonneg (x - y + 4),\n```",
+    "n_tok": 99,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 2 * y - 6), sq_nonneg (x - y + 3), sq_nonneg (x - y + 1), sq_nonneg (x - y + 2), sq_nonneg (x - y + 3), sq_nonneg (x - y + 4),"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "g24_ineq_ht",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1014,
+   "name": "bh_ineq_tail_000372",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.56467,
+      "margin": 0.25118,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y - 5), sq_nonneg (x - y - 1),]\n```",
+    "n_tok": 59,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y - 5), sq_nonneg (x - y - 1),]"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1015,
+   "name": "bh_ineq_tail_000379",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_tail_zero"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99993,
+      "margin": 0.99989,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_tail_zero",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99943,
+      "margin": 0.99928,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 3), sq_nonneg (x - y + 1), sq_nonneg (x - y - 2), sq_nonneg (x - y + 1),\n```",
+    "n_tok": 58,
+    "body": "nlinarith [sq_nonneg (x - y - 3), sq_nonneg (x - y + 1), sq_nonneg (x - y - 2), sq_nonneg (x - y + 1),"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1016,
+   "name": "bh_ineq_tail_000380",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.65709,
+      "margin": 0.5011,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99478,
+      "margin": 0.9921,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 2, rfl⟩]\n```",
+    "n_tok": 40,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 2, rfl⟩]"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1017,
+   "name": "bh_ineq_tail_000386",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_zero"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99806,
+      "margin": 0.99629,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99964,
+      "margin": 0.99948,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_zero",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 3), sq_nonneg (x - y + 2), sq_nonneg (x - y - 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 1),]\n```",
+    "n_tok": 71,
+    "body": "nlinarith [sq_nonneg (x - y - 3), sq_nonneg (x - y + 2), sq_nonneg (x - y - 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 1),]"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1018,
+   "name": "bh_ineq_tail_000387",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_zero"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99997,
+      "margin": 0.99995,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99979,
+      "margin": 0.99972,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_zero",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (y - 4), sq_nonneg (y - 2), sq_nonneg (y - 4), sq_nonneg (y - 2), sq_nonneg (y - 4),\n```",
+    "n_tok": 60,
+    "body": "nlinarith [sq_nonneg (y - 4), sq_nonneg (y - 2), sq_nonneg (y - 4), sq_nonneg (y - 2), sq_nonneg (y - 4),"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1019,
+   "name": "bh_ineq_tail_000388",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99315,
+      "margin": 0.98634,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99995,
+      "margin": 0.99994,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (z - y - 5), sq_nonneg (z - y - 1), sq_nonneg (z - 2), sq_nonneg (z - 9),]\n```",
+    "n_tok": 55,
+    "body": "nlinarith [sq_nonneg (z - y - 5), sq_nonneg (z - y - 1), sq_nonneg (z - 2), sq_nonneg (z - 9),]"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1020,
+   "name": "bh_ineq_tail_000399",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "g24_ineq_ht2"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 184,
+      "pred": "g24_ineq_ht2",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.47699,
+      "margin": 0.06959,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x + -2 * y - 6), sq_nonneg (x - y + 2 * z + 1), sq_nonneg (x - y + 2 * z + 1), rfl⟨x, y, z, pow_nonneg (x - y + 15), sq_nonneg (x - y - 1),]\n```",
+    "n_tok": 96,
+    "body": "nlinarith [sq_nonneg (x + -2 * y - 6), sq_nonneg (x - y + 2 * z + 1), sq_nonneg (x - y + 2 * z + 1), rfl⟨x, y, z, pow_nonneg (x - y + 15), sq_nonneg (x - y - 1),]"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "g24_ineq_ht2",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1021,
+   "name": "bh_ineq_tail_000406",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.9986,
+      "margin": 0.99724,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99986,
+      "margin": 0.99982,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y - 2), sq_nonneg (x - y + 1), sq_nonneg (x - y - 1),]\n```",
+    "n_tok": 59,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y - 2), sq_nonneg (x - y + 1), sq_nonneg (x - y - 1),]"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1022,
+   "name": "bh_ineq_tail_000408",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_zero"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99972,
+      "margin": 0.99945,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99988,
+      "margin": 0.99984,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_zero",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (z - 5), sq_nonneg (z - 1), sq_nonneg (z - 1),]\n```",
+    "n_tok": 41,
+    "body": "nlinarith [sq_nonneg (z - 5), sq_nonneg (z - 1), sq_nonneg (z - 1),]"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1023,
+   "name": "bh_ineq_tail_000413",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99881,
+      "margin": 0.99814,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_tail_other",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99873,
+      "margin": 0.99839,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (z - y - 5), sq_nonneg (z - y - 2)]\n```",
+    "n_tok": 34,
+    "body": "nlinarith [sq_nonneg (z - y - 5), sq_nonneg (z - y - 2)]"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1024,
+   "name": "bh_ineq_tail_000414",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.92476,
+      "margin": 0.8501,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99968,
+      "margin": 0.99962,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 4), sq_nonneg (x - y - 4), sq_nonneg (x - y - 4), sq_nonneg (x - y - 4), sq_nonneg (x - y - 4), sq_nonneg (x - y - 4), sq_nonneg (x - y - 4), sq_nonneg (x - y - 4), sq_nonneg (x - y - 4), sq_nonneg (x - y - 4), sq_nonneg (x - y - 4), sq_nonneg (x - y",
+    "n_tok": 160,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 4), sq_nonneg (x - y - 4), sq_nonneg (x - y - 4), sq_nonneg (x - y - 4), sq_nonneg (x - y - 4), sq_nonneg (x - y - 4), sq_nonneg (x - y - 4), sq_nonneg (x - y - 4), sq_nonneg (x - y - 4), sq_nonneg (x - y - 4), sq_nonneg (x - y - 4), sq_nonneg (x - y"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1025,
+   "name": "bh_ineq_tail_000420",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "g24_ineq_ht2"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 184,
+      "pred": "g24_ineq_ht2",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.97895,
+      "margin": 0.95984,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x + -2 * y - 5), sq_nonneg (x - y + 3), sq_nonneg (x - y + 1), sq_nonneg (x - y + 2), sq_nonneg (x - y + 3), sq_nonneg (x - y + 4), t]\n```",
+    "n_tok": 87,
+    "body": "nlinarith [sq_nonneg (x + -2 * y - 5), sq_nonneg (x - y + 3), sq_nonneg (x - y + 1), sq_nonneg (x - y + 2), sq_nonneg (x - y + 3), sq_nonneg (x - y + 4), t]"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "g24_ineq_ht2",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1026,
+   "name": "bh_ineq_tail_000423",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99846,
+      "margin": 0.99694,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_tail_other",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99988,
+      "margin": 0.99986,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 4), sq_nonneg (x + -2 * y + 1), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1),]\n```",
+    "n_tok": 62,
+    "body": "nlinarith [sq_nonneg (x - y - 4), sq_nonneg (x + -2 * y + 1), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1),]"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1027,
+   "name": "bh_ineq_tail_000424",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.98926,
+      "margin": 0.97856,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99993,
+      "margin": 0.99992,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (y - 5), sq_nonneg (x - 1), sq_nonneg (y - 1), sq_nonneg (x - y),]\n```",
+    "n_tok": 50,
+    "body": "nlinarith [sq_nonneg (y - 5), sq_nonneg (x - 1), sq_nonneg (y - 1), sq_nonneg (x - y),]"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1028,
+   "name": "bh_ineq_tail_000428",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99981,
+      "margin": 0.9997,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99936,
+      "margin": 0.99891,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_other",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (z - y - 5), sq_nonneg (z - y + 1), sq_nonneg (z - 1), sq_nonneg (z - 5),]\n```",
+    "n_tok": 55,
+    "body": "nlinarith [sq_nonneg (z - y - 5), sq_nonneg (z - y + 1), sq_nonneg (z - 1), sq_nonneg (z - 5),]"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1029,
+   "name": "bh_ineq_tail_000431",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_nt_dvd_witness",
+     "ccp_nt_dvd_witness",
+     "ccp_nt_dvd_combine"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": true,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 3
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 165,
+      "pred": "ccp_nt_dvd_witness",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.54777,
+      "margin": 0.34268,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 165,
+      "pred": "ccp_nt_dvd_witness",
+      "gold": "bh_ineq_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.82749,
+      "margin": 0.6641,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 166,
+      "pred": "ccp_nt_dvd_combine",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99997,
+      "margin": 0.99995,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 3,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nobtain ⟨w_a, rfl⟩ := ha\nobtain ⟨w_b, rfl⟩ := hb\nexact ⟨0 * w_a - 18 * w_b - 5, by ring⟩\n```",
+    "n_tok": 67,
+    "body": "obtain ⟨w_a, rfl⟩ := ha\nobtain ⟨w_b, rfl⟩ := hb\nexact ⟨0 * w_a - 18 * w_b - 5, by ring⟩"
+   },
+   "consistency": {
+    "n": 3,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 0.6666666666666666,
+    "per_op": [
+     {
+      "op": "ccp_nt_dvd_witness",
+      "hit": true,
+      "keywords": [
+       "dvd",
+       "⟨",
+       "obtain",
+       "use ",
+       "witness"
+      ]
+     },
+     {
+      "op": "ccp_nt_dvd_witness",
+      "hit": true,
+      "keywords": [
+       "dvd",
+       "⟨",
+       "obtain",
+       "use ",
+       "witness"
+      ]
+     },
+     {
+      "op": "ccp_nt_dvd_combine",
+      "hit": false,
+      "keywords": [
+       "dvd_trans",
+       "mul_dvd",
+       "dvd_mul",
+       "dvd"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1030,
+   "name": "bh_ineq_tail_000434",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "g24_ineq_ht2"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 184,
+      "pred": "g24_ineq_ht2",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.65783,
+      "margin": 0.36736,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_other",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 2, sq_nonneg (x - y - 10), sq_nonneg (x - y + 2), sq_nonneg (x - y + 1), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 1), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x -",
+    "n_tok": 160,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 2, sq_nonneg (x - y - 10), sq_nonneg (x - y + 2), sq_nonneg (x - y + 1), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 1), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x -"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "g24_ineq_ht2",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1031,
+   "name": "bh_ineq_tail_000435",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.29926,
+      "margin": 0.01749,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y + 10), t)]\n```",
+    "n_tok": 61,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y + 10), t)]"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1032,
+   "name": "bh_ineq_tail_000443",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_zero"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.98418,
+      "margin": 0.97222,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99928,
+      "margin": 0.99912,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_zero",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x + -2 * y - 5), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (",
+    "n_tok": 160,
+    "body": "nlinarith [sq_nonneg (x + -2 * y - 5), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg ("
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1033,
+   "name": "bh_ineq_tail_000446",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.65502,
+      "margin": 0.48627,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y - 2), sq_nonneg (x - y + 1), sq_nonneg (x - y - 2),]\n```",
+    "n_tok": 59,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y - 2), sq_nonneg (x - y + 1), sq_nonneg (x - y - 2),]"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1034,
+   "name": "bh_ineq_tail_000447",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.89539,
+      "margin": 0.85316,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.9961,
+      "margin": 0.995,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 2), sq_nonneg (x - y - 1), sq_nonneg (x - y + 3), sq_nonneg (x - y - 1), sq_nonneg (x - y - 2), sq_nonneg (x - y + 1),atsq_nonneg (x - y - 3),atsq_nonneg (x - y - 3),atsq_nonneg (x - y - 3),atsq_nonneg (x - y - 1),atsq_nonneg (x - y - 3),atsq_",
+    "n_tok": 160,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 2), sq_nonneg (x - y - 1), sq_nonneg (x - y + 3), sq_nonneg (x - y - 1), sq_nonneg (x - y - 2), sq_nonneg (x - y + 1),atsq_nonneg (x - y - 3),atsq_nonneg (x - y - 3),atsq_nonneg (x - y - 3),atsq_nonneg (x - y - 1),atsq_nonneg (x - y - 3),atsq_"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1035,
+   "name": "bh_ineq_tail_000449",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.98189,
+      "margin": 0.96384,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99994,
+      "margin": 0.99992,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_other",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (z - y - 5), sq_nonneg (z - y - 1), sq_nonneg (z - 1), sq_nonneg (z - 1),]\n```",
+    "n_tok": 55,
+    "body": "nlinarith [sq_nonneg (z - y - 5), sq_nonneg (z - y - 1), sq_nonneg (z - 1), sq_nonneg (z - 1),]"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1036,
+   "name": "bh_ineq_tail_000454",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.93919,
+      "margin": 0.90434,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (z - y - 5), sq_nonneg (z - 2 * x - 5), sq_nonneg (z - 2), sq_nonneg (z - 5),]\n```",
+    "n_tok": 58,
+    "body": "nlinarith [sq_nonneg (z - y - 5), sq_nonneg (z - 2 * x - 5), sq_nonneg (z - 2), sq_nonneg (z - 5),]"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1037,
+   "name": "bh_ineq_tail_000457",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.57712,
+      "margin": 0.38828,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99406,
+      "margin": 0.99221,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (z - y - 5), sq_nonneg (z - y - 2), sq_nonneg (z - 2), sq_nonneg (z - 2), sq_nonneg (z - 2), sq_nonneg (z - 2), sq_nonneg (z - 2), sq_nonneg (z - 2), sq_nonneg (z - 2), sq_nonneg (z - 2), sq_nonneg (z - 2), sq_nonneg (z - 2), sq_nonneg (z - 2), sq_nonneg (z - 2), sq_nonneg (z - ",
+    "n_tok": 160,
+    "body": "nlinarith [sq_nonneg (z - y - 5), sq_nonneg (z - y - 2), sq_nonneg (z - 2), sq_nonneg (z - 2), sq_nonneg (z - 2), sq_nonneg (z - 2), sq_nonneg (z - 2), sq_nonneg (z - 2), sq_nonneg (z - 2), sq_nonneg (z - 2), sq_nonneg (z - 2), sq_nonneg (z - 2), sq_nonneg (z - 2), sq_nonneg (z - 2), sq_nonneg (z -"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1038,
+   "name": "bh_ineq_tail_000459",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.987,
+      "margin": 0.97406,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99993,
+      "margin": 0.99992,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 2), sq_nonneg (x - y + 5), sq_nonneg (x - y + 2), sq_nonneg (x - y + 5), sq_nonneg (x - y + 5), sq_nonneg (x - y + 5), sq_nonneg (x - y + 5), sq_nonneg (x - y + 5), sq_nonneg (x - y + 5), sq_nonneg (x - y + 5), sq_nonneg (x - y + 5), sq_nonneg (x - y",
+    "n_tok": 160,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 2), sq_nonneg (x - y + 5), sq_nonneg (x - y + 2), sq_nonneg (x - y + 5), sq_nonneg (x - y + 5), sq_nonneg (x - y + 5), sq_nonneg (x - y + 5), sq_nonneg (x - y + 5), sq_nonneg (x - y + 5), sq_nonneg (x - y + 5), sq_nonneg (x - y + 5), sq_nonneg (x - y"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1039,
+   "name": "bh_ineq_tail_000460",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99976,
+      "margin": 0.99964,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99999,
+      "margin": 0.99998,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (z - y - 6), sq_nonneg (z - y + 3), sq_nonneg (z - 5), sq_nonneg (z - 6),]\n```",
+    "n_tok": 55,
+    "body": "nlinarith [sq_nonneg (z - y - 6), sq_nonneg (z - y + 3), sq_nonneg (z - 5), sq_nonneg (z - 6),]"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1040,
+   "name": "bh_ineq_tail_000461",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "g24_ineq_ht"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 183,
+      "pred": "g24_ineq_ht",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.49016,
+      "margin": 0.21234,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_other",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y - 1), sq_nonneg (x - y + 1),```",
+    "n_tok": 57,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y - 1), sq_nonneg (x - y + 1),"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "g24_ineq_ht",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1041,
+   "name": "bh_ineq_tail_000462",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_nt_dvd_witness",
+     "ccp_nt_dvd_witness",
+     "ccp_nt_dvd_combine"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": true,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 3
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 165,
+      "pred": "ccp_nt_dvd_witness",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.93049,
+      "margin": 0.89095,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 165,
+      "pred": "ccp_nt_dvd_witness",
+      "gold": "bh_ineq_tail_other",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.90362,
+      "margin": 0.80912,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 166,
+      "pred": "ccp_nt_dvd_combine",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99994,
+      "margin": 0.99989,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 3,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nobtain ⟨w_a, rfl⟩ := ha\nobtain ⟨w_b, rfl⟩ := hb\nexact ⟨20 * w_a - 5 * w_b - 53 * w_b, by ring⟩\n```",
+    "n_tok": 72,
+    "body": "obtain ⟨w_a, rfl⟩ := ha\nobtain ⟨w_b, rfl⟩ := hb\nexact ⟨20 * w_a - 5 * w_b - 53 * w_b, by ring⟩"
+   },
+   "consistency": {
+    "n": 3,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 0.6666666666666666,
+    "per_op": [
+     {
+      "op": "ccp_nt_dvd_witness",
+      "hit": true,
+      "keywords": [
+       "dvd",
+       "⟨",
+       "obtain",
+       "use ",
+       "witness"
+      ]
+     },
+     {
+      "op": "ccp_nt_dvd_witness",
+      "hit": true,
+      "keywords": [
+       "dvd",
+       "⟨",
+       "obtain",
+       "use ",
+       "witness"
+      ]
+     },
+     {
+      "op": "ccp_nt_dvd_combine",
+      "hit": false,
+      "keywords": [
+       "dvd_trans",
+       "mul_dvd",
+       "dvd_mul",
+       "dvd"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1042,
+   "name": "bh_ineq_tail_000463",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.68113,
+      "margin": 0.48444,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.98543,
+      "margin": 0.97886,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 2), sq_nonneg (x - y - 3), sq_nonneg (x - y - 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y",
+    "n_tok": 160,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 2), sq_nonneg (x - y - 3), sq_nonneg (x - y - 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1043,
+   "name": "bh_ineq_tail_000468",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.84826,
+      "margin": 0.77261,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99741,
+      "margin": 0.99646,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y - 2), sq_nonneg (x - y + 3), sq_nonneg (x - y - 3), sq_nonneg (x - y + 1),]\n```",
+    "n_tok": 71,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y - 2), sq_nonneg (x - y + 3), sq_nonneg (x - y - 3), sq_nonneg (x - y + 1),]"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1044,
+   "name": "bh_ineq_tail_000471",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_tail_zero"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99936,
+      "margin": 0.99909,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_tail_zero",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99848,
+      "margin": 0.99808,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 2), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1),```",
+    "n_tok": 57,
+    "body": "nlinarith [sq_nonneg (x - y - 2), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1),"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1045,
+   "name": "bh_ineq_tail_000472",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.97591,
+      "margin": 0.96719,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y - 1), sq_nonneg (x - y + 1),]\n```",
+    "n_tok": 59,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y - 1), sq_nonneg (x - y + 1),]"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1046,
+   "name": "bh_ineq_tail_000477",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.65732,
+      "margin": 0.41176,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99744,
+      "margin": 0.99657,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y",
+    "n_tok": 160,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1047,
+   "name": "bh_ineq_tail_000481",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99838,
+      "margin": 0.99757,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.9989,
+      "margin": 0.99859,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 4), sq_nonneg (x - y + 1), sq_nonneg (x - y - 3), sq_nonneg (x - y + 1), sq_nonneg (x - y + 3),\n```",
+    "n_tok": 70,
+    "body": "nlinarith [sq_nonneg (x - y - 4), sq_nonneg (x - y + 1), sq_nonneg (x - y - 3), sq_nonneg (x - y + 1), sq_nonneg (x - y + 3),"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1048,
+   "name": "bh_ineq_tail_000490",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_tail_zero"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.74972,
+      "margin": 0.49961,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_tail_zero",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99997,
+      "margin": 0.99996,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x + -2 * y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y + -2), sq_nonneg (x - y + 1),```",
+    "n_tok": 60,
+    "body": "nlinarith [sq_nonneg (x + -2 * y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y + -2), sq_nonneg (x - y + 1),"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1049,
+   "name": "bh_ineq_tail_000492",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_zero"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.90321,
+      "margin": 0.84393,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.98756,
+      "margin": 0.98332,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_zero",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 2), sq_nonneg (x - y - 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 3), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1),]\n```",
+    "n_tok": 95,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 2), sq_nonneg (x - y - 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 3), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1),]"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1050,
+   "name": "bh_ineq_tail_000494",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_tail_zero"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.50328,
+      "margin": 0.33328,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_tail_zero",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.96305,
+      "margin": 0.94418,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 3), sq_nonneg (x - y + 1), sq_nonneg (x - y - 3), sq_nonneg (x - y + 3),```",
+    "n_tok": 57,
+    "body": "nlinarith [sq_nonneg (x - y - 3), sq_nonneg (x - y + 1), sq_nonneg (x - y - 3), sq_nonneg (x - y + 3),"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1051,
+   "name": "bh_ineq_tail_000495",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_zero"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99981,
+      "margin": 0.99972,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 0.99999,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 6), sq_nonneg (x - y + 10), sq_nonneg (x - y - 5), sq_nonneg (x - y + 5), sq_nonneg (x - y - 5), sq_nonneg (x - y + 5),]\n```",
+    "n_tok": 84,
+    "body": "nlinarith [sq_nonneg (x - y - 6), sq_nonneg (x - y + 10), sq_nonneg (x - y - 5), sq_nonneg (x - y + 5), sq_nonneg (x - y - 5), sq_nonneg (x - y + 5),]"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1052,
+   "name": "bh_ineq_tail_000496",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.96929,
+      "margin": 0.94807,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99913,
+      "margin": 0.99884,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x + -2 * y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1), sq_nonneg (",
+    "n_tok": 160,
+    "body": "nlinarith [sq_nonneg (x + -2 * y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1), sq_nonneg ("
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1053,
+   "name": "bh_ineq_tail_000498",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.4707,
+      "margin": 0.25926,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99051,
+      "margin": 0.98516,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_other",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 0.99999,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 2 * y + 5), sq_nonneg (x - y + 2 * y + 5), sq_nonneg (x - y + 2 * y + 5), sq_nonneg (x - y + 1), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (",
+    "n_tok": 160,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 2 * y + 5), sq_nonneg (x - y + 2 * y + 5), sq_nonneg (x - y + 2 * y + 5), sq_nonneg (x - y + 1), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 3), sq_nonneg ("
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1054,
+   "name": "bh_ineq_tail_000507",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "g24_ineq_ht2"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 184,
+      "pred": "g24_ineq_ht2",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.35657,
+      "margin": 0.08979,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 2), sq_nonneg (x - y - 5), sq_nonneg (x - y + 2), sq_nonneg (x - y - 5),]\n```",
+    "n_tok": 71,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 2), sq_nonneg (x - y - 5), sq_nonneg (x - y + 2), sq_nonneg (x - y - 5),]"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "g24_ineq_ht2",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1055,
+   "name": "bh_ineq_tail_000509",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99997,
+      "margin": 0.99995,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99982,
+      "margin": 0.99976,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (y - y + 3), sq_nonneg (y + -2), sq_nonneg (y + -2), sq_nonneg (y + 2), sq_nonneg (y + -2), sq_nonneg (y + 1), t)]\n```",
+    "n_tok": 74,
+    "body": "nlinarith [sq_nonneg (y - y + 3), sq_nonneg (y + -2), sq_nonneg (y + -2), sq_nonneg (y + 2), sq_nonneg (y + -2), sq_nonneg (y + 1), t)]"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1056,
+   "name": "bh_ineq_tail_000510",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99771,
+      "margin": 0.99545,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_tail_other",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99986,
+      "margin": 0.99982,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y - 1), sq_nonneg (x - y - 2), sq_nonneg (x - y - 3), sq_nonneg (x - y - 4), sq_nonneg (x - y - 4), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 3), sq_nonneg (x - y - 4), sq_nonneg (x - y - 4), sq_nonneg (x - y",
+    "n_tok": 160,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y - 1), sq_nonneg (x - y - 2), sq_nonneg (x - y - 3), sq_nonneg (x - y - 4), sq_nonneg (x - y - 4), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 2), sq_nonneg (x - y - 3), sq_nonneg (x - y - 4), sq_nonneg (x - y - 4), sq_nonneg (x - y"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1057,
+   "name": "bh_ineq_tail_000511",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.77363,
+      "margin": 0.62097,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_other",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 6), sq_nonneg (x - y + 36), sq_nonneg (x - y + 1), sq_nonneg (x - y + 2), sq_nonneg (x - y + 3), sq_nonneg (x - y + 1),]\n```",
+    "n_tok": 84,
+    "body": "nlinarith [sq_nonneg (x - y - 6), sq_nonneg (x - y + 36), sq_nonneg (x - y + 1), sq_nonneg (x - y + 2), sq_nonneg (x - y + 3), sq_nonneg (x - y + 1),]"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1058,
+   "name": "bh_ineq_tail_000513",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99976,
+      "margin": 0.99967,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_other",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99999,
+      "margin": 0.99999,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (z - y - 5), sq_nonneg (z - y - 1), sq_nonneg (z - 2), sq_nonneg (z - 1),]\n```",
+    "n_tok": 55,
+    "body": "nlinarith [sq_nonneg (z - y - 5), sq_nonneg (z - y - 1), sq_nonneg (z - 2), sq_nonneg (z - 1),]"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1059,
+   "name": "bh_ineq_tail_000516",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.92606,
+      "margin": 0.87677,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99815,
+      "margin": 0.9973,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 2), sq_nonneg (x - y - 1), sq_nonneg (x - y + 1),]\n```",
+    "n_tok": 59,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 2), sq_nonneg (x - y - 1), sq_nonneg (x - y + 1),]"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1060,
+   "name": "bh_ineq_tail_000517",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "g24_ineq_ht2"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_zero"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 184,
+      "pred": "g24_ineq_ht2",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.34735,
+      "margin": 0.04533,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 3), sq_nonneg (x - y + 1), sq_nonneg (x - y - 3), sq_nonneg (x + -2 * y + 1), sq_nonneg (x - y + 3), sq_nonneg (x - y - 1), t]\n```",
+    "n_tok": 87,
+    "body": "nlinarith [sq_nonneg (x - y - 3), sq_nonneg (x - y + 1), sq_nonneg (x - y - 3), sq_nonneg (x + -2 * y + 1), sq_nonneg (x - y + 3), sq_nonneg (x - y - 1), t]"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "g24_ineq_ht2",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1061,
+   "name": "bh_ineq_tail_000520",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "g24_ineq_ht2"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 184,
+      "pred": "g24_ineq_ht2",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99684,
+      "margin": 0.99465,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_other",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 4), sq_nonneg (x - y + 2), sq_nonneg (x - y - 1), sq_nonneg (x - y + 2), sq_nonneg (x - y + 1),\n```",
+    "n_tok": 70,
+    "body": "nlinarith [sq_nonneg (x - y - 4), sq_nonneg (x - y + 2), sq_nonneg (x - y - 1), sq_nonneg (x - y + 2), sq_nonneg (x - y + 1),"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "g24_ineq_ht2",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1062,
+   "name": "bh_ineq_tail_000521",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_zero"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.96513,
+      "margin": 0.9304,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99994,
+      "margin": 0.99991,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_zero",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y - 1), sq_nonneg (x - y + 1),]\n```",
+    "n_tok": 59,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y - 1), sq_nonneg (x - y + 1),]"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1063,
+   "name": "bh_ineq_tail_000522",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.98223,
+      "margin": 0.96463,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 0.99999,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 6), sq_nonneg (x - y + 1), sq_nonneg (x - y - 1), sq_nonneg (x - y + 1),]\n```",
+    "n_tok": 59,
+    "body": "nlinarith [sq_nonneg (x - y - 6), sq_nonneg (x - y + 1), sq_nonneg (x - y - 1), sq_nonneg (x - y + 1),]"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1064,
+   "name": "bh_ineq_tail_000524",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_zero"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99367,
+      "margin": 0.98993,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99565,
+      "margin": 0.99458,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_zero",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x + -2), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1), by ring_nonneg (x - y + 1), by ring_nonneg (x - y + 1), by ring_nonneg (x - y + 1), by ring_nonneg (x - y + 1), by ring_nonneg (x - y + 1), by ring_nonneg (x - y + 1), by ring_nonneg (x - y + 1), by ring_nonneg (x - y + 1), by ring",
+    "n_tok": 160,
+    "body": "nlinarith [sq_nonneg (x + -2), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1), sq_nonneg (x - y + 1), by ring_nonneg (x - y + 1), by ring_nonneg (x - y + 1), by ring_nonneg (x - y + 1), by ring_nonneg (x - y + 1), by ring_nonneg (x - y + 1), by ring_nonneg (x - y + 1), by ring_nonneg (x - y + 1), by ring_nonneg (x - y + 1), by ring"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1065,
+   "name": "bh_ineq_tail_000525",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.90572,
+      "margin": 0.81171,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 0.99999,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y - 1), sq_nonneg (x - y + 1),]\n```",
+    "n_tok": 59,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y - 1), sq_nonneg (x - y + 1),]"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1066,
+   "name": "bh_ineq_tail_000530",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "g24_ineq_ht2"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 184,
+      "pred": "g24_ineq_ht2",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.77294,
+      "margin": 0.69714,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y - 3), sq_nonneg (x - y + 3), sq_nonneg (x - y - 9), sq_nonneg (x - y + 9), sq_nonneg (x - y - 1),]\n```",
+    "n_tok": 95,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y - 3), sq_nonneg (x - y + 3), sq_nonneg (x - y - 9), sq_nonneg (x - y + 9), sq_nonneg (x - y - 1),]"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "g24_ineq_ht2",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1067,
+   "name": "bh_ineq_tail_000542",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99793,
+      "margin": 0.9959,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99989,
+      "margin": 0.99986,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 4), sq_nonneg (x - y + 2), sq_nonneg (x - y - 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 1),]\n```",
+    "n_tok": 71,
+    "body": "nlinarith [sq_nonneg (x - y - 4), sq_nonneg (x - y + 2), sq_nonneg (x - y - 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 1),]"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1068,
+   "name": "bh_ineq_tail_000546",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.98486,
+      "margin": 0.97819,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99738,
+      "margin": 0.99667,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (y - 3), sq_nonneg (y - 2), sq_nonneg (y - 3), sq_nonneg (y - 3), sq_nonneg (y - 3),\n```",
+    "n_tok": 60,
+    "body": "nlinarith [sq_nonneg (y - 3), sq_nonneg (y - 2), sq_nonneg (y - 3), sq_nonneg (y - 3), sq_nonneg (y - 3),"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1069,
+   "name": "bh_ineq_tail_000549",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.50054,
+      "margin": 0.22827,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_tail_other",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99229,
+      "margin": 0.98843,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": null,
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x + -2 * y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y - 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 9),\n```",
+    "n_tok": 73,
+    "body": "nlinarith [sq_nonneg (x + -2 * y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y - 3), sq_nonneg (x - y + 3), sq_nonneg (x - y + 9),"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1070,
+   "name": "bh_ineq_tail_000554",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.75264,
+      "margin": 0.50592,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99988,
+      "margin": 0.99982,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_other",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y - 2), sq_nonneg (x - y + 4), sq_nonneg (x - y - 2), sq_nonneg (x - y + 8), sq_nonneg (x - y + 1),]\n```",
+    "n_tok": 95,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y - 2), sq_nonneg (x - y + 4), sq_nonneg (x - y - 2), sq_nonneg (x - y + 8), sq_nonneg (x - y + 1),]"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1071,
+   "name": "bh_ineq_tail_000559",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_zero"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99998,
+      "margin": 0.99997,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99976,
+      "margin": 0.99968,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_zero",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (y - 3), sq_nonneg (y - 2), sq_nonneg (y - 1), sq_nonneg (y - 2), sq_nonneg (y - 3), sq_nonneg (y - 4),\n```",
+    "n_tok": 70,
+    "body": "nlinarith [sq_nonneg (y - 3), sq_nonneg (y - 2), sq_nonneg (y - 1), sq_nonneg (y - 2), sq_nonneg (y - 3), sq_nonneg (y - 4),"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1072,
+   "name": "bh_ineq_tail_000560",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_zero"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99894,
+      "margin": 0.99797,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99999,
+      "margin": 0.99999,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y - 5), sq_nonneg (x - y - 5), sq_nonneg (x - y - 5), sq_nonneg (x - y - 5), sq_nonneg (x - y - 5), sq_nonneg (x - y - 5), sq_nonneg (x - y - 5), sq_nonneg (x - y - 5), sq_nonneg (x - y - 5), sq_nonneg (x - y - 5), sq_nonneg (x - y",
+    "n_tok": 160,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y - 5), sq_nonneg (x - y - 5), sq_nonneg (x - y - 5), sq_nonneg (x - y - 5), sq_nonneg (x - y - 5), sq_nonneg (x - y - 5), sq_nonneg (x - y - 5), sq_nonneg (x - y - 5), sq_nonneg (x - y - 5), sq_nonneg (x - y - 5), sq_nonneg (x - y"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1073,
+   "name": "bh_ineq_tail_000564",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99998,
+      "margin": 0.99997,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.9996,
+      "margin": 0.99951,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_other",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 3), sq_nonneg (x - y + 1), sq_nonneg (x - y - 3), sq_nonneg (x - y + 3), sq_nonneg (x - y - 1),]\n```",
+    "n_tok": 71,
+    "body": "nlinarith [sq_nonneg (x - y - 3), sq_nonneg (x - y + 1), sq_nonneg (x - y - 3), sq_nonneg (x - y + 3), sq_nonneg (x - y - 1),]"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1074,
+   "name": "bh_ineq_tail_000566",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.79019,
+      "margin": 0.58315,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x + -2 * y - 6), sq_nonneg (x - y + 1), sq_nonneg (x - y + 5), sq_nonneg (x - y + 2), sq_nonneg (x - y + 1), sq_nonneg (x - y + 5), sq_nonneg (x - y + 2), sq_nonneg (x - y + 5), sq_nonneg (x - y + 5), sq_nonneg (x - y + 2), sq_nonneg (x - y + 5), sq_nonneg (x - y + 2), sq_nonneg (",
+    "n_tok": 160,
+    "body": "nlinarith [sq_nonneg (x + -2 * y - 6), sq_nonneg (x - y + 1), sq_nonneg (x - y + 5), sq_nonneg (x - y + 2), sq_nonneg (x - y + 1), sq_nonneg (x - y + 5), sq_nonneg (x - y + 2), sq_nonneg (x - y + 5), sq_nonneg (x - y + 5), sq_nonneg (x - y + 2), sq_nonneg (x - y + 5), sq_nonneg (x - y + 2), sq_nonneg ("
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1075,
+   "name": "bh_ineq_tail_000572",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.69464,
+      "margin": 0.47401,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99689,
+      "margin": 0.99497,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y - 1), sq_nonneg (x - y + 1),]\n```",
+    "n_tok": 59,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 1), sq_nonneg (x - y - 1), sq_nonneg (x - y + 1),]"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1076,
+   "name": "bh_ineq_tail_000577",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_square"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99972,
+      "margin": 0.99959,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99908,
+      "margin": 0.99876,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_square",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 2), sq_nonneg (x - y + 1), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y",
+    "n_tok": 160,
+    "body": "nlinarith [sq_nonneg (x - y - 2), sq_nonneg (x - y + 1), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y + 2), sq_nonneg (x - y"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1077,
+   "name": "bh_ineq_tail_000579",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99666,
+      "margin": 0.99338,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99994,
+      "margin": 0.99993,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_other",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (z - y - 4), sq_nonneg (z + -2 * z + 4), sq_nonneg (z + -2), sq_nonneg (z + 4), t]\n```",
+    "n_tok": 59,
+    "body": "nlinarith [sq_nonneg (z - y - 4), sq_nonneg (z + -2 * z + 4), sq_nonneg (z + -2), sq_nonneg (z + 4), t]"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1078,
+   "name": "bh_ineq_tail_000583",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_zero"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.98465,
+      "margin": 0.97537,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99835,
+      "margin": 0.99779,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_zero",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 2), sq_nonneg (x - y - 2), sq_nonneg (x - y + 1), sq_nonneg (x - y - 2), sq_nonneg (x - y + 2), sq_nonneg (x - y - 3), sq_nonneg (x - y - 4), sq_nonneg (x - y + 3), sq_nonneg (x - y - 2), sq_nonneg (x - y - 4), sq_nonneg (x - y - 2), sq_nonneg (x - y",
+    "n_tok": 160,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 2), sq_nonneg (x - y - 2), sq_nonneg (x - y + 1), sq_nonneg (x - y - 2), sq_nonneg (x - y + 2), sq_nonneg (x - y - 3), sq_nonneg (x - y - 4), sq_nonneg (x - y + 3), sq_nonneg (x - y - 2), sq_nonneg (x - y - 4), sq_nonneg (x - y - 2), sq_nonneg (x - y"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1079,
+   "name": "bh_ineq_tail_000586",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_sos",
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 2
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 163,
+      "pred": "ccp_ineq_sos",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99225,
+      "margin": 0.98773,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99526,
+      "margin": 0.99374,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 2,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_tail_other",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (z - y - 2), sq_nonneg (z - y - 1), sq_nonneg (z - 2), sq_nonneg (z - 1),]\n```",
+    "n_tok": 55,
+    "body": "nlinarith [sq_nonneg (z - y - 2), sq_nonneg (z - y - 1), sq_nonneg (z - 2), sq_nonneg (z - 1),]"
+   },
+   "consistency": {
+    "n": 2,
+    "n_noreg": 0,
+    "hit": 2,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_sos",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_self_nonneg",
+       "sos",
+       "mul_nonneg"
+      ]
+     },
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1080,
+   "name": "bh_ineq_tail_000591",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_zero"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.95586,
+      "margin": 0.91184,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99999,
+      "margin": 0.99999,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (z - y - 6), sq_nonneg (z - y - 1), sq_nonneg (z - y - 2), sq_nonneg (z - 2), sq_nonneg (z - 1),]\n```",
+    "n_tok": 67,
+    "body": "nlinarith [sq_nonneg (z - y - 6), sq_nonneg (z - y - 1), sq_nonneg (z - y - 2), sq_nonneg (z - 2), sq_nonneg (z - 1),]"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1081,
+   "name": "bh_ineq_tail_000595",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "g24_ineq_ht"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_other"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 183,
+      "pred": "g24_ineq_ht",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.65461,
+      "margin": 0.42146,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 1.0,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 2 * y - 3), sq_nonneg (x - y - 3), sq_nonneg (x - y + 3), sq_nonneg (x - y - 1),```",
+    "n_tok": 74,
+    "body": "nlinarith [sq_nonneg (x - y - 5), sq_nonneg (x - y + 2 * y - 3), sq_nonneg (x - y - 3), sq_nonneg (x - y + 3), sq_nonneg (x - y - 1),"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "g24_ineq_ht",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "positivity",
+       "sq_nonneg",
+       "mul_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  },
+  {
+   "ri": 1082,
+   "name": "bh_ineq_tail_000597",
+   "cls": "ineq",
+   "seg": "exam_main",
+   "arm": "hybrid",
+   "args_mode": "bridge",
+   "chain": {
+    "walked": [
+     "ccp_ineq_close"
+    ],
+    "gold": [
+     "bh_ineq_block",
+     "bh_ineq_block",
+     "bh_ineq_tail_zero"
+    ],
+    "first_hit": false,
+    "exact_hit": false,
+    "prefix_hit": false,
+    "overrun": false,
+    "terminated_end": true,
+    "scorable": true,
+    "budget": 7,
+    "args_src_hist": {
+     "device_state_gold_proxy": 1
+    },
+    "bridge_fallback": 1,
+    "trace": [
+     {
+      "k": 0,
+      "pred_idx": 164,
+      "pred": "ccp_ineq_close",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 0.99902,
+      "margin": 0.99832,
+      "args_src": "device_state_gold_proxy"
+     },
+     {
+      "k": 1,
+      "pred_idx": 154,
+      "pred": "v31_end_marker",
+      "gold": "bh_ineq_block",
+      "gold_in_space": false,
+      "hit": false,
+      "p_max": 1.0,
+      "margin": 0.99999,
+      "stop": "END"
+     }
+    ]
+   },
+   "render": {
+    "text": "```lean4\nnlinarith [sq_nonneg (z - y - 5), sq_nonneg (z - y - 5), sq_nonneg (z - 2), sq_nonneg (z - 5), sq_nonneg (z - 2),]\n```",
+    "n_tok": 65,
+    "body": "nlinarith [sq_nonneg (z - y - 5), sq_nonneg (z - y - 5), sq_nonneg (z - 2), sq_nonneg (z - 5), sq_nonneg (z - 2),]"
+   },
+   "consistency": {
+    "n": 1,
+    "n_noreg": 0,
+    "hit": 1,
+    "rate": 1.0,
+    "per_op": [
+     {
+      "op": "ccp_ineq_close",
+      "hit": true,
+      "keywords": [
+       "nlinarith",
+       "linarith",
+       "positivity",
+       "sq_nonneg"
+      ]
+     }
+    ]
+   },
+   "err": null,
+   "judge": {
+    "certified": false,
+    "reasons": [
+     "lean_reject_sorry",
+     "autoimplicit_dependent",
+     "sorry_ax"
+    ]
+   }
+  }
+ ],
+ "wall_s": 376.22
+}
