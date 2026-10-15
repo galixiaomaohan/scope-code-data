@@ -6,6 +6,10 @@ package contains the experiment pipeline, the frozen judging module, the raw
 experiment outputs behind every number in the paper, and the complete
 generation chain of the data figures.
 
+Release v1.0.0 is archived on Zenodo: DOI
+[10.5281/zenodo.23386805](https://doi.org/10.5281/zenodo.23386805)
+(all versions: 10.5281/zenodo.23386804).
+
 ## 1. Layout and artifacts
 
 ```
